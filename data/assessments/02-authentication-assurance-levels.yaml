@@ -1,0 +1,310 @@
+chapter: "2"
+assessments:
+  2-R1:
+    reqId: 2-R1
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2-R2:
+    reqId: 2-R2
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2-R3:
+    reqId: 2-R3
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.1-R1:
+    reqId: 2.1-R1
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.1.1-R1:
+    reqId: 2.1.1-R1
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.1.1-R2:
+    reqId: 2.1.1-R2
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.1.1-R3:
+    reqId: 2.1.1-R3
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.1.1-R4:
+    reqId: 2.1.1-R4
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.1.1-R5:
+    reqId: 2.1.1-R5
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.1.1-R6:
+    reqId: 2.1.1-R6
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.1.1-R7:
+    reqId: 2.1.1-R7
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.1.2-R1:
+    reqId: 2.1.2-R1
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.1.2-R2:
+    reqId: 2.1.2-R2
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.1.2-R3:
+    reqId: 2.1.2-R3
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.1.3-R1:
+    reqId: 2.1.3-R1
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.2.1-R1:
+    reqId: 2.2.1-R1
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.2.1-R2:
+    reqId: 2.2.1-R2
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.2.1-R3:
+    reqId: 2.2.1-R3
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.2.1-R4:
+    reqId: 2.2.1-R4
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.2.1-R5:
+    reqId: 2.2.1-R5
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.2.1-R6:
+    reqId: 2.2.1-R6
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.2.1-R7:
+    reqId: 2.2.1-R7
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.2.1-R8:
+    reqId: 2.2.1-R8
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.2.2-R1:
+    reqId: 2.2.2-R1
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.2.2-R2:
+    reqId: 2.2.2-R2
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.2.2-R3:
+    reqId: 2.2.2-R3
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.2.2-R4:
+    reqId: 2.2.2-R4
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.2.3-R1:
+    reqId: 2.2.3-R1
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.3.1-R1:
+    reqId: 2.3.1-R1
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.3.1-R2:
+    reqId: 2.3.1-R2
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.3.2-R1:
+    reqId: 2.3.2-R1
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.3.2-R2:
+    reqId: 2.3.2-R2
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.3.2-R3:
+    reqId: 2.3.2-R3
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.3.2-R4:
+    reqId: 2.3.2-R4
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.3.3-R1:
+    reqId: 2.3.3-R1
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.4.1-R1:
+    reqId: 2.4.1-R1
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.4.2-R1:
+    reqId: 2.4.2-R1
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.4.3-R1:
+    reqId: 2.4.3-R1
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.4.3-R2:
+    reqId: 2.4.3-R2
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.4.3-R3:
+    reqId: 2.4.3-R3
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.4.3-R4:
+    reqId: 2.4.3-R4
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.4.3-R5:
+    reqId: 2.4.3-R5
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.4.3-R6:
+    reqId: 2.4.3-R6
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  2.4.4-R1:
+    reqId: 2.4.4-R1
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""

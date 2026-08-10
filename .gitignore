@@ -1,0 +1,22 @@
+# Dependencies / build output
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Local environment — IDP_ROOT is machine-specific, see .env.example
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor / tooling local config
+.claude/
+.vscode/
+.idea/
+
+# OS cruft
+.DS_Store
+Thumbs.db

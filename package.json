@@ -1,0 +1,39 @@
+{
+  "name": "nist-tracker",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n web,api -c blue,green \"vite\" \"tsx watch server/index.ts\"",
+    "build": "tsc -b && vite build",
+    "ingest": "tsx scripts/ingest-spec.ts",
+    "seed:template": "tsx scripts/seed-template.ts",
+    "check": "tsx scripts/check-assessments.ts",
+    "typecheck": "tsc -b",
+    "seed:apply": "tsx scripts/apply-seed.ts"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.62.0",
+    "express": "^4.21.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-resizable-panels": "^2.1.7",
+    "react-router-dom": "^6.28.0",
+    "shiki": "^1.24.0",
+    "yaml": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@types/sanitize-html": "^2.13.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "cheerio": "^1.0.0",
+    "concurrently": "^9.1.0",
+    "sanitize-html": "^2.13.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  }
+}

@@ -1,0 +1,351 @@
+chapter: "5"
+assessments:
+  5-R1:
+    reqId: 5-R1
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  5.1-R1:
+    reqId: 5.1-R1
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  5.1-R2:
+    reqId: 5.1-R2
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  5.1-R3:
+    reqId: 5.1-R3
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  5.1-R4:
+    reqId: 5.1-R4
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  5.1-R5:
+    reqId: 5.1-R5
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  5.1-R6:
+    reqId: 5.1-R6
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  5.1-R7:
+    reqId: 5.1-R7
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  5.1-R8:
+    reqId: 5.1-R8
+    status: compliant
+    notes: Session IDs come from redis-session-store, which derives them from SecureRandom — well above
+      the 64-bit floor. The session cookie itself carries only the opaque id; contents live in
+      Redis.
+    refs:
+      - path: config/initializers/session_store.rb
+        startLine: 7
+        endLine: 26
+        snippet: Rails.application.config.session_store(
+    verified: false
+    seededBy: claude
+    updatedAt: 2026-08-10T14:24:00.446Z
+  5.1-R9:
+    reqId: 5.1-R9
+    status: compliant
+    notes: Logout paths call sign_out, which resets the session and drops the Redis-backed record.
+    refs:
+      - path: app/controllers/users/sessions_controller.rb
+        startLine: 56
+        snippet: def destroy
+    verified: false
+    seededBy: claude
+    updatedAt: 2026-08-10T14:24:00.447Z
+  5.1-R10:
+    reqId: 5.1-R10
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  5.1-R11:
+    reqId: 5.1-R11
+    status: compliant
+    notes: Redis expires the session after session_timeout_in_seconds (900s = 15 min), so a stale
+      session secret stops being accepted server-side rather than relying on the cookie.
+    refs:
+      - path: config/initializers/session_store.rb
+        startLine: 20
+        snippet: "ttl: IdentityConfig.store.session_timeout_in_seconds.seconds"
+      - path: config/application.yml.default
+        startLine: 487
+        snippet: "session_timeout_in_seconds:"
+    verified: false
+    seededBy: claude
+    updatedAt: 2026-08-10T14:24:00.447Z
+  5.1-R12:
+    reqId: 5.1-R12
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  5.1-R13:
+    reqId: 5.1-R13
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  5.1-R14:
+    reqId: 5.1-R14
+    status: compliant
+    notes: force_ssl in production prevents any post-authentication fallback to http.
+    refs:
+      - path: config/environments/production.rb
+        startLine: 9
+        snippet: config.force_ssl = true
+    verified: false
+    seededBy: claude
+    updatedAt: 2026-08-10T14:24:00.447Z
+  5.1-R15:
+    reqId: 5.1-R15
+    status: compliant
+    notes: Rails CSRF protection is enabled application-wide and raises on mismatch rather than silently
+      resetting the session.
+    refs:
+      - path: app/controllers/application_controller.rb
+        startLine: 15
+        snippet: "protect_from_forgery with: :exception"
+    verified: false
+    seededBy: claude
+    updatedAt: 2026-08-10T14:24:00.447Z
+  5.1-R16:
+    reqId: 5.1-R16
+    status: compliant
+    notes: A sign-out route is exposed and reachable from the account UI.
+    refs:
+      - path: app/controllers/users/sessions_controller.rb
+        startLine: 56
+        snippet: def destroy
+    verified: false
+    seededBy: claude
+    updatedAt: 2026-08-10T14:24:00.447Z
+  5.1.1-R1:
+    reqId: 5.1.1-R1
+    status: compliant
+    notes: SecureCookies middleware appends "; Secure" to every Set-Cookie when the request is HTTPS, so
+      cookies are not sent over plaintext in production.
+    refs:
+      - path: lib/secure_cookies.rb
+        startLine: 18
+        snippet: cookie << '; Secure' if env['HTTPS'] == 'on'
+    verified: false
+    seededBy: claude
+    updatedAt: 2026-08-10T14:24:00.447Z
+  5.1.1-R2:
+    reqId: 5.1.1-R2
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  5.1.1-R3:
+    reqId: 5.1.1-R3
+    status: compliant
+    notes: SecureCookies unconditionally appends HttpOnly to every cookie lacking it, so session cookies
+      are not JavaScript-readable.
+    refs:
+      - path: lib/secure_cookies.rb
+        startLine: 19
+        snippet: cookie << '; HttpOnly'
+    verified: false
+    seededBy: claude
+    updatedAt: 2026-08-10T14:24:00.447Z
+  5.1.1-R4:
+    reqId: 5.1.1-R4
+    status: compliant
+    notes: "The session cookie is set with expire_after: nil so it expires on browser close, and timeout
+      enforcement lives server-side in the Redis TTL — exactly the separation this requirement asks
+      for (cookie expiry is not relied on for timeout)."
+    refs:
+      - path: config/initializers/session_store.rb
+        startLine: 11
+        endLine: 20
+        snippet: "expire_after: nil"
+    verified: false
+    seededBy: claude
+    updatedAt: 2026-08-10T14:24:00.447Z
+  5.1.1-R5:
+    reqId: 5.1.1-R5
+    status: gap
+    notes: The session cookie key is "_identity_idp_session" with no "__Host-" prefix. The __Host-
+      prefix would harden against subdomain cookie-injection. SHOULD-level, and adopting it requires
+      confirming no subdomain depends on reading the cookie.
+    refs:
+      - path: config/initializers/session_store.rb
+        startLine: 5
+        snippet: APPLICATION_SESSION_COOKIE_KEY = '_identity_idp_session'
+    verified: false
+    seededBy: claude
+    updatedAt: 2026-08-10T14:24:00.447Z
+  5.1.1-R6:
+    reqId: 5.1.1-R6
+    status: compliant
+    notes: SecureCookies appends SameSite=Lax to every cookie that does not already set it.
+    refs:
+      - path: lib/secure_cookies.rb
+        startLine: 20
+        snippet: cookie << '; SameSite=Lax'
+    verified: false
+    seededBy: claude
+    updatedAt: 2026-08-10T14:24:00.447Z
+  5.1.1-R7:
+    reqId: 5.1.1-R7
+    status: compliant
+    notes: The cookie carries an opaque session id only; session contents are stored in Redis and
+      encrypted via SessionEncryptor, so no cleartext personal information rides in the cookie.
+    refs:
+      - path: config/initializers/session_store.rb
+        startLine: 25
+        snippet: "serializer: SessionEncryptor.new"
+    verified: false
+    seededBy: claude
+    updatedAt: 2026-08-10T14:24:00.447Z
+  5.1.2-R1:
+    reqId: 5.1.2-R1
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  5.2-R1:
+    reqId: 5.2-R1
+    status: compliant
+    notes: Periodic reauthentication is enforced by confirm_recently_authenticated_2fa, which checks the
+      last 2FA event against the reauthn window.
+    refs:
+      - path: app/controllers/concerns/reauthentication_required_concern.rb
+        startLine: 7
+        endLine: 20
+        snippet: def confirm_recently_authenticated_2fa
+      - path: app/services/auth_methods_session.rb
+        startLine: 41
+        endLine: 57
+        snippet: def reauthenticate_at
+    verified: false
+    seededBy: claude
+    updatedAt: 2026-08-10T14:24:00.447Z
+  5.2-R2:
+    reqId: 5.2-R2
+    status: compliant
+    notes: "Both timeout types exist — an inactivity timeout via the Redis session TTL (900s, with a
+      150s warning) and a reauthentication window (reauthn_window: 1200s) bounding how long since
+      the last 2FA event."
+    refs:
+      - path: config/application.yml.default
+        startLine: 487
+        endLine: 488
+        snippet: "session_timeout_in_seconds:"
+      - path: config/application.yml.default
+        startLine: 425
+        snippet: "reauthn_window:"
+      - path: app/services/auth_methods_session.rb
+        startLine: 56
+        endLine: 58
+        snippet: IdentityConfig.store.reauthn_window.seconds
+    verified: false
+    seededBy: claude
+    updatedAt: 2026-08-10T14:24:00.447Z
+  5.2-R3:
+    reqId: 5.2-R3
+    status: partial
+    notes: Timeouts are configured globally rather than varying by AAL. The one AAL-sensitive knob is
+      remember-device expiry (720h at AAL1, 0 minutes at AAL2 — i.e. remember-device is disabled at
+      AAL2). Whether a single 15-minute inactivity window satisfies the per-AAL limits in
+      §2.1.3/§2.2.3/§2.3.3 is a human judgment call.
+    refs:
+      - path: config/application.yml.default
+        startLine: 445
+        endLine: 446
+        snippet: "remember_device_expiration_hours_aal_1:"
+      - path: app/controllers/concerns/remember_device_concern.rb
+    verified: false
+    seededBy: claude
+    updatedAt: 2026-08-10T14:24:00.447Z
+  5.2-R4:
+    reqId: 5.2-R4
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  5.3-R1:
+    reqId: 5.3-R1
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  5.3-R2:
+    reqId: 5.3-R2
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  5.3-R3:
+    reqId: 5.3-R3
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  5.3-R4:
+    reqId: 5.3-R4
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  5.3-R5:
+    reqId: 5.3-R5
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  5.3-R6:
+    reqId: 5.3-R6
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
+  5.3-R7:
+    reqId: 5.3-R7
+    status: not-assessed
+    notes: ""
+    refs: []
+    verified: false
+    updatedAt: ""
