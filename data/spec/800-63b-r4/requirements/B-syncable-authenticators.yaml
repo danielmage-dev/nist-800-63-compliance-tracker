@@ -1,0 +1,209 @@
+chapter: B
+rev: 800-63b-r4
+requirements:
+  B.2-R1:
+    id: B.2-R1
+    rev: 800-63b-r4
+    sectionNumber: B.2
+    ordinal: 1
+    level: SHALL
+    text: All keys SHALL be generated using approved cryptography.
+    textHash: ee599e093fa6
+    source: prose
+    seededBy: parser
+    verified: false
+  B.2-R2:
+    id: B.2-R2
+    rev: 800-63b-r4
+    sectionNumber: B.2
+    ordinal: 2
+    level: SHALL
+    text: Authentication keys that are cloned or exported from a device to a sync fabric SHALL only be
+      stored in an encrypted form using a key with the minimum security strength specified in the
+      latest revision of [SP800-131A] (i.e., 112 bits as of the date of this publication). These
+      keys SHOULD be encrypted using a method that employs a user-controlled secret.
+    textHash: 0bf07165173b
+    source: prose
+    seededBy: parser
+    verified: false
+  B.2-R3:
+    id: B.2-R3
+    rev: 800-63b-r4
+    sectionNumber: B.2
+    ordinal: 3
+    level: SHALL
+    text: All authentication transactions SHALL perform private-key operations on the local device using
+      cryptographic keys that are generated on-device or recovered from the sync fabric.
+    textHash: b1682f837612
+    source: prose
+    seededBy: parser
+    verified: false
+  B.2-R4:
+    id: B.2-R4
+    rev: 800-63b-r4
+    sectionNumber: B.2
+    ordinal: 4
+    level: SHALL
+    text: Authentication keys stored in the sync fabric SHALL be protected by access control mechanisms
+      such that only the authenticated user can access their authentication keys in the sync fabric.
+    textHash: 507a5f6e548d
+    source: prose
+    seededBy: parser
+    verified: false
+  B.2-R5:
+    id: B.2-R5
+    rev: 800-63b-r4
+    sectionNumber: B.2
+    ordinal: 5
+    level: SHALL
+    text: User access to authentication keys in the sync fabric SHALL be protected by AAL2-equivalent
+      MFA to preserve the integrity of the authentication protocols using the synced keys.
+    textHash: a50351e82446
+    source: prose
+    seededBy: parser
+    verified: false
+  B.2-R6:
+    id: B.2-R6
+    rev: 800-63b-r4
+    sectionNumber: B.2
+    ordinal: 6
+    level: SHALL
+    text: These general requirements and any other agency-specific requirements for using syncable
+      authenticators SHALL be documented and communicated, including on public-facing websites and
+      digital service policies, where applicable.
+    textHash: fff79c5ab091
+    source: prose
+    seededBy: parser
+    verified: false
+  B.2-R7:
+    id: B.2-R7
+    rev: 800-63b-r4
+    sectionNumber: B.2
+    ordinal: 7
+    level: SHALL_NOT
+    text: Authenticators that enable the use of syncable authentication keys SHOULD provide a user
+      interface (UI) that allows subscribers to view the services for which they have created a
+      syncable authentication key, whether that key has been synced, and where that key has been
+      synced. The UI SHALL NOT expose the authentication key itself.
+    textHash: 0844a0ae10c9
+    source: prose
+    seededBy: parser
+    verified: false
+  B.2-R8:
+    id: B.2-R8
+    rev: 800-63b-r4
+    sectionNumber: B.2
+    ordinal: 8
+    level: SHALL
+    text: Federal enterprise authentication keys SHALL be stored in sync fabrics that have achieved
+      Federal Information Security Modernization Act (FISMA) [FISMA] moderate protections or
+      equivalent.
+    textHash: f61607396c75
+    source: prose
+    seededBy: parser
+    verified: false
+  B.2-R9:
+    id: B.2-R9
+    rev: 800-63b-r4
+    sectionNumber: B.2
+    ordinal: 9
+    level: SHALL
+    text: Devices (e.g., mobile phones, laptops, tablets) that generate, store, and sync authenticators
+      containing federal enterprise authentication keys SHALL be protected by mobile device
+      management software or other device configuration controls that prevent the syncing or sharing
+      of keys to unauthorized devices or sync fabrics.
+    textHash: f987be6dcb0e
+    source: prose
+    seededBy: parser
+    verified: false
+  B.2-R10:
+    id: B.2-R10
+    rev: 800-63b-r4
+    sectionNumber: B.2
+    ordinal: 10
+    level: SHALL
+    text: Access to the sync fabric SHALL be controlled by agency-managed accounts (e.g., a central
+      identity and access management solution, platform-based managed account) to maintain federal
+      enterprise control over the authentication key’s life cycle.
+    textHash: 59be1a4ce085
+    source: prose
+    seededBy: parser
+    verified: false
+  B.2-R11:
+    id: B.2-R11
+    rev: 800-63b-r4
+    sectionNumber: B.2
+    ordinal: 11
+    level: SHOULD
+    text: Authenticators that generate authentication keys SHOULD support attestation features that can
+      be used to verify the capabilities and sources of the authenticator (e.g., enterprise
+      attestation).
+    textHash: a7f1f75e2e5f
+    source: prose
+    seededBy: parser
+    verified: false
+  B.3-R1:
+    id: B.3-R1
+    rev: 800-63b-r4
+    sectionNumber: B.3
+    ordinal: 1
+    level: SHOULD
+    text: In addition to the flags specified above, agencies may wish to gain additional information on
+      the origins and capabilities of the syncable authenticators that they choose to implement and
+      accept. Within the context of WebAuthn, some authenticators support attestation features that
+      can be used to determine the capabilities and manufacturers of specific authenticators. For
+      federal enterprise use cases, agencies SHOULD implement attestation capabilities based on the
+      functionality offered by their platform providers. This would take the form of a manufacturer
+      attestation in which the RP requests identifying information about the authenticator.
+    textHash: fea9d99529da
+    source: prose
+    seededBy: parser
+    verified: false
+  B.3-R2:
+    id: B.3-R2
+    rev: 800-63b-r4
+    sectionNumber: B.3
+    ordinal: 2
+    level: SHOULD_NOT
+    text: The unavailability of attestations SHOULD NOT block the use of syncable authenticators for
+      broad public-facing applications. Due to the limited availability of attestations in consumer
+      products, requiring their use is likely to divert users to less secure authentication options
+      that are vulnerable to phishing (e.g., PSTN-based out-of-band authentication). While
+      authentication transaction metadata (e.g., the User Verified flag indicating the use of a
+      local activation factor) is available in WebAuthn responses, attestation can provide stronger
+      assurance of the characteristics of the authenticator used in a transaction. RPs SHOULD use
+      attestation to determine the level of confidence they have in a syncable authenticator when
+      attestations are available.
+    textHash: 9a8dda49082f
+    source: prose
+    seededBy: parser
+    verified: false
+  B.3-R3:
+    id: B.3-R3
+    rev: 800-63b-r4
+    sectionNumber: B.3
+    ordinal: 3
+    level: SHALL
+    text: When the RP receives flag and attestation data, the authenticator may provide information that
+      is incomplete or inconsistent with access to a resource. Agencies SHALL evaluate the use cases
+      for syncable authenticators and determine the appropriate access policy decisions that they
+      intend to make based on the returned information.
+    textHash: 6c868ff9a41e
+    source: prose
+    seededBy: parser
+    verified: false
+  B.5-R1:
+    id: B.5-R1
+    rev: 800-63b-r4
+    sectionNumber: B.5
+    ordinal: 1
+    level: SHOULD
+    text: If the subscriber provides their own authenticator, the verifier may have limited visibility
+      into the features and capabilities of the sync fabric and the devices to which the user may
+      sync their authentication keys. In this scenario, the verifier SHOULD leverage additional risk
+      indicators or trust signals that may be available from the transaction, device, or sync fabric
+      to increase confidence in the authentication event.
+    textHash: dd8d057eba5e
+    source: prose
+    seededBy: parser
+    verified: false

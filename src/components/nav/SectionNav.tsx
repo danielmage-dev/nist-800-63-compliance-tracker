@@ -31,10 +31,12 @@ function NavItem({
   section,
   rollups,
   activeNumber,
+  rev,
 }: {
   section: NavSection;
   rollups: Map<string, Rollup>;
   activeNumber?: string;
+  rev: string;
 }) {
   const roll = rollups.get(section.number);
   const isAncestorOfActive =
@@ -45,7 +47,7 @@ function NavItem({
   return (
     <li>
       <NavLink
-        to={`/section/${encodeURIComponent(section.number)}`}
+        to={`/rev/${encodeURIComponent(rev)}/section/${encodeURIComponent(section.number)}`}
         className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}
         end
       >
@@ -60,7 +62,7 @@ function NavItem({
       {showChildren && (
         <ul>
           {section.children.map((c) => (
-            <NavItem key={c.number} section={c} rollups={rollups} activeNumber={activeNumber} />
+            <NavItem key={c.number} section={c} rollups={rollups} activeNumber={activeNumber} rev={rev} />
           ))}
         </ul>
       )}
@@ -68,10 +70,18 @@ function NavItem({
   );
 }
 
-export default function SectionNav() {
+export default function SectionNav({ rev }: { rev: string }) {
   const { number } = useParams();
-  const sectionsQ = useQuery({ queryKey: ['sections'], queryFn: api.sections });
-  const reqsQ = useQuery({ queryKey: ['requirements'], queryFn: api.requirements });
+  const sectionsQ = useQuery({
+    queryKey: ['sections', rev],
+    queryFn: () => api.sections(rev),
+    enabled: !!rev,
+  });
+  const reqsQ = useQuery({
+    queryKey: ['requirements', rev],
+    queryFn: () => api.requirements(rev),
+    enabled: !!rev,
+  });
   const rollups = useMemo(
     () => buildRollups(reqsQ.data ?? []),
     [reqsQ.data],
@@ -84,7 +94,7 @@ export default function SectionNav() {
     <div className="section-nav">
       <ul>
         {sectionsQ.data.sections.map((s) => (
-          <NavItem key={s.number} section={s} rollups={rollups} activeNumber={number} />
+          <NavItem key={s.number} section={s} rollups={rollups} activeNumber={number} rev={rev} />
         ))}
       </ul>
     </div>

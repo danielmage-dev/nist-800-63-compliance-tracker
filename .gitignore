@@ -20,3 +20,29 @@ npm-debug.log*
 # OS cruft
 .DS_Store
 Thumbs.db
+
+# ---------------------------------------------------------------------------
+# User-generated / local-only data (never committed).
+#
+# The repo ships the SKELETON: the vendored NIST spec HTML and the
+# deterministic parser output (spec.json + requirements/*.yaml, seededBy:parser)
+# under data/spec/<revKey>/, plus data/revisions.json. Everything below is
+# produced by using the tool and stays local to each operator.
+# ---------------------------------------------------------------------------
+
+# Compliance work: statuses, notes, mappings, verifications (seededBy human/claude)
+data/assessments/
+
+# Agentic run artifacts: discovery transcripts + audit logs (contain identity-idp
+# source excerpts — must not be pushed)
+data/reviews/
+
+# Operator-authored Layer B candidate inputs (reqId -> candidate files)
+data/candidates/
+
+# Additional spec revisions/documents a user imports locally are user data too;
+# only the shipped baseline revision(s) are committed explicitly (see below).
+
+# Local OpenCode config (provided by the sbx usai-provider kit at runtime;
+# a project-level copy is not part of the app)
+opencode.jsonc

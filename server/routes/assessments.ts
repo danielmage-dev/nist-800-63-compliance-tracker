@@ -2,18 +2,24 @@ import { Router } from 'express';
 import { getAssessment, putAssessment } from '../lib/store.ts';
 import type { Assessment, FileRef, Status } from '../../src/types.ts';
 
-export const assessmentsRouter = Router();
+export const assessmentsRouter = Router({ mergeParams: true });
 
 const STATUSES: Status[] = [
   'compliant', 'partial', 'gap', 'not-assessed', 'not-applicable',
 ];
 
-assessmentsRouter.get('/assessments/:reqId', (req, res) => {
-  res.json(getAssessment(req.params.reqId));
+assessmentsRouter.get('/assessments/:reqId', (req, res, next) => {
+  try {
+    const { rev, reqId } = req.params as { rev: string; reqId: string };
+    res.json(getAssessment(rev, reqId));
+  } catch (err) {
+    next(err);
+  }
 });
 
 assessmentsRouter.put('/assessments/:reqId', async (req, res, next) => {
   try {
+    const { rev, reqId } = req.params as { rev: string; reqId: string };
     const body = req.body as Partial<Assessment>;
     if (body.status && !STATUSES.includes(body.status)) {
       return res.status(400).json({ error: `Invalid status: ${body.status}` });
@@ -27,9 +33,10 @@ assessmentsRouter.put('/assessments/:reqId', async (req, res, next) => {
           ...(r.note ? { note: String(r.note) } : {}),
         }))
       : [];
-    const current = getAssessment(req.params.reqId);
-    const saved = await putAssessment({
-      reqId: req.params.reqId,
+    const current = getAssessment(rev, reqId);
+    const saved = await putAssessment(rev, {
+      reqId,
+      rev,
       status: body.status ?? current.status,
       notes: body.notes ?? current.notes,
       refs,

@@ -5,15 +5,15 @@ import YAML from 'yaml';
 import type {
   Assessment,
   ChapterAssessments,
+  ChapterRequirements,
+  FileRef,
   Requirement,
   RequirementWithStatus,
   SpecSection,
 } from '../../src/types.ts';
+import { hasRevision } from './revisions.ts';
 
 const ROOT = process.cwd();
-const SPEC_PATH = path.join(ROOT, 'data/spec/spec.json');
-const REQS_PATH = path.join(ROOT, 'data/spec/requirements.json');
-const ASSESS_DIR = path.join(ROOT, 'data/assessments');
 
 interface SpecFile {
   source: string;
@@ -21,56 +21,107 @@ interface SpecFile {
   sections: SpecSection[];
 }
 
-export const spec: SpecFile = JSON.parse(readFileSync(SPEC_PATH, 'utf8'));
-export const requirements: Requirement[] = JSON.parse(readFileSync(REQS_PATH, 'utf8'));
+interface RevStore {
+  spec: SpecFile;
+  requirements: Requirement[];
+  requirementById: Map<string, Requirement>;
+  /** chapter number -> { filePath, data } */
+  chapters: Map<string, { filePath: string; data: ChapterAssessments }>;
+  assessmentsFingerprint: string;
+}
 
-const requirementById = new Map(requirements.map((r) => [r.id, r]));
+const stores = new Map<string, RevStore>();
 
-// chapter number -> { filePath, data }
-const chapters = new Map<string, { filePath: string; data: ChapterAssessments }>();
-
-let loadedFingerprint = '';
+function specPath(rev: string): string {
+  return path.join(ROOT, 'data/spec', rev, 'spec.json');
+}
+function reqDir(rev: string): string {
+  return path.join(ROOT, 'data/spec', rev, 'requirements');
+}
+function assessDir(rev: string): string {
+  return path.join(ROOT, 'data/assessments', rev);
+}
 
 /** mtime+size of every assessment file, so out-of-band edits (seed scripts,
  *  hand edits, git checkouts) are picked up without restarting the server */
-function fingerprint(): string {
-  if (!existsSync(ASSESS_DIR)) return '';
-  return readdirSync(ASSESS_DIR)
+function assessmentsFingerprint(rev: string): string {
+  const dir = assessDir(rev);
+  if (!existsSync(dir)) return '';
+  return readdirSync(dir)
     .filter((f) => f.endsWith('.yaml'))
     .sort()
     .map((f) => {
-      const s = statSync(path.join(ASSESS_DIR, f));
+      const s = statSync(path.join(dir, f));
       return `${f}:${s.mtimeMs}:${s.size}`;
     })
     .join('|');
 }
 
-export function loadAssessments(): void {
-  chapters.clear();
-  if (!existsSync(ASSESS_DIR)) mkdirSync(ASSESS_DIR, { recursive: true });
-  for (const file of readdirSync(ASSESS_DIR).filter((f) => f.endsWith('.yaml'))) {
-    const filePath = path.join(ASSESS_DIR, file);
+function loadRequirements(rev: string): Requirement[] {
+  const dir = reqDir(rev);
+  if (!existsSync(dir)) return [];
+  const out: Requirement[] = [];
+  for (const file of readdirSync(dir).filter((f) => f.endsWith('.yaml'))) {
+    const data = YAML.parse(readFileSync(path.join(dir, file), 'utf8')) as ChapterRequirements;
+    if (!data?.chapter || typeof data.requirements !== 'object') {
+      throw new Error(`Malformed requirements file: ${path.join(dir, file)}`);
+    }
+    out.push(...Object.values(data.requirements));
+  }
+  out.sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }));
+  return out;
+}
+
+function loadAssessmentsInto(rev: string, store: RevStore): void {
+  store.chapters.clear();
+  const dir = assessDir(rev);
+  if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
+  for (const file of readdirSync(dir).filter((f) => f.endsWith('.yaml'))) {
+    const filePath = path.join(dir, file);
     const data = YAML.parse(readFileSync(filePath, 'utf8')) as ChapterAssessments;
     if (!data?.chapter || typeof data.assessments !== 'object') {
       throw new Error(`Malformed assessment file: ${filePath}`);
     }
-    chapters.set(String(data.chapter), { filePath, data });
+    store.chapters.set(String(data.chapter), { filePath, data });
   }
-  loadedFingerprint = fingerprint();
+  store.assessmentsFingerprint = assessmentsFingerprint(rev);
 }
 
-export function refreshIfStale(): void {
-  if (fingerprint() !== loadedFingerprint) loadAssessments();
+function buildStore(rev: string): RevStore {
+  const spec: SpecFile = JSON.parse(readFileSync(specPath(rev), 'utf8'));
+  const requirements = loadRequirements(rev);
+  const store: RevStore = {
+    spec,
+    requirements,
+    requirementById: new Map(requirements.map((r) => [r.id, r])),
+    chapters: new Map(),
+    assessmentsFingerprint: '',
+  };
+  loadAssessmentsInto(rev, store);
+  return store;
 }
 
-loadAssessments();
+/** Get (and lazily build) the store for a revision. Refreshes assessments if stale. */
+function getStore(rev: string): RevStore {
+  if (!hasRevision(rev)) {
+    throw Object.assign(new Error(`Unknown revision: ${rev}`), { status: 404 });
+  }
+  let store = stores.get(rev);
+  if (!store) {
+    store = buildStore(rev);
+    stores.set(rev, store);
+  } else if (assessmentsFingerprint(rev) !== store.assessmentsFingerprint) {
+    loadAssessmentsInto(rev, store);
+  }
+  return store;
+}
 
 export function chapterOf(reqId: string): string {
   return reqId.split('.')[0].split('-')[0];
 }
 
-function slugForChapter(chapter: string): string {
-  const section = spec.sections.find((s) => s.number === chapter);
+function slugForChapter(store: RevStore, chapter: string): string {
+  const section = store.spec.sections.find((s) => s.number === chapter);
   const title = section
     ? section.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
     : 'misc';
@@ -78,11 +129,12 @@ function slugForChapter(chapter: string): string {
   return `${prefix}-${title}`;
 }
 
-function readAssessment(reqId: string): Assessment {
-  const entry = chapters.get(chapterOf(reqId))?.data.assessments[reqId];
+function readAssessment(store: RevStore, rev: string, reqId: string): Assessment {
+  const entry = store.chapters.get(chapterOf(reqId))?.data.assessments[reqId];
   return (
     entry ?? {
       reqId,
+      rev,
       status: 'not-assessed',
       notes: '',
       refs: [],
@@ -92,32 +144,70 @@ function readAssessment(reqId: string): Assessment {
   );
 }
 
-export function getAssessment(reqId: string): Assessment {
-  refreshIfStale();
-  return readAssessment(reqId);
+export function getSpec(rev: string): SpecFile {
+  return getStore(rev).spec;
 }
 
-export async function putAssessment(assessment: Assessment): Promise<Assessment> {
+export function getAssessment(rev: string, reqId: string): Assessment {
+  return readAssessment(getStore(rev), rev, reqId);
+}
+
+export async function putAssessment(rev: string, assessment: Assessment): Promise<Assessment> {
+  const store = getStore(rev);
   const reqId = assessment.reqId;
-  if (!requirementById.has(reqId)) {
+  if (!store.requirementById.has(reqId)) {
     throw Object.assign(new Error(`Unknown requirement: ${reqId}`), { status: 404 });
   }
   const chapter = chapterOf(reqId);
-  let entry = chapters.get(chapter);
+  let entry = store.chapters.get(chapter);
   if (!entry) {
-    const filePath = path.join(ASSESS_DIR, `${slugForChapter(chapter)}.yaml`);
-    entry = { filePath, data: { chapter, assessments: {} } };
-    chapters.set(chapter, entry);
+    const filePath = path.join(assessDir(rev), `${slugForChapter(store, chapter)}.yaml`);
+    entry = { filePath, data: { chapter, rev, assessments: {} } };
+    store.chapters.set(chapter, entry);
   }
-  entry.data.assessments[reqId] = assessment;
-  await writeChapter(entry);
-  return assessment;
+  entry.data.assessments[reqId] = { ...assessment, rev };
+  await writeChapter(rev, entry);
+  return entry.data.assessments[reqId];
 }
 
-async function writeChapter(entry: { filePath: string; data: ChapterAssessments }) {
+/** True if a record is locked against AI overwrite (human-verified or authored). */
+export function isAssessmentLocked(rev: string, reqId: string): boolean {
+  const a = getStore(rev).chapters.get(chapterOf(reqId))?.data.assessments[reqId];
+  return !!a && (a.verified || a.seededBy === 'human');
+}
+
+/**
+ * Write an AI-authored (agentic discovery) proposal, enforcing the provenance
+ * human-lock: refuses if the existing record is verified or human-authored.
+ * Always stamps seededBy:'claude', verified:false. Returns 'locked' (writes
+ * nothing) or the saved Assessment.
+ */
+export async function proposeAssessment(
+  rev: string,
+  reqId: string,
+  patch: { status: Assessment['status']; notes: string; refs: FileRef[] },
+): Promise<Assessment | 'locked'> {
+  if (isAssessmentLocked(rev, reqId)) return 'locked';
+  return putAssessment(rev, {
+    reqId,
+    rev,
+    status: patch.status,
+    notes: patch.notes,
+    refs: patch.refs,
+    verified: false,
+    seededBy: 'claude',
+    updatedAt: new Date().toISOString(),
+  });
+}
+
+async function writeChapter(
+  rev: string,
+  entry: { filePath: string; data: ChapterAssessments },
+) {
   // Stable key order for reviewable diffs
   const sorted: ChapterAssessments = {
     chapter: entry.data.chapter,
+    rev,
     assessments: Object.fromEntries(
       Object.entries(entry.data.assessments).sort(([a], [b]) =>
         a.localeCompare(b, undefined, { numeric: true }),
@@ -130,21 +220,67 @@ async function writeChapter(entry: { filePath: string; data: ChapterAssessments 
   await rename(tmp, entry.filePath);
 }
 
-export function requirementsWithStatus(): RequirementWithStatus[] {
-  refreshIfStale();
-  return requirements.map((r) => {
-    const a = readAssessment(r.id);
+export function getRequirements(rev: string): Requirement[] {
+  return getStore(rev).requirements;
+}
+
+/**
+ * Set a requirement's own provenance (verify/unverify its extraction). This
+ * writes to the per-chapter requirements YAML. Verifying stamps seededBy:'human'
+ * so the record is thereafter protected from Layer A overwrite; unverifying
+ * leaves seededBy as-is. Returns the updated requirement.
+ */
+export async function setRequirementVerified(
+  rev: string,
+  reqId: string,
+  verified: boolean,
+): Promise<Requirement> {
+  const store = getStore(rev);
+  const dir = reqDir(rev);
+  const chapter = chapterOf(reqId);
+  // Find the chapter file that contains this requirement.
+  for (const file of readdirSync(dir).filter((f) => f.endsWith('.yaml'))) {
+    const filePath = path.join(dir, file);
+    const data = YAML.parse(readFileSync(filePath, 'utf8')) as ChapterRequirements;
+    if (String(data.chapter) !== chapter || !data.requirements[reqId]) continue;
+    const req = data.requirements[reqId];
+    req.verified = verified;
+    if (verified) req.seededBy = 'human';
+    const sorted: ChapterRequirements = {
+      chapter: data.chapter,
+      rev,
+      requirements: Object.fromEntries(
+        Object.entries(data.requirements).sort(([a], [b]) =>
+          a.localeCompare(b, undefined, { numeric: true }),
+        ),
+      ),
+    };
+    const tmp = filePath + '.tmp';
+    await writeFile(tmp, YAML.stringify(sorted, { lineWidth: 100 }));
+    await rename(tmp, filePath);
+    // Refresh the in-memory store so subsequent reads see the change.
+    const rebuilt = buildStore(rev);
+    stores.set(rev, rebuilt);
+    return rebuilt.requirementById.get(reqId)!;
+  }
+  throw Object.assign(new Error(`Unknown requirement: ${reqId}`), { status: 404 });
+}
+
+export function requirementsWithStatus(rev: string): RequirementWithStatus[] {
+  const store = getStore(rev);
+  return store.requirements.map((r) => {
+    const a = readAssessment(store, rev, r.id);
     return {
       ...r,
       status: a.status,
-      verified: a.verified,
-      ...(a.seededBy ? { seededBy: a.seededBy } : {}),
+      assessed: a.verified,
+      ...(a.seededBy ? { assessmentSeededBy: a.seededBy } : {}),
       refCount: a.refs.length,
     };
   });
 }
 
-export function findSection(number: string): SpecSection | null {
+export function findSection(rev: string, number: string): SpecSection | null {
   const walk = (secs: SpecSection[]): SpecSection | null => {
     for (const s of secs) {
       if (s.number === number) return s;
@@ -153,5 +289,5 @@ export function findSection(number: string): SpecSection | null {
     }
     return null;
   };
-  return walk(spec.sections);
+  return walk(getStore(rev).spec.sections);
 }

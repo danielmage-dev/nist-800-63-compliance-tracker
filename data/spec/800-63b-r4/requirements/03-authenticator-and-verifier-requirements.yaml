@@ -1,0 +1,2122 @@
+chapter: "3"
+rev: 800-63b-r4
+requirements:
+  3-R1:
+    id: 3-R1
+    rev: 800-63b-r4
+    sectionNumber: "3"
+    ordinal: 1
+    level: SHOULD_NOT
+    text: In many circumstances, subscribers need to share devices that are used in authentication
+      processes, such as a family phone that receives OTPs. In public-facing applications, CSPs
+      SHOULD NOT prevent a device from being registered as an authenticator by multiple subscribers.
+      However, they MAY establish restrictions to prevent large-scale fraud or misuse (e.g.,
+      limiting the total number of subscriber accounts a single device can be registered with).
+    textHash: 3a9ec715dd72
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.1.1-R1:
+    id: 3.1.1.1-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.1.1.1
+    ordinal: 1
+    level: SHALL
+    text: Passwords SHALL either be chosen by the subscriber or assigned randomly by the CSP.
+    textHash: b1f2180fc34b
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.1.1-R2:
+    id: 3.1.1.1-R2
+    rev: 800-63b-r4
+    sectionNumber: 3.1.1.1
+    ordinal: 2
+    level: SHALL_NOT
+    text: If the CSP disallows a chosen password because it is on a blocklist of commonly used,
+      expected, or compromised values (see Sec. 3.1.1.2), the subscriber SHALL be required to choose
+      a different password. Other composition requirements for passwords SHALL NOT be imposed. A
+      rationale for this is presented in Appendix A, Strength of Passwords.
+    textHash: 5ead69173222
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.1.2-R1:
+    id: 3.1.1.2-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.1.1.2
+    ordinal: 1
+    level: SHALL
+    text: Verifiers and CSPs SHALL require passwords that are used as a single-factor authentication
+      mechanism to be a minimum of 15 characters in length. Verifiers and CSPs MAY allow passwords
+      that are only used as part of multi-factor authentication processes to be shorter but SHALL
+      require them to be a minimum of eight characters in length.
+    textHash: df97e64ce4fb
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.1.2-R2:
+    id: 3.1.1.2-R2
+    rev: 800-63b-r4
+    sectionNumber: 3.1.1.2
+    ordinal: 2
+    level: SHOULD
+    text: Verifiers and CSPs SHOULD permit a maximum password length of at least 64 characters.
+    textHash: 17f39df400d2
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.1.2-R3:
+    id: 3.1.1.2-R3
+    rev: 800-63b-r4
+    sectionNumber: 3.1.1.2
+    ordinal: 3
+    level: SHOULD
+    text: Verifiers and CSPs SHOULD accept all printing ASCII [RFC20] characters and the space character
+      in passwords.
+    textHash: 4cc5dc76d5c8
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.1.2-R4:
+    id: 3.1.1.2-R4
+    rev: 800-63b-r4
+    sectionNumber: 3.1.1.2
+    ordinal: 4
+    level: SHALL
+    text: Verifiers and CSPs SHOULD accept Unicode [ISO/ISC 10646] characters in passwords. Each Unicode
+      code point SHALL be counted as a single character when evaluating password length.
+    textHash: ae6b34411a68
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.1.2-R5:
+    id: 3.1.1.2-R5
+    rev: 800-63b-r4
+    sectionNumber: 3.1.1.2
+    ordinal: 5
+    level: SHALL_NOT
+    text: Verifiers and CSPs SHALL NOT impose other composition rules (e.g., requiring mixtures of
+      different character types) for passwords.
+    textHash: 9b01efdb5b69
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.1.2-R6:
+    id: 3.1.1.2-R6
+    rev: 800-63b-r4
+    sectionNumber: 3.1.1.2
+    ordinal: 6
+    level: SHALL_NOT
+    text: Verifiers and CSPs SHALL NOT require subscribers to change passwords periodically. However,
+      verifiers SHALL force a change if there is evidence that the authenticator has been
+      compromised.
+    textHash: 9da5cb53f249
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.1.2-R7:
+    id: 3.1.1.2-R7
+    rev: 800-63b-r4
+    sectionNumber: 3.1.1.2
+    ordinal: 7
+    level: SHALL_NOT
+    text: Verifiers and CSPs SHALL NOT permit the subscriber to store a hint (e.g., a reminder of how
+      the password was created) that is accessible to an unauthenticated claimant.
+    textHash: 507d9594a202
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.1.2-R8:
+    id: 3.1.1.2-R8
+    rev: 800-63b-r4
+    sectionNumber: 3.1.1.2
+    ordinal: 8
+    level: SHALL_NOT
+    text: Verifiers and CSPs SHALL NOT prompt subscribers to use knowledge-based authentication (KBA)
+      (e.g., “What was the name of your first pet?”) or security questions when choosing passwords.
+    textHash: 04ccb98074ac
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.1.2-R9:
+    id: 3.1.1.2-R9
+    rev: 800-63b-r4
+    sectionNumber: 3.1.1.2
+    ordinal: 9
+    level: SHALL
+    text: Verifiers SHALL request the password to be provided in full (not a subset of it) and SHALL
+      verify the entire submitted password (e.g., not truncate it).
+    textHash: 17450ea70e2b
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.1.2-R10:
+    id: 3.1.1.2-R10
+    rev: 800-63b-r4
+    sectionNumber: 3.1.1.2
+    ordinal: 10
+    level: SHOULD
+    text: If Unicode characters are accepted in passwords, the verifier SHOULD apply the normalization
+      process for stabilized strings using the Normalization Form Canonical Composition (NFC)
+      normalization defined in Sec. 12.1 of Unicode Normalization Forms [UAX15]. This process is
+      applied before hashing the byte string that represents the password. Subscribers choosing
+      passwords that contain Unicode characters SHOULD be advised that some endpoints may represent
+      some characters differently, which would affect their ability to authenticate successfully.
+    textHash: 7ed016b894ae
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.1.2-R11:
+    id: 3.1.1.2-R11
+    rev: 800-63b-r4
+    sectionNumber: 3.1.1.2
+    ordinal: 11
+    level: SHALL
+    text: Passwords obtained from previous breach corpuses
+    textHash: 616d2f446908
+    context: "When processing a request to establish or change a password, verifiers SHALL compare the
+      prospective secret against a blocklist that contains known commonly used, expected, or
+      compromised passwords. The entire password SHALL be subject to comparison, not substrings or
+      words that might be contained therein. For example, the list may include:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.1.2-R12:
+    id: 3.1.1.2-R12
+    rev: 800-63b-r4
+    sectionNumber: 3.1.1.2
+    ordinal: 12
+    level: SHALL
+    text: Dictionary words
+    textHash: 141901b0727a
+    context: "When processing a request to establish or change a password, verifiers SHALL compare the
+      prospective secret against a blocklist that contains known commonly used, expected, or
+      compromised passwords. The entire password SHALL be subject to comparison, not substrings or
+      words that might be contained therein. For example, the list may include:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.1.2-R13:
+    id: 3.1.1.2-R13
+    rev: 800-63b-r4
+    sectionNumber: 3.1.1.2
+    ordinal: 13
+    level: SHALL
+    text: Context-specific words, such as the name of the service, the username, and derivatives thereof
+    textHash: 0b8b3de6758a
+    context: "When processing a request to establish or change a password, verifiers SHALL compare the
+      prospective secret against a blocklist that contains known commonly used, expected, or
+      compromised passwords. The entire password SHALL be subject to comparison, not substrings or
+      words that might be contained therein. For example, the list may include:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.1.2-R14:
+    id: 3.1.1.2-R14
+    rev: 800-63b-r4
+    sectionNumber: 3.1.1.2
+    ordinal: 14
+    level: SHALL
+    text: If the chosen password is found on the blocklist, the CSP SHALL require the subscriber to
+      select a different secret and SHALL provide the reason for rejection. Since the blocklist is
+      used to defend against brute-force attacks and unsuccessful attempts are rate-limited, the
+      blocklist SHOULD be of sufficient size to prevent subscribers from choosing passwords that
+      attackers are likely to guess before reaching the attempt limit.
+    textHash: f78c61111eda
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.1.2-R15:
+    id: 3.1.1.2-R15
+    rev: 800-63b-r4
+    sectionNumber: 3.1.1.2
+    ordinal: 15
+    level: SHALL
+    text: Verifiers SHALL offer guidance to the subscriber to help the subscriber choose a strong
+      password. This is particularly important following the rejection of a password on the
+      blocklist as it discourages trivial modifications of listed weak passwords [Blocklists].
+    textHash: 9aeeed8cb9a3
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.1.2-R16:
+    id: 3.1.1.2-R16
+    rev: 800-63b-r4
+    sectionNumber: 3.1.1.2
+    ordinal: 16
+    level: SHALL
+    text: Verifiers SHALL implement a rate-limiting mechanism that effectively limits the number of
+      failed authentication attempts that can be made on the subscriber account, as described in
+      Sec. 3.2.2.
+    textHash: 6560899f3460
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.1.2-R17:
+    id: 3.1.1.2-R17
+    rev: 800-63b-r4
+    sectionNumber: 3.1.1.2
+    ordinal: 17
+    level: SHALL
+    text: Verifiers SHALL allow the use of password managers and autofill functionality. Verifiers
+      SHOULD permit claimants to use the “paste” function when entering a password to facilitate
+      password manager use when password autofill APIs are unavailable. Password managers have been
+      shown to increase the likelihood that subscribers will choose stronger passwords, particularly
+      if the password managers include password generators [Managers].
+    textHash: 00bd60974830
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.1.2-R18:
+    id: 3.1.1.2-R18
+    rev: 800-63b-r4
+    sectionNumber: 3.1.1.2
+    ordinal: 18
+    level: SHOULD
+    text: To help the claimant successfully enter a password, the verifier SHOULD offer an option to
+      display the password — rather than a series of dots or asterisks — while it is entered and
+      until it is submitted to the verifier. This allows the claimant to confirm their entry if they
+      are in a location where their screen is unlikely to be observed. The verifier MAY also permit
+      the claimant’s device to display individual entered characters for a short time after each
+      character is typed to verify the correct entry. This is common on mobile devices.
+    textHash: ff7a9e6ab684
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.1.2-R19:
+    id: 3.1.1.2-R19
+    rev: 800-63b-r4
+    sectionNumber: 3.1.1.2
+    ordinal: 19
+    level: MAY
+    text: Verifiers MAY make limited allowances for mistyping (e.g., removing leading and trailing
+      whitespace characters before verification, allowing the verification of passwords with
+      differing cases for the leading character) if the password remains at least the required
+      minimum length after such processing and the complexity of the resulting password is not
+      significantly reduced.
+    textHash: 4c4e452c8c53
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.1.2-R20:
+    id: 3.1.1.2-R20
+    rev: 800-63b-r4
+    sectionNumber: 3.1.1.2
+    ordinal: 20
+    level: SHALL
+    text: Verifiers and CSPs SHALL use approved encryption and an authenticated protected channel when
+      requesting passwords.
+    textHash: b665d6183b87
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.1.2-R21:
+    id: 3.1.1.2-R21
+    rev: 800-63b-r4
+    sectionNumber: 3.1.1.2
+    ordinal: 21
+    level: SHALL
+    text: Verifiers SHALL store passwords in a form that is resistant to offline attacks. Passwords
+      SHALL be salted and hashed using a suitable password hashing scheme. Password hashing schemes
+      take a password, a salt, and a cost factor as inputs and generate a password hash. Their
+      purpose is to make each password guess more expensive for an attacker who has obtained a
+      hashed password file, thereby making the cost of a guessing attack high or prohibitive. The
+      chosen cost factor SHOULD be as high as practical without negatively impacting verifier
+      performance. It SHOULD be increased over time to account for increases in computing
+      performance. An approved password hashing scheme published in the latest revision of
+      [SP800-132] or updated NIST guidelines on password hashing schemes SHOULD be used. The chosen
+      output length of the password verifier, excluding the salt and versioning information, SHOULD
+      be the same as the length of the underlying password hashing scheme output.
+    textHash: f287203a4757
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.1.2-R22:
+    id: 3.1.1.2-R22
+    rev: 800-63b-r4
+    sectionNumber: 3.1.1.2
+    ordinal: 22
+    level: SHALL
+    text: The salt SHALL be at least 32 bits in length and chosen to minimize salt value collisions
+      among stored hashes (i.e., to prevent multiple subscriber accounts from having the same hashed
+      password). Both the salt value and the resulting hash SHALL be stored for each password. A
+      reference to the password hashing scheme used, including the cost factor, SHOULD be stored for
+      each password to allow migration to new algorithms and work factors.
+    textHash: 5cf568ab5cc3
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.1.2-R23:
+    id: 3.1.1.2-R23
+    rev: 800-63b-r4
+    sectionNumber: 3.1.1.2
+    ordinal: 23
+    level: SHALL
+    text: In addition, verifiers SHOULD perform an additional iteration of a keyed hashing or encryption
+      operation using a secret key known only to the verifier. If used, this key value SHALL be
+      generated by an approved random bit generator, as described in Sec. 3.2.12. The secret key
+      value SHALL be stored separately from the hashed passwords. It SHOULD be stored and used
+      within a hardware-protected area, such as a hardware security module or trusted execution
+      environment (TEE), such as a trusted platform module (TPM). With this additional iteration,
+      brute-force attacks on the hashed passwords are impractical as long as the secret key value
+      remains secret.
+    textHash: 0e6f53b31cee
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.2.1-R1:
+    id: 3.1.2.1-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.1.2.1
+    ordinal: 1
+    level: SHALL
+    text: CSPs that create look-up secret authenticators SHALL use an approved random bit generator, as
+      described in Sec. 3.2.12, to generate the list of secrets and SHALL deliver the authenticator
+      list securely to the subscriber (e.g., in an in-person session, via an online session, through
+      the postal mail to a contact address). If delivered via an online session, the session SHALL
+      be authenticated by the subscriber at AAL2 or higher and SHALL deliver the secrets through an
+      authenticated protected channel and in accordance with the post-enrollment binding
+      requirements in Sec. 4.1.2. Look-up secrets SHALL be at least six decimal digits (or
+      equivalent) in length. Additional requirements described in Sec. 3.1.2.2 may also apply,
+      depending on their length.
+    textHash: f76e0d8f73f9
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.2.2-R1:
+    id: 3.1.2.2-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.1.2.2
+    ordinal: 1
+    level: SHALL
+    text: Verifiers of look-up secrets SHALL prompt the claimant for a secret from their authenticator.
+      A secret from a look-up secret authenticator SHALL be used successfully only once. If the
+      look-up secret is derived from a grid card, each grid cell SHOULD be used only once, which
+      limits the number of authentications that can be accomplished using look-up secrets. A very
+      long list of secrets is potentially required.
+    textHash: 5b9644d9add5
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.2.2-R2:
+    id: 3.1.2.2-R2
+    rev: 800-63b-r4
+    sectionNumber: 3.1.2.2
+    ordinal: 2
+    level: SHALL
+    text: Verifiers SHALL store look-up secrets in a form that is resistant to offline attacks. All
+      look-up secrets SHALL be stored in a hashed form using an approved hashing function.
+    textHash: 0b528225aba0
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.2.2-R3:
+    id: 3.1.2.2-R3
+    rev: 800-63b-r4
+    sectionNumber: 3.1.2.2
+    ordinal: 3
+    level: SHALL
+    text: Look-up secrets that are shorter than the minimum security strength specified in the latest
+      revision of [SP800-131A] (i.e., 112 bits as of the date of this publication) SHALL be stored
+      in a salted and hashed form using a suitable password hashing scheme, as described in Sec.
+      3.1.1.2. The salt value SHALL be at least 32 bits in length and arbitrarily chosen to minimize
+      salt value collisions among stored hashes. Both the salt value and the resulting hash SHALL be
+      stored for each look-up secret.
+    textHash: 0809a6cf00c6
+    context: "Look-up secrets SHALL be at least six decimal digits (or equivalent) in length, as
+      specified in Sec. 3.1.2.1. Look-up secrets that are shorter than specified lengths have
+      additional verification requirements as follows:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.2.2-R4:
+    id: 3.1.2.2-R4
+    rev: 800-63b-r4
+    sectionNumber: 3.1.2.2
+    ordinal: 4
+    level: SHALL
+    text: The verifier SHALL implement a rate-limiting mechanism that effectively limits the number of
+      failed authentication attempts that can be made on the subscriber account, as described in
+      Sec. 3.2.2.
+    textHash: 35d3df4d59c8
+    context: "Look-up secrets SHALL be at least six decimal digits (or equivalent) in length, as
+      specified in Sec. 3.1.2.1. Look-up secrets that are shorter than specified lengths have
+      additional verification requirements as follows:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.2.2-R5:
+    id: 3.1.2.2-R5
+    rev: 800-63b-r4
+    sectionNumber: 3.1.2.2
+    ordinal: 5
+    level: SHALL
+    text: The verifier SHALL use approved encryption and an authenticated protected channel when
+      requesting look-up secrets.
+    textHash: f4cb99b104ac
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.3.1-R1:
+    id: 3.1.3.1-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.1.3.1
+    ordinal: 1
+    level: SHALL
+    text: The out-of-band authenticator SHALL establish a separate channel with the verifier to retrieve
+      the out-of-band secret or authentication request. This channel is considered to be out-of-band
+      with respect to the primary communication channel (even if it terminates on the same device),
+      provided that the device does not leak information from one channel to the other without the
+      claimant’s participation.
+    textHash: 4cba1e473b40
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.3.1-R2:
+    id: 3.1.3.1-R2
+    rev: 800-63b-r4
+    sectionNumber: 3.1.3.1
+    ordinal: 2
+    level: SHALL
+    text: The out-of-band device SHOULD be uniquely addressable by the verifier. Communication over the
+      secondary channel SHALL use approved encryption unless sent via the public switched telephone
+      network (PSTN). For additional authenticator requirements that are specific to using the PSTN
+      for out-of-band authentication, see Sec. 3.1.3.3.
+    textHash: dbb644b0ba82
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.3.1-R3:
+    id: 3.1.3.1-R3
+    rev: 800-63b-r4
+    sectionNumber: 3.1.3.1
+    ordinal: 3
+    level: SHALL_NOT
+    text: Access using only a password
+    textHash: 0ad2ff799d1b
+    context: "Email SHALL NOT be used for out-of-band authentication because it may be vulnerable to:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.3.1-R4:
+    id: 3.1.3.1-R4
+    rev: 800-63b-r4
+    sectionNumber: 3.1.3.1
+    ordinal: 4
+    level: SHALL_NOT
+    text: Interception in transit or at intermediate mail servers
+    textHash: c81feb2dcbf4
+    context: "Email SHALL NOT be used for out-of-band authentication because it may be vulnerable to:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.3.1-R5:
+    id: 3.1.3.1-R5
+    rev: 800-63b-r4
+    sectionNumber: 3.1.3.1
+    ordinal: 5
+    level: SHALL_NOT
+    text: Rerouting attacks, such as those caused by Domain Name System (DNS) spoofing
+    textHash: ade3a1d731f4
+    context: "Email SHALL NOT be used for out-of-band authentication because it may be vulnerable to:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.3.1-R6:
+    id: 3.1.3.1-R6
+    rev: 800-63b-r4
+    sectionNumber: 3.1.3.1
+    ordinal: 6
+    level: SHALL
+    text: Using approved cryptography, establish a mutually authenticated protected channel (e.g.,
+      client-authenticated transport layer security (TLS) [RFC8446]) with the verifier.
+      Communication between the out-of-band authenticator and the verifier MAY use a trusted
+      intermediary service to which each authenticates. The key used to establish the channel SHALL
+      be provisioned in a mutually authenticated session during authenticator binding, as described
+      in Sec. 4.1.
+    textHash: 2070cbb8153f
+    context: "The out-of-band authenticator SHALL uniquely authenticate itself in one of the following
+      ways when communicating with the verifier:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.3.1-R7:
+    id: 3.1.3.1-R7
+    rev: 800-63b-r4
+    sectionNumber: 3.1.3.1
+    ordinal: 7
+    level: SHALL
+    text: Authenticate to a public mobile telephone network using a SIM card or equivalent secret that
+      uniquely identifies the subscriber. This method SHALL only be used if a secret is sent from
+      the verifier to the out-of-band device via the PSTN (i.e., SMS or voice) or an encrypted
+      instant messaging service.
+    textHash: 649c070bd4cc
+    context: "The out-of-band authenticator SHALL uniquely authenticate itself in one of the following
+      ways when communicating with the verifier:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.3.1-R8:
+    id: 3.1.3.1-R8
+    rev: 800-63b-r4
+    sectionNumber: 3.1.3.1
+    ordinal: 8
+    level: SHALL
+    text: Use a wired connection to the PSTN that the verifier can call and dictate the out-of-band
+      secret. For the purposes of this definition, “wired connection” includes services such as
+      cable providers that offer PSTN services through other wired media and fiber via analog
+      telephone adapters.
+    textHash: e2b0132c80fe
+    context: "The out-of-band authenticator SHALL uniquely authenticate itself in one of the following
+      ways when communicating with the verifier:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.3.1-R9:
+    id: 3.1.3.1-R9
+    rev: 800-63b-r4
+    sectionNumber: 3.1.3.1
+    ordinal: 9
+    level: SHOULD_NOT
+    text: For single-factor out-of-band authenticators, if a secret is sent by the verifier to the
+      out-of-band device, the device SHOULD NOT display the authentication secret while it is locked
+      by the owner. Rather, the device SHOULD require the presentation and verification of a PIN,
+      passcode, or biometric characteristic to view the secret. However, authenticators SHOULD
+      indicate the receipt of an authentication secret on a locked device.
+    textHash: 0d927dc97bbf
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.3.1-R10:
+    id: 3.1.3.1-R10
+    rev: 800-63b-r4
+    sectionNumber: 3.1.3.1
+    ordinal: 10
+    level: SHALL
+    text: If the out-of-band authenticator requests approval over the secondary communication channel
+      rather than by presenting a secret that the claimant transfers to the primary communication
+      channel, it SHALL accept a transfer of the secret from the primary channel and send it to the
+      verifier over the secondary channel to associate the approval with the authentication
+      transaction. The claimant MAY perform the transfer manually or with the assistance of a
+      representation, such as a barcode or quick response (QR) code.
+    textHash: 1c502a4c47fc
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.3.2-R1:
+    id: 3.1.3.2-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.1.3.2
+    ordinal: 1
+    level: SHALL_NOT
+    text: The verifier waits for an authenticated protected channel to be established with the
+      out-of-band authenticator and verifies its identifying key. The verifier SHALL NOT store the
+      identifying key itself but SHALL use a verification method (e.g., an approved hash function or
+      proof of possession of the identifying key) to uniquely identify the authenticator. Once
+      authenticated, the verifier transmits the authentication secret to the authenticator. The
+      connection with the out-of-band authenticator MAY be either manually initiated or prompted by
+      a mechanism, such as a push notification.
+    textHash: 5e03e04356db
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.3.2-R2:
+    id: 3.1.3.2-R2
+    rev: 800-63b-r4
+    sectionNumber: 3.1.3.2
+    ordinal: 2
+    level: SHALL
+    text: Transfer of the secret from the secondary to the primary channel. As shown in Fig. 1, the
+      verifier MAY signal the device that contains the subscriber’s authenticator to indicate a
+      readiness to authenticate. It SHALL then transmit a random secret to the out-of-band
+      authenticator and wait for the secret to be returned via the primary communication channel.
+    textHash: 71c69834b602
+    context: "Depending on the type of out-of-band authenticator, one of the following SHALL take place:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.3.2-R3:
+    id: 3.1.3.2-R3
+    rev: 800-63b-r4
+    sectionNumber: 3.1.3.2
+    ordinal: 3
+    level: SHALL
+    text: Transfer of the secret from the primary to the secondary channel. As shown in Fig. 2, the
+      verifier SHALL transmit a random authentication secret to the claimant via the primary
+      channel. It SHALL then wait for the secret to be returned via the secondary channel from the
+      claimant’s out-of-band authenticator. The verifier MAY additionally display an address, such
+      as a phone number or VoIP address, for the claimant to use in addressing its response to the
+      verifier.
+    textHash: f41918fca74b
+    context: "Depending on the type of out-of-band authenticator, one of the following SHALL take place:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.3.2-R4:
+    id: 3.1.3.2-R4
+    rev: 800-63b-r4
+    sectionNumber: 3.1.3.2
+    ordinal: 4
+    level: SHALL
+    text: In all cases, the authentication SHALL be considered invalid unless completed within 10
+      minutes. Verifiers SHALL accept a given authentication secret as valid only once during the
+      validity period to provide replay resistance, as described in Sec. 3.2.7.
+    textHash: 9a906eb15701
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.3.2-R5:
+    id: 3.1.3.2-R5
+    rev: 800-63b-r4
+    sectionNumber: 3.1.3.2
+    ordinal: 5
+    level: SHALL_NOT
+    text: The verifier SHALL generate random authentication secrets that are at least six decimal digits
+      (or equivalent) in length using an approved random bit generator as described in Sec. 3.2.12.
+      If the authentication secret is less than 64 bits long, the verifier SHALL implement a
+      rate-limiting mechanism that effectively limits the total number of consecutive failed
+      authentication attempts that can be made on the subscriber account as described in Sec. 3.2.2.
+      Generating a new authentication secret SHALL NOT reset the failed authentication count.
+    textHash: 99af6bd8c7b8
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.3.2-R6:
+    id: 3.1.3.2-R6
+    rev: 800-63b-r4
+    sectionNumber: 3.1.3.2
+    ordinal: 6
+    level: SHOULD
+    text: Out-of-band verifiers that send a push notification to a subscriber device SHOULD implement a
+      reasonable limit on the rate or total number of push notifications that will be sent since the
+      last successful authentication.
+    textHash: 33ca8a96cc40
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.3.3-R1:
+    id: 3.1.3.3-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.1.3.3
+    ordinal: 1
+    level: SHALL
+    text: Use of the PSTN for out-of-band verification is restricted as described in this section and
+      SHALL satisfy the requirements of Sec. 3.2.9. Setting or changing the pre-registered telephone
+      number is considered to be the binding of a new authenticator and SHALL only occur as
+      described in Sec. 4.1.2.
+    textHash: 48cb24ef7ce1
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.3.3-R2:
+    id: 3.1.3.3-R2
+    rev: 800-63b-r4
+    sectionNumber: 3.1.3.3
+    ordinal: 2
+    level: SHALL
+    text: Some subscribers may be unable to use PSTN to deliver out-of-band authentication secrets in
+      areas with limited telephone coverage, particularly without mobile phone service. Accordingly,
+      verifiers SHALL ensure that alternative authenticator types are available to all subscribers
+      and SHOULD remind subscribers of this limitation of PSTN out-of-band authenticators before
+      binding one or more devices controlled by the subscriber.
+    textHash: 9c535bc64390
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.3.3-R3:
+    id: 3.1.3.3-R3
+    rev: 800-63b-r4
+    sectionNumber: 3.1.3.3
+    ordinal: 3
+    level: SHOULD
+    text: Verifiers SHOULD consider risk indicators (e.g., device swap, SIM change, number porting,
+      other abnormal behavior) before using the PSTN to deliver an out-of-band authentication
+      secret.
+    textHash: 9b6fc70cbbfa
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.3.4-R1:
+    id: 3.1.3.4-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.1.3.4
+    ordinal: 1
+    level: SHALL
+    text: Multi-factor out-of-band authenticators operate similarly to single-factor out-of-band
+      authenticators (see Sec. 3.1.3.1). However, they require the presentation and verification of
+      an activation factor (i.e., a password or a biometric characteristic) before allowing the
+      claimant to complete the authentication transaction (i.e., before accessing or entering the
+      authentication secret as appropriate for the authentication flow being used). Each use of the
+      authenticator SHALL require the presentation of the activation factor.
+    textHash: a95fa2976627
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.3.4-R2:
+    id: 3.1.3.4-R2
+    rev: 800-63b-r4
+    sectionNumber: 3.1.3.4
+    ordinal: 2
+    level: SHALL
+    text: Authenticator activation secrets SHALL meet the requirements of Sec. 3.2.10. A biometric
+      activation factor SHALL meet the requirements of Sec. 3.2.3, including limits on the number of
+      consecutive authentication failures. The password or biometric sample used for activation and
+      any biometric data derived from the biometric sample (e.g., a fingerprint image and feature
+      locations produced by a fingerprint feature extractor) SHALL be erased immediately after an
+      authentication operation.
+    textHash: c6691dfdc281
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.4.1-R1:
+    id: 3.1.4.1-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.1.4.1
+    ordinal: 1
+    level: SHALL
+    text: The secret key and its algorithm SHALL provide at least the minimum security strength
+      specified in the latest revision of [SP800-131A] (i.e., 112 bits as of the date of this
+      publication). The nonce SHALL be of sufficient length to ensure that it is unique for each
+      operation of the authenticator over its lifetime. If a subscriber needs to change the device
+      on which a software-based OTP authenticator resides, they SHOULD bind the authenticator
+      application on the new device to their subscriber account, as described in Sec. 4.1.2, and
+      invalidate the authenticator application that will no longer be used. Alternatively, the
+      subscriber MAY export the secret key and store it in a sync fabric that meets the requirements
+      in Appendix B.2 and then retrieve the key with their new device.
+    textHash: 3b4ba3e91519
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.4.1-R2:
+    id: 3.1.4.1-R2
+    rev: 800-63b-r4
+    sectionNumber: 3.1.4.1
+    ordinal: 2
+    level: MAY
+    text: The authenticator output is obtained using an approved block cipher or hash function to
+      securely combine the key and nonce. In coordination with the verifier, the authenticator MAY
+      truncate its output to as few as six decimal digits (or an equivalent representation).
+    textHash: 0f4dc00993bb
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.4.1-R3:
+    id: 3.1.4.1-R3
+    rev: 800-63b-r4
+    sectionNumber: 3.1.4.1
+    ordinal: 3
+    level: SHALL
+    text: If the nonce used to generate the authenticator output is based on a real-time clock, the
+      nonce SHALL be changed at least once every two minutes.
+    textHash: 673de49803c7
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.4.2-R1:
+    id: 3.1.4.2-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.1.4.2
+    ordinal: 1
+    level: SHALL
+    text: Single-factor OTP verifiers effectively duplicate the process of generating the OTP used by
+      the authenticator. As such, the symmetric keys used by authenticators are also present in the
+      verifier and SHALL be strongly protected against unauthorized disclosure by access controls
+      that limit access to the keys to only those software components that require access.
+    textHash: 1b8e97fbc522
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.4.2-R2:
+    id: 3.1.4.2-R2
+    rev: 800-63b-r4
+    sectionNumber: 3.1.4.2
+    ordinal: 2
+    level: SHALL
+    text: When binding a single-factor OTP authenticator to a subscriber account, the verifier or
+      associated CSP SHALL use approved cryptography for key establishment to generate and exchange
+      keys or to obtain the secrets required to duplicate the authenticator output.
+    textHash: b4a2f0b5b64b
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.4.2-R3:
+    id: 3.1.4.2-R3
+    rev: 800-63b-r4
+    sectionNumber: 3.1.4.2
+    ordinal: 3
+    level: SHALL
+    text: The verifier SHALL use approved encryption and an authenticated protected channel when
+      collecting the OTP. Verifiers SHALL accept a given OTP only once while it is valid to provide
+      replay resistance, as described in Sec. 3.2.7. If a claimant’s authentication is denied due to
+      the duplicate use of an OTP, verifiers MAY warn the claimant if an attacker has been able to
+      authenticate in advance. Verifiers MAY also warn a subscriber in an existing session of the
+      attempted duplicate use of an OTP.
+    textHash: ac178106ecb1
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.4.2-R4:
+    id: 3.1.4.2-R4
+    rev: 800-63b-r4
+    sectionNumber: 3.1.4.2
+    ordinal: 4
+    level: SHALL
+    text: Time-based OTPs [TOTP] SHALL have a defined lifetime that is determined by the expected clock
+      drift in either direction of the authenticator over its lifetime plus an allowance for network
+      delay and claimant entry of the OTP.
+    textHash: eb93a3978315
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.4.2-R5:
+    id: 3.1.4.2-R5
+    rev: 800-63b-r4
+    sectionNumber: 3.1.4.2
+    ordinal: 5
+    level: SHALL
+    text: The verifier SHOULD implement or, if the authenticator output is less than 64 bits in length,
+      SHALL implement a rate-limiting mechanism that effectively limits the number of failed
+      authentication attempts that can be made on the subscriber account, as described in Sec.
+      3.2.2.
+    textHash: 5b4f39ab2c69
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.5.1-R1:
+    id: 3.1.5.1-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.1.5.1
+    ordinal: 1
+    level: SHALL
+    text: Multi-factor OTP authenticators operate similarly to single-factor OTP authenticators (see
+      Sec. 3.1.4.1), except they require the presentation and verification of an activation factor
+      (i.e., a password or a biometric characteristic) to obtain the OTP from the authenticator.
+      Each use of the authenticator SHALL require the input of the activation factor.
+    textHash: 5a08840e149f
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.5.1-R2:
+    id: 3.1.5.1-R2
+    rev: 800-63b-r4
+    sectionNumber: 3.1.5.1
+    ordinal: 2
+    level: SHALL
+    text: The secret key and its algorithm SHALL provide at least the minimum security strength
+      specified in the latest revision of [SP800-131A] (i.e., 112 bits as of the date of this
+      publication). The nonce SHALL be of sufficient length to ensure that it is unique for each
+      operation of the authenticator over its lifetime. If a subscriber needs to change the device
+      on which a software-based OTP authenticator resides, they SHOULD bind the authenticator
+      application on the new device to their subscriber account, as described in Sec. 4.1.2, and
+      invalidate the authenticator application that will no longer be used. Alternatively, the
+      subscriber MAY export the secret key and store it in a sync fabric that meets the requirements
+      in Appendix B.2 and retrieve the key with their new device.
+    textHash: 5ea8ccd09eef
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.5.1-R3:
+    id: 3.1.5.1-R3
+    rev: 800-63b-r4
+    sectionNumber: 3.1.5.1
+    ordinal: 3
+    level: MAY
+    text: The authenticator output is obtained using an approved cryptography block cipher or hash
+      function to securely combine the key and nonce. In coordination with the verifier, the
+      authenticator MAY truncate its output to as few as six decimal digits or equivalent.
+    textHash: 7972058331da
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.5.1-R4:
+    id: 3.1.5.1-R4
+    rev: 800-63b-r4
+    sectionNumber: 3.1.5.1
+    ordinal: 4
+    level: SHALL
+    text: If the nonce used to generate the authenticator output is based on a real-time clock, the
+      nonce SHALL be changed at least once every two minutes.
+    textHash: 673de49803c7
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.5.1-R5:
+    id: 3.1.5.1-R5
+    rev: 800-63b-r4
+    sectionNumber: 3.1.5.1
+    ordinal: 5
+    level: SHALL
+    text: Authenticator activation secrets SHALL meet the requirements of Sec. 3.2.10. A biometric
+      activation factor SHALL meet the requirements of Sec. 3.2.3, including limits on the number of
+      consecutive authentication failures. The unencrypted key and activation secret or biometric
+      sample and any biometric data derived from the biometric sample (e.g., a fingerprint image and
+      feature locations produced by a fingerprint feature extractor) SHALL be erased immediately
+      after an OTP has been generated.
+    textHash: bb3a8536074c
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.5.2-R1:
+    id: 3.1.5.2-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.1.5.2
+    ordinal: 1
+    level: SHALL
+    text: Multi-factor OTP verifiers effectively duplicate the process of generating the OTP used by the
+      authenticator without requiring a second authentication factor. As such, the symmetric keys
+      used by authenticators SHALL be strongly protected against unauthorized disclosure by access
+      controls that limit access to the keys to only those software components that require access.
+    textHash: c4e50256a170
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.5.2-R2:
+    id: 3.1.5.2-R2
+    rev: 800-63b-r4
+    sectionNumber: 3.1.5.2
+    ordinal: 2
+    level: SHALL
+    text: When binding a multi-factor OTP authenticator to a subscriber account, the verifier or
+      associated CSP SHALL use approved cryptography for key establishment to generate and exchange
+      keys or to obtain the secrets required to duplicate the authenticator output.
+    textHash: 371b720639f3
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.5.2-R3:
+    id: 3.1.5.2-R3
+    rev: 800-63b-r4
+    sectionNumber: 3.1.5.2
+    ordinal: 3
+    level: SHALL
+    text: The verifier SHALL use approved encryption and an authenticated protected channel when
+      collecting the OTP. Verifiers SHALL accept a given OTP only once while it is valid to provide
+      replay resistance, as described in Sec. 3.2.7. If a claimant’s authentication is denied due to
+      the duplicate use of an OTP, verifiers MAY warn the claimant if an attacker has been able to
+      authenticate in advance. Verifiers MAY also warn a subscriber in an existing session of the
+      attempted duplicate use of an OTP.
+    textHash: ac178106ecb1
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.5.2-R4:
+    id: 3.1.5.2-R4
+    rev: 800-63b-r4
+    sectionNumber: 3.1.5.2
+    ordinal: 4
+    level: SHALL
+    text: Time-based OTPs [TOTP] SHALL have a defined lifetime that is determined by the expected clock
+      drift in either direction of the authenticator over its lifetime plus an allowance for network
+      delay and claimant entry of the OTP.
+    textHash: eb93a3978315
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.5.2-R5:
+    id: 3.1.5.2-R5
+    rev: 800-63b-r4
+    sectionNumber: 3.1.5.2
+    ordinal: 5
+    level: SHALL
+    text: The verifier SHALL implement a rate-limiting mechanism that effectively limits the number of
+      consecutive failed authentication attempts that can be made on the subscriber account, as
+      required by Sec. 3.2.10.
+    textHash: 99fa4b9e48c4
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.6-R1:
+    id: 3.1.6-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.1.6
+    ordinal: 1
+    level: SHALL
+    text: Single-factor cryptographic authentication is accomplished by proving the possession and
+      control of a cryptographic key via an authentication protocol. Depending on the strength of
+      authentication required, the authentication key may be stored in a manner that is accessible
+      to the endpoint associated with the authenticator or in a separate, directly connected
+      processor or device. The authenticator output is highly dependent on the specific
+      cryptographic protocol used but is generally some type of signed message. A single-factor
+      cryptographic authenticator is “something you have.” Single-factor cryptographic
+      authenticators used at AAL3 SHALL use public-key cryptography to protect the authentication
+      secrets from compromise of the verifier.
+    textHash: 602d1bd7db18
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.6.1-R1:
+    id: 3.1.6.1-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.1.6.1
+    ordinal: 1
+    level: SHALL
+    text: Single-factor cryptographic authenticators encapsulate one or more authentication keys.
+      Authentication keys are described as either exportable (see Sec. 3.2.13) or non-exportable.
+      Exportable authentication keys (usable at AAL2 or below) SHOULD be stored in appropriate
+      storage that is available to the authenticator (e.g., keychain storage). If they are
+      accessible to the endpoint being authenticated, exportable authentication keys SHALL be
+      strongly protected against unauthorized disclosure with access controls that limit access to
+      the key to only those software components that require access. Non-exportable authentication
+      keys (usable at AAL3 or below) SHALL be stored in an isolated execution environment that is
+      protected by hardware or in a separate processor with a controlled interface to the central
+      processing unit of the user endpoint.
+    textHash: a004e29bfd8e
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.6.1-R2:
+    id: 3.1.6.1-R2
+    rev: 800-63b-r4
+    sectionNumber: 3.1.6.1
+    ordinal: 2
+    level: SHALL
+    text: External (i.e., non-embedded) cryptographic authenticators SHALL meet the requirements for
+      connected authenticators in Sec. 3.2.11.
+    textHash: a5a5b4c9abf1
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.6.2-R1:
+    id: 3.1.6.2-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.1.6.2
+    ordinal: 1
+    level: SHALL
+    text: The verifier has a public cryptographic key that corresponds to each authenticator. While both
+      types of keys SHALL be protected against modification, symmetric keys SHALL additionally be
+      protected against unauthorized disclosure by access controls that limit access to the key to
+      only those software components that require access.
+    textHash: 05260af0ed93
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.6.2-R2:
+    id: 3.1.6.2-R2
+    rev: 800-63b-r4
+    sectionNumber: 3.1.6.2
+    ordinal: 2
+    level: SHALL
+    text: The authentication key and its algorithm SHALL provide at least the minimum security strength
+      specified in the latest revision of [SP800-131A] (i.e., 112 bits as of the date of this
+      publication). The challenge nonce SHALL be at least 64 bits in length and SHALL either be
+      unique over the authenticator’s lifetime or statistically unique (i.e., generated using an
+      approved random bit generator, as described in Sec. 3.2.12). The verification operation SHALL
+      use approved cryptography.
+    textHash: 75bc0d731828
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.7-R1:
+    id: 3.1.7-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.1.7
+    ordinal: 1
+    level: SHALL
+    text: Multi-factor cryptographic authentication uses an authentication protocol to prove possession
+      and control of an authentication key that requires activation through a second authentication
+      factor. Depending on the strength of authentication needed, the authentication key may be
+      stored in a manner that is accessible to the endpoint being authenticated or in a separate,
+      directly connected processor or device. The authenticator output is highly dependent on the
+      specific cryptographic protocol used but is generally some type of signed message. A
+      multi-factor cryptographic authenticator is “something you have” and is activated by an
+      activation factor that represents either “something you know” or “something you are.”
+      Multi-factor cryptographic authenticators used at AAL3 SHALL use public-key cryptography to
+      protect the authentication secrets from compromise of the verifier.
+    textHash: 4ec7e09defd2
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.7.1-R1:
+    id: 3.1.7.1-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.1.7.1
+    ordinal: 1
+    level: SHALL
+    text: Multi-factor cryptographic authenticators encapsulate one or more authentication keys that
+      SHALL only be accessible through the presentation and verification of an activation factor
+      (i.e., a password or a biometric characteristic). Non-exportable authentication keys, suitable
+      for use at AAL3, SHALL be stored in an isolated execution environment that is protected by
+      hardware or in a separate processor with a controlled interface to the central processing unit
+      of the user endpoint. Exportable authentication keys (usable at AAL2 or below) SHOULD be
+      stored in appropriate storage that is available to the authenticator (e.g., keychain storage).
+      If accessible to the endpoint being authenticated, authentication keys SHALL be strongly
+      protected against unauthorized disclosure by using access controls that limit access to the
+      authentication keys to only those software components that require access.
+    textHash: f3d28f0e5b62
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.7.1-R2:
+    id: 3.1.7.1-R2
+    rev: 800-63b-r4
+    sectionNumber: 3.1.7.1
+    ordinal: 2
+    level: SHALL
+    text: External (non-embedded) cryptographic authenticators SHALL meet the requirements for connected
+      authenticators in Sec. 3.2.11. Each authentication event SHALL require input and verification
+      of the local activation factor. Authenticator activation secrets SHALL meet the requirements
+      of Sec. 3.2.10. A biometric activation factor SHALL meet the requirements of Sec. 3.2.3,
+      including limits on the number of consecutive authentication failures. The activation secret
+      or biometric sample and any biometric data derived from the biometric sample (e.g., a
+      fingerprint image and feature locations produced by a fingerprint feature extractor) SHALL be
+      erased after an authentication transaction.
+    textHash: 6820cc59cc82
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.7.2-R1:
+    id: 3.1.7.2-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.1.7.2
+    ordinal: 1
+    level: SHALL
+    text: The requirements for a multi-factor cryptographic verifier are identical to those for a
+      single-factor cryptographic verifier, as described in Sec. 3.1.6.2. Some multi-factor
+      authenticators include flags to indicate whether an activation factor was used. If such a flag
+      is present and indicates that an activation factor was not used, the authentication SHALL be
+      treated as single-factor. Otherwise, verification of the output from a multi-factor
+      cryptographic authenticator indicates that the activation factor was used.
+    textHash: 357042f0fd92
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.7.3-R1:
+    id: 3.1.7.3-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.1.7.3
+    ordinal: 1
+    level: SHALL
+    text: Access to the private key SHALL require an activation factor. Authenticator activation secrets
+      SHALL meet the requirements of Sec. 3.2.10. Biometric activation factors SHALL meet the
+      requirements of Sec. 3.2.3, including limits on the number of consecutive authentication
+      failures. The password or biometric sample used for activation and any biometric data derived
+      from the biometric sample SHALL be erased immediately after an authentication transaction.
+    textHash: 49954a67dfe6
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1.7.3-R2:
+    id: 3.1.7.3-R2
+    rev: 800-63b-r4
+    sectionNumber: 3.1.7.3
+    ordinal: 2
+    level: SHALL_NOT
+    text: Authentication processes using subscriber-controlled wallets SHALL be used with a federation
+      process as detailed in Sec. 5 of [SP800-63C]. Signed audience-restricted assertions that are
+      generated by subscriber-controlled wallets are considered phishing-resistant because they
+      prevent an assertion presented to an impostor RP from being used by the legitimate one.
+      Assertions that lack a valid signature from the wallet or an audience restriction SHALL NOT be
+      considered phishing-resistant. Assertions SHALL also include sufficient information to
+      determine the nature of the activation method used to activate the wallet.
+    textHash: 8db425519536
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.1-R1:
+    id: 3.2.1-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.2.1
+    ordinal: 1
+    level: SHALL
+    text: CSPs SHALL provide subscriber instructions for appropriately protecting the authenticator
+      against theft or loss. The CSP SHALL provide a mechanism to invalidate1 the authenticator
+      immediately upon notification from a subscriber that the authenticator’s loss, theft, or
+      compromise is suspected.
+    textHash: 0627be50e2d7
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.2-R1:
+    id: 3.2.2-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.2.2
+    ordinal: 1
+    level: SHALL
+    text: When required by the authenticator type descriptions in Sec. 3.1, the verifier SHALL implement
+      controls to protect against online guessing attacks. Unless otherwise specified in the
+      description of a given authenticator, the verifier SHALL limit consecutive failed
+      authentication attempts using a specific authenticator on a single subscriber account to no
+      more than 100 by disabling that authenticator. If more than one authenticator is involved with
+      an excessive number of authentication attempts (e.g., single-factor cryptographic
+      authenticator and centrally verified password), both authenticators SHALL be disabled.
+      Authenticators that have been disabled SHALL be required to rebind to the subscriber account,
+      as described in Sec. 4.1, to be usable in the future.
+    textHash: 8f934f5a83cd
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.2-R2:
+    id: 3.2.2-R2
+    rev: 800-63b-r4
+    sectionNumber: 3.2.2
+    ordinal: 2
+    level: MAY
+    text: Requiring the claimant to complete a bot detection and mitigation challenge before attempting
+      authentication
+    textHash: 6ac2ad4e2755
+    context: "Additional techniques MAY be used to reduce the likelihood that an attacker will lock the
+      legitimate claimant out due to rate limiting. These include:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.2-R3:
+    id: 3.2.2-R3
+    rev: 800-63b-r4
+    sectionNumber: 3.2.2
+    ordinal: 3
+    level: MAY
+    text: Requiring the claimant to wait after a failed attempt for a period of time that increases as
+      the subscriber account approaches its maximum allowance for consecutive failed attempts (e.g.,
+      30 seconds up to an hour)
+    textHash: 9027f60b32e0
+    context: "Additional techniques MAY be used to reduce the likelihood that an attacker will lock the
+      legitimate claimant out due to rate limiting. These include:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.2-R4:
+    id: 3.2.2-R4
+    rev: 800-63b-r4
+    sectionNumber: 3.2.2
+    ordinal: 4
+    level: MAY
+    text: Leveraging other risk-based or adaptive authentication techniques to identify claimant
+      behaviors that fall within or outside of typical norms (e.g., the use of the claimant’s IP
+      address, geolocation, timing of request patterns, or browser metadata)
+    textHash: 627a366f1662
+    context: "Additional techniques MAY be used to reduce the likelihood that an attacker will lock the
+      legitimate claimant out due to rate limiting. These include:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.2-R5:
+    id: 3.2.2-R5
+    rev: 800-63b-r4
+    sectionNumber: 3.2.2
+    ordinal: 5
+    level: SHOULD
+    text: When the subscriber successfully authenticates, the verifier SHOULD disregard any previous
+      failed attempts for the authenticators used in the successful authentication.
+    textHash: 239da3df0852
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.2-R6:
+    id: 3.2.2-R6
+    rev: 800-63b-r4
+    sectionNumber: 3.2.2
+    ordinal: 6
+    level: SHALL
+    text: Following successful authentication at a given AAL, the verifier SHOULD reset the retry count
+      of the authenticators that were used. If this is provided, the maximum AAL of the
+      authenticator being reset SHALL not exceed the AAL of the session from which it is being
+      reset. If the subscriber cannot authenticate at the required AAL, the account recovery
+      procedures in Sec. 4.2 SHALL be used.
+    textHash: cea1fea7ef23
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.3-R1:
+    id: 3.2.3-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.2.3
+    ordinal: 1
+    level: SHALL
+    text: Biometrics SHALL only be used as part of multi-factor authentication with a physical
+      authenticator (i.e., “something you have”). The biometric characteristic SHALL be presented
+      and compared for each authentication operation. An alternative non-biometric authentication
+      option SHALL always be provided to the subscriber. Biometric data SHALL be treated and secured
+      as sensitive personal information.
+    textHash: 35ba1f7a54aa
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.3.1-R1:
+    id: 3.2.3.1-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.2.3.1
+    ordinal: 1
+    level: SHALL
+    text: The biometric system SHALL operate with an FMR [ISO/IEC2382-37] of one in 10000 or better for
+      all demographic groups. Demographic categories to be considered SHALL include sex and skin
+      tone when these factors affect biometric performance. This FMR SHALL be achieved under the
+      conditions of a conformant attack (i.e., zero-effort impostor attempt), as defined in
+      [ISO/IEC30107-1]. The biometric system SHOULD demonstrate a false non-match rate (FNMR) of
+      less than 5 %. Biometric performance SHALL be tested in accordance with [ISO/IEC19795-1]. The
+      biometric system SHALL be configured with a fixed threshold; it is not feasible to change the
+      threshold for each demographic.
+    textHash: 85cd28af8ffe
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.3.2-R1:
+    id: 3.2.3.2-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.2.3.2
+    ordinal: 1
+    level: SHALL_NOT
+    text: The biometric system SHOULD implement PAD for iris and fingerprint modalities and SHALL
+      implement PAD for facial recognition. Biometric comparison based on voice SHALL NOT be used.
+      Testing the biometric system for deployment SHOULD demonstrate an impostor attack presentation
+      accept rate (IAPAR) of less than 0.07. Presentation attack resistance SHOULD be tested in
+      accordance with Clause 13 of [ISO/IEC30107-3] following security evaluation methodologies in
+      [ISO/IEC19792] or [ISO/IEC19989-1] and [ISO/IEC19989-3]. The PAD decision MAY be made either
+      locally on the claimant’s device or by a central verifier.
+    textHash: 48321b22290a
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.3.3-R1:
+    id: 3.2.3.3-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.2.3.3
+    ordinal: 1
+    level: SHALL
+    text: The biometric system SHALL allow no more than five consecutive failed authentication attempts
+      or 10 consecutive failed attempts if PAD is implemented and meets the above requirements. Once
+      that limit has been reached, the biometric authenticator SHALL impose a delay of at least 30
+      seconds before each subsequent attempt with an overall limit of no more than 50 consecutive
+      failed authentication attempts or 100 if PAD is implemented due to the mitigation of
+      presentation attacks. Once the overall limit is reached, the biometric system SHALL disable
+      biometric authentication and offer another factor (e.g., a different biometric modality or an
+      activation secret if it is not a required factor) if such an alternative method is already
+      available. These limits are upper bounds, and agencies MAY make risk-based decisions to impose
+      lower limits.
+    textHash: ff77223138de
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.3.3-R2:
+    id: 3.2.3.3-R2
+    rev: 800-63b-r4
+    sectionNumber: 3.2.3.3
+    ordinal: 2
+    level: SHOULD
+    text: Use of a known sensor, as determined by sensor authentication
+    textHash: fbbe8e8ec96f
+    context: "The verifier SHOULD determine the performance and integrity of the sensor and its
+      associated endpoint. This increases the likelihood of detecting injection attacks due to
+      compromised endpoints, sensor emulators, and similar threats. Acceptable methods for making
+      this determination include:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.3.3-R3:
+    id: 3.2.3.3-R3
+    rev: 800-63b-r4
+    sectionNumber: 3.2.3.3
+    ordinal: 3
+    level: SHOULD
+    text: First- or third-party testing against biometric performance standards
+    textHash: 251922b93c6e
+    context: "The verifier SHOULD determine the performance and integrity of the sensor and its
+      associated endpoint. This increases the likelihood of detecting injection attacks due to
+      compromised endpoints, sensor emulators, and similar threats. Acceptable methods for making
+      this determination include:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.3.3-R4:
+    id: 3.2.3.3-R4
+    rev: 800-63b-r4
+    sectionNumber: 3.2.3.3
+    ordinal: 4
+    level: SHOULD
+    text: Runtime interrogation of signed metadata (e.g., attestation), as described in Sec. 3.2.4
+    textHash: 3fa377ce5362
+    context: "The verifier SHOULD determine the performance and integrity of the sensor and its
+      associated endpoint. This increases the likelihood of detecting injection attacks due to
+      compromised endpoints, sensor emulators, and similar threats. Acceptable methods for making
+      this determination include:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.3.3-R5:
+    id: 3.2.3.3-R5
+    rev: 800-63b-r4
+    sectionNumber: 3.2.3.3
+    ordinal: 5
+    level: SHOULD
+    text: Biometric comparison can be performed locally on a device being used by the claimant or at a
+      central verifier. Since the potential for attacks on a larger scale is greater at central
+      verifiers, comparison SHOULD be performed locally.
+    textHash: 33345155e79f
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.3.3-R6:
+    id: 3.2.3.3-R6
+    rev: 800-63b-r4
+    sectionNumber: 3.2.3.3
+    ordinal: 6
+    level: SHALL
+    text: The presentation of a biometric factor for authenticator activation SHALL be a separate
+      operation from unlocking the host device (e.g., smartphone). However, the same activation
+      factor used to unlock the host device MAY be used in the authentication operation. Agencies
+      MAY lower this requirement for authenticators that are managed by or on behalf of the CSP
+      (e.g., via mobile device management) and constrained to have short agency-determined
+      inactivity timeouts and biometric systems that meet the above requirements.
+    textHash: 81871ac5da64
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.3.3-R7:
+    id: 3.2.3.3-R7
+    rev: 800-63b-r4
+    sectionNumber: 3.2.3.3
+    ordinal: 7
+    level: SHALL
+    text: The sensor or endpoint SHALL be authenticated before capturing the biometric sample from the
+      claimant. The verifier MAY limit the use of the centrally stored biometric template to
+      particular sensors or sensor classes (e.g., sensor manufacturers or models).
+    textHash: 928365a8e0c2
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.3.3-R8:
+    id: 3.2.3.3-R8
+    rev: 800-63b-r4
+    sectionNumber: 3.2.3.3
+    ordinal: 8
+    level: SHALL
+    text: Appropriate controls (e.g., encryption and access controls) for sensitive personal information
+      SHALL be implemented.
+    textHash: bea07f26e85a
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.3.3-R9:
+    id: 3.2.3.3-R9
+    rev: 800-63b-r4
+    sectionNumber: 3.2.3.3
+    ordinal: 9
+    level: SHALL
+    text: An authenticated protected channel between the sensor (or an endpoint containing a sensor that
+      resists sensor replacement) and the verifier SHALL be established. All transmission of
+      biometric information SHALL be conducted over that authenticated protected channel.
+    textHash: dc5006ec910f
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.3.4-R1:
+    id: 3.2.3.4-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.2.3.4
+    ordinal: 1
+    level: SHALL
+    text: Biometric samples collected in the authentication process MAY be used locally within the
+      authenticator or verifier performing the biometric comparison to update the templates for the
+      purpose of compensating for changes in subscriber characteristics or — with explicit
+      subscriber consent — other research purposes. The biometric samples and any other biometric
+      data derived from them SHALL be erased immediately after any adaptation or research data has
+      been derived. A limit on the allowable time for adaptation SHALL be established and enforced
+      by the authenticator or the CSP.
+    textHash: 640aaac260a7
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.4-R1:
+    id: 3.2.4-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.2.4
+    ordinal: 1
+    level: MAY
+    text: The provenance (e.g., manufacturer or supplier certification), health, and integrity of the
+      authenticator and endpoint
+    textHash: 7d69dc2444cc
+    context: "The CSP needs to have a reliable basis for evaluating the characteristics of the
+      authenticator, such as the inclusion of a signed attestation. An attestation is information
+      conveyed to the CSP, generally when an authenticator is bound, regarding that connected
+      authenticator or the endpoint involved in an authentication operation. Information conveyed by
+      attestation MAY include but is not limited to:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.4-R2:
+    id: 3.2.4-R2
+    rev: 800-63b-r4
+    sectionNumber: 3.2.4
+    ordinal: 2
+    level: MAY
+    text: Security features of the authenticator
+    textHash: 3b9ad91f5ce7
+    context: "The CSP needs to have a reliable basis for evaluating the characteristics of the
+      authenticator, such as the inclusion of a signed attestation. An attestation is information
+      conveyed to the CSP, generally when an authenticator is bound, regarding that connected
+      authenticator or the endpoint involved in an authentication operation. Information conveyed by
+      attestation MAY include but is not limited to:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.4-R3:
+    id: 3.2.4-R3
+    rev: 800-63b-r4
+    sectionNumber: 3.2.4
+    ordinal: 3
+    level: MAY
+    text: Security and performance characteristics of biometric sensors
+    textHash: 3de3932cb291
+    context: "The CSP needs to have a reliable basis for evaluating the characteristics of the
+      authenticator, such as the inclusion of a signed attestation. An attestation is information
+      conveyed to the CSP, generally when an authenticator is bound, regarding that connected
+      authenticator or the endpoint involved in an authentication operation. Information conveyed by
+      attestation MAY include but is not limited to:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.4-R4:
+    id: 3.2.4-R4
+    rev: 800-63b-r4
+    sectionNumber: 3.2.4
+    ordinal: 4
+    level: MAY
+    text: Sensor modality
+    textHash: f11c842a613e
+    context: "The CSP needs to have a reliable basis for evaluating the characteristics of the
+      authenticator, such as the inclusion of a signed attestation. An attestation is information
+      conveyed to the CSP, generally when an authenticator is bound, regarding that connected
+      authenticator or the endpoint involved in an authentication operation. Information conveyed by
+      attestation MAY include but is not limited to:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.4-R5:
+    id: 3.2.4-R5
+    rev: 800-63b-r4
+    sectionNumber: 3.2.4
+    ordinal: 5
+    level: MAY
+    text: Properties of the authentication key
+    textHash: 0d10dd66c049
+    context: "The CSP needs to have a reliable basis for evaluating the characteristics of the
+      authenticator, such as the inclusion of a signed attestation. An attestation is information
+      conveyed to the CSP, generally when an authenticator is bound, regarding that connected
+      authenticator or the endpoint involved in an authentication operation. Information conveyed by
+      attestation MAY include but is not limited to:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.4-R6:
+    id: 3.2.4-R6
+    rev: 800-63b-r4
+    sectionNumber: 3.2.4
+    ordinal: 6
+    level: SHALL
+    text: Attestations SHALL be signed using a digital signature that provides at least the minimum
+      security strength specified in the latest revision of [SP800-131A] (i.e., 112 bits as of the
+      date of this publication).
+    textHash: 9b3b095fc8d0
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.4-R7:
+    id: 3.2.4-R7
+    rev: 800-63b-r4
+    sectionNumber: 3.2.4
+    ordinal: 7
+    level: SHOULD
+    text: Verifiers in federal enterprise systems2 SHOULD use attestation features to verify the
+      capabilities and sources of authenticators. In other applications, attestation information MAY
+      be used as part of a verifier’s risk-based authentication decisions.
+    textHash: 9e43498dd703
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.5-R1:
+    id: 3.2.5-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.2.5
+    ordinal: 1
+    level: SHALL
+    text: Approved cryptographic algorithms SHALL be used to establish phishing resistance where
+      required. Keys used for this purpose SHALL provide at least the minimum security strength
+      specified in the latest revision of [SP800-131A] (i.e., 112 bits as of the date of this
+      publication).
+    textHash: 75f63dd39a42
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.5-R2:
+    id: 3.2.5-R2
+    rev: 800-63b-r4
+    sectionNumber: 3.2.5
+    ordinal: 2
+    level: SHALL_NOT
+    text: Phishing resistance requires single- or multi-factor cryptographic authentication.
+      Authenticators that involve the manual entry of an authenticator output (e.g., out-of-band and
+      OTP authenticators) SHALL NOT be considered phishing-resistant because the manual entry does
+      not bind the authenticator output to the specific session being authenticated. For example, an
+      impostor verifier could relay an authenticator output to the verifier and successfully
+      authenticate.
+    textHash: 0f76ee66eb3a
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.5.1-R1:
+    id: 3.2.5.1-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.2.5.1
+    ordinal: 1
+    level: SHALL
+    text: An authentication protocol with channel binding SHALL establish an authenticated protected
+      channel with the verifier. The protocol SHALL then strongly and irreversibly bind a channel
+      identifier negotiated in establishing the authenticated protected channel to the authenticator
+      output (e.g., by signing the two values together using a private key controlled by the
+      claimant for which the public key is known to the verifier). The verifier SHALL validate the
+      signature or other information used to prove phishing resistance. This prevents an impostor
+      verifier — even one that has obtained a certificate that represents the actual verifier — from
+      successfully relaying that authentication on a different authenticated protected channel.
+    textHash: 81795d67d311
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.5.2-R1:
+    id: 3.2.5.2-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.2.5.2
+    ordinal: 1
+    level: SHALL
+    text: An authentication protocol with verifier name binding SHALL establish an authenticated
+      protected channel with the verifier. The protocol SHALL then generate an authenticator output
+      that is cryptographically bound to a verifier identifier that is authenticated as part of the
+      protocol. In the case of DNS identifiers, the verifier identifier SHALL be either the
+      authenticated hostname of the verifier or a parent domain that is at least one level below the
+      public suffix [PSL] associated with that hostname. The binding MAY be established by choosing
+      an associated authenticator secret, deriving an authenticator secret using the verifier
+      identifier, cryptographically signing the authenticator output with the verifier identifier,
+      or using similar cryptographically secure means.
+    textHash: 7ce62d9f8ad2
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.6-R1:
+    id: 3.2.6-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.2.6
+    ordinal: 1
+    level: SHALL
+    text: If the verifier and CSP or IdP are separate entities (as shown by the dotted line in Fig. 3 of
+      [SP800-63]), communications between the verifier and CSP or IdP SHALL occur through a mutually
+      authenticated protected channel (e.g., a client-authenticated TLS connection) using approved
+      cryptography.
+    textHash: 8dda3b089657
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.8-R1:
+    id: 3.2.8-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.2.8
+    ordinal: 1
+    level: SHALL
+    text: An authentication process demonstrates intent if it requires the claimant to respond
+      explicitly to each authentication or reauthentication request. The goal of authentication
+      intent is to make it more difficult for authenticators (e.g., multi-factor cryptographic
+      authenticators) to be used without the claimant’s knowledge, such as by malware on the
+      endpoint. The authenticator itself SHALL establish authentication intent. Multi-factor
+      authenticators MAY establish intent by reentry of the activation factor for the authenticator.
+    textHash: fd2b63c42008
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.8-R2:
+    id: 3.2.8-R2
+    rev: 800-63b-r4
+    sectionNumber: 3.2.8
+    ordinal: 2
+    level: MAY
+    text: Authentication intent MAY be established in several ways. Authentication processes that
+      require the claimant’s intervention can be used to prove intent (e.g., a claimant entering an
+      authenticator output from an OTP authenticator). Cryptographic authenticators that require
+      claimant action for each authentication or reauthentication operation can also be used to
+      establish intent (e.g., by pushing a button or reinsertion).
+    textHash: 4250ff41d3b1
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.8-R3:
+    id: 3.2.8-R3
+    rev: 800-63b-r4
+    sectionNumber: 3.2.8
+    ordinal: 3
+    level: SHALL
+    text: The presentation of biometric characteristics does not always establish authentication intent.
+      For example, using a front-facing camera on a mobile phone to capture a face biometric does
+      not necessarily constitute intent, as it can be reasonably expected to capture a face image
+      while the device is used for other non-authentication purposes. In these scenarios, an
+      explicit mechanism (e.g., tapping a software or physical button) SHALL be provided to
+      establish authentication intent.
+    textHash: 7975a53ed5dc
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.9-R1:
+    id: 3.2.9-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.2.9
+    ordinal: 1
+    level: SHALL_NOT
+    text: The acceptance of a restricted authenticator requires the implementing organization to assess,
+      understand, and accept the risks associated with that authenticator and acknowledge that risks
+      will likely increase over time. It is the RP’s responsibility to determine the level of
+      acceptable risk for their systems and associated data, define any methods for mitigating
+      excessive risks, and communicate those determinations to the verifier. If the RP determines
+      that the risk to any party is unacceptable, the restricted authenticator SHALL NOT be used,
+      and an alternative authenticator type SHALL be used.
+    textHash: baf758545a52
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.9-R2:
+    id: 3.2.9-R2
+    rev: 800-63b-r4
+    sectionNumber: 3.2.9
+    ordinal: 2
+    level: SHALL
+    text: Offer subscribers at least one alternative authenticator that is not restricted and can be
+      used to authenticate at the required AAL
+    textHash: e643c5fccef4
+    context: "Furthermore, the risk of an authentication error is typically borne by multiple parties,
+      including the implementing organization, organizations that rely on the authentication
+      decision, and the subscriber. Because the subscriber may be exposed to additional risks when
+      an organization accepts a restricted authenticator and the subscriber may have a limited
+      understanding of and ability to control those risks, the CSP SHALL do all of the following:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.9-R3:
+    id: 3.2.9-R3
+    rev: 800-63b-r4
+    sectionNumber: 3.2.9
+    ordinal: 3
+    level: SHALL
+    text: Provide subscribers with meaningful notice regarding the restricted authenticator’s security
+      risks and the availability of unrestricted alternatives
+    textHash: ab6590ed25ff
+    context: "Furthermore, the risk of an authentication error is typically borne by multiple parties,
+      including the implementing organization, organizations that rely on the authentication
+      decision, and the subscriber. Because the subscriber may be exposed to additional risks when
+      an organization accepts a restricted authenticator and the subscriber may have a limited
+      understanding of and ability to control those risks, the CSP SHALL do all of the following:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.9-R4:
+    id: 3.2.9-R4
+    rev: 800-63b-r4
+    sectionNumber: 3.2.9
+    ordinal: 4
+    level: SHALL
+    text: Address any additional risks to subscribers and RPs in its risk assessment
+    textHash: 34056b5d0231
+    context: "Furthermore, the risk of an authentication error is typically borne by multiple parties,
+      including the implementing organization, organizations that rely on the authentication
+      decision, and the subscriber. Because the subscriber may be exposed to additional risks when
+      an organization accepts a restricted authenticator and the subscriber may have a limited
+      understanding of and ability to control those risks, the CSP SHALL do all of the following:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.9-R5:
+    id: 3.2.9-R5
+    rev: 800-63b-r4
+    sectionNumber: 3.2.9
+    ordinal: 5
+    level: SHALL
+    text: Develop a migration plan for the possibility that the restricted authenticator will not be
+      acceptable in the future and include this migration plan in its Digital Identity Acceptance
+      Statement (see Sec. 3.4.4 of [SP800-63])
+    textHash: 6f9277dc9654
+    context: "Furthermore, the risk of an authentication error is typically borne by multiple parties,
+      including the implementing organization, organizations that rely on the authentication
+      decision, and the subscriber. Because the subscriber may be exposed to additional risks when
+      an organization accepts a restricted authenticator and the subscriber may have a limited
+      understanding of and ability to control those risks, the CSP SHALL do all of the following:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.10-R1:
+    id: 3.2.10-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.2.10
+    ordinal: 1
+    level: SHALL
+    text: A password used locally as an activation factor for a multi-factor authenticator is referred
+      to as an activation secret. An activation secret is used to obtain access to a stored
+      authentication key. In all cases, the activation secret SHALL remain within the authenticator
+      and its associated user endpoint.
+    textHash: d01c7499a4d6
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.10-R2:
+    id: 3.2.10-R2
+    rev: 800-63b-r4
+    sectionNumber: 3.2.10
+    ordinal: 2
+    level: SHALL
+    text: Authenticators that use activation secrets SHALL require the secrets to be at least four
+      characters in length and SHOULD require the secrets to be at least six characters in length.
+      Activation secrets MAY be entirely numeric (i.e., a PIN). Otherwise, all printing ASCII
+      [RFC20] characters, the space character, and Unicode [ISO/ISC 10646] characters SHOULD be
+      permitted in activation secrets. The authenticator or its management tools SHOULD implement a
+      blocklist to discourage subscribers from selecting commonly used activation secrets (e.g.,
+      123456).
+    textHash: d89e7fba276c
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.10-R3:
+    id: 3.2.10-R3
+    rev: 800-63b-r4
+    sectionNumber: 3.2.10
+    ordinal: 3
+    level: SHALL
+    text: The authenticator or verifier SHALL implement a retry-limiting mechanism that limits the
+      number of consecutive failed activation attempts using the authenticator to no more than 10.
+      If an incorrect activation secret entry causes the authenticator to provide an invalid output
+      to the central verifier, the verifier MAY implement this retry-limiting mechanism. Otherwise,
+      retry limiting SHALL be implemented in the authenticator. Once the limit of attempts is
+      reached, the authenticator SHALL be disabled, and a different authenticator SHALL be required
+      for authentication.
+    textHash: 6dcecbb54333
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.10-R4:
+    id: 3.2.10-R4
+    rev: 800-63b-r4
+    sectionNumber: 3.2.10
+    ordinal: 4
+    level: SHALL
+    text: For authenticators that are usable at AAL3, verification of activation secrets SHALL be
+      performed in a hardware-protected environment (e.g., a secure element, TPM, or TEE). At AAL2,
+      if a hardware-protected environment is not used, the authenticator SHALL use the activation
+      secret to derive a key used to decrypt the authentication key.
+    textHash: d057f1fffe38
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.10-R5:
+    id: 3.2.10-R5
+    rev: 800-63b-r4
+    sectionNumber: 3.2.10
+    ordinal: 5
+    level: SHALL
+    text: Submitting the activation factor SHALL be a separate operation from unlocking the host device
+      (e.g., smartphone). However, the same activation factor used to unlock the host device MAY be
+      used in the authentication operation. Agencies MAY relax this requirement for authenticators
+      that are managed by or on behalf of the CSP (e.g., via mobile device management), are
+      constrained to have short agency-determined inactivity timeouts, and use device activation
+      factors that meet the corresponding requirements in this section.
+    textHash: 3266eea5363b
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.11-R1:
+    id: 3.2.11-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.2.11
+    ordinal: 1
+    level: SHALL
+    text: Cryptographic authenticators require a trustworthy connection between the authenticator and
+      the endpoint being authenticated that provides resistance to eavesdropping, injection, and
+      relay attacks. This connection SHALL be made using a wired connection (e.g., USB or direct
+      connection with a smartcard), a wireless technology, or a hybrid of those technologies,
+      including network connections.
+    textHash: 15e51d3773ad
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.11-R2:
+    id: 3.2.11-R2
+    rev: 800-63b-r4
+    sectionNumber: 3.2.11
+    ordinal: 2
+    level: SHALL
+    text: Approved cryptography SHALL be used for all cases in which cryptographic operations are
+      required. All communication of authentication data between authenticators and endpoints SHALL
+      occur directly between those devices or through an authenticated protected channel between the
+      authenticator and endpoint.
+    textHash: fda928f6e130
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.11.1-R1:
+    id: 3.2.11.1-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.2.11.1
+    ordinal: 1
+    level: SHOULD
+    text: Wired connections, including those with embedded authenticators, MAY be assumed to be
+      trustworthy because their attack surface is minimal. Claimants SHOULD be advised to use
+      trusted hardware (e.g., cables, adapters) to ensure that they have not been compromised.
+    textHash: bcd04cf52b6f
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.11.2-R1:
+    id: 3.2.11.2-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.2.11.2
+    ordinal: 1
+    level: SHALL
+    text: The potential for such attacks on wireless connections depends on the technology’s effective
+      range. To minimize the attack surface for threats to the authenticator-endpoint connection,
+      the authentication process SHALL require physical proximity between the authenticator and
+      endpoint by establishing a wireless connection with a range of no more than 240 meters.3
+    textHash: 5819cb699ff9
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.11.2-R2:
+    id: 3.2.11.2-R2
+    rev: 800-63b-r4
+    sectionNumber: 3.2.11.2
+    ordinal: 2
+    level: SHALL
+    text: Through a temporary wired connection between the devices.
+    textHash: f0d359213fe2
+    context: "Wireless connections SHALL establish a key for encrypted communication between the
+      authenticator and endpoint in one of the following ways:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.11.2-R3:
+    id: 3.2.11.2-R3
+    rev: 800-63b-r4
+    sectionNumber: 3.2.11.2
+    ordinal: 3
+    level: SHALL
+    text: Through an association process that is similar to a pairing process but does not require a
+      persistent relationship between devices to establish a key for encrypted communication between
+      the authenticator and endpoint. The association process SHALL employ a pairing code4 or other
+      shared secret between the devices. Either the authenticator or endpoint SHALL have a pairing
+      code that MAY be printed on the device. The pairing code SHALL be at least six decimal digits
+      (or equivalent) in length. It SHALL be conveyed between the devices by manual entry or using a
+      QR code or similar representation that is optically communicated.
+    textHash: f8fef5a5850a
+    context: "Wireless connections SHALL establish a key for encrypted communication between the
+      authenticator and endpoint in one of the following ways:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.11.2-R4:
+    id: 3.2.11.2-R4
+    rev: 800-63b-r4
+    sectionNumber: 3.2.11.2
+    ordinal: 4
+    level: SHALL
+    text: When using a wireless technology with an effective range of less than 1 meter (e.g., NFC), any
+      activation secret transmitted from the endpoint to the authenticator SHALL be encrypted using
+      a key that is established between the devices. An authenticated connection SHOULD be used. A
+      pairing code SHALL be used if the authenticator is configured to require authenticated
+      pairing.
+    textHash: 372957ca57a1
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.11.2-R5:
+    id: 3.2.11.2-R5
+    rev: 800-63b-r4
+    sectionNumber: 3.2.11.2
+    ordinal: 5
+    level: SHALL
+    text: Network connections and wireless technologies with an effective range of 1 meter or more
+      (e.g., Bluetooth Low Energy [BLE]) SHALL use an authenticated protected channel between the
+      authenticator and endpoint. The entire authentication transaction SHALL be encrypted.
+    textHash: 7b26308a2800
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.11.2-R6:
+    id: 3.2.11.2-R6
+    rev: 800-63b-r4
+    sectionNumber: 3.2.11.2
+    ordinal: 6
+    level: SHALL
+    text: The key established by the association process may be either temporary (i.e., valid for a
+      limited number of transactions or time-limited) or persistent. A mechanism for endpoints to
+      remove persistent keys SHALL be provided.
+    textHash: 8877e2be44e6
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.11.3-R1:
+    id: 3.2.11.3-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.2.11.3
+    ordinal: 1
+    level: SHALL
+    text: By communicating initial keying information and the identity of the tunnel service to be used
+      via a displayed QR code or similar visual representation coupled with the receipt by the
+      endpoint of wireless data containing the additional information required to establish the
+      tunnel connection. The wireless data SHALL be conveyed over a technology with a maximum
+      effective range of no more than 240 meters.
+    textHash: d079020d6c1e
+    context: "Hybrid connections (e.g., hybrid transports specified by the CTAP2.2 protocol [FIDO2])
+      SHALL be established between authenticators and endpoints in one of the following ways:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.11.3-R2:
+    id: 3.2.11.3-R2
+    rev: 800-63b-r4
+    sectionNumber: 3.2.11.3
+    ordinal: 2
+    level: SHALL
+    text: Through cached keying and tunnel information retained by the authenticator and endpoint from a
+      previous authentication transaction.
+    textHash: 9f95fd0675eb
+    context: "Hybrid connections (e.g., hybrid transports specified by the CTAP2.2 protocol [FIDO2])
+      SHALL be established between authenticators and endpoints in one of the following ways:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.11.3-R3:
+    id: 3.2.11.3-R3
+    rev: 800-63b-r4
+    sectionNumber: 3.2.11.3
+    ordinal: 3
+    level: SHALL
+    text: A mechanism for endpoints to remove cached associations with authenticators SHALL be provided.
+    textHash: 5c5d446ceac2
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.12-R1:
+    id: 3.2.12-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.2.12
+    ordinal: 1
+    level: SHALL
+    text: Random values are extensively used in authentication processes in a variety of roles (e.g.,
+      nonces, authentication secrets). Unless otherwise specified, random values that reference this
+      section SHALL be generated by an approved random bit generator [RBG]5 that provides at least
+      the minimum security strength specified in the latest revision of [SP800-131A] (i.e., 112 bits
+      as of the date of this publication).
+    textHash: 96f0f29009d2
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.13-R1:
+    id: 3.2.13-R1
+    rev: 800-63b-r4
+    sectionNumber: 3.2.13
+    ordinal: 1
+    level: SHALL_NOT
+    text: To be considered non-exportable, an authenticator SHALL either be a separate piece of hardware
+      or an embedded processor or execution environment (e.g., secure element, TEE, TPM). These
+      hardware authenticators and embedded processors are separate from a host processor, such as
+      the CPU on a laptop or mobile device. A non-exportable authenticator SHALL be designed to
+      prohibit the export of the authentication secret to the host processor and SHALL NOT be
+      capable of being reprogrammed by the host processor to allow the secret to be extracted. The
+      authenticator is subject to applicable [FIPS140] requirements. Organizations SHOULD employ
+      authenticators that have undergone independent security testing, such as authenticators
+      validated to [FIPS140] security level 2 overall with level 3 physical security6 or evaluated
+      against relevant Common Criteria Protection Profiles.
+    textHash: b7eafa720aa2
+    source: prose
+    seededBy: parser
+    verified: false

@@ -1,28 +1,58 @@
 /**
- * Ingest NIST SP 800-63B rev 4 from the vendored single-page HTML into
- * data/spec/spec.json (section tree with sanitized HTML) and
- * data/spec/requirements.json (extracted normative requirements).
+ * Ingest a NIST SP 800-63 revision from vendored single-page HTML into
+ * data/spec/<rev>/spec.json (section tree with sanitized HTML) and
+ * data/spec/<rev>/requirements/*.yaml (extracted normative requirements,
+ * per chapter, stamped seededBy: parser / verified: false).
  *
  * The raw HTML is fetched once and committed; re-running the parse is
  * deterministic. Section numbers are derived from the heading walk
  * (data-section gives only the chapter; HTML ids are duplicated and unusable
  * as keys).
+ *
+ * Usage: npm run ingest -- --rev 800-63b-r4
+ * The revision must exist in data/revisions.json (for sourceUrl + baseUrl).
  */
 import * as cheerio from 'cheerio';
 import type { AnyNode, Element } from 'domhandler';
 import sanitizeHtml from 'sanitize-html';
 import { createHash } from 'node:crypto';
-import { existsSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import type { ReqLevel, Requirement, SpecSection } from '../src/types.ts';
+import YAML from 'yaml';
+import type {
+  ChapterRequirements,
+  ReqLevel,
+  Requirement,
+  RevisionMeta,
+  SpecSection,
+} from '../src/types.ts';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const RAW_PATH = path.join(ROOT, 'data/spec/raw/sp800-63b.html');
-const ASSETS_DIR = path.join(ROOT, 'data/spec/assets');
-const SPEC_URL = 'https://pages.nist.gov/800-63-4/sp800-63b.html';
-const BASE_URL = 'https://pages.nist.gov/800-63-4/';
+
+function parseRevArg(): string {
+  const idx = process.argv.indexOf('--rev');
+  if (idx !== -1 && process.argv[idx + 1]) return process.argv[idx + 1];
+  return '800-63b-r4';
+}
+const REV = parseRevArg();
+
+const registry: RevisionMeta[] = JSON.parse(
+  readFileSync(path.join(ROOT, 'data/revisions.json'), 'utf8'),
+);
+const revMeta = registry.find((r) => r.revKey === REV);
+if (!revMeta) {
+  console.error(`Revision '${REV}' not found in data/revisions.json`);
+  process.exit(1);
+}
+
+const REV_DIR = path.join(ROOT, 'data/spec', REV);
+const RAW_PATH = path.join(REV_DIR, 'raw', `${revMeta.doc}.html`);
+const ASSETS_DIR = path.join(REV_DIR, 'assets');
+const REQ_DIR = path.join(REV_DIR, 'requirements');
+const SPEC_URL = revMeta.sourceUrl;
+const BASE_URL = SPEC_URL.replace(/[^/]+$/, ''); // strip filename
 
 /** Sections whose keyword hits are definitional, not normative */
 const EXCLUDED_TITLES = [
@@ -190,6 +220,7 @@ function main(html: string) {
     const id = `${sectionNumber}-R${ordinal}`;
     requirements.push({
       id,
+      rev: REV,
       sectionNumber,
       ordinal,
       level,
@@ -197,6 +228,8 @@ function main(html: string) {
       textHash: textHash(text),
       ...(context ? { context } : {}),
       source,
+      seededBy: 'parser',
+      verified: false,
     });
     $(el).attr('data-req-id', id);
     $(el).attr('data-req-level', level);
@@ -296,10 +329,10 @@ function main(html: string) {
       img: (tagName, attribs) => {
         const src = attribs.src ?? '';
         if (src && !src.startsWith('http') && !src.startsWith('data:')) {
-          // Vendored at ingest; served by the dev server from data/spec/assets
+          // Vendored at ingest; served by the dev server from data/spec/<rev>/assets
           return {
             tagName,
-            attribs: { ...attribs, src: `/spec-assets/${path.basename(src)}` },
+            attribs: { ...attribs, src: `/spec-assets/${REV}/assets/${path.basename(src)}` },
           };
         }
         return { tagName, attribs };
@@ -323,23 +356,63 @@ function main(html: string) {
   return { tree, requirements };
 }
 
+function chapterOf(reqId: string): string {
+  return reqId.split('.')[0].split('-')[0];
+}
+
+function slugForChapter(chapter: string, tree: SpecSection[]): string {
+  const section = tree.find((s) => s.number === chapter);
+  const title = section
+    ? section.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+    : 'misc';
+  const prefix = /^\d+$/.test(chapter) ? chapter.padStart(2, '0') : chapter;
+  return `${prefix}-${title}`;
+}
+
 const html = await ensureRawHtml();
 const $probe = cheerio.load(html);
 await vendorAssets($probe);
 const { tree, requirements } = main(html);
 
+const ingestedAt = new Date().toISOString();
+
+await mkdir(REV_DIR, { recursive: true });
 await writeFile(
-  path.join(ROOT, 'data/spec/spec.json'),
-  JSON.stringify({ source: SPEC_URL, ingestedAt: new Date().toISOString(), sections: tree }, null, 2),
+  path.join(REV_DIR, 'spec.json'),
+  JSON.stringify({ source: SPEC_URL, ingestedAt, sections: tree }, null, 2),
 );
+
+// Requirements → per-chapter YAML (mirrors assessments layout)
+await mkdir(REQ_DIR, { recursive: true });
+const byChapter = new Map<string, Requirement[]>();
+for (const req of requirements) {
+  const c = chapterOf(req.id);
+  byChapter.set(c, [...(byChapter.get(c) ?? []), req]);
+}
+for (const [chapter, reqs] of byChapter) {
+  const sorted = reqs.sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }));
+  const data: ChapterRequirements = {
+    chapter,
+    rev: REV,
+    requirements: Object.fromEntries(sorted.map((r) => [r.id, r])),
+  };
+  await writeFile(
+    path.join(REQ_DIR, `${slugForChapter(chapter, tree)}.yaml`),
+    YAML.stringify(data, { lineWidth: 100 }),
+  );
+}
+
+// Stamp ingestedAt back into the registry entry
+const updated = registry.map((r) => (r.revKey === REV ? { ...r, ingestedAt } : r));
 await writeFile(
-  path.join(ROOT, 'data/spec/requirements.json'),
-  JSON.stringify(requirements, null, 2),
+  path.join(ROOT, 'data/revisions.json'),
+  JSON.stringify(updated, null, 2) + '\n',
 );
 
 const byLevel = requirements.reduce<Record<string, number>>((acc, r) => {
   acc[r.level] = (acc[r.level] ?? 0) + 1;
   return acc;
 }, {});
-console.log(`Sections: ${JSON.stringify(tree.map((s) => s.number))}`);
-console.log(`Requirements: ${requirements.length}`, byLevel);
+console.log(`[${REV}] Sections: ${JSON.stringify(tree.map((s) => s.number))}`);
+console.log(`[${REV}] Requirements: ${requirements.length}`, byLevel);
+console.log(`[${REV}] Chapters written: ${byChapter.size}`);

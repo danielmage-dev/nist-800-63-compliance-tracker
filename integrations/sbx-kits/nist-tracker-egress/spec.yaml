@@ -1,0 +1,48 @@
+# spec.yaml — nist-tracker-egress (an sbx mixin kit)
+#
+# Project-scoped egress mixin for the NIST 800-63 Compliance Tracker.
+#
+# The tracker's reviewer app makes NO network calls. This kit exists ONLY for
+# the opt-in, operator-invoked authoring/detection scripts, which need two NIST
+# hosts on an otherwise default-deny egress policy:
+#
+#   - pages.nist.gov  — one-time vendoring of a revision's spec HTML at ingest
+#                       (scripts/ingest-spec.ts), only when adopting a rev whose
+#                       HTML is not already committed under data/spec/<rev>/raw/.
+#   - csrc.nist.gov   — report-only revision detection against the CSRC
+#                       publications feed (scripts/detect-revisions.ts).
+#
+# This kit does NOT allow-list the USAi model endpoint (api.gsa.usai.gov):
+# that is provided by the built-in usai-provider kit that acq applies on every
+# run, which the tracker's agentic layers (scripts/layer-map.ts,
+# scripts/layer-extract.ts) rely on. This is the one EXTRA kit for the tracker;
+# add it via acq's ACQ_EXTRA_KITS (applied after the built-ins):
+#
+#   export ACQ_EXTRA_KITS="./integrations/sbx-kits/nist-tracker-egress"
+#   acq run opencode /path/to/NIST-800-63-tracker
+#
+# (If driving sbx directly instead of acq, pass both this kit and the
+# usai-provider kit with explicit --kit flags — see README.md "Usage".)
+#
+# Rationale + authorized-endpoint documentation:
+#   - AGENTS.md "Network Access"
+#   - docs/decisions/0002-agentic-layers-usai.md   (USAi egress; SC-7/SC-8)
+#   - docs/decisions/0004-revision-detection.md     (CSRC, report-only; SC-7)
+#   - docs/risk-assessment.md                        (T2 source egress, T11 stale-spec)
+schemaVersion: "2"
+kind: mixin
+name: nist-tracker-egress
+displayName: NIST Tracker Egress (NIST CSRC + pages.nist.gov)
+description: >
+  Allow-lists the two NIST hosts the NIST 800-63 Compliance Tracker's
+  authoring-time scripts require on a default-deny egress network: pages.nist.gov
+  (one-time spec vendoring at ingest) and csrc.nist.gov (report-only revision
+  detection). Compose alongside the usai-provider kit, which allow-lists the USAi
+  model endpoint. The reviewer app itself makes no network calls.
+
+caps:
+  network:
+    allow:
+      # Exact hosts (default port 443). Both are read-only, TLS.
+      - pages.nist.gov
+      - csrc.nist.gov

@@ -26,19 +26,26 @@ function SectionBlock({ section }: { section: SpecSection }) {
 }
 
 export default function SpecView({
+  rev,
   number,
   selectedReqId,
 }: {
+  rev: string;
   number: string;
   selectedReqId?: string;
 }) {
   const navigate = useNavigate();
   const containerRef = useRef<HTMLDivElement>(null);
   const sectionQ = useQuery({
-    queryKey: ['section', number],
-    queryFn: () => api.section(number),
+    queryKey: ['section', rev, number],
+    queryFn: () => api.section(rev, number),
+    enabled: !!rev,
   });
-  const reqsQ = useQuery({ queryKey: ['requirements'], queryFn: api.requirements });
+  const reqsQ = useQuery({
+    queryKey: ['requirements', rev],
+    queryFn: () => api.requirements(rev),
+    enabled: !!rev,
+  });
   const statusById = useMemo(() => {
     const m = new Map<string, RequirementWithStatus>();
     for (const r of reqsQ.data ?? []) m.set(r.id, r);
@@ -93,7 +100,7 @@ export default function SpecView({
     // Let real links inside requirement text work normally
     if ((e.target as HTMLElement).closest('a')) return;
     const id = target.dataset.reqId!;
-    navigate(`/section/${encodeURIComponent(number)}/req/${encodeURIComponent(id)}`);
+    navigate(`/rev/${encodeURIComponent(rev)}/section/${encodeURIComponent(number)}/req/${encodeURIComponent(id)}`);
   };
 
   if (sectionQ.isLoading) return <div className="spec-loading">Loading…</div>;

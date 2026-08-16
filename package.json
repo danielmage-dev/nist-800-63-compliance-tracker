@@ -10,7 +10,10 @@
     "seed:template": "tsx scripts/seed-template.ts",
     "check": "tsx scripts/check-assessments.ts",
     "typecheck": "tsc -b",
-    "seed:apply": "tsx scripts/apply-seed.ts"
+    "seed:apply": "tsx scripts/apply-seed.ts",
+    "layer:map": "tsx scripts/layer-map.ts",
+    "layer:extract": "tsx scripts/layer-extract.ts",
+    "detect:revisions": "tsx scripts/detect-revisions.ts"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.62.0",

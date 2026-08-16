@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { api } from '../../api/client';
 import type { RequirementWithStatus, Status } from '../../types';
 import { LEVEL_LABEL, STATUS_META, STATUS_ORDER } from '../../statusMeta';
@@ -60,7 +60,7 @@ function Bar({ reqs }: { reqs: RequirementWithStatus[] }) {
   );
 }
 
-function ReqList({ title, reqs }: { title: string; reqs: RequirementWithStatus[] }) {
+function ReqList({ title, reqs, rev }: { title: string; reqs: RequirementWithStatus[]; rev: string }) {
   if (!reqs.length) return null;
   return (
     <div className="req-queue">
@@ -68,7 +68,7 @@ function ReqList({ title, reqs }: { title: string; reqs: RequirementWithStatus[]
       <ul>
         {reqs.map((r) => (
           <li key={r.id}>
-            <Link to={`/section/${encodeURIComponent(r.sectionNumber)}/req/${encodeURIComponent(r.id)}`}>
+            <Link to={`/rev/${encodeURIComponent(rev)}/section/${encodeURIComponent(r.sectionNumber)}/req/${encodeURIComponent(r.id)}`}>
               <span className={`level-chip level-${r.level.toLowerCase()}`}>
                 {LEVEL_LABEL[r.level]}
               </span>
@@ -83,7 +83,12 @@ function ReqList({ title, reqs }: { title: string; reqs: RequirementWithStatus[]
 }
 
 export default function Dashboard() {
-  const reqsQ = useQuery({ queryKey: ['requirements'], queryFn: api.requirements });
+  const { rev = '' } = useParams();
+  const reqsQ = useQuery({
+    queryKey: ['requirements', rev],
+    queryFn: () => api.requirements(rev),
+    enabled: !!rev,
+  });
   const reqs = reqsQ.data ?? [];
 
   const chapters = useMemo(() => {
@@ -103,7 +108,13 @@ export default function Dashboard() {
   const shoulds = reqs.filter((r) => r.level === 'SHOULD' || r.level === 'SHOULD_NOT');
   const mays = reqs.filter((r) => r.level === 'MAY');
   const gaps = reqs.filter((r) => r.status === 'gap');
-  const unverifiedSeeded = reqs.filter((r) => r.seededBy === 'claude' && !r.verified);
+  const unverifiedSeeded = reqs.filter(
+    (r) => r.assessmentSeededBy === 'claude' && !r.assessed,
+  );
+  // Layer A: requirements the AI proposed (or flagged) that a human hasn't verified.
+  const unverifiedReqs = reqs.filter(
+    (r) => r.seededBy === 'claude' && !r.verified,
+  );
 
   return (
     <div className="dashboard">
@@ -118,7 +129,7 @@ export default function Dashboard() {
       <div className="chapter-rollups">
         {chapters.map(([c, list]) => (
           <div key={c} className="chapter-row">
-            <Link className="chapter-label" to={`/section/${encodeURIComponent(c)}`}>
+            <Link className="chapter-label" to={`/rev/${encodeURIComponent(rev)}/section/${encodeURIComponent(c)}`}>
               {c}. {CHAPTER_TITLES[c] ?? c}
             </Link>
             <Bar reqs={list} />
@@ -129,8 +140,9 @@ export default function Dashboard() {
         ))}
       </div>
 
-      <ReqList title="Gaps" reqs={gaps} />
-      <ReqList title="Claude-seeded, awaiting review" reqs={unverifiedSeeded} />
+      <ReqList title="Gaps" reqs={gaps} rev={rev} />
+      <ReqList title="AI-proposed requirements, awaiting review" reqs={unverifiedReqs} rev={rev} />
+      <ReqList title="Claude-seeded assessments, awaiting review" reqs={unverifiedSeeded} rev={rev} />
     </div>
   );
 }

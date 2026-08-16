@@ -1,0 +1,617 @@
+chapter: "2"
+rev: 800-63b-r4
+requirements:
+  2-R1:
+    id: 2-R1
+    rev: 800-63b-r4
+    sectionNumber: "2"
+    ordinal: 1
+    level: SHALL
+    text: To satisfy the requirements of a given AAL and be recognized as a subscriber, a claimant SHALL
+      authenticate to an RP (or IdP, as described in [SP800-63C]) with a process whose strength is
+      equal to or greater than the requirements at that level. The authentication process results in
+      an identifier that uniquely identifies the subscriber each time they authenticate to that RP.
+      The identifier MAY be pseudonymous. Other attributes that identify the subscriber as a unique
+      subject MAY also be provided. Detailed normative requirements for authenticators and verifiers
+      at each AAL are provided in Sec. 3. See [SP800-63] Sec. 3 for details on how to choose the
+      most appropriate AAL.
+    textHash: b7db6a5894d2
+    source: prose
+    seededBy: parser
+    verified: false
+  2-R2:
+    id: 2-R2
+    rev: 800-63b-r4
+    sectionNumber: "2"
+    ordinal: 2
+    level: SHALL
+    text: Personal information collected during and after identity proofing (see [SP800-63A]) MAY be
+      made available to the subscriber by the digital identity service through the subscriber
+      account. The release or online availability of any personal information by federal agencies
+      requires multi-factor authentication in accordance with [EO13681]. Therefore, federal agencies
+      SHALL select a minimum of AAL2 when personal information is made available online.
+    textHash: d1e649de78b3
+    source: prose
+    seededBy: parser
+    verified: false
+  2-R3:
+    id: 2-R3
+    rev: 800-63b-r4
+    sectionNumber: "2"
+    ordinal: 3
+    level: SHALL
+    text: At all AALs, indicators of potential fraud, including applicable indicators described in Sec.
+      5.3, MAY be used to lower the risk of misauthentication. For example, authentication from an
+      unexpected geolocation or IP address block (e.g., a cloud service) might prompt the use of
+      additional risk-based controls. CSPs or verifiers SHALL assess their use of indicators of
+      potential fraud for efficacy and to identify and mitigate potential negative impacts on their
+      user populations. CSPs or verifiers SHALL include fraud indicators in the authentication
+      privacy risk assessment. The use of potential fraud indicators prior to or during the
+      authentication process does not impact or change the AAL of a transaction or substitute for an
+      authentication factor.
+    textHash: bee82fd4821b
+    source: prose
+    seededBy: parser
+    verified: false
+  2.1-R1:
+    id: 2.1-R1
+    rev: 800-63b-r4
+    sectionNumber: "2.1"
+    ordinal: 1
+    level: SHOULD
+    text: AAL1 provides basic confidence that the claimant controls an authenticator that is bound to
+      the subscriber account. AAL1 requires either single-factor or multi-factor authentication
+      using a wide range of available authentication technologies. Verifiers SHOULD make
+      multi-factor authentication options available at AAL1 and encourage their use. Successful
+      authentication requires that the claimant prove possession and control of the authenticator
+      through a secure authentication protocol.
+    textHash: 18e72aff8de0
+    source: prose
+    seededBy: parser
+    verified: false
+  2.1.1-R1:
+    id: 2.1.1-R1
+    rev: 800-63b-r4
+    sectionNumber: 2.1.1
+    ordinal: 1
+    level: SHALL
+    text: "Password (Sec. 3.1.1): A memorizable secret typically chosen by the subscriber"
+    textHash: 7828b75f08d1
+    context: "AAL1 authentication SHALL use any of the following authentication types, which are further
+      defined in Sec. 3:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.1.1-R2:
+    id: 2.1.1-R2
+    rev: 800-63b-r4
+    sectionNumber: 2.1.1
+    ordinal: 2
+    level: SHALL
+    text: "Look-up secret (Sec. 3.1.2): A secret determined by the claimant by looking up a prompted
+      value in a list held by the subscriber"
+    textHash: 184ba331b5e6
+    context: "AAL1 authentication SHALL use any of the following authentication types, which are further
+      defined in Sec. 3:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.1.1-R3:
+    id: 2.1.1-R3
+    rev: 800-63b-r4
+    sectionNumber: 2.1.1
+    ordinal: 3
+    level: SHALL
+    text: "Out-of-band device (Sec. 3.1.3): A secret sent or received through a separate communication
+      channel with the subscriber"
+    textHash: bbf2d70afd3f
+    context: "AAL1 authentication SHALL use any of the following authentication types, which are further
+      defined in Sec. 3:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.1.1-R4:
+    id: 2.1.1-R4
+    rev: 800-63b-r4
+    sectionNumber: 2.1.1
+    ordinal: 4
+    level: SHALL
+    text: "Single-factor one-time password (OTP) (Sec. 3.1.4): A one-time secret obtained from a device
+      or application held by the subscriber"
+    textHash: 59eb48a57dd6
+    context: "AAL1 authentication SHALL use any of the following authentication types, which are further
+      defined in Sec. 3:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.1.1-R5:
+    id: 2.1.1-R5
+    rev: 800-63b-r4
+    sectionNumber: 2.1.1
+    ordinal: 5
+    level: SHALL
+    text: "Multi-factor OTP (Sec. 3.1.5): A one-time secret obtained from a device or application held
+      by the subscriber that requires activation by a second authentication factor"
+    textHash: 4bbb63bcbc29
+    context: "AAL1 authentication SHALL use any of the following authentication types, which are further
+      defined in Sec. 3:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.1.1-R6:
+    id: 2.1.1-R6
+    rev: 800-63b-r4
+    sectionNumber: 2.1.1
+    ordinal: 6
+    level: SHALL
+    text: "Single-factor cryptographic authentication (Sec. 3.1.6): Proof of possession and control via
+      an authentication protocol of a cryptographic key held by the subscriber"
+    textHash: 3e5df201c828
+    context: "AAL1 authentication SHALL use any of the following authentication types, which are further
+      defined in Sec. 3:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.1.1-R7:
+    id: 2.1.1-R7
+    rev: 800-63b-r4
+    sectionNumber: 2.1.1
+    ordinal: 7
+    level: SHALL
+    text: "Multi-factor cryptographic authentication (Sec. 3.1.7): Proof of possession and control via
+      an authentication protocol of a cryptographic key held by the subscriber that requires
+      activation by a second authentication factor"
+    textHash: 14c324aa5448
+    context: "AAL1 authentication SHALL use any of the following authentication types, which are further
+      defined in Sec. 3:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.1.2-R1:
+    id: 2.1.2-R1
+    rev: 800-63b-r4
+    sectionNumber: 2.1.2
+    ordinal: 1
+    level: SHALL
+    text: Authenticators used at AAL1 SHALL use approved cryptography. In other words, they must use
+      approved algorithms, but the implementation need not be validated under [FIPS140].
+    textHash: d51db52424e4
+    source: prose
+    seededBy: parser
+    verified: false
+  2.1.2-R2:
+    id: 2.1.2-R2
+    rev: 800-63b-r4
+    sectionNumber: 2.1.2
+    ordinal: 2
+    level: SHALL
+    text: Communication between the claimant and verifier SHALL occur via one or more authenticated
+      protected channels.
+    textHash: 041ef5ecb00d
+    source: prose
+    seededBy: parser
+    verified: false
+  2.1.2-R3:
+    id: 2.1.2-R3
+    rev: 800-63b-r4
+    sectionNumber: 2.1.2
+    ordinal: 3
+    level: SHALL
+    text: Cryptography used by verifiers operated by or on behalf of federal agencies at AAL1 SHALL be
+      validated to meet the requirements of [FIPS140] Level 1.
+    textHash: 9513481d6847
+    source: prose
+    seededBy: parser
+    verified: false
+  2.1.3-R1:
+    id: 2.1.3-R1
+    rev: 800-63b-r4
+    sectionNumber: 2.1.3
+    ordinal: 1
+    level: SHALL
+    text: Periodic reauthentication of subscriber sessions SHALL be performed, as described in Sec. 5.2.
+      A definite reauthentication overall timeout SHALL be established, which SHOULD be no more than
+      30 days at AAL1. An inactivity timeout MAY be applied but is not required at AAL1.
+    textHash: cc3f32264fa7
+    source: prose
+    seededBy: parser
+    verified: false
+  2.2.1-R1:
+    id: 2.2.1-R1
+    rev: 800-63b-r4
+    sectionNumber: 2.2.1
+    ordinal: 1
+    level: SHALL
+    text: At AAL2, authentication SHALL use either a multi-factor authenticator or a combination of two
+      separate authentication factors. A multi-factor authenticator requires two factors to execute
+      a single authentication event, such as a cryptographically secure device with an integrated
+      biometric sensor that is required to activate the device. Authenticator requirements are
+      specified in Sec. 3.
+    textHash: f6953994795f
+    source: prose
+    seededBy: parser
+    verified: false
+  2.2.1-R2:
+    id: 2.2.1-R2
+    rev: 800-63b-r4
+    sectionNumber: 2.2.1
+    ordinal: 2
+    level: MAY
+    text: Multi-factor out-of-band authenticator (Sec. 3.1.3.4)
+    textHash: d7ec574f34a3
+    context: "When a multi-factor authenticator is used, any of the following MAY be used:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.2.1-R3:
+    id: 2.2.1-R3
+    rev: 800-63b-r4
+    sectionNumber: 2.2.1
+    ordinal: 3
+    level: MAY
+    text: Multi-factor OTP (Sec. 3.1.5)
+    textHash: 675f13ae2001
+    context: "When a multi-factor authenticator is used, any of the following MAY be used:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.2.1-R4:
+    id: 2.2.1-R4
+    rev: 800-63b-r4
+    sectionNumber: 2.2.1
+    ordinal: 4
+    level: MAY
+    text: Multi-factor cryptographic authentication (Sec. 3.1.7)
+    textHash: b9c4c1368e4f
+    context: "When a multi-factor authenticator is used, any of the following MAY be used:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.2.1-R5:
+    id: 2.2.1-R5
+    rev: 800-63b-r4
+    sectionNumber: 2.2.1
+    ordinal: 5
+    level: SHALL
+    text: Look-up secret (Sec. 3.1.2)
+    textHash: 5cddb172f2f8
+    context: "When a combination of two single-factor authenticators is used, the combination SHALL
+      include one physical authenticator (i.e., “something you have”) from the following list in
+      conjunction with either a password (Sec. 3.1.1) or a biometric comparison:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.2.1-R6:
+    id: 2.2.1-R6
+    rev: 800-63b-r4
+    sectionNumber: 2.2.1
+    ordinal: 6
+    level: SHALL
+    text: Out-of-band device (Sec. 3.1.3)
+    textHash: ebe9e5cc3f43
+    context: "When a combination of two single-factor authenticators is used, the combination SHALL
+      include one physical authenticator (i.e., “something you have”) from the following list in
+      conjunction with either a password (Sec. 3.1.1) or a biometric comparison:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.2.1-R7:
+    id: 2.2.1-R7
+    rev: 800-63b-r4
+    sectionNumber: 2.2.1
+    ordinal: 7
+    level: SHALL
+    text: Single-factor OTP (Sec. 3.1.4)
+    textHash: d2e50ad6a35a
+    context: "When a combination of two single-factor authenticators is used, the combination SHALL
+      include one physical authenticator (i.e., “something you have”) from the following list in
+      conjunction with either a password (Sec. 3.1.1) or a biometric comparison:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.2.1-R8:
+    id: 2.2.1-R8
+    rev: 800-63b-r4
+    sectionNumber: 2.2.1
+    ordinal: 8
+    level: SHALL
+    text: Single-factor cryptographic authentication (Sec. 3.1.6)
+    textHash: b4978f72b7cd
+    context: "When a combination of two single-factor authenticators is used, the combination SHALL
+      include one physical authenticator (i.e., “something you have”) from the following list in
+      conjunction with either a password (Sec. 3.1.1) or a biometric comparison:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.2.2-R1:
+    id: 2.2.2-R1
+    rev: 800-63b-r4
+    sectionNumber: 2.2.2
+    ordinal: 1
+    level: SHALL
+    text: Authenticators used at AAL2 SHALL use approved cryptography. Cryptographic authenticators
+      procured by federal agencies SHALL be validated to meet the requirements of [FIPS140] Level 1.
+      At least one authenticator used at AAL2 SHALL be replay-resistant, as described in Sec. 3.2.7.
+      Authentication at AAL2 SHOULD demonstrate authentication intent from at least one
+      authenticator, as discussed in Sec. 3.2.8.
+    textHash: 83547e5cc5fb
+    source: prose
+    seededBy: parser
+    verified: false
+  2.2.2-R2:
+    id: 2.2.2-R2
+    rev: 800-63b-r4
+    sectionNumber: 2.2.2
+    ordinal: 2
+    level: SHALL
+    text: Communication between the claimant and verifier SHALL occur via one or more authenticated
+      protected channels.
+    textHash: 041ef5ecb00d
+    source: prose
+    seededBy: parser
+    verified: false
+  2.2.2-R3:
+    id: 2.2.2-R3
+    rev: 800-63b-r4
+    sectionNumber: 2.2.2
+    ordinal: 3
+    level: SHALL
+    text: Cryptography used by verifiers operated by or on behalf of federal agencies at AAL2 SHALL be
+      validated to meet the requirements of [FIPS140] Level 1 unless otherwise specified.
+    textHash: 24025a57ae43
+    source: prose
+    seededBy: parser
+    verified: false
+  2.2.2-R4:
+    id: 2.2.2-R4
+    rev: 800-63b-r4
+    sectionNumber: 2.2.2
+    ordinal: 4
+    level: SHALL
+    text: Verifiers SHALL offer at least one phishing-resistant authentication option at AAL2, as
+      described in Sec. 3.2.5. Federal agencies SHALL require their staff, contractors, and partners
+      to use phishing-resistant authentication to access federal information systems. In all cases,
+      verifiers SHOULD encourage the use of phishing-resistant authentication at AAL2 whenever
+      practical since phishing is a significant threat vector [IC3].
+    textHash: 464acd1acbb9
+    source: prose
+    seededBy: parser
+    verified: false
+  2.2.3-R1:
+    id: 2.2.3-R1
+    rev: 800-63b-r4
+    sectionNumber: 2.2.3
+    ordinal: 1
+    level: SHALL
+    text: Periodic reauthentication of subscriber sessions SHALL be performed, as described in Sec. 5.2.
+      A definite reauthentication overall timeout SHALL be established, which SHOULD be no more than
+      24 hours at AAL2. The inactivity timeout SHOULD be no more than 1 hour. When the inactivity
+      timeout has occurred but the overall timeout has not yet occurred, the verifier MAY allow the
+      subscriber to reauthenticate using only a successful password or biometric comparison in
+      conjunction with the session secret, as described in Sec. 5.1.
+    textHash: 9d70e843f503
+    source: prose
+    seededBy: parser
+    verified: false
+  2.3.1-R1:
+    id: 2.3.1-R1
+    rev: 800-63b-r4
+    sectionNumber: 2.3.1
+    ordinal: 1
+    level: SHALL
+    text: Multi-factor cryptographic authentication (Sec. 3.1.7)
+    textHash: b9c4c1368e4f
+    context: "AAL3 authentication SHALL require one of the following authenticator combinations:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.3.1-R2:
+    id: 2.3.1-R2
+    rev: 800-63b-r4
+    sectionNumber: 2.3.1
+    ordinal: 2
+    level: SHALL
+    text: Single-factor cryptographic authentication (Sec. 3.1.6) used in conjunction with either a
+      password (Sec. 3.1.1) or a biometric comparison
+    textHash: e57df1627fca
+    context: "AAL3 authentication SHALL require one of the following authenticator combinations:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.3.2-R1:
+    id: 2.3.2-R1
+    rev: 800-63b-r4
+    sectionNumber: 2.3.2
+    ordinal: 1
+    level: SHALL
+    text: Authenticators used at AAL3 SHALL use approved cryptography. Communication between the
+      claimant and verifier SHALL occur via one or more authenticated protected channels. The
+      cryptographic authenticator used at AAL3 SHALL have a non-exportable private key and SHALL
+      provide phishing resistance, as described in Sec. 3.2.5. The cryptographic authentication
+      protocol SHALL be replay-resistant, as described in Sec. 3.2.7. All authentication and
+      reauthentication processes at AAL3 SHALL demonstrate authentication intent from at least one
+      authenticator, as described in Sec. 3.2.8. Cryptographic authenticators used at AAL3 SHALL use
+      public-key cryptography to protect the authentication secrets from compromise of the verifier.
+    textHash: 09ac3fa1b8e4
+    source: prose
+    seededBy: parser
+    verified: false
+  2.3.2-R2:
+    id: 2.3.2-R2
+    rev: 800-63b-r4
+    sectionNumber: 2.3.2
+    ordinal: 2
+    level: SHALL_NOT
+    text: Single-factor and multi-factor authenticators used at AAL3 SHALL be validated to meet the
+      requirements of [FIPS140] Level 1 or higher overall. As described in Sec. 3.2.12,
+      cryptographic authenticators used at AAL3 are required to provide a hardware-protected,
+      isolated environment to prevent authentication keys from being leaked or extracted. Since
+      syncable authenticators (described in Appendix B) require the private key to be exportable,
+      syncable authenticators SHALL NOT be used at AAL3.
+    textHash: d0d9fafd94e4
+    source: prose
+    seededBy: parser
+    verified: false
+  2.3.2-R3:
+    id: 2.3.2-R3
+    rev: 800-63b-r4
+    sectionNumber: 2.3.2
+    ordinal: 3
+    level: SHALL
+    text: Cryptography used by verifiers at AAL3 SHALL be validated at [FIPS140] Level 1 or higher.
+    textHash: d01e27c41dd7
+    source: prose
+    seededBy: parser
+    verified: false
+  2.3.2-R4:
+    id: 2.3.2-R4
+    rev: 800-63b-r4
+    sectionNumber: 2.3.2
+    ordinal: 4
+    level: SHOULD
+    text: Hardware-based authenticators and verifiers at AAL3 SHOULD resist relevant side-channel (e.g.,
+      timing and power-consumption analysis) attacks.
+    textHash: 5d37889d86df
+    source: prose
+    seededBy: parser
+    verified: false
+  2.3.3-R1:
+    id: 2.3.3-R1
+    rev: 800-63b-r4
+    sectionNumber: 2.3.3
+    ordinal: 1
+    level: SHALL
+    text: Periodic reauthentication of subscriber sessions SHALL be performed, as described in Sec. 5.2.
+      At AAL3, the overall timeout for reauthentication SHALL be no more than 12 hours. The
+      inactivity timeout SHOULD be no more than 15 minutes. Unlike AAL2, AAL3 reauthentication
+      requirements are the same as for initial authentication at AAL3.
+    textHash: d9fcdde47841
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1-R1:
+    id: 2.4.1-R1
+    rev: 800-63b-r4
+    sectionNumber: 2.4.1
+    ordinal: 1
+    level: SHALL
+    text: The verifier SHALL employ appropriately tailored security controls from the moderate baseline
+      security controls defined in [SP800-53] or an equivalent federal (e.g., [FEDRAMP]) or industry
+      standard that the organization has chosen for the information systems, applications, and
+      online services that these guidelines are used to protect.
+    textHash: ea1719d38ffd
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.2-R1:
+    id: 2.4.2-R1
+    rev: 800-63b-r4
+    sectionNumber: 2.4.2
+    ordinal: 1
+    level: SHALL
+    text: The verifier SHALL comply with its respective records retention policies in accordance with
+      applicable laws, regulations, and policies, including any National Archives and Records
+      Administration (NARA) records retention schedules that may apply. If the verifier opts to
+      retain records in the absence of mandatory requirements, the verifier or the CSP or IdP of
+      which it is a part SHALL conduct a risk management process [NISTRMF], including assessments of
+      privacy and security risks, to determine how long records should be retained and SHALL inform
+      the subscriber of that retention policy.
+    textHash: "611760900000"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.3-R1:
+    id: 2.4.3-R1
+    rev: 800-63b-r4
+    sectionNumber: 2.4.3
+    ordinal: 1
+    level: SHALL
+    text: The verifier SHALL employ appropriately tailored privacy controls defined in [SP800-53] or an
+      equivalent industry standard.
+    textHash: 8e9ef58ee321
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.3-R2:
+    id: 2.4.3-R2
+    rev: 800-63b-r4
+    sectionNumber: 2.4.3
+    ordinal: 2
+    level: SHALL_NOT
+    text: If CSPs or IdPs process attributes for purposes other than identity services (i.e., identity
+      proofing, authentication, or attribute assertions), related fraud mitigation, or compliance
+      with laws or legal processes, they SHALL implement measures to maintain predictability and
+      manageability commensurate with the privacy risks that arise from the additional processing.
+      Examples of such measures include providing clear notice, obtaining subscriber consent, and
+      enabling the selective use or disclosure of attributes. When CSPs or IdPs use consent
+      measures, they SHALL NOT make consent for the additional processing a condition of the
+      identity service.
+    textHash: 675eefff3edf
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.3-R3:
+    id: 2.4.3-R3
+    rev: 800-63b-r4
+    sectionNumber: 2.4.3
+    ordinal: 3
+    level: SHALL
+    text: The agency SHALL consult with their Senior Agency Official for Privacy (SAOP) and conduct an
+      analysis to determine whether the collection of personal information to issue or maintain
+      authenticators triggers the requirements of the Privacy Act of 1974 [PrivacyAct] (see Sec.
+      7.4).
+    textHash: 84b287a3150f
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.3-R4:
+    id: 2.4.3-R4
+    rev: 800-63b-r4
+    sectionNumber: 2.4.3
+    ordinal: 4
+    level: SHALL
+    text: The agency SHALL publish a System of Records Notice (SORN) to cover such collections, as
+      applicable.
+    textHash: 431c520787b1
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.3-R5:
+    id: 2.4.3-R5
+    rev: 800-63b-r4
+    sectionNumber: 2.4.3
+    ordinal: 5
+    level: SHALL
+    text: The agency SHALL consult with its SAOP and conduct an analysis to determine whether the
+      collection of personal information to issue or maintain authenticators triggers the
+      requirements of the E-Government Act of 2002 [E-Gov].
+    textHash: 147769326d74
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.3-R6:
+    id: 2.4.3-R6
+    rev: 800-63b-r4
+    sectionNumber: 2.4.3
+    ordinal: 6
+    level: SHALL
+    text: The agency SHALL publish a Privacy Impact Assessment (PIA) to cover such collection, as
+      applicable.
+    textHash: 1332df5f7592
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.4-R1:
+    id: 2.4.4-R1
+    rev: 800-63b-r4
+    sectionNumber: 2.4.4
+    ordinal: 1
+    level: SHALL
+    text: The verifier and associated CSP or IdP SHALL provide mechanisms for the redress of subscriber
+      complaints and problems that arise from subscriber authentication processes, as described in
+      Sec. 5.6 of [SP800-63]. These mechanisms SHALL be easy for subscribers to find and use. The
+      CSP or IdP SHALL assess the mechanisms for efficacy in resolving complaints or problems.
+    textHash: b32f67512e0d
+    source: prose
+    seededBy: parser
+    verified: false
