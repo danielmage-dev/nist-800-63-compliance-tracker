@@ -55,6 +55,11 @@ for (const revMeta of revsToCheck) {
 
   // ---- Requirements -------------------------------------------------------
   const requirementIds = new Set<string>();
+  // Track requirement IDs seen, to catch duplicates across chapter files (a
+  // duplicate ID means two distinct requirements collide on the same key —
+  // e.g. from a duplicated section number). This is an ERROR: it silently
+  // drops/merges requirements.
+  const seenReqIds = new Map<string, string>(); // reqId -> first ctx it appeared in
   if (!existsSync(REQ_DIR)) {
     warn(`[${REV}] no requirements directory — run ingest`);
   } else {
@@ -76,6 +81,12 @@ for (const revMeta of revsToCheck) {
         if (reqId !== r.id) err(`${ctx}:${reqId}: key/id mismatch ('${r.id}')`);
         if (r.rev !== REV) err(`${ctx}:${reqId}: rev '${r.rev}' != '${REV}'`);
         if (typeof r.verified !== 'boolean') err(`${ctx}:${reqId}: 'verified' must be boolean`);
+        const prior = seenReqIds.get(reqId);
+        if (prior) {
+          err(`${ctx}:${reqId}: duplicate requirement id (also in ${prior}) — section-number collision?`);
+        } else {
+          seenReqIds.set(reqId, ctx);
+        }
         requirementIds.add(reqId);
       }
     }

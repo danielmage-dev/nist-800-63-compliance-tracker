@@ -1,0 +1,645 @@
+chapter: "2"
+rev: 800-63a-r4
+requirements:
+  2-R1:
+    id: 2-R1
+    rev: 800-63a-r4
+    sectionNumber: "2"
+    ordinal: 1
+    level: SHOULD
+    text: These guidelines provide multiple methods by which resolution, validation, and verification
+      can be accomplished, as well as multiple types of identity evidence that support the identity
+      proofing process. CSPs and organizations SHOULD provide options when implementing their
+      identity proofing services and processes to promote access for applicants with different
+      means, capabilities, and technologies. These options SHOULD include accepting multiple types
+      and combinations of identity evidence, supporting multiple data validation sources, enabling
+      multiple methods for verifying identity, providing multiple identity proofing types, and
+      offering exception handling for applicants (e.g., trusted referees, applicant references).
+    textHash: 224b11439eac
+    source: prose
+    seededBy: parser
+    verified: false
+  2-R2:
+    id: 2-R2
+    rev: 800-63a-r4
+    sectionNumber: "2"
+    ordinal: 2
+    level: SHALL
+    text: CSPs SHALL evaluate the risks associated with each identity proofing option offered (e.g.,
+      identity proofing types, validation sources, assistance mechanisms) and implement mitigating
+      fraud controls, as appropriate. At a minimum, CSPs SHALL design each option such that the
+      options provide comparable assurance in aggregate.
+    textHash: ed1e82011e90
+    source: prose
+    seededBy: parser
+    verified: false
+  2.1.2-R1:
+    id: 2.1.2-R1
+    rev: 800-63a-r4
+    sectionNumber: 2.1.2
+    ordinal: 1
+    level: SHALL
+    text: CSPs SHALL identify which of the above roles are applicable to their identity service and
+      SHALL provide training and support resources consistent with the requirements and expectations
+      provided in Sec. 3.
+    textHash: aa74cf3719a2
+    source: prose
+    seededBy: parser
+    verified: false
+  2.1.3-R1:
+    id: 2.1.3-R1
+    rev: 800-63a-r4
+    sectionNumber: 2.1.3
+    ordinal: 1
+    level: SHOULD
+    text: The requirements at each assurance level are structured to allow CSPs to implement different
+      combinations of identity proofing types to meet the requirements of different assurance
+      levels, as appropriate. CSPs SHOULD offer the combination of identity proofing types that best
+      addresses the needs of the populations served by their identity service and the risk posture
+      of the RPs that use their service.
+    textHash: 287ef2f3ab1f
+    source: prose
+    seededBy: parser
+    verified: false
+  2.2-R1:
+    id: 2.2-R1
+    rev: 800-63a-r4
+    sectionNumber: "2.2"
+    ordinal: 1
+    level: SHALL
+    text: "First name: The applicant’s given name."
+    textHash: 69377be136a7
+    context: "The identity proofing process involves the presentation and validation of the minimum
+      attributes necessary to accomplish identity proofing, including what is needed to complete
+      resolution, validation, and verification. The CSP determines and documents the set of
+      attributes that it considers to be core attributes, as specified in Sec. 3.1. CSPs SHALL
+      include a government identifier1 and SHOULD include the following in their set of core
+      attributes for identity proofing at any IAL:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.2-R2:
+    id: 2.2-R2
+    rev: 800-63a-r4
+    sectionNumber: "2.2"
+    ordinal: 2
+    level: SHALL
+    text: "Middle name or initial: The applicant’s middle name or initial, as applicable."
+    textHash: 9658351b8cfe
+    context: "The identity proofing process involves the presentation and validation of the minimum
+      attributes necessary to accomplish identity proofing, including what is needed to complete
+      resolution, validation, and verification. The CSP determines and documents the set of
+      attributes that it considers to be core attributes, as specified in Sec. 3.1. CSPs SHALL
+      include a government identifier1 and SHOULD include the following in their set of core
+      attributes for identity proofing at any IAL:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.2-R3:
+    id: 2.2-R3
+    rev: 800-63a-r4
+    sectionNumber: "2.2"
+    ordinal: 3
+    level: SHALL
+    text: "Last name: The applicant’s last name or family name, as appropriate."
+    textHash: e366d25782a6
+    context: "The identity proofing process involves the presentation and validation of the minimum
+      attributes necessary to accomplish identity proofing, including what is needed to complete
+      resolution, validation, and verification. The CSP determines and documents the set of
+      attributes that it considers to be core attributes, as specified in Sec. 3.1. CSPs SHALL
+      include a government identifier1 and SHOULD include the following in their set of core
+      attributes for identity proofing at any IAL:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.2-R4:
+    id: 2.2-R4
+    rev: 800-63a-r4
+    sectionNumber: "2.2"
+    ordinal: 4
+    level: SHALL
+    text: "Date of birth: The date on which the applicant was born."
+    textHash: 9657a5343bca
+    context: "The identity proofing process involves the presentation and validation of the minimum
+      attributes necessary to accomplish identity proofing, including what is needed to complete
+      resolution, validation, and verification. The CSP determines and documents the set of
+      attributes that it considers to be core attributes, as specified in Sec. 3.1. CSPs SHALL
+      include a government identifier1 and SHOULD include the following in their set of core
+      attributes for identity proofing at any IAL:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.2-R5:
+    id: 2.2-R5
+    rev: 800-63a-r4
+    sectionNumber: "2.2"
+    ordinal: 5
+    level: SHALL
+    text: "Physical or digital address: A physical (i.e., mailing address) or digital (e.g., phone
+      number or email) address at which the applicant can receive communications related to the
+      proofing process."
+    textHash: 5d2ed449c992
+    context: "The identity proofing process involves the presentation and validation of the minimum
+      attributes necessary to accomplish identity proofing, including what is needed to complete
+      resolution, validation, and verification. The CSP determines and documents the set of
+      attributes that it considers to be core attributes, as specified in Sec. 3.1. CSPs SHALL
+      include a government identifier1 and SHOULD include the following in their set of core
+      attributes for identity proofing at any IAL:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.2-R6:
+    id: 2.2-R6
+    rev: 800-63a-r4
+    sectionNumber: "2.2"
+    ordinal: 6
+    level: SHALL
+    text: Additional attributes MAY be added to these as required by the CSP and RP. The CSP and RP
+      SHALL document all core attributes in trust agreements and practice statements. Following a
+      privacy risk assessment, a CSP MAY request additional attributes that are not required to
+      complete identity proofing, but that may support other RP business processes. See Sec. 3.3 for
+      details on privacy requirements for requesting additional attributes.
+    textHash: 3baade784fe8
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.1-R1:
+    id: 2.4.1.1-R1
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.1
+    ordinal: 1
+    level: SHALL
+    text: There is a reasonable expectation that the issuing source of the evidence confirmed the
+      claimed identity by following formal procedures designed to provide assurance that the claimed
+      identity is associated with the subject, such as evidence issued by financial institutions
+      that have customer identity verification obligations under the Customer Identification Program
+      (CIP) rule or procedures for establishing a mobile phone account with a mobile network
+      operator (MNO).
+    textHash: 4ecfb3f2afd3
+    context: "To be considered FAIR, identity evidence SHALL meet all of the following requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.1-R2:
+    id: 2.4.1.1-R2
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.1
+    ordinal: 2
+    level: SHALL
+    text: The evidence has an issuance process that results in the delivery of the evidence to the
+      person to whom it relates, such as delivery to a postal address, issuance in person, or
+      through a protected remote provisioning process.
+    textHash: b02e28d11f84
+    context: "To be considered FAIR, identity evidence SHALL meet all of the following requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.1-R3:
+    id: 2.4.1.1-R3
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.1
+    ordinal: 3
+    level: SHALL
+    text: The evidence contains the name of the claimed identity.
+    textHash: 4c70487fec0f
+    context: "To be considered FAIR, identity evidence SHALL meet all of the following requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.1-R4:
+    id: 2.4.1.1-R4
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.1
+    ordinal: 4
+    level: SHALL
+    text: The evidence contains at least one reference number, a facial image or other biometric
+      characteristic, or sufficient attributes to uniquely identify the person to whom it relates.
+    textHash: 232e6db80c61
+    context: "To be considered FAIR, identity evidence SHALL meet all of the following requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.1-R5:
+    id: 2.4.1.1-R5
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.1
+    ordinal: 5
+    level: SHALL
+    text: The evidence contains physical (e.g., security printing, optically variable features,
+      holograms) or digital (e.g., digitally signed assertions, addressable SIM or ESIM) security
+      features that make it difficult to reproduce.
+    textHash: "76e344350060"
+    context: "To be considered FAIR, identity evidence SHALL meet all of the following requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.1-R6:
+    id: 2.4.1.1-R6
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.1
+    ordinal: 6
+    level: SHALL
+    text: Core attributes on the evidence can be validated against information held by an authoritative
+      or credible source, as described in Sec. 2.4.2.4.
+    textHash: 6561983d4f15
+    context: "To be considered FAIR, identity evidence SHALL meet all of the following requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.1-R7:
+    id: 2.4.1.1-R7
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.1
+    ordinal: 7
+    level: SHALL
+    text: The evidence can be validated through an approved method, as provided in Sec. 2.4.2.2.
+    textHash: 1f4fb23a1b30
+    context: "To be considered FAIR, identity evidence SHALL meet all of the following requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.1-R8:
+    id: 2.4.1.1-R8
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.1
+    ordinal: 8
+    level: SHALL
+    text: The evidence can support the identity verification process, as described in Sec. 2.5.1.
+    textHash: bbab7d3e8f65
+    context: "To be considered FAIR, identity evidence SHALL meet all of the following requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.2-R1:
+    id: 2.4.1.2-R1
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.2
+    ordinal: 1
+    level: SHALL
+    text: There is a reasonable expectation that the issuing source of the evidence confirmed the
+      claimed identity by following written procedures (e.g., identity proofing at IAL2 or above)
+      designed to provide assurance that the claimed identity is associated with the subject.
+      Additionally, these procedures are subject to recurring oversight by regulatory or publicly
+      accountable institutions, such as states, the Federal Government, and some regulated
+      industries.
+    textHash: cb354d9ea0e0
+    context: "In order to be considered STRONG, identity evidence SHALL meet all of the following
+      requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.2-R2:
+    id: 2.4.1.2-R2
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.2
+    ordinal: 2
+    level: SHALL
+    text: The evidence has an issuance process that results in the delivery of the evidence to the
+      person to whom it relates, such as delivery to a postal address, issuance in person, or
+      through a protected remote provisioning process.
+    textHash: b02e28d11f84
+    context: "In order to be considered STRONG, identity evidence SHALL meet all of the following
+      requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.2-R3:
+    id: 2.4.1.2-R3
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.2
+    ordinal: 3
+    level: SHALL
+    text: The evidence contains the name of the claimed identity.
+    textHash: 4c70487fec0f
+    context: "In order to be considered STRONG, identity evidence SHALL meet all of the following
+      requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.2-R4:
+    id: 2.4.1.2-R4
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.2
+    ordinal: 4
+    level: SHALL
+    text: The evidence contains a reference number or other attributes that uniquely identify the person
+      to whom it relates.
+    textHash: ca39b20c4394
+    context: "In order to be considered STRONG, identity evidence SHALL meet all of the following
+      requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.2-R5:
+    id: 2.4.1.2-R5
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.2
+    ordinal: 5
+    level: SHALL
+    text: The evidence contains a facial image or other biometric characteristic of the person to whom
+      it relates.
+    textHash: a8af7b0c20cd
+    context: "In order to be considered STRONG, identity evidence SHALL meet all of the following
+      requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.2-R6:
+    id: 2.4.1.2-R6
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.2
+    ordinal: 6
+    level: SHALL
+    text: The evidence contains physical (e.g., security printing, optically variable features,
+      holograms) or digital security (e.g., digitally signed assertions, addressable SIM or ESIM)
+      features that make it difficult to reproduce.
+    textHash: dd20b58acdb8
+    context: "In order to be considered STRONG, identity evidence SHALL meet all of the following
+      requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.2-R7:
+    id: 2.4.1.2-R7
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.2
+    ordinal: 7
+    level: SHALL
+    text: Core attributes on the evidence can be validated against information held by authoritative or
+      credible sources, as described in Sec. 2.4.2.4.
+    textHash: a4738ea86988
+    context: "In order to be considered STRONG, identity evidence SHALL meet all of the following
+      requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.2-R8:
+    id: 2.4.1.2-R8
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.2
+    ordinal: 8
+    level: SHALL
+    text: The evidence can be validated through an approved method, as provided in Sec. 2.4.2.2.
+    textHash: 1f4fb23a1b30
+    context: "In order to be considered STRONG, identity evidence SHALL meet all of the following
+      requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.2-R9:
+    id: 2.4.1.2-R9
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.2
+    ordinal: 9
+    level: SHALL
+    text: The evidence can support the identity verification process, as described in Sec. 2.5.1.
+    textHash: bbab7d3e8f65
+    context: "In order to be considered STRONG, identity evidence SHALL meet all of the following
+      requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.3-R1:
+    id: 2.4.1.3-R1
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.3
+    ordinal: 1
+    level: SHALL
+    text: The issuing source of the evidence confirmed the claimed identity by following written
+      procedures (e.g., identity proofing at IAL2 or above) designed to enable it to have high
+      confidence that the claimed identity is associated with the subject. Additionally, these
+      procedures are subject to recurring oversight by regulatory or publicly accountable
+      institutions, such as states, the Federal Government, and some regulated industries.
+    textHash: 1f21e77c891e
+    context: "In order to be considered SUPERIOR, identity evidence SHALL meet all of the following
+      requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.3-R2:
+    id: 2.4.1.3-R2
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.3
+    ordinal: 2
+    level: SHALL
+    text: The identity evidence contains attributes and data objects that are cryptographically
+      protected and can be validated using approved cryptography through verification of a digital
+      signature applied by the issuing source.
+    textHash: 63c3f75f7ed6
+    context: "In order to be considered SUPERIOR, identity evidence SHALL meet all of the following
+      requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.3-R3:
+    id: 2.4.1.3-R3
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.3
+    ordinal: 3
+    level: SHALL
+    text: The issuing source had the subject participate in an attended enrollment and identity proofing
+      process that confirmed their physical existence.
+    textHash: 7ef3d7c5df93
+    context: "In order to be considered SUPERIOR, identity evidence SHALL meet all of the following
+      requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.3-R4:
+    id: 2.4.1.3-R4
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.3
+    ordinal: 4
+    level: SHALL
+    text: The evidence has an issuance process that results in the delivery of the evidence to the
+      person to whom it relates, such as delivery to a postal address, issuance in person, or
+      through a protected remote provisioning process.
+    textHash: b02e28d11f84
+    context: "In order to be considered SUPERIOR, identity evidence SHALL meet all of the following
+      requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.3-R5:
+    id: 2.4.1.3-R5
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.3
+    ordinal: 5
+    level: SHALL
+    text: The evidence contains the name of the claimed identity.
+    textHash: 4c70487fec0f
+    context: "In order to be considered SUPERIOR, identity evidence SHALL meet all of the following
+      requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.3-R6:
+    id: 2.4.1.3-R6
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.3
+    ordinal: 6
+    level: SHALL
+    text: The evidence contains at least one reference number that uniquely identifies the person to
+      whom it relates.
+    textHash: c3aa746c8af5
+    context: "In order to be considered SUPERIOR, identity evidence SHALL meet all of the following
+      requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.3-R7:
+    id: 2.4.1.3-R7
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.3
+    ordinal: 7
+    level: SHALL
+    text: The evidence contains a facial image or other biometric characteristic of the person to whom
+      it relates.
+    textHash: a8af7b0c20cd
+    context: "In order to be considered SUPERIOR, identity evidence SHALL meet all of the following
+      requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.3-R8:
+    id: 2.4.1.3-R8
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.3
+    ordinal: 8
+    level: SHALL
+    text: The evidence contains physical (e.g., security printing, optically variable features,
+      holograms) or digital security (e.g., digitally signed assertions, addressable SIM or ESIM)
+      features that make it difficult to reproduce.
+    textHash: dd20b58acdb8
+    context: "In order to be considered SUPERIOR, identity evidence SHALL meet all of the following
+      requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.3-R9:
+    id: 2.4.1.3-R9
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.3
+    ordinal: 9
+    level: SHALL
+    text: The evidence can be validated through an approved method, as provided in Sec. 2.4.2.2.
+    textHash: 1f4fb23a1b30
+    context: "In order to be considered SUPERIOR, identity evidence SHALL meet all of the following
+      requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.1.3-R10:
+    id: 2.4.1.3-R10
+    rev: 800-63a-r4
+    sectionNumber: 2.4.1.3
+    ordinal: 10
+    level: SHALL
+    text: The evidence can support the identity verification process, as described in Sec. 2.5.1.
+    textHash: bbab7d3e8f65
+    context: "In order to be considered SUPERIOR, identity evidence SHALL meet all of the following
+      requirements:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.2.1-R1:
+    id: 2.4.2.1-R1
+    rev: 800-63a-r4
+    sectionNumber: 2.4.2.1
+    ordinal: 1
+    level: SHALL
+    text: The evidence is in the correct format and includes complete information for the identity
+      evidence type
+    textHash: 86d49e29b3c8
+    context: "The CSP SHALL validate the authenticity, accuracy, and validity of presented evidence by
+      confirming that:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.2.1-R2:
+    id: 2.4.2.1-R2
+    rev: 800-63a-r4
+    sectionNumber: 2.4.2.1
+    ordinal: 2
+    level: SHALL
+    text: The evidence does not show signs of being counterfeit or tampered with
+    textHash: 4370b814be99
+    context: "The CSP SHALL validate the authenticity, accuracy, and validity of presented evidence by
+      confirming that:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.2.1-R3:
+    id: 2.4.2.1-R3
+    rev: 800-63a-r4
+    sectionNumber: 2.4.2.1
+    ordinal: 3
+    level: SHALL
+    text: The evidence contains physical or digital security features
+    textHash: 2fec3ef76ce1
+    context: "The CSP SHALL validate the authenticity, accuracy, and validity of presented evidence by
+      confirming that:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.2.1-R4:
+    id: 2.4.2.1-R4
+    rev: 800-63a-r4
+    sectionNumber: 2.4.2.1
+    ordinal: 4
+    level: SHALL
+    text: The core attributes and data fields necessary to determine authenticity on the evidence are
+      accurate
+    textHash: 01f4e65113bb
+    context: "The CSP SHALL validate the authenticity, accuracy, and validity of presented evidence by
+      confirming that:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.2.3-R1:
+    id: 2.4.2.3-R1
+    rev: 800-63a-r4
+    sectionNumber: 2.4.2.3
+    ordinal: 1
+    level: SHALL
+    text: The CSP SHALL validate all core attributes (Sec. 2.2), whether obtained from identity evidence
+      or self-asserted by the applicant, with an authoritative or credible source (Sec. 2.4.2.4).
+    textHash: 4a031c24eafa
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4.2.4-R1:
+    id: 2.4.2.4-R1
+    rev: 800-63a-r4
+    sectionNumber: 2.4.2.4
+    ordinal: 1
+    level: SHALL
+    text: The CSP SHALL use authoritative or credible sources that meet the following criteria.
+    textHash: a91a051cbef8
+    source: prose
+    seededBy: parser
+    verified: false
+  2.5.1-R1:
+    id: 2.5.1-R1
+    rev: 800-63a-r4
+    sectionNumber: 2.5.1
+    ordinal: 1
+    level: SHALL
+    text: The CSP SHALL verify the linkage between the claimed identity to the applicant engaged in the
+      identity proofing process through one or more of the following methods.
+    textHash: e24c0c9e80fe
+    source: prose
+    seededBy: parser
+    verified: false
+  2.5.1-R2:
+    id: 2.5.1-R2
+    rev: 800-63a-r4
+    sectionNumber: 2.5.1
+    ordinal: 2
+    level: SHALL_NOT
+    text: Knowledge-based verification (KBV) or knowledge-based authentication SHALL NOT be used for
+      identity verification.
+    textHash: 0f3059bc7dd6
+    source: prose
+    seededBy: parser
+    verified: false

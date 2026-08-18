@@ -7,5 +7,23 @@
     "status": "active",
     "sourceUrl": "https://pages.nist.gov/800-63-4/sp800-63b.html",
     "ingestedAt": "2026-08-18T14:48:50.629Z"
+  },
+  {
+    "revKey": "800-63c-r4",
+    "doc": "sp800-63c",
+    "rev": "4",
+    "label": "SP 800-63C rev 4",
+    "status": "active",
+    "sourceUrl": "https://pages.nist.gov/800-63-4/sp800-63c.html",
+    "ingestedAt": "2026-08-18T15:14:28.286Z"
+  },
+  {
+    "revKey": "800-63a-r4",
+    "doc": "sp800-63a",
+    "rev": "4",
+    "label": "SP 800-63A rev 4",
+    "status": "active",
+    "sourceUrl": "https://pages.nist.gov/800-63-4/sp800-63a.html",
+    "ingestedAt": "2026-08-18T15:58:13.104Z"
   }
 ]
