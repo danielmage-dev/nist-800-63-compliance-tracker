@@ -148,7 +148,12 @@ function main(html: string) {
   const stack: WorkSection[] = [];
   // Per-parent child counters keyed by parent number ('' = top level)
   const counters = new Map<string, number>();
-  let unnumberedSeen = new Set<string>();
+  // Every top-level section number we've assigned, so we can mechanically
+  // dedup collisions (e.g. SP 800-63A's HTML tags two different appendices with
+  // data-section="B"). A duplicate number would otherwise collide requirement
+  // IDs and assessment keys across those sections. Dedup applies to BOTH
+  // data-section-derived numbers and slug-derived pseudo-numbers.
+  const topLevelSeen = new Set<string>();
 
   for (const node of contentRoot.children().toArray()) {
     const tag = 'tagName' in node ? node.tagName?.toLowerCase() : undefined;
@@ -169,15 +174,19 @@ function main(html: string) {
 
     let number: string;
     if (level === 1) {
-      if (chapter) {
-        number = chapter;
-      } else {
-        // Front/back matter: use a slug as the pseudo-number
-        let slug = anchor || title.toLowerCase().replace(/\W+/g, '-');
-        while (unnumberedSeen.has(slug)) slug += '-x';
-        unnumberedSeen.add(slug);
-        number = slug;
+      // Base number from data-section if present, else a slug of the anchor/title.
+      let base = chapter || anchor || title.toLowerCase().replace(/\W+/g, '-');
+      // Mechanical dedup: if this top-level number was already used (NIST
+      // sometimes reuses a data-section letter across two appendices), suffix
+      // it with the anchor (unique) or a counter so keys never collide.
+      let candidate = base;
+      if (topLevelSeen.has(candidate)) {
+        candidate = anchor ? `${base}-${anchor}` : base;
+        let i = 2;
+        while (topLevelSeen.has(candidate)) candidate = `${base}-${i++}`;
       }
+      topLevelSeen.add(candidate);
+      number = candidate;
     } else {
       const parent = stack[stack.length - 1];
       if (!parent) throw new Error(`h${level} "${title}" has no parent section`);

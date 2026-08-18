@@ -1,0 +1,1641 @@
+chapter: "4"
+rev: 800-63a-r4
+requirements:
+  4.1.1-R1:
+    id: 4.1.1-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.1.1
+    ordinal: 1
+    level: MAY
+    text: IAL1 identity proofing MAY be delivered through any proofing type, as described in Sec. 2.1.3.
+    textHash: 0bdf4b4f19b5
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.1-R2:
+    id: 4.1.1-R2
+    rev: 800-63a-r4
+    sectionNumber: 4.1.1
+    ordinal: 2
+    level: SHALL
+    text: CSPs MAY combine proofing types and their stated requirements to create hybrid processes. For
+      example, a CSP might leverage remote unattended identity proofing validation processes in
+      advance of a remote attended session where the verification will take place. If such steps are
+      combined, CSPs SHALL document their hybrid process and state how the applicable requirements
+      for each of the employed proofing types are met.
+    textHash: "306589483742"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.2-R1:
+    id: 4.1.2-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.1.2
+    ordinal: 1
+    level: SHALL
+    text: "One piece of:"
+    textHash: 949a0d9214aa
+    context: "For identity proofing at IAL1, the CSP SHALL collect:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.3-R1:
+    id: 4.1.3-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.1.3
+    ordinal: 1
+    level: SHALL
+    text: The CSP SHALL collect all core attributes, including at least one government identifier.
+      Validated evidence is the preferred source of identity attributes. If the presented identity
+      evidence does not provide all of the attributes that the CSP considers to be core attributes,
+      it MAY collect attributes that are self-asserted by the applicant.
+    textHash: 4affcfcc05b3
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.4-R1:
+    id: 4.1.4-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.1.4
+    ordinal: 1
+    level: SHALL
+    text: Confirming the authenticity of digital evidence by interrogating the digital security features
+      (e.g., signatures on assertions or data)
+    textHash: 834fdf2b06c3
+    context: "Each piece of evidence presented SHALL be validated using one of the following methods:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.4-R2:
+    id: 4.1.4-R2
+    rev: 800-63a-r4
+    sectionNumber: 4.1.4
+    ordinal: 2
+    level: SHALL
+    text: Confirming the authenticity of physical evidence using automated scanning technology that can
+      detect physical security features, as described in Sec. 3.14
+    textHash: 2398aecb7f0e
+    context: "Each piece of evidence presented SHALL be validated using one of the following methods:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.4-R3:
+    id: 4.1.4-R3
+    rev: 800-63a-r4
+    sectionNumber: 4.1.4
+    ordinal: 3
+    level: SHALL
+    text: Confirming the integrity of physical security features on presented evidence through visual
+      inspection by a proofing agent using real-time or asynchronous processes (e.g., offline manual
+      review)
+    textHash: 6ebd8524a1c9
+    context: "Each piece of evidence presented SHALL be validated using one of the following methods:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.4-R4:
+    id: 4.1.4-R4
+    rev: 800-63a-r4
+    sectionNumber: 4.1.4
+    ordinal: 4
+    level: SHALL
+    text: Confirming the integrity of physical security features through physical and tactile inspection
+      by a proofing agent at an on-site location
+    textHash: 52b57e55b400
+    context: "Each piece of evidence presented SHALL be validated using one of the following methods:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.5-R1:
+    id: 4.1.5-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.1.5
+    ordinal: 1
+    level: SHALL
+    text: The CSP SHALL validate all core attributes and the government identifier against an
+      authoritative or credible source to determine accuracy.
+    textHash: 287a72d4a62e
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.5-R2:
+    id: 4.1.5-R2
+    rev: 800-63a-r4
+    sectionNumber: 4.1.5
+    ordinal: 2
+    level: SHOULD
+    text: CSPs SHOULD evaluate attributes obtained from different sources (e.g., presented evidence,
+      self-asserted, authoritative or credible sources) for consistency.
+    textHash: 4f8b5bd81c0b
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.5-R3:
+    id: 4.1.5-R3
+    rev: 800-63a-r4
+    sectionNumber: 4.1.5
+    ordinal: 3
+    level: SHOULD
+    text: CSPs SHOULD validate any reference numbers on the presented identity evidence, if available.
+    textHash: f7f134eb00d8
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.6-R1:
+    id: 4.1.6-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.1.6
+    ordinal: 1
+    level: SHALL
+    text: Confirming the applicant’s ability to return a confirmation code delivered to a validated
+      address associated with the evidence
+    textHash: 46533d41772f
+    context: "The CSP SHALL verify the applicant’s ownership of one piece of evidence using one of the
+      following methods:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.6-R2:
+    id: 4.1.6-R2
+    rev: 800-63a-r4
+    sectionNumber: 4.1.6
+    ordinal: 2
+    level: SHALL
+    text: Confirming the applicant’s ability to return a microtransaction value delivered to a validated
+      financial or similar account
+    textHash: 23cc9841f0f5
+    context: "The CSP SHALL verify the applicant’s ownership of one piece of evidence using one of the
+      following methods:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.6-R3:
+    id: 4.1.6-R3
+    rev: 800-63a-r4
+    sectionNumber: 4.1.6
+    ordinal: 3
+    level: SHALL
+    text: Confirming the applicant’s ability to successfully complete an authentication and federation
+      protocol equivalent to AAL2/FAL2 or higher to access an account related to the identity
+      evidence
+    textHash: f7f974ddaa3e
+    context: "The CSP SHALL verify the applicant’s ownership of one piece of evidence using one of the
+      following methods:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.6-R4:
+    id: 4.1.6-R4
+    rev: 800-63a-r4
+    sectionNumber: 4.1.6
+    ordinal: 4
+    level: SHALL
+    text: Comparing the applicant’s facial image to a facial portrait on evidence via an automated
+      comparison
+    textHash: 08b0a02a206f
+    context: "The CSP SHALL verify the applicant’s ownership of one piece of evidence using one of the
+      following methods:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.6-R5:
+    id: 4.1.6-R5
+    rev: 800-63a-r4
+    sectionNumber: 4.1.6
+    ordinal: 5
+    level: SHALL
+    text: Visually comparing the applicant’s facial image to a facial portrait on evidence or in records
+      associated with the evidence during an on-site attended session (i.e., in-person with a
+      proofing agent), a remote attended session (i.e., live video with a proofing agent), or an
+      asynchronous process (i.e., visual comparison made by a proofing agent at a different time).
+      If the comparison is performed asynchronously at a later time, the CSP SHALL implement PAD and
+      passive or active document presence checks to increase confidence that both the live applicant
+      and physical documents are present during the submission or capture event.
+    textHash: f55c5343796c
+    context: "The CSP SHALL verify the applicant’s ownership of one piece of evidence using one of the
+      following methods:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.6-R6:
+    id: 4.1.6-R6
+    rev: 800-63a-r4
+    sectionNumber: 4.1.6
+    ordinal: 6
+    level: SHALL
+    text: Using automated means to compare a facial image represented on or stored in the identity
+      evidence or in records associated with the evidence to a live sample provided by the applicant
+    textHash: e2d118edd775
+    context: "The CSP SHALL verify the applicant’s ownership of one piece of evidence using one of the
+      following methods:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.8-R1:
+    id: 4.1.8-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.1.8
+    ordinal: 1
+    level: SHALL
+    text: During the video session, the applicant SHALL remain in view of the proofing agent during each
+      step of the proofing process.
+    textHash: d2e8ad396d63
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.8-R2:
+    id: 4.1.8-R2
+    rev: 800-63a-r4
+    sectionNumber: 4.1.8
+    ordinal: 2
+    level: SHALL
+    text: The video quality SHALL be sufficient to support the necessary steps in the validation and
+      verification processes, such as inspecting evidence and comparing the applicant to the
+      evidence.
+    textHash: b8d1d8d05c79
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.8-R3:
+    id: 4.1.8-R3
+    rev: 800-63a-r4
+    sectionNumber: 4.1.8
+    ordinal: 3
+    level: SHALL
+    text: The proofing agent SHALL be trained to identify signs of manipulation, coercion, or social
+      engineering occurring during the session.
+    textHash: 17a1d37bfdfe
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.8-R4:
+    id: 4.1.8-R4
+    rev: 800-63a-r4
+    sectionNumber: 4.1.8
+    ordinal: 4
+    level: MAY
+    text: "CSPs MAY record and maintain video sessions for fraud prevention and prosecution purposes
+      pursuant to a privacy risk assessment, as defined in Sec. 3.3.1. If the CSP records a video
+      session, the following further requirements apply:"
+    textHash: 46f9450a05ab
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.8-R5:
+    id: 4.1.8-R5
+    rev: 800-63a-r4
+    sectionNumber: 4.1.8
+    ordinal: 5
+    level: SHALL
+    text: The CSP SHALL notify the applicant of the recording prior to initiating a recorded session.
+    textHash: 113b511a0463
+    context: "CSPs MAY record and maintain video sessions for fraud prevention and prosecution purposes
+      pursuant to a privacy risk assessment, as defined in Sec. 3.3.1. If the CSP records a video
+      session, the following further requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.8-R6:
+    id: 4.1.8-R6
+    rev: 800-63a-r4
+    sectionNumber: 4.1.8
+    ordinal: 6
+    level: SHALL
+    text: The CSP SHALL gain consent from the applicant prior to initiating a recorded session.
+    textHash: aa76f6ffa963
+    context: "CSPs MAY record and maintain video sessions for fraud prevention and prosecution purposes
+      pursuant to a privacy risk assessment, as defined in Sec. 3.3.1. If the CSP records a video
+      session, the following further requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.8-R7:
+    id: 4.1.8-R7
+    rev: 800-63a-r4
+    sectionNumber: 4.1.8
+    ordinal: 7
+    level: SHALL
+    text: The CSP SHALL publish their retention schedule and deletion processes for all video records.
+    textHash: 4ad9075fde51
+    context: "CSPs MAY record and maintain video sessions for fraud prevention and prosecution purposes
+      pursuant to a privacy risk assessment, as defined in Sec. 3.3.1. If the CSP records a video
+      session, the following further requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.8-R8:
+    id: 4.1.8-R8
+    rev: 800-63a-r4
+    sectionNumber: 4.1.8
+    ordinal: 8
+    level: SHALL
+    text: The CSP SHALL implement injection protection and modified media controls, as defined in Sec.
+      3.14.
+    textHash: 67f603f0ce01
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.8-R9:
+    id: 4.1.8-R9
+    rev: 800-63a-r4
+    sectionNumber: 4.1.8
+    ordinal: 9
+    level: SHALL
+    text: The CSP SHALL provide proofing agents with a method or mechanism to flag events for potential
+      fraud.
+    textHash: 3c503c0a1e5e
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.9-R1:
+    id: 4.1.9-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.1.9
+    ordinal: 1
+    level: SHALL
+    text: The CSP SHALL provide a physical setting in which on-site identity proofing sessions are
+      conducted.
+    textHash: f7982be91444
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.9-R2:
+    id: 4.1.9-R2
+    rev: 800-63a-r4
+    sectionNumber: 4.1.9
+    ordinal: 2
+    level: SHALL
+    text: All devices SHALL be protected by appropriate baseline security features comparable to FISMA
+      moderate controls, including malware protection, administrator-specific access controls, and
+      software update processes.
+    textHash: a97aecdfb6e0
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.9-R3:
+    id: 4.1.9-R3
+    rev: 800-63a-r4
+    sectionNumber: 4.1.9
+    ordinal: 3
+    level: SHALL
+    text: CSP proofing agents SHALL be trained to identify signs of manipulation, coercion, or social
+      engineering occurring during the on-site session.
+    textHash: 63e0fab80562
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.9-R4:
+    id: 4.1.9-R4
+    rev: 800-63a-r4
+    sectionNumber: 4.1.9
+    ordinal: 4
+    level: MAY
+    text: "CSPs MAY record and maintain video sessions for fraud prevention and prosecution purposes
+      pursuant to a privacy risk assessment, as defined in Sec. 3.3.1. If the CSP records a video
+      session, the following additional requirements apply:"
+    textHash: 5681c1da4866
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.9-R5:
+    id: 4.1.9-R5
+    rev: 800-63a-r4
+    sectionNumber: 4.1.9
+    ordinal: 5
+    level: SHALL
+    text: The CSP SHALL notify the applicant of the recording prior to initiating a recorded session.
+    textHash: 113b511a0463
+    context: "CSPs MAY record and maintain video sessions for fraud prevention and prosecution purposes
+      pursuant to a privacy risk assessment, as defined in Sec. 3.3.1. If the CSP records a video
+      session, the following additional requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.9-R6:
+    id: 4.1.9-R6
+    rev: 800-63a-r4
+    sectionNumber: 4.1.9
+    ordinal: 6
+    level: SHALL
+    text: The CSP SHALL gain consent from the applicant prior to initiating a recorded session.
+    textHash: aa76f6ffa963
+    context: "CSPs MAY record and maintain video sessions for fraud prevention and prosecution purposes
+      pursuant to a privacy risk assessment, as defined in Sec. 3.3.1. If the CSP records a video
+      session, the following additional requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.9-R7:
+    id: 4.1.9-R7
+    rev: 800-63a-r4
+    sectionNumber: 4.1.9
+    ordinal: 7
+    level: SHALL
+    text: The CSP SHALL publish their retention schedule and deletion processes for all video records.
+    textHash: 4ad9075fde51
+    context: "CSPs MAY record and maintain video sessions for fraud prevention and prosecution purposes
+      pursuant to a privacy risk assessment, as defined in Sec. 3.3.1. If the CSP records a video
+      session, the following additional requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.9-R8:
+    id: 4.1.9-R8
+    rev: 800-63a-r4
+    sectionNumber: 4.1.9
+    ordinal: 8
+    level: SHALL
+    text: The CSP SHALL provide proofing agents with a method or mechanism to covertly flag events for
+      potential fraud.
+    textHash: dc24637068cd
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.10-R1:
+    id: 4.1.10-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.1.10
+    ordinal: 1
+    level: SHALL
+    text: All devices SHALL be safeguarded from tampering through observation by CSP representatives
+      and/or physical and digital tamper prevention features.
+    textHash: 52bccdd2c808
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.10-R2:
+    id: 4.1.10-R2
+    rev: 800-63a-r4
+    sectionNumber: 4.1.10
+    ordinal: 2
+    level: SHALL
+    text: All devices SHALL be protected by appropriate baseline security features comparable to FISMA
+      moderate controls, including malware protection, administrator-specific access controls, and
+      software update processes.
+    textHash: a97aecdfb6e0
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.10-R3:
+    id: 4.1.10-R3
+    rev: 800-63a-r4
+    sectionNumber: 4.1.10
+    ordinal: 3
+    level: SHALL
+    text: All devices SHALL be inspected periodically by trained technicians to deter tampering,
+      modification, or damage.
+    textHash: d1093b0c55db
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.10-R4:
+    id: 4.1.10-R4
+    rev: 800-63a-r4
+    sectionNumber: 4.1.10
+    ordinal: 4
+    level: MAY
+    text: "CSPs MAY record and maintain video recordings of on-site unattended identity proofing
+      sessions for fraud prevention and prosecution purposes pursuant to a privacy risk assessment,
+      as defined in Sec. 3.3.1. If the CSP records a video session, the following additional
+      requirements apply:"
+    textHash: a32255733df1
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.10-R5:
+    id: 4.1.10-R5
+    rev: 800-63a-r4
+    sectionNumber: 4.1.10
+    ordinal: 5
+    level: SHALL
+    text: The CSP SHALL notify the applicant of the recording prior to initiating a recorded session.
+    textHash: 113b511a0463
+    context: "CSPs MAY record and maintain video recordings of on-site unattended identity proofing
+      sessions for fraud prevention and prosecution purposes pursuant to a privacy risk assessment,
+      as defined in Sec. 3.3.1. If the CSP records a video session, the following additional
+      requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.10-R6:
+    id: 4.1.10-R6
+    rev: 800-63a-r4
+    sectionNumber: 4.1.10
+    ordinal: 6
+    level: SHALL
+    text: The CSP SHALL gain consent from the applicant prior to initiating a recorded session.
+    textHash: aa76f6ffa963
+    context: "CSPs MAY record and maintain video recordings of on-site unattended identity proofing
+      sessions for fraud prevention and prosecution purposes pursuant to a privacy risk assessment,
+      as defined in Sec. 3.3.1. If the CSP records a video session, the following additional
+      requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.10-R7:
+    id: 4.1.10-R7
+    rev: 800-63a-r4
+    sectionNumber: 4.1.10
+    ordinal: 7
+    level: SHALL
+    text: The CSP SHALL publish their retention schedule and deletion processes for all video records.
+    textHash: 4ad9075fde51
+    context: "CSPs MAY record and maintain video recordings of on-site unattended identity proofing
+      sessions for fraud prevention and prosecution purposes pursuant to a privacy risk assessment,
+      as defined in Sec. 3.3.1. If the CSP records a video session, the following additional
+      requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.11-R1:
+    id: 4.1.11-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.1.11
+    ordinal: 1
+    level: SHALL
+    text: Upon the successful completion of identity proofing at IAL1, the CSP SHALL send a notification
+      of proofing to a validated address for the applicant, as specified in Sec. 3.10.
+    textHash: c0d7a237bdb0
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.12-R1:
+    id: 4.1.12-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.1.12
+    ordinal: 1
+    level: SHOULD
+    text: Once a unique subscriber account is established for the applicant (now subscriber) in the
+      CSP’s identity system, one or more authenticators can be associated (i.e., bound) to the
+      subscriber’s account. To minimize the need for account recovery, CSPs SHOULD encourage
+      subscribers to bind at least two separate means of authentication. See Sec. 5 for more
+      information about subscriber accounts and Sec. 4.1.2.1 of [SP800-63B] for more information on
+      binding authenticators.
+    textHash: a5f99238e96f
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.12-R2:
+    id: 4.1.12-R2
+    rev: 800-63a-r4
+    sectionNumber: 4.1.12
+    ordinal: 2
+    level: SHALL
+    text: "The CSP SHALL provide the ability for the applicant to bind an authenticator using one of the
+      following methods:"
+    textHash: d1e092cf6bec
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1.12-R3:
+    id: 4.1.12-R3
+    rev: 800-63a-r4
+    sectionNumber: 4.1.12
+    ordinal: 3
+    level: SHALL
+    text: "If authenticators are bound outside of a single protected session with the user, the CSP
+      SHALL confirm the presence of the intended subscriber through one of the following methods:"
+    textHash: a70ca66cb093
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.1-R1:
+    id: 4.2.1-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.2.1
+    ordinal: 1
+    level: MAY
+    text: IAL2 identity proofing MAY be delivered through any identity proofing type, as described in
+      Sec. 2.1.3.
+    textHash: 332976bbbcaa
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.1-R2:
+    id: 4.2.1-R2
+    rev: 800-63a-r4
+    sectionNumber: 4.2.1
+    ordinal: 2
+    level: SHALL
+    text: CSPs MAY combine identity proofing types and their stated requirements to create hybrid
+      processes. For example, a CSP might leverage remote unattended identity proofing validation
+      processes in advance of a remote attended session where the verification will take place. If
+      such steps are combined, CSPs SHALL document their hybrid process and state how the applicable
+      requirements for each of the employed proofing types are met.
+    textHash: 7f52686a4625
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.2-R1:
+    id: 4.2.2-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.2.2
+    ordinal: 1
+    level: SHALL
+    text: One piece of FAIR evidence and one piece of STRONG evidence or
+    textHash: f154c82931c0
+    context: "For identity proofing at IAL2, the CSP SHALL collect:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.2-R2:
+    id: 4.2.2-R2
+    rev: 800-63a-r4
+    sectionNumber: 4.2.2
+    ordinal: 2
+    level: SHALL
+    text: Two pieces of STRONG evidence or
+    textHash: 0245a501fb5c
+    context: "For identity proofing at IAL2, the CSP SHALL collect:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.2-R3:
+    id: 4.2.2-R3
+    rev: 800-63a-r4
+    sectionNumber: 4.2.2
+    ordinal: 3
+    level: SHALL
+    text: One piece of SUPERIOR evidence.
+    textHash: 6c89f1f2af30
+    context: "For identity proofing at IAL2, the CSP SHALL collect:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.3-R1:
+    id: 4.2.3-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.2.3
+    ordinal: 1
+    level: SHALL
+    text: The CSP SHALL collect all core attributes, including at least one government identifier.
+      Validated evidence is the preferred source of identity attributes. If the presented identity
+      evidence does not provide all of the attributes that the CSP considers to be core attributes,
+      it MAY collect attributes that are self-asserted by the applicant.
+    textHash: 4affcfcc05b3
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.4-R1:
+    id: 4.2.4-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.2.4
+    ordinal: 1
+    level: SHALL
+    text: "Each piece of FAIR or STRONG evidence that is presented SHALL be validated using one of the
+      following techniques:"
+    textHash: 94bb75d3d8fa
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.4-R2:
+    id: 4.2.4-R2
+    rev: 800-63a-r4
+    sectionNumber: 4.2.4
+    ordinal: 2
+    level: SHALL
+    text: Each piece of SUPERIOR evidence SHALL be validated through the cryptographic verification of
+      the evidence contents and the issuing source, including digital signature verification and the
+      validation of any trust chain back to a trust anchor. Any piece of SUPERIOR evidence that
+      cannot be validated using this method MAY be considered STRONG evidence if it can be validated
+      by using one of the techniques provided above.
+    textHash: 83546a2d989f
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.5-R1:
+    id: 4.2.5-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.2.5
+    ordinal: 1
+    level: SHALL
+    text: "The CSP SHALL validate all core attributes by either:"
+    textHash: b76ae643d619
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.5-R2:
+    id: 4.2.5-R2
+    rev: 800-63a-r4
+    sectionNumber: 4.2.5
+    ordinal: 2
+    level: SHOULD
+    text: CSPs SHOULD evaluate attributes obtained from different sources (e.g., presented evidence,
+      self-asserted, authoritative or credible sources) for consistency.
+    textHash: 4f8b5bd81c0b
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.5-R3:
+    id: 4.2.5-R3
+    rev: 800-63a-r4
+    sectionNumber: 4.2.5
+    ordinal: 3
+    level: SHOULD
+    text: CSPs SHOULD validate any reference numbers on the presented identity evidence, if available.
+    textHash: f7f134eb00d8
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.6-R1:
+    id: 4.2.6-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.2.6
+    ordinal: 1
+    level: SHOULD
+    text: Verification pathways SHOULD be implemented consistent with relevant policy and be responsive
+      to the use cases, populations, and threat environment of the online service being protected.
+      CSPs SHOULD deploy more than one pathway to IAL2 verification and MAY combine pathways in
+      order to achieve desired outcomes.
+    textHash: 001d39745bbe
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.6-R2:
+    id: 4.2.6-R2
+    rev: 800-63a-r4
+    sectionNumber: 4.2.6
+    ordinal: 2
+    level: SHALL
+    text: CSPs that offer multiple verification pathways SHALL record in the subscriber record which
+      pathways were followed to achieve IAL2 and SHALL make that information available to RPs in the
+      assertion, API, or as part of their trust agreement. When the Non-Biometric Pathway is used,
+      the CSP SHALL additionally record whether a mailed confirmation code or a visual comparison of
+      the applicant against evidence was used for verification.
+    textHash: b9ad1d0e24b5
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.6.1-R1:
+    id: 4.2.6.1-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.2.6.1
+    ordinal: 1
+    level: SHALL
+    text: The IAL2 Non-Biometric Pathway provides verification methods that do not use an automated
+      comparison of biometric samples provided by the applicant. This pathway can still involve the
+      collection and verification of biometric data (e.g., visual comparison to a facial image
+      contained on identity evidence performed by a proofing agent), but such comparisons are done
+      through manual rather than automated means. Additional verification methods that do not
+      require the use of automated biometric comparison are also included in the Digital Evidence
+      Pathway requirements specified in Sec. 4.2.6.2. If provided as an option at IAL2, CSPs SHALL
+      communicate their use of the Non-Biometric Pathway to all RPs that use their identity service.
+    textHash: 16f48aab2e5b
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.6.1-R2:
+    id: 4.2.6.1-R2
+    rev: 800-63a-r4
+    sectionNumber: 4.2.6.1
+    ordinal: 2
+    level: SHALL
+    text: For remote attended, remote unattended, and on-site unattended identity proofing, the CSP
+      SHALL verify the applicant’s ownership of all pieces of presented identity evidence. For
+      on-site attended identity proofing, the CSP SHALL verify the applicant’s ownership of the
+      strongest piece of presented identity evidence.
+    textHash: e9d82e395ca0
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.6.1-R3:
+    id: 4.2.6.1-R3
+    rev: 800-63a-r4
+    sectionNumber: 4.2.6.1
+    ordinal: 3
+    level: SHALL
+    text: Visually comparing the applicant’s facial image to a facial portrait on the presented evidence
+      or in records associated with the evidence during an on-site attended session (i.e., in-person
+      with a proofing agent), a remote attended session (i.e., live video with a proofing agent), or
+      an asynchronous process (i.e., visual comparison made by a proofing agent at a different
+      time). If the comparison is performed asynchronously at a later time, the CSP SHALL implement
+      PAD and passive or active document presence checks to increase confidence that both the live
+      applicant and physical documents are present during the captured identity proofing event.
+    textHash: 36e5265f7289
+    context: "Approved non-biometric methods for verifying STRONG and SUPERIOR evidence at IAL2 include:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.6.2-R1:
+    id: 4.2.6.2-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.2.6.2
+    ordinal: 1
+    level: SHALL
+    text: For remote attended, remote unattended, and on-site unattended identity proofing, the CSP
+      SHALL verify the applicant’s ownership of all pieces of presented identity evidence. For
+      on-site attended identity proofing, the CSP SHALL verify the applicant’s ownership of the
+      strongest piece of presented identity evidence.
+    textHash: e9d82e395ca0
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.6.3-R1:
+    id: 4.2.6.3-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.2.6.3
+    ordinal: 1
+    level: SHALL
+    text: For remote attended, remote unattended, and on-site unattended identity proofing, the CSP
+      SHALL verify the applicant’s ownership of all pieces of presented identity evidence. For
+      on-site attended identity proofing, the CSP SHALL verify the applicant’s ownership of the
+      strongest piece of presented identity evidence.
+    textHash: e9d82e395ca0
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.8-R1:
+    id: 4.2.8-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.2.8
+    ordinal: 1
+    level: SHALL
+    text: During the video session, the applicant SHALL remain in view of the proofing agent during each
+      step of the proofing process.
+    textHash: d2e8ad396d63
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.8-R2:
+    id: 4.2.8-R2
+    rev: 800-63a-r4
+    sectionNumber: 4.2.8
+    ordinal: 2
+    level: SHALL
+    text: The video quality SHALL be sufficient to support the necessary steps in the validation and
+      verification processes, such as inspecting evidence and comparing the user to the evidence.
+    textHash: 0105b79c6823
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.8-R3:
+    id: 4.2.8-R3
+    rev: 800-63a-r4
+    sectionNumber: 4.2.8
+    ordinal: 3
+    level: SHALL
+    text: The proofing agent SHALL be trained to identify signs of manipulation, coercion, or social
+      engineering occurring during the recorded session.
+    textHash: 24df3c8fd272
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.8-R4:
+    id: 4.2.8-R4
+    rev: 800-63a-r4
+    sectionNumber: 4.2.8
+    ordinal: 4
+    level: MAY
+    text: "CSPs MAY record and maintain video sessions for fraud prevention and prosecution purposes
+      pursuant to a privacy risk assessment, as defined in Sec. 3.3.1. If the CSP records a video
+      session, the following further requirements apply:"
+    textHash: 46f9450a05ab
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.8-R5:
+    id: 4.2.8-R5
+    rev: 800-63a-r4
+    sectionNumber: 4.2.8
+    ordinal: 5
+    level: SHALL
+    text: The CSP SHALL notify the applicant of the recording prior to initiating a recorded session.
+    textHash: 113b511a0463
+    context: "CSPs MAY record and maintain video sessions for fraud prevention and prosecution purposes
+      pursuant to a privacy risk assessment, as defined in Sec. 3.3.1. If the CSP records a video
+      session, the following further requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.8-R6:
+    id: 4.2.8-R6
+    rev: 800-63a-r4
+    sectionNumber: 4.2.8
+    ordinal: 6
+    level: SHALL
+    text: The CSP SHALL gain consent from the applicant prior to initiating a recorded session.
+    textHash: aa76f6ffa963
+    context: "CSPs MAY record and maintain video sessions for fraud prevention and prosecution purposes
+      pursuant to a privacy risk assessment, as defined in Sec. 3.3.1. If the CSP records a video
+      session, the following further requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.8-R7:
+    id: 4.2.8-R7
+    rev: 800-63a-r4
+    sectionNumber: 4.2.8
+    ordinal: 7
+    level: SHALL
+    text: The CSP SHALL publish their retention schedule and deletion processes for all video records.
+    textHash: 4ad9075fde51
+    context: "CSPs MAY record and maintain video sessions for fraud prevention and prosecution purposes
+      pursuant to a privacy risk assessment, as defined in Sec. 3.3.1. If the CSP records a video
+      session, the following further requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.8-R8:
+    id: 4.2.8-R8
+    rev: 800-63a-r4
+    sectionNumber: 4.2.8
+    ordinal: 8
+    level: SHALL
+    text: The CSP SHALL implement injection protection and modified media controls, as defined in Sec.
+      3.14.
+    textHash: 67f603f0ce01
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.8-R9:
+    id: 4.2.8-R9
+    rev: 800-63a-r4
+    sectionNumber: 4.2.8
+    ordinal: 9
+    level: SHALL
+    text: The CSP SHALL provide proofing agents with a method or mechanism to flag events for potential
+      fraud.
+    textHash: 3c503c0a1e5e
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.9-R1:
+    id: 4.2.9-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.2.9
+    ordinal: 1
+    level: SHALL
+    text: The CSP SHALL provide a physical setting in which on-site identity proofing sessions are
+      conducted.
+    textHash: f7982be91444
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.9-R2:
+    id: 4.2.9-R2
+    rev: 800-63a-r4
+    sectionNumber: 4.2.9
+    ordinal: 2
+    level: SHALL
+    text: All devices SHALL be protected by appropriate baseline security features comparable to FISMA
+      moderate controls, including malware protection, administrator-specific access controls, and
+      software update processes.
+    textHash: a97aecdfb6e0
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.9-R3:
+    id: 4.2.9-R3
+    rev: 800-63a-r4
+    sectionNumber: 4.2.9
+    ordinal: 3
+    level: SHALL
+    text: CSP proofing agents SHALL be trained to identify signs of manipulation, coercion, or social
+      engineering occurring during the on-site session.
+    textHash: 63e0fab80562
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.9-R4:
+    id: 4.2.9-R4
+    rev: 800-63a-r4
+    sectionNumber: 4.2.9
+    ordinal: 4
+    level: MAY
+    text: "CSPs MAY record and maintain video sessions for fraud prevention and prosecution purposes
+      pursuant to a privacy risk assessment, as defined in Sec. 3.3.1. If the CSP records a video
+      session, the following additional requirements apply:"
+    textHash: 5681c1da4866
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.9-R5:
+    id: 4.2.9-R5
+    rev: 800-63a-r4
+    sectionNumber: 4.2.9
+    ordinal: 5
+    level: SHALL
+    text: The CSP SHALL notify the applicant of the recording prior to initiating a recorded session.
+    textHash: 113b511a0463
+    context: "CSPs MAY record and maintain video sessions for fraud prevention and prosecution purposes
+      pursuant to a privacy risk assessment, as defined in Sec. 3.3.1. If the CSP records a video
+      session, the following additional requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.9-R6:
+    id: 4.2.9-R6
+    rev: 800-63a-r4
+    sectionNumber: 4.2.9
+    ordinal: 6
+    level: SHALL
+    text: The CSP SHALL gain consent from the applicant prior to initiating a recorded session.
+    textHash: aa76f6ffa963
+    context: "CSPs MAY record and maintain video sessions for fraud prevention and prosecution purposes
+      pursuant to a privacy risk assessment, as defined in Sec. 3.3.1. If the CSP records a video
+      session, the following additional requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.9-R7:
+    id: 4.2.9-R7
+    rev: 800-63a-r4
+    sectionNumber: 4.2.9
+    ordinal: 7
+    level: SHALL
+    text: The CSP SHALL publish their retention schedule and deletion processes for all video records.
+    textHash: 4ad9075fde51
+    context: "CSPs MAY record and maintain video sessions for fraud prevention and prosecution purposes
+      pursuant to a privacy risk assessment, as defined in Sec. 3.3.1. If the CSP records a video
+      session, the following additional requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.9-R8:
+    id: 4.2.9-R8
+    rev: 800-63a-r4
+    sectionNumber: 4.2.9
+    ordinal: 8
+    level: SHALL
+    text: The CSP SHALL provide proofing agents with a method or mechanism to safely flag events for
+      potential fraud.
+    textHash: 661dc787c8c3
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.10-R1:
+    id: 4.2.10-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.2.10
+    ordinal: 1
+    level: SHALL
+    text: All devices SHALL be safeguarded from tampering through observation by CSP representatives
+      and/or physical and digital tamper prevention features.
+    textHash: 52bccdd2c808
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.10-R2:
+    id: 4.2.10-R2
+    rev: 800-63a-r4
+    sectionNumber: 4.2.10
+    ordinal: 2
+    level: SHALL
+    text: All devices SHALL be protected by appropriate baseline security features comparable to FISMA
+      moderate controls, including malware protection, administrator-specific access controls, and
+      software update processes.
+    textHash: a97aecdfb6e0
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.10-R3:
+    id: 4.2.10-R3
+    rev: 800-63a-r4
+    sectionNumber: 4.2.10
+    ordinal: 3
+    level: SHALL
+    text: All devices SHALL be inspected periodically by trained technicians to deter tampering,
+      modification, or damage.
+    textHash: d1093b0c55db
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.10-R4:
+    id: 4.2.10-R4
+    rev: 800-63a-r4
+    sectionNumber: 4.2.10
+    ordinal: 4
+    level: MAY
+    text: "CSPs MAY record and maintain video recordings of on-site unattended identity proofing
+      sessions for fraud prevention and prosecution purposes pursuant to a privacy risk assessment,
+      as defined in Sec. 3.3.1. If the CSP records a video session, the following additional
+      requirements apply:"
+    textHash: a32255733df1
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.10-R5:
+    id: 4.2.10-R5
+    rev: 800-63a-r4
+    sectionNumber: 4.2.10
+    ordinal: 5
+    level: SHALL
+    text: The CSP SHALL notify the applicant of the recording prior to initiating a recorded session.
+    textHash: 113b511a0463
+    context: "CSPs MAY record and maintain video recordings of on-site unattended identity proofing
+      sessions for fraud prevention and prosecution purposes pursuant to a privacy risk assessment,
+      as defined in Sec. 3.3.1. If the CSP records a video session, the following additional
+      requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.10-R6:
+    id: 4.2.10-R6
+    rev: 800-63a-r4
+    sectionNumber: 4.2.10
+    ordinal: 6
+    level: SHALL
+    text: The CSP SHALL gain consent from the applicant prior to initiating a recorded session.
+    textHash: aa76f6ffa963
+    context: "CSPs MAY record and maintain video recordings of on-site unattended identity proofing
+      sessions for fraud prevention and prosecution purposes pursuant to a privacy risk assessment,
+      as defined in Sec. 3.3.1. If the CSP records a video session, the following additional
+      requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.10-R7:
+    id: 4.2.10-R7
+    rev: 800-63a-r4
+    sectionNumber: 4.2.10
+    ordinal: 7
+    level: SHALL
+    text: The CSP SHALL publish their retention schedule and deletion processes for all video records.
+    textHash: 4ad9075fde51
+    context: "CSPs MAY record and maintain video recordings of on-site unattended identity proofing
+      sessions for fraud prevention and prosecution purposes pursuant to a privacy risk assessment,
+      as defined in Sec. 3.3.1. If the CSP records a video session, the following additional
+      requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.11-R1:
+    id: 4.2.11-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.2.11
+    ordinal: 1
+    level: SHALL
+    text: Upon the successful completion of identity proofing at IAL2, the CSP SHALL send a notification
+      of proofing to a validated address for the applicant, as specified in Sec. 3.10. CSPs SHOULD
+      send the notification of proofing to the applicant’s postal address.
+    textHash: 4155d8f5420b
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.12-R1:
+    id: 4.2.12-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.2.12
+    ordinal: 1
+    level: SHOULD
+    text: Once a unique subscriber account is established for the applicant (now subscriber) in the
+      CSP’s identity system, one or more authenticators can be associated (i.e., bound) to the
+      subscriber’s account. To minimize the need for account recovery, CSPs SHOULD encourage
+      subscribers to bind at least two separate means of authentication. See Sec. 5 for more
+      information about subscriber accounts and Sec. 4.1.2.1 of [SP800-63B] for more information on
+      binding authenticators.
+    textHash: a5f99238e96f
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.12-R2:
+    id: 4.2.12-R2
+    rev: 800-63a-r4
+    sectionNumber: 4.2.12
+    ordinal: 2
+    level: SHALL
+    text: "The CSP SHALL provide the ability for the applicant to bind an authenticator using one of the
+      following methods:"
+    textHash: d1e092cf6bec
+    source: prose
+    seededBy: parser
+    verified: false
+  4.2.12-R3:
+    id: 4.2.12-R3
+    rev: 800-63a-r4
+    sectionNumber: 4.2.12
+    ordinal: 3
+    level: SHALL
+    text: "If authenticators are bound outside of a single protected session with the user, the CSP
+      SHALL confirm the presence of the intended subscriber through one of the following methods:"
+    textHash: a70ca66cb093
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R1:
+    id: 4.3.1-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.3.1
+    ordinal: 1
+    level: SHALL
+    text: IAL3 identity proofing SHALL only be delivered as on-site attended. The proofing agent MAY be
+      co-located with the applicant or attend the identity proofing session via a CSP-controlled
+      kiosk or device.
+    textHash: bf51ac110846
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.2-R1:
+    id: 4.3.2-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.3.2
+    ordinal: 1
+    level: SHALL
+    text: One piece of FAIR evidence and one piece of STRONG evidence or
+    textHash: f154c82931c0
+    context: "For identity proofing at IAL3, the CSP SHALL collect:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.2-R2:
+    id: 4.3.2-R2
+    rev: 800-63a-r4
+    sectionNumber: 4.3.2
+    ordinal: 2
+    level: SHALL
+    text: Two pieces of STRONG evidence or
+    textHash: 0245a501fb5c
+    context: "For identity proofing at IAL3, the CSP SHALL collect:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.2-R3:
+    id: 4.3.2-R3
+    rev: 800-63a-r4
+    sectionNumber: 4.3.2
+    ordinal: 3
+    level: SHALL
+    text: One piece of SUPERIOR evidence.
+    textHash: 6c89f1f2af30
+    context: "For identity proofing at IAL3, the CSP SHALL collect:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.3-R1:
+    id: 4.3.3-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.3.3
+    ordinal: 1
+    level: SHALL
+    text: The CSP SHALL collect all core attributes, including at least one government identifier.
+      Validated evidence is the preferred source of identity attributes. If the presented identity
+      evidence does not provide all of the attributes that a CSP considers to be core attributes,
+      the CSP MAY collect attributes that are self-asserted by the applicant.
+    textHash: c255c93eaf1e
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.3-R2:
+    id: 4.3.3-R2
+    rev: 800-63a-r4
+    sectionNumber: 4.3.3
+    ordinal: 2
+    level: SHALL
+    text: The CSP SHALL collect and retain a biometric sample from the applicant during the identity
+      proofing process to support account recovery and non-repudiation and to establish a high level
+      of confidence that the same participant is present in the proofing and issuance processes, if
+      done separately. CSPs MAY choose to periodically re-enroll user biometrics based on the
+      modalities they use and the likelihood that subscriber accounts will persist long enough to
+      warrant such a refresh.
+    textHash: 3d56d539fa70
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.4-R1:
+    id: 4.3.4-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.3.4
+    ordinal: 1
+    level: SHALL
+    text: "Each piece of FAIR or STRONG evidence that is presented SHALL be validated using one of the
+      following techniques:"
+    textHash: 94bb75d3d8fa
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.4-R2:
+    id: 4.3.4-R2
+    rev: 800-63a-r4
+    sectionNumber: 4.3.4
+    ordinal: 2
+    level: SHALL
+    text: Each piece of SUPERIOR evidence SHALL be validated through the cryptographic verification of
+      the evidence contents and the issuing source, including digital signature verification and the
+      validation of any trust chain back to a trust anchor. Any piece of SUPERIOR evidence that
+      cannot be validated using this method MAY be considered STRONG evidence if it can be validated
+      by using one of the techniques provided above.
+    textHash: 83546a2d989f
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.5-R1:
+    id: 4.3.5-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.3.5
+    ordinal: 1
+    level: SHALL
+    text: "The CSP SHALL validate all core attributes by either:"
+    textHash: b76ae643d619
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.5-R2:
+    id: 4.3.5-R2
+    rev: 800-63a-r4
+    sectionNumber: 4.3.5
+    ordinal: 2
+    level: SHOULD
+    text: CSPs SHOULD evaluate attributes obtained from different sources (e.g., presented evidence,
+      self-asserted, authoritative or credible sources) for consistency.
+    textHash: 4f8b5bd81c0b
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.5-R3:
+    id: 4.3.5-R3
+    rev: 800-63a-r4
+    sectionNumber: 4.3.5
+    ordinal: 3
+    level: SHOULD
+    text: CSPs SHOULD validate any reference numbers on the presented identity evidence, if available.
+    textHash: f7f134eb00d8
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.6-R1:
+    id: 4.3.6-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.3.6
+    ordinal: 1
+    level: SHALL
+    text: "The CSP SHALL verify the applicant’s ownership of the strongest piece of evidence (STRONG or
+      SUPERIOR) by one of the following methods:"
+    textHash: 535d5e6d4234
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.7-R1:
+    id: 4.3.7-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.3.7
+    ordinal: 1
+    level: SHALL
+    text: The CSP SHALL provide a secure, physical setting in which on-site identity proofing sessions
+      are conducted.
+    textHash: 77aae175c575
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.7-R2:
+    id: 4.3.7-R2
+    rev: 800-63a-r4
+    sectionNumber: 4.3.7
+    ordinal: 2
+    level: SHALL
+    text: The CSP SHALL provide sensors and capture devices for the collection of biometrics from the
+      applicant.
+    textHash: 2859dbfce95a
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.7-R3:
+    id: 4.3.7-R3
+    rev: 800-63a-r4
+    sectionNumber: 4.3.7
+    ordinal: 3
+    level: SHALL
+    text: The CSP SHALL have the proofing agent view the source of the collected biometric for the
+      presence of any non-natural materials (e.g., putty, glue).
+    textHash: 20d3eb9fed33
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.7-R4:
+    id: 4.3.7-R4
+    rev: 800-63a-r4
+    sectionNumber: 4.3.7
+    ordinal: 4
+    level: SHALL
+    text: The CSP SHALL have the proofing agent collect the biometric samples in such a way that ensures
+      the sample was collected from the applicant and no other source.
+    textHash: 9c172ac5f3b1
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.7-R5:
+    id: 4.3.7-R5
+    rev: 800-63a-r4
+    sectionNumber: 4.3.7
+    ordinal: 5
+    level: SHALL
+    text: The CSP SHALL ensure that all information systems and technology leveraged by proofing agents
+      and trusted referees are protected consistent with at least FISMA moderate or comparable
+      levels of controls, including physical controls for the proofing facility.
+    textHash: a761d5d714ea
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.7-R6:
+    id: 4.3.7-R6
+    rev: 800-63a-r4
+    sectionNumber: 4.3.7
+    ordinal: 6
+    level: SHALL
+    text: CSP proofing agents SHALL be trained to identify signs of manipulation, coercion, or social
+      engineering occurring during the on-site session.
+    textHash: 63e0fab80562
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.7-R7:
+    id: 4.3.7-R7
+    rev: 800-63a-r4
+    sectionNumber: 4.3.7
+    ordinal: 7
+    level: MAY
+    text: "CSPs MAY record and maintain video sessions for fraud prevention and prosecution purposes
+      pursuant to a privacy risk assessment, as defined in Sec. 3.3.1. If the CSP records a session,
+      the following additional requirements apply:"
+    textHash: a7809d60c129
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.7-R8:
+    id: 4.3.7-R8
+    rev: 800-63a-r4
+    sectionNumber: 4.3.7
+    ordinal: 8
+    level: SHALL
+    text: The CSP SHALL notify the applicant of the recording prior to initiating a recorded session.
+    textHash: 113b511a0463
+    context: "CSPs MAY record and maintain video sessions for fraud prevention and prosecution purposes
+      pursuant to a privacy risk assessment, as defined in Sec. 3.3.1. If the CSP records a session,
+      the following additional requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.7-R9:
+    id: 4.3.7-R9
+    rev: 800-63a-r4
+    sectionNumber: 4.3.7
+    ordinal: 9
+    level: SHALL
+    text: The CSP SHALL gain consent from the applicant prior to initiating a recorded session.
+    textHash: aa76f6ffa963
+    context: "CSPs MAY record and maintain video sessions for fraud prevention and prosecution purposes
+      pursuant to a privacy risk assessment, as defined in Sec. 3.3.1. If the CSP records a session,
+      the following additional requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.7-R10:
+    id: 4.3.7-R10
+    rev: 800-63a-r4
+    sectionNumber: 4.3.7
+    ordinal: 10
+    level: SHALL
+    text: The CSP SHALL publish their retention schedule and deletion processes for all video records.
+    textHash: 4ad9075fde51
+    context: "CSPs MAY record and maintain video sessions for fraud prevention and prosecution purposes
+      pursuant to a privacy risk assessment, as defined in Sec. 3.3.1. If the CSP records a session,
+      the following additional requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.7-R11:
+    id: 4.3.7-R11
+    rev: 800-63a-r4
+    sectionNumber: 4.3.7
+    ordinal: 11
+    level: SHALL
+    text: The CSP SHALL provide proofing agents with a method or mechanism to discretely flag events or
+      actions as potential fraud.
+    textHash: 2e3c83fcb81f
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.8-R1:
+    id: 4.3.8-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.3.8
+    ordinal: 1
+    level: MAY
+    text: The CSP MAY offer a remote means of interacting with a proofing agent whereby the agent and
+      the applicant are not co-located (i.e., in the same room). For example, applicants might
+      interact with a CSP-controlled kiosk with the proofing agent participating remotely in the
+      session over video. In such cases, the following requirements apply in addition to those
+      provided for the on-site attended identity proofing in Sec. 4.3.7. In previous versions of
+      this document, this approach was referred to as Supervised Remote Identity Proofing (SRIP).
+    textHash: 8960500ccbad
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.8-R2:
+    id: 4.3.8-R2
+    rev: 800-63a-r4
+    sectionNumber: 4.3.8
+    ordinal: 2
+    level: SHALL
+    text: The CSP SHALL monitor the entire identity proofing session through a high-resolution video
+      transmission with the applicant.
+    textHash: f25fa40b08bc
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.8-R3:
+    id: 4.3.8-R3
+    rev: 800-63a-r4
+    sectionNumber: 4.3.8
+    ordinal: 3
+    level: SHALL
+    text: The CSP SHALL have a live proofing agent participate remotely with the applicant for the
+      evidence collection, evidence validation, and verification steps of the identity proofing
+      process. Data entry of attributes for resolution and enrollment MAY be done without the
+      presence of a live proofing agent.
+    textHash: d2ca5d161695
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.8-R4:
+    id: 4.3.8-R4
+    rev: 800-63a-r4
+    sectionNumber: 4.3.8
+    ordinal: 4
+    level: SHALL
+    text: The CSP SHALL require all actions taken by the applicant during the evidence collection,
+      evidence validation, and verification steps to be clearly visible to the remote proofing
+      agent.
+    textHash: 72395ac5b38c
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.8-R5:
+    id: 4.3.8-R5
+    rev: 800-63a-r4
+    sectionNumber: 4.3.8
+    ordinal: 5
+    level: SHALL
+    text: The CSP SHALL require that all digital validation and verification of evidence (e.g., via chip
+      or wireless technologies) be performed by integrated scanners and sensors (e.g., embedded
+      fingerprint reader).
+    textHash: cb6ee45582e4
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.8-R6:
+    id: 4.3.8-R6
+    rev: 800-63a-r4
+    sectionNumber: 4.3.8
+    ordinal: 6
+    level: SHALL
+    text: All devices used to support interaction between the proofing agent and the applicant SHALL be
+      protected by appropriate baseline security features that are comparable to at least FISMA
+      moderate controls, including malware protection, administrator-specific access controls, and
+      software update processes.
+    textHash: c5ada0953bf8
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.8-R7:
+    id: 4.3.8-R7
+    rev: 800-63a-r4
+    sectionNumber: 4.3.8
+    ordinal: 7
+    level: SHALL
+    text: All devices used to support interaction between the proofing agent and the applicant SHALL be
+      inspected periodically by trained technicians to deter tampering, modification, or damage.
+    textHash: bb22bda3bb99
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.9-R1:
+    id: 4.3.9-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.3.9
+    ordinal: 1
+    level: SHALL
+    text: Upon the successful completion of identity proofing at IAL3, the CSP SHALL send a notification
+      of proofing to a validated address for the applicant, as specified in Sec. 3.10. CSPs SHOULD
+      send the notification of proofing to the applicant’s postal address.
+    textHash: a3b20c26fc58
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.10-R1:
+    id: 4.3.10-R1
+    rev: 800-63a-r4
+    sectionNumber: 4.3.10
+    ordinal: 1
+    level: SHALL
+    text: The CSP SHALL distribute or enroll the subscriber’s initial authenticator during an on-site
+      attended interaction with a proofing agent.
+    textHash: a79b3dc13324
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.10-R2:
+    id: 4.3.10-R2
+    rev: 800-63a-r4
+    sectionNumber: 4.3.10
+    ordinal: 2
+    level: SHALL
+    text: If the CSP distributes or enrolls the initial authenticator outside of a single authenticated
+      protected session with the subscriber, the CSP SHALL compare a biometric sample collected from
+      the subscriber to the one collected at the time of proofing prior to registration of the
+      authenticator and MAY request that the subscriber bring the identity evidence used during the
+      proofing process to further strengthen the process of binding the authenticator to the
+      subscriber.
+    textHash: c067b2989a63
+    source: prose
+    seededBy: parser
+    verified: false

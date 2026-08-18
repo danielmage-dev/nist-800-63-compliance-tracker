@@ -1,0 +1,2379 @@
+chapter: "4"
+rev: 800-63c-r4
+requirements:
+  4.1-R1:
+    id: 4.1-R1
+    rev: 800-63c-r4
+    sectionNumber: "4.1"
+    ordinal: 1
+    level: SHALL
+    text: In order to make subscriber accounts available through an IdP, the subscriber accounts need to
+      be provisioned at the IdP. The means by which the subscriber account is provisioned to the IdP
+      SHALL be disclosed in the trust agreement.
+    textHash: 1978b6db610e
+    source: prose
+    seededBy: parser
+    verified: false
+  4.1-R2:
+    id: 4.1-R2
+    rev: 800-63c-r4
+    sectionNumber: "4.1"
+    ordinal: 2
+    level: SHALL
+    text: The CSP can provide attributes from the subscriber account to the IdP as attribute values,
+      derived attribute values, or attribute bundles. The CSP SHALL sign attribute bundles issued to
+      the IdP.
+    textHash: bd1d1ca9755c
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3-R1:
+    id: 4.3-R1
+    rev: 800-63c-r4
+    sectionNumber: "4.3"
+    ordinal: 1
+    level: SHALL
+    text: As the result of an agreement by the federated parties prior to the federation transaction or
+    textHash: 9b2e19da2a30
+    context: "Trust agreements for general-purpose IdPs SHALL be established either:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3-R2:
+    id: 4.3-R2
+    rev: 800-63c-r4
+    sectionNumber: "4.3"
+    ordinal: 2
+    level: SHALL
+    text: As the result of decision or action by the subscriber during the federation transaction
+    textHash: e144c6990a09
+    context: "Trust agreements for general-purpose IdPs SHALL be established either:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R1:
+    id: 4.3.1-R1
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 1
+    level: SHALL
+    text: The set of subscriber attributes, derived attributes, and attribute bundles that the IdP can
+      make available to the RP
+    textHash: e9b7aa3c47ed
+    context: "When the trust agreement is established by the federated parties prior to the federation
+      transaction, the trust agreement SHALL establish the following terms:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R2:
+    id: 4.3.1-R2
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 2
+    level: SHALL
+    text: The attribute storage policy of the IdP for the subscriber account, including any available
+      means for the subscriber to request deletion
+    textHash: 3c43741f0a3f
+    context: "When the trust agreement is established by the federated parties prior to the federation
+      transaction, the trust agreement SHALL establish the following terms:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R3:
+    id: 4.3.1-R3
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 3
+    level: SHALL
+    text: Any attribute sources from which the IdP receives applicable subscriber attributes, derived
+      attributes, and attribute bundles, including the CSP
+    textHash: 5adb1849cd4f
+    context: "When the trust agreement is established by the federated parties prior to the federation
+      transaction, the trust agreement SHALL establish the following terms:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R4:
+    id: 4.3.1-R4
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 4
+    level: SHALL
+    text: Any identity APIs that are made available by the IdP, either directly or through an external
+      provider, and which subscriber attributes are available at these APIs
+    textHash: 533b22597b0e
+    context: "When the trust agreement is established by the federated parties prior to the federation
+      transaction, the trust agreement SHALL establish the following terms:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R5:
+    id: 4.3.1-R5
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 5
+    level: SHALL
+    text: The population of subscriber accounts for which the IdP can create assertions
+    textHash: 74a1842c9a23
+    context: "When the trust agreement is established by the federated parties prior to the federation
+      transaction, the trust agreement SHALL establish the following terms:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R6:
+    id: 4.3.1-R6
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 6
+    level: SHALL
+    text: Any additional uses of subscriber information beyond providing the identity service
+    textHash: e4f1bf13bae1
+    context: "When the trust agreement is established by the federated parties prior to the federation
+      transaction, the trust agreement SHALL establish the following terms:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R7:
+    id: 4.3.1-R7
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 7
+    level: SHALL
+    text: The set of subscriber attributes, derived attributes, and attribute bundles that the RP is
+      allowed to request (i.e., a subset of the attributes made available)
+    textHash: 156783355d84
+    context: "When the trust agreement is established by the federated parties prior to the federation
+      transaction, the trust agreement SHALL establish the following terms:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R8:
+    id: 4.3.1-R8
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 8
+    level: SHALL
+    text: The purpose for each attribute requested by the RP
+    textHash: b8a1d069befe
+    context: "When the trust agreement is established by the federated parties prior to the federation
+      transaction, the trust agreement SHALL establish the following terms:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R9:
+    id: 4.3.1-R9
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 9
+    level: SHALL
+    text: The provisioning models used by the RP for RP subscriber accounts
+    textHash: 2f532433ff1b
+    context: "When the trust agreement is established by the federated parties prior to the federation
+      transaction, the trust agreement SHALL establish the following terms:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R10:
+    id: 4.3.1-R10
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 10
+    level: SHALL
+    text: The authorized party responsible for decisions regarding the release of subscriber attributes
+      to the RP (e.g., the IdP organization, the subscriber)
+    textHash: 294151f94e52
+    context: "When the trust agreement is established by the federated parties prior to the federation
+      transaction, the trust agreement SHALL establish the following terms:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R11:
+    id: 4.3.1-R11
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 11
+    level: SHALL
+    text: The process and techniques used to inform subscribers about attribute sharing
+    textHash: 963eed033656
+    context: "When the trust agreement is established by the federated parties prior to the federation
+      transaction, the trust agreement SHALL establish the following terms:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R12:
+    id: 4.3.1-R12
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 12
+    level: SHALL
+    text: The process and techniques for collecting consent from the authorized party when necessary
+    textHash: 3d34eb9a1ef2
+    context: "When the trust agreement is established by the federated parties prior to the federation
+      transaction, the trust agreement SHALL establish the following terms:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R13:
+    id: 4.3.1-R13
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 13
+    level: SHALL
+    text: The xALs available from the IdP
+    textHash: dfc6b21e3f85
+    context: "When the trust agreement is established by the federated parties prior to the federation
+      transaction, the trust agreement SHALL establish the following terms:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R14:
+    id: 4.3.1-R14
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 14
+    level: SHALL
+    text: The xALs required by the RP
+    textHash: 0f0508e88a5d
+    context: "When the trust agreement is established by the federated parties prior to the federation
+      transaction, the trust agreement SHALL establish the following terms:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R15:
+    id: 4.3.1-R15
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 15
+    level: SHALL
+    text: The terms of the trust agreement SHALL be available to the operators of the RP and the IdP
+      upon its establishment. The terms of the trust agreement SHALL be made available to
+      subscribers upon request to the IdP or RP.
+    textHash: db38b3309fa9
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R16:
+    id: 4.3.1-R16
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 16
+    level: SHALL
+    text: The IdP and RP SHALL each assess their respective redress mechanisms for efficacy in resolving
+      complaints or problems and disclose the results of this assessment as part of the trust
+      agreement. See Sec. 3.5.3 for additional requirements and considerations for redress
+      mechanisms.
+    textHash: d838677a3c22
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R17:
+    id: 4.3.1-R17
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 17
+    level: SHALL
+    text: The means by which holder-of-key assertions can be verified by the RP (such as a common
+      trusted PKI system)
+    textHash: a2c1f1a48ff1
+    context: "If FAL3 is allowed within the trust agreement, the trust agreement SHALL stipulate the
+      following terms regarding holder-of-key assertions (see Sec. 3.15) and bound authenticators
+      (see Sec. 3.16):"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R18:
+    id: 4.3.1-R18
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 18
+    level: SHALL
+    text: The means by which the RP can associate holder-of-key assertions with specific RP subscriber
+      accounts (such as attribute-based account resolution or pre-provisioning)
+    textHash: 297fc18a8f68
+    context: "If FAL3 is allowed within the trust agreement, the trust agreement SHALL stipulate the
+      following terms regarding holder-of-key assertions (see Sec. 3.15) and bound authenticators
+      (see Sec. 3.16):"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R19:
+    id: 4.3.1-R19
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 19
+    level: SHALL
+    text: Whether bound authenticators are supplied by the RP or the subscriber
+    textHash: a01a72a0be59
+    context: "If FAL3 is allowed within the trust agreement, the trust agreement SHALL stipulate the
+      following terms regarding holder-of-key assertions (see Sec. 3.15) and bound authenticators
+      (see Sec. 3.16):"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R20:
+    id: 4.3.1-R20
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 20
+    level: SHALL
+    text: Documentation of the binding ceremony used for any subscriber-provided bound authenticators
+    textHash: 27da5b28d76d
+    context: "If FAL3 is allowed within the trust agreement, the trust agreement SHALL stipulate the
+      following terms regarding holder-of-key assertions (see Sec. 3.15) and bound authenticators
+      (see Sec. 3.16):"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R21:
+    id: 4.3.1-R21
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 21
+    level: SHALL
+    text: The events that trigger a signal to be sent
+    textHash: e2039fb9d698
+    context: "If shared signaling is used by the IdP or RP (see Sec. 4.8), the terms of the trust
+      agreement SHALL establish:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R22:
+    id: 4.3.1-R22
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 22
+    level: SHALL
+    text: Which signals are sent for each trigger
+    textHash: 47e57d85ce34
+    context: "If shared signaling is used by the IdP or RP (see Sec. 4.8), the terms of the trust
+      agreement SHALL establish:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R23:
+    id: 4.3.1-R23
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 23
+    level: SHALL
+    text: The information included in each signal
+    textHash: 315fb35cfe5b
+    context: "If shared signaling is used by the IdP or RP (see Sec. 4.8), the terms of the trust
+      agreement SHALL establish:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R24:
+    id: 4.3.1-R24
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 24
+    level: SHALL
+    text: The expected behavior of the party receiving the signal
+    textHash: 1c685f490242
+    context: "If shared signaling is used by the IdP or RP (see Sec. 4.8), the terms of the trust
+      agreement SHALL establish:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R25:
+    id: 4.3.1-R25
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 25
+    level: MAY
+    text: Runtime decisions at the IdP (see Sec. 4.6.1.3), MAY be used to further limit which subscriber
+      attributes are sent between parties in the federated transaction (e.g., a runtime decision
+      could opt to not disclose an email address, even though this attribute was included in the
+      terms of the trust agreement).
+    textHash: 5caf31d5f961
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.1-R26:
+    id: 4.3.1-R26
+    rev: 800-63c-r4
+    sectionNumber: 4.3.1
+    ordinal: 26
+    level: SHALL
+    text: The trust agreement SHALL be reviewed periodically to ensure that it is still fit for purpose
+      and to avoid unnecessary data exchange and the over-collection of subscriber data.
+    textHash: c24353568ca7
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.2-R1:
+    id: 4.3.2-R1
+    rev: 800-63c-r4
+    sectionNumber: 4.3.2
+    ordinal: 1
+    level: SHALL
+    text: Any attribute sources from which the IdP receives applicable subscriber attributes, including
+      the CSP
+    textHash: 546c0b349010
+    context: "When the trust agreement is established as the result of a subscriber’s decision (e.g., a
+      subscriber starting a federation transaction between an RP and their IdP without an
+      established agreement), the trust agreement is anchored by the subscriber. In a
+      subscriber-driven trust agreement, the trust agreement takes the form of a set of terms of use
+      as opposed to a formal contract between parties. Consequently, the following terms SHALL be
+      disclosed to the subscriber upon request:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.2-R2:
+    id: 4.3.2-R2
+    rev: 800-63c-r4
+    sectionNumber: 4.3.2
+    ordinal: 2
+    level: SHALL
+    text: Any identity APIs that are made available by the IdP, either directly or through an external
+      provider, and which subscriber attributes are available at these APIs
+    textHash: 533b22597b0e
+    context: "When the trust agreement is established as the result of a subscriber’s decision (e.g., a
+      subscriber starting a federation transaction between an RP and their IdP without an
+      established agreement), the trust agreement is anchored by the subscriber. In a
+      subscriber-driven trust agreement, the trust agreement takes the form of a set of terms of use
+      as opposed to a formal contract between parties. Consequently, the following terms SHALL be
+      disclosed to the subscriber upon request:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.2-R3:
+    id: 4.3.2-R3
+    rev: 800-63c-r4
+    sectionNumber: 4.3.2
+    ordinal: 3
+    level: SHALL
+    text: The set of subscriber attributes, derived attributes, and attribute bundles that the IdP can
+      make available to the RP
+    textHash: e9b7aa3c47ed
+    context: "When the trust agreement is established as the result of a subscriber’s decision (e.g., a
+      subscriber starting a federation transaction between an RP and their IdP without an
+      established agreement), the trust agreement is anchored by the subscriber. In a
+      subscriber-driven trust agreement, the trust agreement takes the form of a set of terms of use
+      as opposed to a formal contract between parties. Consequently, the following terms SHALL be
+      disclosed to the subscriber upon request:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.2-R4:
+    id: 4.3.2-R4
+    rev: 800-63c-r4
+    sectionNumber: 4.3.2
+    ordinal: 4
+    level: SHALL
+    text: The attribute storage policy of the IdP for the subscriber account, including any available
+      means for the subscriber to request deletion
+    textHash: 3c43741f0a3f
+    context: "When the trust agreement is established as the result of a subscriber’s decision (e.g., a
+      subscriber starting a federation transaction between an RP and their IdP without an
+      established agreement), the trust agreement is anchored by the subscriber. In a
+      subscriber-driven trust agreement, the trust agreement takes the form of a set of terms of use
+      as opposed to a formal contract between parties. Consequently, the following terms SHALL be
+      disclosed to the subscriber upon request:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.2-R5:
+    id: 4.3.2-R5
+    rev: 800-63c-r4
+    sectionNumber: 4.3.2
+    ordinal: 5
+    level: SHALL
+    text: The use of any shared signaling between the IdP and RP
+    textHash: 5e52ca41f8df
+    context: "When the trust agreement is established as the result of a subscriber’s decision (e.g., a
+      subscriber starting a federation transaction between an RP and their IdP without an
+      established agreement), the trust agreement is anchored by the subscriber. In a
+      subscriber-driven trust agreement, the trust agreement takes the form of a set of terms of use
+      as opposed to a formal contract between parties. Consequently, the following terms SHALL be
+      disclosed to the subscriber upon request:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.2-R6:
+    id: 4.3.2-R6
+    rev: 800-63c-r4
+    sectionNumber: 4.3.2
+    ordinal: 6
+    level: SHALL
+    text: The population of subscriber accounts for which the IdP can create assertions
+    textHash: 74a1842c9a23
+    context: "When the trust agreement is established as the result of a subscriber’s decision (e.g., a
+      subscriber starting a federation transaction between an RP and their IdP without an
+      established agreement), the trust agreement is anchored by the subscriber. In a
+      subscriber-driven trust agreement, the trust agreement takes the form of a set of terms of use
+      as opposed to a formal contract between parties. Consequently, the following terms SHALL be
+      disclosed to the subscriber upon request:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.2-R7:
+    id: 4.3.2-R7
+    rev: 800-63c-r4
+    sectionNumber: 4.3.2
+    ordinal: 7
+    level: SHALL
+    text: Any additional uses of subscriber information beyond providing the identity service
+    textHash: e4f1bf13bae1
+    context: "When the trust agreement is established as the result of a subscriber’s decision (e.g., a
+      subscriber starting a federation transaction between an RP and their IdP without an
+      established agreement), the trust agreement is anchored by the subscriber. In a
+      subscriber-driven trust agreement, the trust agreement takes the form of a set of terms of use
+      as opposed to a formal contract between parties. Consequently, the following terms SHALL be
+      disclosed to the subscriber upon request:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.2-R8:
+    id: 4.3.2-R8
+    rev: 800-63c-r4
+    sectionNumber: 4.3.2
+    ordinal: 8
+    level: SHALL
+    text: The xALs available from the IdP
+    textHash: dfc6b21e3f85
+    context: "When the trust agreement is established as the result of a subscriber’s decision (e.g., a
+      subscriber starting a federation transaction between an RP and their IdP without an
+      established agreement), the trust agreement is anchored by the subscriber. In a
+      subscriber-driven trust agreement, the trust agreement takes the form of a set of terms of use
+      as opposed to a formal contract between parties. Consequently, the following terms SHALL be
+      disclosed to the subscriber upon request:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.2-R9:
+    id: 4.3.2-R9
+    rev: 800-63c-r4
+    sectionNumber: 4.3.2
+    ordinal: 9
+    level: SHALL
+    text: The xALs required by the RP
+    textHash: 0f0508e88a5d
+    context: "When the trust agreement is established as the result of a subscriber’s decision (e.g., a
+      subscriber starting a federation transaction between an RP and their IdP without an
+      established agreement), the trust agreement is anchored by the subscriber. In a
+      subscriber-driven trust agreement, the trust agreement takes the form of a set of terms of use
+      as opposed to a formal contract between parties. Consequently, the following terms SHALL be
+      disclosed to the subscriber upon request:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.2-R10:
+    id: 4.3.2-R10
+    rev: 800-63c-r4
+    sectionNumber: 4.3.2
+    ordinal: 10
+    level: SHALL
+    text: The IdP SHALL assess its redress mechanisms for efficacy in resolving complaints or problems
+      and disclose the results of this assessment to the subscriber. See Sec. 3.5.3 for additional
+      requirements and considerations for redress mechanisms.
+    textHash: 7a435843dbf0
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.2-R11:
+    id: 4.3.2-R11
+    rev: 800-63c-r4
+    sectionNumber: 4.3.2
+    ordinal: 11
+    level: SHALL
+    text: The release of subscriber attributes SHALL be managed using a runtime decision at the IdP, as
+      described in Sec. 4.6.1.3. The authorized party SHALL be the subscriber.
+    textHash: 2a1acb7fe50e
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.2-R12:
+    id: 4.3.2-R12
+    rev: 800-63c-r4
+    sectionNumber: 4.3.2
+    ordinal: 12
+    level: SHALL
+    text: The set of subscriber attributes, derived attributes, and attribute bundles that the RP will
+      request (i.e., a subset of the attributes made available by the IdP)
+    textHash: 58827e333a7f
+    context: "The following terms of the trust agreement SHALL be disclosed to the subscriber during the
+      runtime decision:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.2-R13:
+    id: 4.3.2-R13
+    rev: 800-63c-r4
+    sectionNumber: 4.3.2
+    ordinal: 13
+    level: SHALL
+    text: The purpose for each attribute requested by the RP
+    textHash: b8a1d069befe
+    context: "The following terms of the trust agreement SHALL be disclosed to the subscriber during the
+      runtime decision:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.3.2-R14:
+    id: 4.3.2-R14
+    rev: 800-63c-r4
+    sectionNumber: 4.3.2
+    ordinal: 14
+    level: SHALL
+    text: The attribute storage policy of the RP for the RP subscriber account, including any available
+      means for the subscriber to request deletion
+    textHash: e3f0819e23b0
+    context: "The following terms of the trust agreement SHALL be disclosed to the subscriber during the
+      runtime decision:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.4-R1:
+    id: 4.4-R1
+    rev: 800-63c-r4
+    sectionNumber: "4.4"
+    ordinal: 1
+    level: SHALL
+    text: The RP SHALL associate the assertion validation keys and other relevant configuration
+      information with the IdP’s identifier, as stipulated by the trust agreement. If the validation
+      keys and configuration information are retrieved over a network connection, request and
+      retrieval SHALL be made over an authenticated protected channel from a location that is
+      associated with the IdP’s identifier by the trust agreement. In many federation protocols,
+      this is accomplished by the RP fetching the public keys and configuration data from a URL that
+      is specified in the trust agreement as being controlled by the IdP or offered on the IdP’s
+      behalf. It is also possible for the RP to be configured directly with this information in a
+      manual fashion, whereby the RP’s system administrator enters the IdP information directly into
+      the RP software’s configuration.
+    textHash: c0d0ad47f51f
+    source: prose
+    seededBy: parser
+    verified: false
+  4.4-R2:
+    id: 4.4-R2
+    rev: 800-63c-r4
+    sectionNumber: "4.4"
+    ordinal: 2
+    level: SHALL
+    text: Additionally, the RP SHALL register its information with either the IdP or an authority that
+      the IdP trusts, as stipulated by the trust agreement. In many federation protocols, the RP is
+      assigned an identifier during this stage, which the RP will use in subsequent communication
+      with the IdP.
+    textHash: 5133f89e2bea
+    source: prose
+    seededBy: parser
+    verified: false
+  4.4-R3:
+    id: 4.4-R3
+    rev: 800-63c-r4
+    sectionNumber: "4.4"
+    ordinal: 3
+    level: MAY
+    text: Parties that seek to federate MAY use a trusted third party to facilitate the discovery and
+      registration processes if that trusted third party is identified in the trust agreement. For
+      example, a consortium could use a hosted service that collects the configuration records of
+      IdPs and RPs directly from participants. Instead of going to the IdP directly for its
+      discovery record, an RP would instead go to this service and retrieve the key material for its
+      target IdP. The IdP would, in turn, go to this service to find the identifiers and
+      configuration information for RPs that are needed to connect. This service is often managed by
+      the same party that fulfills the federation authority role in multilateral trust agreements,
+      as discussed in Sec. 3.5.2.
+    textHash: 12344429cda8
+    source: prose
+    seededBy: parser
+    verified: false
+  4.4.1-R1:
+    id: 4.4.1-R1
+    rev: 800-63c-r4
+    sectionNumber: 4.4.1
+    ordinal: 1
+    level: SHALL
+    text: This process MAY be facilitated by some level of automated tooling, whereby the manual
+      configuration points the systems in question to a trusted source of information that can be
+      updated over time. If such automation is used, the trust agreement SHALL enumerate the
+      allowable terms of the cryptographic key distribution and assignment, including allowable
+      cache lifetimes.
+    textHash: ae914a30ccd0
+    source: prose
+    seededBy: parser
+    verified: false
+  4.4.2-R1:
+    id: 4.4.2-R1
+    rev: 800-63c-r4
+    sectionNumber: 4.4.2
+    ordinal: 1
+    level: SHALL
+    text: At FAL1 and FAL2, the cryptographic keys and identifiers of the RP can be exchanged in a
+      dynamic process, whereby the RP software presents its configuration to the IdP either directly
+      or through a trusted third party and receives the identifier to use with that IdP. This
+      process is specific to the federation protocol in use but requires machine-readable
+      configuration data to be made available over the network. All transmission of configuration
+      information SHALL be made over a secure protected channel to endpoints that are associated
+      with the IdP’s identifier by the trust agreement.
+    textHash: d9c741f8cd1e
+    source: prose
+    seededBy: parser
+    verified: false
+  4.4.2-R2:
+    id: 4.4.2-R2
+    rev: 800-63c-r4
+    sectionNumber: 4.4.2
+    ordinal: 2
+    level: SHOULD
+    text: IdPs SHOULD consider the risks of information leakage to multiple RP instances and take
+      appropriate countermeasures, such as issuing PPIs for subscribers who access dynamically
+      registered RPs, as discussed in Sec. 3.4.1.
+    textHash: b91124b46f23
+    source: prose
+    seededBy: parser
+    verified: false
+  4.4.2-R3:
+    id: 4.4.2-R3
+    rev: 800-63c-r4
+    sectionNumber: 4.4.2
+    ordinal: 3
+    level: SHOULD
+    text: Dynamic registration SHOULD be augmented by attestations about the RP software and device, as
+      discussed in Sec. 3.6.3.
+    textHash: 11c4d794e0ff
+    source: prose
+    seededBy: parser
+    verified: false
+  4.5-R1:
+    id: 4.5-R1
+    rev: 800-63c-r4
+    sectionNumber: "4.5"
+    ordinal: 1
+    level: SHALL
+    text: Approval of attribute release
+    textHash: 6adf338e40d2
+    context: "The IdP SHALL require the subscriber to have an authenticated session before any of the
+      following events:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.5-R2:
+    id: 4.5-R2
+    rev: 800-63c-r4
+    sectionNumber: "4.5"
+    ordinal: 2
+    level: SHALL
+    text: Creation and issuance of an assertion
+    textHash: abc3645c9d27
+    context: "The IdP SHALL require the subscriber to have an authenticated session before any of the
+      following events:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.5-R3:
+    id: 4.5-R3
+    rev: 800-63c-r4
+    sectionNumber: "4.5"
+    ordinal: 3
+    level: SHALL
+    text: Establishment of a subscriber-driven trust agreement
+    textHash: bd6cd5ba925c
+    context: "The IdP SHALL require the subscriber to have an authenticated session before any of the
+      following events:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6-R1:
+    id: 4.6-R1
+    rev: 800-63c-r4
+    sectionNumber: "4.6"
+    ordinal: 1
+    level: SHALL
+    text: An allowlist, which determines the circumstances under which the system can allow the
+      federation transaction to proceed in an automated fashion;
+    textHash: e8440b6b65e8
+    context: "The authorized party stipulated by the trust agreement SHALL decide whether a federation
+      transaction proceeds and, therefore, whether an assertion is issued and attributes are
+      released to the RP. This decision can be calculated in a variety of ways, including:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6-R2:
+    id: 4.6-R2
+    rev: 800-63c-r4
+    sectionNumber: "4.6"
+    ordinal: 2
+    level: SHALL
+    text: A blocklist, which determines the circumstances under which the system will not allow the
+      federation transaction to proceed; and
+    textHash: 87a8389685b8
+    context: "The authorized party stipulated by the trust agreement SHALL decide whether a federation
+      transaction proceeds and, therefore, whether an assertion is issued and attributes are
+      released to the RP. This decision can be calculated in a variety of ways, including:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6-R3:
+    id: 4.6-R3
+    rev: 800-63c-r4
+    sectionNumber: "4.6"
+    ordinal: 3
+    level: SHALL
+    text: A runtime decision, which allows the authorized party (e.g., the subscriber) to decide whether
+      the transaction can proceed and under what precise terms. A runtime decision can be stored and
+      applied to future transactions.
+    textHash: 03b49ea961dc
+    context: "The authorized party stipulated by the trust agreement SHALL decide whether a federation
+      transaction proceeds and, therefore, whether an assertion is issued and attributes are
+      released to the RP. This decision can be calculated in a variety of ways, including:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6-R4:
+    id: 4.6-R4
+    rev: 800-63c-r4
+    sectionNumber: "4.6"
+    ordinal: 4
+    level: SHALL
+    text: The IdP SHALL provide effective mechanisms for the redress of subscriber complaints or
+      problems (e.g., subscriber identifies an inaccurate attribute value). See Sec. 3.5.3 for
+      additional requirements and considerations for redress mechanisms.
+    textHash: 7179b3146744
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.1.1-R1:
+    id: 4.6.1.1-R1
+    rev: 800-63c-r4
+    sectionNumber: 4.6.1.1
+    ordinal: 1
+    level: SHALL
+    text: In a pre-established trust agreement, IdPs MAY establish allowlists of RPs that are authorized
+      to receive authentication and attributes from the IdP without a runtime decision from the
+      subscriber. When placing an RP on its allowlist, the IdP SHALL confirm that the RP abides by
+      the terms of the trust agreement. The IdP SHALL determine which identity attributes are passed
+      to the allowlisted RP upon authentication. IdPs SHALL make allowlists available to
+      subscribers, as described in Sec. 7.2.
+    textHash: 5abb03ce3a5d
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.1.1-R2:
+    id: 4.6.1.1-R2
+    rev: 800-63c-r4
+    sectionNumber: 4.6.1.1
+    ordinal: 2
+    level: SHALL_NOT
+    text: IdP allowlists SHALL uniquely identify RPs through fully qualified domain names, cryptographic
+      keys, or other identifiers that are applicable to the federation protocol in use. Any entities
+      that share an identifier SHALL be considered equivalent for the purposes of the allowlist.
+      Allowlists SHOULD be as specific as possible to avoid unintentional impersonation of an RP. An
+      allowlist entry for an RP SHALL NOT use a wildcard domain identifier.
+    textHash: 2d0badcce209
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.1.1-R3:
+    id: 4.6.1.1-R3
+    rev: 800-63c-r4
+    sectionNumber: 4.6.1.1
+    ordinal: 3
+    level: SHALL
+    text: Subject to a runtime decision of the authorized party to approve the additional attributes
+      requested,
+    textHash: 4e8bb802f85c
+    context: "IdP allowlist entries for an RP SHALL indicate which attributes are included as part of an
+      allowlisted decision. If additional attributes are requested by the RP, the request SHALL be:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.1.1-R4:
+    id: 4.6.1.1-R4
+    rev: 800-63c-r4
+    sectionNumber: 4.6.1.1
+    ordinal: 4
+    level: SHALL
+    text: Redacted to only the attributes in the allowlist entry, or
+    textHash: 6215c7c65a80
+    context: "IdP allowlist entries for an RP SHALL indicate which attributes are included as part of an
+      allowlisted decision. If additional attributes are requested by the RP, the request SHALL be:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.1.1-R5:
+    id: 4.6.1.1-R5
+    rev: 800-63c-r4
+    sectionNumber: 4.6.1.1
+    ordinal: 5
+    level: SHALL
+    text: Denied outright by the IdP.
+    textHash: 65d8a986a0b9
+    context: "IdP allowlist entries for an RP SHALL indicate which attributes are included as part of an
+      allowlisted decision. If additional attributes are requested by the RP, the request SHALL be:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.1.1-R6:
+    id: 4.6.1.1-R6
+    rev: 800-63c-r4
+    sectionNumber: 4.6.1.1
+    ordinal: 6
+    level: MAY
+    text: IdP allowlist entries MAY be applied based on aspects of the federation transaction, such as
+      the xALs required for the transaction. For example, an IdP could use an allowlist entry to
+      bypass a consent screen for an FAL1 transaction but require confirmation of consent from the
+      subscriber during an FAL3 transaction.
+    textHash: d5d7260739ac
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.1.2-R1:
+    id: 4.6.1.2-R1
+    rev: 800-63c-r4
+    sectionNumber: 4.6.1.2
+    ordinal: 1
+    level: SHALL_NOT
+    text: IdPs MAY establish blocklists of RPs that are not authorized to receive authentication
+      assertions or attributes from the IdP, even if requested to do so by the subscriber. If an RP
+      is on an IdP’s blocklist, the IdP SHALL NOT produce an assertion that targets the RP in
+      question under any circumstances.
+    textHash: 8c2cc838a0ec
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.1.2-R2:
+    id: 4.6.1.2-R2
+    rev: 800-63c-r4
+    sectionNumber: 4.6.1.2
+    ordinal: 2
+    level: SHALL
+    text: IdP blocklists SHALL uniquely identify RPs through the means of fully qualified domain names,
+      cryptographic keys, or other identifiers that are applicable to the federation protocol in
+      use. Any entities that share an identifier SHALL be considered equivalent for the purposes of
+      the blocklist. For example, a wildcard domain identifier of “*.example.com” would match the
+      domains “www.example.com”, “service.example.com”, and “unknown.example.com” equally. All three
+      of these sites would be blocked by the same blocklist entry.
+    textHash: "477910494064"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.1.3-R1:
+    id: 4.6.1.3-R1
+    rev: 800-63c-r4
+    sectionNumber: 4.6.1.3
+    ordinal: 1
+    level: SHALL
+    text: Every RP that is in a trust agreement with an IdP but not on an allowlist with that IdP SHALL
+      be governed by a default policy in which runtime authorization decisions will be made by an
+      authorized party that is identified by the trust agreement. Since the runtime decision occurs
+      during the federation transaction, the authorized party is generally a person and, in most
+      circumstances, is the subscriber. However, it is possible for another party such as a system
+      administrator to be prompted on behalf of the subscriber. In a subscriber-driven trust
+      agreement, a runtime decision with the subscriber is the only allowable means to authorize the
+      release of subscriber attributes.
+    textHash: 08904c4f4fc3
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.1.3-R2:
+    id: 4.6.1.3-R2
+    rev: 800-63c-r4
+    sectionNumber: 4.6.1.3
+    ordinal: 2
+    level: SHALL
+    text: When processing a runtime decision, the IdP interactively prompts the authorized party during
+      the federation transaction. The authorized party provides consent to release an authentication
+      assertion and specific attributes to the RP. The IdP SHALL provide the authorized party with
+      explicit notice and prompt them for positive confirmation before any attributes about the
+      subscriber are transmitted to the RP. At a minimum, the notice SHOULD be provided by the party
+      in the position to provide the most effective notice and obtain confirmation, consistent with
+      Sec. 7.2. The IdP SHALL disclose which attributes will be released to the RP if the
+      transaction is approved. If the federation protocol in use allows for optional or selective
+      attribute disclosure at runtime, the authorized party SHALL be given the option to decide
+      whether to transmit specific attributes to the RP without terminating the federation
+      transaction entirely.
+    textHash: 8eb9c16d0403
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.1.3-R3:
+    id: 4.6.1.3-R3
+    rev: 800-63c-r4
+    sectionNumber: 4.6.1.3
+    ordinal: 3
+    level: SHALL
+    text: If the authorized party is the subscriber, the IdP SHALL provide mechanisms for the subscriber
+      to view the attribute values and derived attribute values to be sent to the RP. To mitigate
+      the risk of unauthorized exposure of sensitive information (e.g., shoulder surfing), the IdP
+      SHALL, by default, mask sensitive information displayed to the subscriber. For more details on
+      masking, see Sec. 8 on usability considerations.
+    textHash: a02166911e2a
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.1.3-R4:
+    id: 4.6.1.3-R4
+    rev: 800-63c-r4
+    sectionNumber: 4.6.1.3
+    ordinal: 4
+    level: SHALL
+    text: An IdP MAY employ mechanisms to remember the authorized party’s decision and re-transmit the
+      same set of attributes to the same RP. This mechanism is associated with the subscriber
+      account as managed by the IdP. If such a mechanism is provided, the IdP SHALL disclose to the
+      authorized party that the storage mechanism is in use and SHALL allow the authorized party to
+      revoke such remembered access at a future time.
+    textHash: 6c026250f7c6
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.2.1-R1:
+    id: 4.6.2.1-R1
+    rev: 800-63c-r4
+    sectionNumber: 4.6.2.1
+    ordinal: 1
+    level: SHALL
+    text: RPs MAY establish allowlists of IdPs from which the RP will accept authentication and
+      attributes without a runtime decision from the subscriber to use the IdP. In practice, many
+      RPs interface with only a single IdP, and this IdP is allowlisted as the only possible entry
+      for that RP. When placing an IdP in its allowlist, the RP SHALL confirm that the IdP abides by
+      the terms of the trust agreement. This confirmation can be facilitated by a federation
+      authority or undertaken directly by the RP.
+    textHash: f03a6b0199ae
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.2.1-R2:
+    id: 4.6.2.1-R2
+    rev: 800-63c-r4
+    sectionNumber: 4.6.2.1
+    ordinal: 2
+    level: SHALL_NOT
+    text: RP allowlists SHALL uniquely identify IdPs through fully qualified domain names, cryptographic
+      keys, or other identifiers that are applicable to the federation protocol in use. Allowlists
+      SHOULD be as specific as possible to avoid unintentional impersonation of an IdP. An allowlist
+      entry for an IdP SHALL NOT use a wildcard domain identifier.
+    textHash: 53f61a686901
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.2.1-R3:
+    id: 4.6.2.1-R3
+    rev: 800-63c-r4
+    sectionNumber: 4.6.2.1
+    ordinal: 3
+    level: MAY
+    text: RP allowlist entries MAY be applied based on aspects of the federation transaction, such as
+      the xALs required for the transaction. For example, an RP could use a runtime decision for
+      FAL1 transactions but require an allowlisted IdP for FAL3 transactions.
+    textHash: 9a1b2a09c38c
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.2.2-R1:
+    id: 4.6.2.2-R1
+    rev: 800-63c-r4
+    sectionNumber: 4.6.2.2
+    ordinal: 1
+    level: MAY
+    text: RPs MAY establish blocklists of IdPs from which the RP will not accept authentication or
+      attributes, even when requested by the subscriber. A blocklisted IdP can otherwise be in a
+      valid trust agreement with the RP, such as when both are under the same federation authority.
+    textHash: dc91956127ae
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.2.2-R2:
+    id: 4.6.2.2-R2
+    rev: 800-63c-r4
+    sectionNumber: 4.6.2.2
+    ordinal: 2
+    level: SHALL
+    text: RP blocklists SHALL uniquely identify IdPs through fully qualified domain names, cryptographic
+      keys, or other identifiers that are applicable to the federation protocol in use. Any entities
+      that share an identifier SHALL be considered equivalent for the purposes of the blocklist. For
+      example, a wildcard domain identifier of “*.example.com” would match the domains
+      “www.example.com”, “service.example.com”, and “unknown.example.com” equally. All three of
+      these sites would be blocked by the same blocklist entry.
+    textHash: f937e4b67192
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.2.3-R1:
+    id: 4.6.2.3-R1
+    rev: 800-63c-r4
+    sectionNumber: 4.6.2.3
+    ordinal: 1
+    level: SHALL
+    text: Every IdP that is in a trust agreement with an RP but not on an allowlist with that RP SHALL
+      be governed by a default policy in which runtime authorization decisions will be made by the
+      authorized party indicated in the trust agreement. In this mode, the authorized party is
+      prompted by the RP to select or enter which IdP to contact for authentication on behalf of the
+      subscriber. This process can be facilitated by a discovery mechanism that allows the
+      subscriber to enter a human-facing identifier, such as an email address that is then used to
+      programmatically select the IdP for the entered address. Since the runtime decision occurs
+      during the federation transaction, the authorized party is generally a person and, in most
+      circumstances, the subscriber.
+    textHash: c1573169b69c
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.2.3-R2:
+    id: 4.6.2.3-R2
+    rev: 800-63c-r4
+    sectionNumber: 4.6.2.3
+    ordinal: 2
+    level: SHALL
+    text: The RP MAY employ mechanisms to remember the authorized party’s decision to use a given IdP.
+      Since this mechanism is employed prior to authentication at the RP, the manner in which the RP
+      provides this mechanism (e.g., a browser cookie outside of the authenticated session) is
+      separate from the RP subscriber account, as described in Sec. 3.8. If such a mechanism is
+      provided, the RP SHALL disclose to the authorized party that the storage mechanism is in use
+      and SHALL allow the authorized party to revoke such remembered access at a future time.
+    textHash: 2ae3c891894a
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.3-R1:
+    id: 4.6.3-R1
+    rev: 800-63c-r4
+    sectionNumber: 4.6.3
+    ordinal: 1
+    level: SHALL
+    text: All organizations SHALL document their provisioning models as part of their trust agreement.
+    textHash: 169b73faa9ec
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.4-R1:
+    id: 4.6.4-R1
+    rev: 800-63c-r4
+    sectionNumber: 4.6.4
+    ordinal: 1
+    level: MAY
+    text: From the RP’s perspective, the IdP is the trusted source for any attributes that the IdP
+      asserts as being associated with the subscriber account at the IdP. However, the RP MAY
+      collect and optionally verify other attributes to associate with the RP subscriber account, as
+      discussed in Sec. 4.6.6.
+    textHash: b34f7ba8dc09
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.4-R2:
+    id: 4.6.4-R2
+    rev: 800-63c-r4
+    sectionNumber: 4.6.4
+    ordinal: 2
+    level: SHOULD
+    text: While it is possible for the IdP to proactively push updated attributes to the RP with every
+      assertion, this practice exposes personal information on every transaction. To limit the
+      amount of personal information sent at each transaction, the IdP SHOULD signal downstream RPs
+      when the attributes of a subscriber account available to the RP have been updated. RPs MAY
+      respond to this signal by requesting the new attributes from the IdP and updating the RP
+      subscriber account. This synchronization can be accomplished by using shared signaling (see
+      Sec. 4.8), through a provisioning API (see Sec. 4.6.5), or by signaling the RP (e.g., by
+      providing a timestamp of when the subscriber account attributes were last updated) to request
+      updated attributes through an identity API (see Sec. 3.12.3).
+    textHash: f6003fe88e29
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.4-R3:
+    id: 4.6.4-R3
+    rev: 800-63c-r4
+    sectionNumber: 4.6.4
+    ordinal: 3
+    level: SHOULD
+    text: If the RP is granted access to an identity API, the IdP SHOULD allow the RP to access the
+      identity API for sufficient time to perform synchronization operations after the federation
+      transaction has concluded. While an identity API is most often used during the first login,
+      especially with a just-in-time provisioning process, on subsequent logins it is possible that
+      attributes could have changed since the RP last fetched them. Therefore, the RP ought to be
+      given access to the identity API beyond the initial login process to allow the RP to update
+      its cache of attributes in the RP subscriber account. For example, if the assertion is valid
+      for five minutes, access to the identity API could be valid for 30 minutes to allow the RP to
+      fetch and update attributes out of band if the RP has determined that the RP subscriber
+      account is out of date.
+    textHash: 47e02da47c3c
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.4-R4:
+    id: 4.6.4-R4
+    rev: 800-63c-r4
+    sectionNumber: 4.6.4
+    ordinal: 4
+    level: SHALL
+    text: The IdP SHOULD signal downstream RPs when a subscriber account is terminated or when the
+      subscriber account’s access to an RP is revoked. This can be accomplished through shared
+      signaling (see Sec. 4.8), through a provisioning API (see Sec. 4.6.5), or through an
+      out-of-band mechanism. Upon receiving such a signal, the RP SHALL process the RP subscriber
+      account, as stipulated in the trust agreement and in accordance with Sec. 3.11.3. If the
+      reason for termination is suspicious or fraudulent activity, the IdP SHALL notify the RP of
+      the termination and include the reason in its signal to the RP to allow the RP to review the
+      associated RP subscriber account’s activity for suspicious activity, if specified in the trust
+      agreement with that RP.
+    textHash: f4c71bac7843
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.5-R1:
+    id: 4.6.5-R1
+    rev: 800-63c-r4
+    sectionNumber: 4.6.5
+    ordinal: 1
+    level: SHALL
+    text: The purpose for the access using the provisioning model
+    textHash: a49c1bb0623c
+    context: "The attributes in the provisioning API that are available to a given RP SHALL be limited
+      to only those necessary for the RP to perform its functions, including any audit and security
+      purposes, as discussed in Sec. 3.10.1. As part of establishing the trust agreement, the IdP
+      SHALL document when an RP is given access to a provisioning API, including at least the
+      following:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.5-R2:
+    id: 4.6.5-R2
+    rev: 800-63c-r4
+    sectionNumber: 4.6.5
+    ordinal: 2
+    level: SHALL
+    text: The set of attributes made available to the RP
+    textHash: b807dc8cb45f
+    context: "The attributes in the provisioning API that are available to a given RP SHALL be limited
+      to only those necessary for the RP to perform its functions, including any audit and security
+      purposes, as discussed in Sec. 3.10.1. As part of establishing the trust agreement, the IdP
+      SHALL document when an RP is given access to a provisioning API, including at least the
+      following:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.5-R3:
+    id: 4.6.5-R3
+    rev: 800-63c-r4
+    sectionNumber: 4.6.5
+    ordinal: 3
+    level: SHALL
+    text: Whether the API functions as a push to the RP, a pull from the RP, or both
+    textHash: 8cccad372a41
+    context: "The attributes in the provisioning API that are available to a given RP SHALL be limited
+      to only those necessary for the RP to perform its functions, including any audit and security
+      purposes, as discussed in Sec. 3.10.1. As part of establishing the trust agreement, the IdP
+      SHALL document when an RP is given access to a provisioning API, including at least the
+      following:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.5-R4:
+    id: 4.6.5-R4
+    rev: 800-63c-r4
+    sectionNumber: 4.6.5
+    ordinal: 4
+    level: SHALL
+    text: The population of subscribers whose attributes are made available to the RP
+    textHash: df46c11694c6
+    context: "The attributes in the provisioning API that are available to a given RP SHALL be limited
+      to only those necessary for the RP to perform its functions, including any audit and security
+      purposes, as discussed in Sec. 3.10.1. As part of establishing the trust agreement, the IdP
+      SHALL document when an RP is given access to a provisioning API, including at least the
+      following:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.5-R5:
+    id: 4.6.5-R5
+    rev: 800-63c-r4
+    sectionNumber: 4.6.5
+    ordinal: 5
+    level: SHALL
+    text: Access to the provisioning API SHALL occur over a mutually authenticated protected channel.
+      The exact means of authentication varies depending on the specifics of the API and whether it
+      is a push model (i.e., the IdP initiates the connection to the RP) or a pull model (i.e., the
+      RP initiates the connection to the IdP).
+    textHash: e34c782cd98c
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.5-R6:
+    id: 4.6.5-R6
+    rev: 800-63c-r4
+    sectionNumber: 4.6.5
+    ordinal: 6
+    level: SHALL_NOT
+    text: A provisioning API SHALL NOT be made available under a subscriber-driven trust agreement. The
+      IdP SHALL NOT make a provisioning API available to any RP outside of an established trust
+      agreement. The IdP SHALL provide access to a provisioning API only as part of a federated
+      identity relationship with an RP to facilitate federation transactions with that RP and
+      related functions, such as signaling revocation of the subscriber account. The IdP SHALL
+      revoke an RP’s access to the provisioning API once access is no longer required by the RP for
+      its functioning purposes or when the trust agreement is terminated.
+    textHash: c84818e0c5bd
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.5-R7:
+    id: 4.6.5-R7
+    rev: 800-63c-r4
+    sectionNumber: 4.6.5
+    ordinal: 7
+    level: SHALL
+    text: Any provisioning API provided to the RP SHALL be under the control and jurisdiction of the
+      IdP. External attribute providers MAY be used as information sources by the IdP to provide
+      attributes through this provisioning API, but the IdP is responsible for the content and
+      accuracy of the information provided by the referenced attribute providers.
+    textHash: 01adddfb0634
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.5-R8:
+    id: 4.6.5-R8
+    rev: 800-63c-r4
+    sectionNumber: 4.6.5
+    ordinal: 8
+    level: SHALL
+    text: When a provisioning API is in use, the IdP SHALL signal to the RP when the state of a
+      subscriber account has been changed, such as when the account has been terminated or disabled.
+      When receiving such a signal, the RP SHALL remove the binding of the federated identifier from
+      the account. The RP MAY terminate the RP subscriber account if it can no longer be accessed by
+      the subscriber. The RP SHALL treat all personal information sourced from the provisioning API
+      in accordance with Sec. 3.11.3.
+    textHash: 3c87623269d1
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.6-R1:
+    id: 4.6.6-R1
+    rev: 800-63c-r4
+    sectionNumber: 4.6.6
+    ordinal: 1
+    level: MAY
+    text: The RP MAY collect and maintain additional attributes from the subscriber beyond those
+      provided by the IdP. For example, the RP could collect a preferred display name directly from
+      the subscriber that is not provided by the IdP. The RP could also have a separate agreement
+      with an attribute provider that gives the RP access to an identity API that is not associated
+      with the IdP. For example, the RP could receive a state license number from the IdP but use a
+      separate attribute verification API to check whether a particular license number is currently
+      valid. The assertion from the IdP binds the license to the subscriber, but the attribute
+      verification API provides additional information beyond what the IdP can share or be
+      authoritative for.
+    textHash: 35d16652b4ef
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.6-R2:
+    id: 4.6.6-R2
+    rev: 800-63c-r4
+    sectionNumber: 4.6.6
+    ordinal: 2
+    level: SHALL
+    text: These attributes are governed separately from the trust agreement since they are collected by
+      the RP outside of a federation transaction. However, all attributes in the RP subscriber
+      account — regardless of source — SHALL be stored in accordance with Sec. 3.11.3.
+    textHash: b7ad35cde322
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.6-R3:
+    id: 4.6.6-R3
+    rev: 800-63c-r4
+    sectionNumber: 4.6.6
+    ordinal: 3
+    level: SHALL
+    text: The RP SHALL disclose to the subscriber the purpose for collecting any additional attributes.
+      These attributes SHALL be used solely for the stated purposes of the RP’s functionality. The
+      transmission of additionally collected attributes SHALL be handled in accordance with Sec.
+      3.10.1.
+    textHash: 8de945cf7971
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.6-R4:
+    id: 4.6.6-R4
+    rev: 800-63c-r4
+    sectionNumber: 4.6.6
+    ordinal: 4
+    level: SHALL
+    text: The RP SHALL provide a secure and effective means of redress for the subscriber to update and
+      remove these additionally collected attributes from the RP subscriber account. See Sec. 3.5.3
+      for additional requirements and considerations for redress mechanisms.
+    textHash: bb819d953fa6
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.6-R5:
+    id: 4.6.6-R5
+    rev: 800-63c-r4
+    sectionNumber: 4.6.6
+    ordinal: 5
+    level: SHALL
+    text: An RP SHALL disclose any additional attributes collected and their use as part of its System
+      of Records Notice (SORN).
+    textHash: 3d64d4e5b775
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.7-R1:
+    id: 4.6.7-R1
+    rev: 800-63c-r4
+    sectionNumber: 4.6.7
+    ordinal: 1
+    level: MAY
+    text: If an RP is using a just-in-time provisioning mechanism, the RP only learns of the existence
+      of a subscriber account when that account is first used at the RP. If the IdP does not inform
+      the RP of terminated subscriber accounts using shared signaling (see Sec. 4.8), an RP could
+      accumulate RP subscriber accounts that are no longer accessible from the IdP. This poses a
+      risk to the RP for holding personal information in the RP subscriber accounts and providing
+      potentially exploitable accounts for an attacker to target. In such circumstances, the RP MAY
+      employ a time-based mechanism to identify RP subscriber accounts for termination that have not
+      been accessed after a period of time that is tailored to the usage patterns of the
+      application. For example, an RP that is usually accessed on a weekly basis could set a timeout
+      of 120 days since last access at the RP to mark the RP subscriber account for termination. An
+      RP that expects longer gaps between access (e.g., a service used annually) should have a much
+      longer time frame for time-based termination, such as five years.
+    textHash: 1f453aaa6659
+    source: prose
+    seededBy: parser
+    verified: false
+  4.6.7-R2:
+    id: 4.6.7-R2
+    rev: 800-63c-r4
+    sectionNumber: 4.6.7
+    ordinal: 2
+    level: SHALL
+    text: When processing an inactive account, the RP SHALL provide sufficient notice to the subscriber
+      about the pending termination of the account and provide the subscriber with an option to
+      re-activate the account prior to its scheduled termination. Upon termination, the RP SHALL
+      remove all personal information associated with the RP subscriber account in accordance with
+      Sec. 3.11.3.
+    textHash: dadc47496383
+    source: prose
+    seededBy: parser
+    verified: false
+  4.7-R1:
+    id: 4.7-R1
+    rev: 800-63c-r4
+    sectionNumber: "4.7"
+    ordinal: 1
+    level: MAY
+    text: The IdP terminating the subscriber’s session at the IdP will not necessarily terminate any
+      sessions that subscriber might have at downstream RPs. The RP and IdP MAY communicate
+      end-session events to each other if supported by the federation protocol or through shared
+      signaling (see Sec. 4.8).
+    textHash: 06b0e0d61363
+    source: prose
+    seededBy: parser
+    verified: false
+  4.7-R2:
+    id: 4.7-R2
+    rev: 800-63c-r4
+    sectionNumber: "4.7"
+    ordinal: 2
+    level: SHALL
+    text: At the time of a federated transaction request, the subscriber could have a pre-existing
+      authenticated session at the IdP that MAY be used to generate an assertion to the RP. The IdP
+      SHALL communicate to the RP any information that the IdP has regarding the recency of the
+      subscriber’s latest authentication event at the IdP, and the RP MAY use this information to
+      make authorization and access decisions. Depending on the capabilities of the federation
+      protocol in use, the IdP SHOULD allow the RP to request that the subscriber provide a fresh
+      authentication at the IdP, such as requesting a maximum time since the subscriber’s last
+      authentication event. For example, suppose that the subscriber authenticates at the IdP for
+      one transaction. The subscriber then starts a federation transaction at the RP 30 minutes
+      later. Depending on xAL requirements, the subscriber’s existing session at the IdP can be used
+      to avoid prompting the subscriber for their authenticators. The resulting assertion to the RP
+      will indicate that the last time the subscriber authenticated to the RP was 30 minutes in the
+      past. The RP can then use this information to determine whether this is reasonable for the
+      RP’s needs. If the authentication time is not sufficient for the RP, the RP can request the
+      IdP to prompt the subscriber for a fresh authentication event.
+    textHash: 3e4e37f385d6
+    source: prose
+    seededBy: parser
+    verified: false
+  4.7-R3:
+    id: 4.7-R3
+    rev: 800-63c-r4
+    sectionNumber: "4.7"
+    ordinal: 3
+    level: SHALL_NOT
+    text: If an RP is granted access to an identity API at the same that time the RP receives an
+      assertion, the lifetime of the access to the identity API is independent of the lifetime of
+      the assertion. As a consequence, the RP’s ability to successfully fetch additional attributes
+      through an identity API SHALL NOT be used to establish or extend a session at the RP.
+      Likewise, the inability to access an identity API SHOULD NOT be used to end the session at the
+      RP.
+    textHash: cefee18524bb
+    source: prose
+    seededBy: parser
+    verified: false
+  4.7-R4:
+    id: 4.7-R4
+    rev: 800-63c-r4
+    sectionNumber: "4.7"
+    ordinal: 4
+    level: MAY
+    text: The RP MAY terminate its authenticated session with the subscriber or restrict access to the
+      RP’s functions if the assertion, authentication event, or attributes do not meet the RP’s
+      requirements. For example, if an RP is configured to allow access to certain high-risk
+      functionality only if the federation transaction was at FAL3, but the incoming assertion only
+      meets the requirements for FAL2, the RP could decide to deny access to the high-risk
+      functionality while allowing access to a lower risk functionality, or the RP could choose to
+      terminate the session entirely.
+    textHash: 6df483a17196
+    source: prose
+    seededBy: parser
+    verified: false
+  4.8-R1:
+    id: 4.8-R1
+    rev: 800-63c-r4
+    sectionNumber: "4.8"
+    ordinal: 1
+    level: SHALL_NOT
+    text: In some environments, it is useful for the IdP and RP to send information to each other
+      outside of the federation transaction. These signals can communicate important changes in
+      state between parties that would not otherwise be known, such as suspected fraud or an account
+      status change. Shared signaling SHALL be limited to the allowable functions of the identity
+      process, as discussed in Sec. 3.10.1. All uses of shared signaling SHALL be documented in the
+      trust agreement and made available to the authorized party stipulated by the trust agreement.
+      This documentation SHALL include the events under which a signal is sent, the type of
+      information included in such a signal (including any personal information), any additional
+      parameters sent with the signal, and the expected processing of a received signal. The use of
+      shared signaling SHALL be subject to privacy review under the trust agreement. Shared signals
+      SHALL NOT include personal information except what is necessary to identify the subscriber
+      account in question (e.g., an account identifier or attributes that can be correlated by the
+      receiving party).
+    textHash: 1edd6eb19411
+    source: prose
+    seededBy: parser
+    verified: false
+  4.8-R2:
+    id: 4.8-R2
+    rev: 800-63c-r4
+    sectionNumber: "4.8"
+    ordinal: 2
+    level: SHALL
+    text: Signaling from the IdP to the RP SHALL require a pre-established trust agreement. Signaling
+      from the RP to the IdP MAY be used in both pre-established and subscriber-driven trust
+      agreements.
+    textHash: e92cc2be58a0
+    source: prose
+    seededBy: parser
+    verified: false
+  4.8-R3:
+    id: 4.8-R3
+    rev: 800-63c-r4
+    sectionNumber: "4.8"
+    ordinal: 3
+    level: SHOULD
+    text: The account has been terminated, suspended, or disabled.
+    textHash: 91e771e5b007
+    context: "The IdP SHOULD send a signal to the RP regarding the following changes to the subscriber
+      account:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.8-R4:
+    id: 4.8-R4
+    rev: 800-63c-r4
+    sectionNumber: "4.8"
+    ordinal: 4
+    level: SHOULD
+    text: The account is suspected of being compromised.
+    textHash: ee66c737eeaf
+    context: "The IdP SHOULD send a signal to the RP regarding the following changes to the subscriber
+      account:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.8-R5:
+    id: 4.8-R5
+    rev: 800-63c-r4
+    sectionNumber: "4.8"
+    ordinal: 5
+    level: SHOULD
+    text: Attributes of the account have changed, including identifiers other than the federated
+      identifier (e.g., email address, certificate common name).
+    textHash: 4d7e1e068d24
+    context: "The IdP SHOULD send a signal to the RP regarding the following changes to the subscriber
+      account:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.8-R6:
+    id: 4.8-R6
+    rev: 800-63c-r4
+    sectionNumber: "4.8"
+    ordinal: 6
+    level: SHOULD
+    text: The possible range of IAL, AAL, or FAL for the account has changed.
+    textHash: 25aa417828f5
+    context: "The IdP SHOULD send a signal to the RP regarding the following changes to the subscriber
+      account:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.8-R7:
+    id: 4.8-R7
+    rev: 800-63c-r4
+    sectionNumber: "4.8"
+    ordinal: 7
+    level: SHOULD
+    text: Authenticators have been updated.
+    textHash: cd18bbc94d0b
+    context: "The IdP SHOULD send a signal to the RP regarding the following changes to the subscriber
+      account:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.8-R8:
+    id: 4.8-R8
+    rev: 800-63c-r4
+    sectionNumber: "4.8"
+    ordinal: 8
+    level: SHOULD
+    text: If the RP receives a signal that an RP subscriber account is suspected of compromise, the RP
+      SHOULD review actions taken by that account at the RP for suspicious activity.
+    textHash: daff7d685dd9
+    source: prose
+    seededBy: parser
+    verified: false
+  4.8-R9:
+    id: 4.8-R9
+    rev: 800-63c-r4
+    sectionNumber: "4.8"
+    ordinal: 9
+    level: SHOULD
+    text: The account has been terminated, suspended, or disabled.
+    textHash: 91e771e5b007
+    context: "The RP SHOULD send a signal to the IdP regarding the following changes to the RP
+      subscriber account:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.8-R10:
+    id: 4.8-R10
+    rev: 800-63c-r4
+    sectionNumber: "4.8"
+    ordinal: 10
+    level: SHOULD
+    text: The account is suspected of being compromised.
+    textHash: ee66c737eeaf
+    context: "The RP SHOULD send a signal to the IdP regarding the following changes to the RP
+      subscriber account:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.8-R11:
+    id: 4.8-R11
+    rev: 800-63c-r4
+    sectionNumber: "4.8"
+    ordinal: 11
+    level: SHOULD
+    text: A bound authenticator is added by the RP.
+    textHash: ea2b0300b09e
+    context: "The RP SHOULD send a signal to the IdP regarding the following changes to the RP
+      subscriber account:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.8-R12:
+    id: 4.8-R12
+    rev: 800-63c-r4
+    sectionNumber: "4.8"
+    ordinal: 12
+    level: SHOULD
+    text: A bound authenticator is removed by the RP.
+    textHash: 8f03cb87162a
+    context: "The RP SHOULD send a signal to the IdP regarding the following changes to the RP
+      subscriber account:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.8-R13:
+    id: 4.8-R13
+    rev: 800-63c-r4
+    sectionNumber: "4.8"
+    ordinal: 13
+    level: SHALL
+    text: If the IdP receives a signal that a subscriber account is suspected of compromise, the IdP
+      SHALL review actions taken by that account at the IdP for suspicious activity. If suspicious
+      activity is confirmed at the IdP, the IdP SHALL signal any additional RPs that the subscriber
+      account was used for during the suspected time frame.
+    textHash: 20bd3b3a061c
+    source: prose
+    seededBy: parser
+    verified: false
+  4.8-R14:
+    id: 4.8-R14
+    rev: 800-63c-r4
+    sectionNumber: "4.8"
+    ordinal: 14
+    level: SHALL
+    text: Additional signals from both the IdP and RP SHALL be subject to a security review, included in
+      the privacy risk assessment, and addressed in the trust agreement.
+    textHash: 86b420ded2ae
+    source: prose
+    seededBy: parser
+    verified: false
+  4.8-R15:
+    id: 4.8-R15
+    rev: 800-63c-r4
+    sectionNumber: "4.8"
+    ordinal: 15
+    level: SHALL
+    text: If the RP allows for account linking to multiple IdPs, the RP SHALL document their practices
+      regarding signals for linked accounts. The RP SHALL ensure that the shared signals do not
+      reveal the identity of a subscriber’s linked IdPs.
+    textHash: 70f2b87ebd12
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R1:
+    id: 4.9-R1
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 1
+    level: SHALL
+    text: Assertions SHALL represent a discrete authentication event of the subscriber at the IdP and
+      SHALL be processed as a discrete authentication event at the RP.
+    textHash: 5749323262ef
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R2:
+    id: 4.9-R2
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 2
+    level: SHALL
+    text: "Issuer identifier: An identifier for the issuer of the assertion (i.e., the IdP)."
+    textHash: b3da2e5cc93f
+    context: "All assertions SHALL include the following attributes:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R3:
+    id: 4.9-R3
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 3
+    level: SHALL
+    text: "Audience identifier: An identifier for the party intended to consume the assertion (i.e., the
+      RP). An assertion can contain more than one audience identifier at FAL1."
+    textHash: 0830d6e62412
+    context: "All assertions SHALL include the following attributes:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R4:
+    id: 4.9-R4
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 4
+    level: SHALL
+    text: "Issuance time: A timestamp that indicates when the IdP issued the assertion."
+    textHash: b5e3d39a8edf
+    context: "All assertions SHALL include the following attributes:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R5:
+    id: 4.9-R5
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 5
+    level: SHALL_NOT
+    text: "Validity time window: A period of time outside of which the assertion SHALL NOT be accepted
+      as valid by the RP for the purposes of authenticating the subscriber and starting an
+      authenticated session at the RP. This is usually communicated by means of an expiration
+      timestamp for the assertion in addition to the issuance timestamp."
+    textHash: 9856dd50fe8b
+    context: "All assertions SHALL include the following attributes:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R6:
+    id: 4.9-R6
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 6
+    level: SHALL
+    text: "Assertion identifier: A value that uniquely identifies this assertion and is used to prevent
+      attackers from replaying prior assertions."
+    textHash: 4ace03eb40d2
+    context: "All assertions SHALL include the following attributes:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R7:
+    id: 4.9-R7
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 7
+    level: SHALL
+    text: "Authentication time: A timestamp that indicates when the IdP last verified the presence of
+      the subscriber at the IdP through a primary authentication event."
+    textHash: af7db5e25ff9
+    context: "All assertions SHALL include the following attributes:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R8:
+    id: 4.9-R8
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 8
+    level: SHALL
+    text: "Signature: Digital signature or MAC, including verification key identifier, that covers the
+      entire assertion."
+    textHash: 2fb2d4277451
+    context: "All assertions SHALL include the following attributes:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R9:
+    id: 4.9-R9
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 9
+    level: SHALL
+    text: If the RP subscriber account does not use an ephemeral provisioning process, the subscriber
+      SHALL be identified in the assertion using a federated identifier (see Sec. 3.4) or through an
+      account resolution process (see Sec. 3.8.2).
+    textHash: a5266582d512
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R10:
+    id: 4.9-R10
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 10
+    level: SHALL
+    text: "Subject Identifier: An identifier for the party to which the assertion applies (i.e., the
+      subscriber)"
+    textHash: 2f519d527774
+    context: "If the subscriber is identified using a federated identifier, the assertion SHALL include:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R11:
+    id: 4.9-R11
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 11
+    level: SHALL
+    text: The IAL as well as the type of verification used during the identity proofing process (e.g.,
+      biometric, address verification), an indication of the identity proofing processes used to
+      establish the subscriber account, or an indication that no IAL is asserted
+    textHash: 010c807bd815
+    context: "The following aspects of the federation transaction SHALL be provided through information
+      contained in the assertion contents or the applicable trust agreement:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R12:
+    id: 4.9-R12
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 12
+    level: SHALL
+    text: The AAL used when the subscriber authenticated to the IdP or an indication that no AAL is
+      asserted
+    textHash: ee4d33a79d1e
+    context: "The following aspects of the federation transaction SHALL be provided through information
+      contained in the assertion contents or the applicable trust agreement:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R13:
+    id: 4.9-R13
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 13
+    level: SHALL
+    text: The IdP’s intended FAL of the federation process represented by the assertion
+    textHash: 216a0755ecd4
+    context: "The following aspects of the federation transaction SHALL be provided through information
+      contained in the assertion contents or the applicable trust agreement:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R14:
+    id: 4.9-R14
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 14
+    level: SHOULD
+    text: The assertion SHOULD contain additional information about the authentication method used at
+      the IdP, if available (e.g., whether the authenticator used is phishing-resistant). Some
+      technologies that can carry information include Vectors of Trust [RFC8485] or authentication
+      class references in [OIDC] and [SAML].
+    textHash: f0527c368a1e
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R15:
+    id: 4.9-R15
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 15
+    level: SHALL
+    text: "Nonce: A cryptographic nonce from the RP’s federation request"
+    textHash: 3bdf6789c0d7
+    context: "At FAL2 and above, the assertion SHALL include:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R16:
+    id: 4.9-R16
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 16
+    level: SHALL
+    text: The public key, key identifier, or other identifier for a holder-of-key assertion or
+    textHash: 71c34b66f016
+    context: "At FAL3, the assertion SHALL include one of the following:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R17:
+    id: 4.9-R17
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 17
+    level: SHALL
+    text: An indicator that the verification of a bound authenticator is required to process this
+      assertion.
+    textHash: 99ebcba15ceb
+    context: "At FAL3, the assertion SHALL include one of the following:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R18:
+    id: 4.9-R18
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 18
+    level: SHALL_NOT
+    text: Assertions SHALL NOT contain subscriber authentication secrets (e.g., passwords).
+    textHash: 8487869d0b0e
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R19:
+    id: 4.9-R19
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 19
+    level: MAY
+    text: "Attribute values and derived attribute values: Information about the subscriber"
+    textHash: fddcbea17b96
+    context: "Assertions MAY also include additional items, including:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R20:
+    id: 4.9-R20
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 20
+    level: MAY
+    text: "Attribute bundles: Collections of attributes in a signed bundle from the CSP"
+    textHash: 64d5fe62eec8
+    context: "Assertions MAY also include additional items, including:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R21:
+    id: 4.9-R21
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 21
+    level: MAY
+    text: "Subscriber account: Additional details about the subscriber account, such as the set of
+      controls used to obtain the IAL"
+    textHash: 929db890e940
+    context: "Assertions MAY also include additional items, including:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R22:
+    id: 4.9-R22
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 22
+    level: MAY
+    text: "Attribute metadata: Additional information about one or more subscriber attributes, such as
+      those described in [NISTIR8112]"
+    textHash: f004ff6ff0c3
+    context: "Assertions MAY also include additional items, including:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R23:
+    id: 4.9-R23
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 23
+    level: MAY
+    text: "Authentication event: Additional details about the authentication event, such as the class of
+      authenticators used"
+    textHash: c06590a378c4
+    context: "Assertions MAY also include additional items, including:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R24:
+    id: 4.9-R24
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 24
+    level: SHALL
+    text: "Signature validation: Ensure that the signature of the assertion is valid and corresponds to
+      a verification key that belongs to the IdP sending the assertion."
+    textHash: ad7ff62cf821
+    context: "The RP SHALL validate the assertion by checking that all of the following are true:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R25:
+    id: 4.9-R25
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 25
+    level: SHALL
+    text: "Issuer verification: Ensure that the assertion was issued by the expected IdP."
+    textHash: 682436a4e0b2
+    context: "The RP SHALL validate the assertion by checking that all of the following are true:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R26:
+    id: 4.9-R26
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 26
+    level: SHALL
+    text: "Time validation: Ensure that the validity time window is within acceptable limits of the
+      current timestamp."
+    textHash: 8557f63e75a3
+    context: "The RP SHALL validate the assertion by checking that all of the following are true:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R27:
+    id: 4.9-R27
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 27
+    level: SHALL
+    text: "Audience restriction: Ensure that this RP is the intended recipient of the assertion."
+    textHash: 47923ec3644b
+    context: "The RP SHALL validate the assertion by checking that all of the following are true:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R28:
+    id: 4.9-R28
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 28
+    level: SHALL
+    text: "Nonce: Ensure that the cryptographic nonce included in the RP’s request (if applicable) is
+      included in the presentation."
+    textHash: cce0b48ee498
+    context: "The RP SHALL validate the assertion by checking that all of the following are true:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R29:
+    id: 4.9-R29
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 29
+    level: SHALL
+    text: "Transaction terms: Ensure that the IAL, AAL, and FAL represented by the assertion are
+      allowable under the applicable trust agreement and are suitable for the RP’s needs."
+    textHash: af9fb09df424
+    context: "The RP SHALL validate the assertion by checking that all of the following are true:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R30:
+    id: 4.9-R30
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 30
+    level: SHALL
+    text: "Assertion identifier: Ensure that the assertion has not been replayed within its validity
+      time window at this RP."
+    textHash: 5b752d45d387
+    context: "The RP SHALL validate the assertion by checking that all of the following are true:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R31:
+    id: 4.9-R31
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 31
+    level: SHALL_NOT
+    text: An RP that uses the federated identifier to identify the subscriber SHALL NOT treat subject
+      identifiers as inherently globally unique across IdPs. Instead, the value of the assertion’s
+      subject identifier is processed in a namespace under the assertion issuer’s control, as
+      discussed in Sec. 3.4. This allows an RP to talk to multiple IdPs without incorrectly
+      conflating subjects from different IdPs.
+    textHash: e23c23674c02
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R32:
+    id: 4.9-R32
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 32
+    level: MAY
+    text: Any release of identity attributes to the RP is subject to the terms of the trust agreement.
+      Section 3.10 contains privacy requirements for presenting attributes in assertions. The RP MAY
+      be given limited access to an identity API (see Sec. 3.12.3), either in the same response as
+      the assertion is received or through some other mechanism. The RP can use this API to fetch
+      additional identity attributes for the subscriber that are not included in the assertion
+      itself. These attributes are also subject to the terms of the trust agreement.
+    textHash: 7cda21c698d8
+    source: prose
+    seededBy: parser
+    verified: false
+  4.9-R33:
+    id: 4.9-R33
+    rev: 800-63c-r4
+    sectionNumber: "4.9"
+    ordinal: 33
+    level: SHALL_NOT
+    text: The assertion’s validity time window is the time between its issuance and its expiration. This
+      window needs to be large enough to allow the RP to process the assertion and create a local
+      application session for the subscriber but should not be longer than necessary for such
+      establishment, including reasonable clock drift between the IdP and RP. Long-lived assertions
+      have a greater risk of being stolen or replayed; a short assertion validity time window
+      mitigates this risk. Assertion validity time windows SHALL NOT be used to limit the session at
+      the RP. See Sec. 4.7 for more information.
+    textHash: 9a8e9c5639df
+    source: prose
+    seededBy: parser
+    verified: false
+  4.10-R1:
+    id: 4.10-R1
+    rev: 800-63c-r4
+    sectionNumber: "4.10"
+    ordinal: 1
+    level: SHALL
+    text: An identifier for the RP
+    textHash: 3ea5c2d5311f
+    context: "When the federation transaction is initiated by the RP, the RP’s request for an assertion
+      SHALL contain:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.10-R2:
+    id: 4.10-R2
+    rev: 800-63c-r4
+    sectionNumber: "4.10"
+    ordinal: 2
+    level: SHALL
+    text: A cryptographic nonce to be returned in the assertion
+    textHash: 477d726ad89f
+    context: "When the federation transaction is initiated by the RP, the RP’s request for an assertion
+      SHALL contain:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.10-R3:
+    id: 4.10-R3
+    rev: 800-63c-r4
+    sectionNumber: "4.10"
+    ordinal: 3
+    level: SHOULD
+    text: The set of identity attributes requested by the RP and their purpose of use at the RP; this is
+      a subset of what is allowed by the trust agreement
+    textHash: 7e961f2f78de
+    context: "The RP’s request SHOULD additionally contain:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.10-R4:
+    id: 4.10-R4
+    rev: 800-63c-r4
+    sectionNumber: "4.10"
+    ordinal: 4
+    level: SHOULD
+    text: The requirements for the authentication event at the IdP
+    textHash: 1c277576afd3
+    context: "The RP’s request SHOULD additionally contain:"
+    source: prose
+    seededBy: parser
+    verified: false
+  4.11-R1:
+    id: 4.11-R1
+    rev: 800-63c-r4
+    sectionNumber: "4.11"
+    ordinal: 1
+    level: MAY
+    text: There are trade-offs with each model, but both require the proper validation of the assertion.
+      Assertions MAY also be proxied to facilitate federation between IdPs and RPs using different
+      presentation methods, as discussed in detail in Sec. 3.3.3.
+    textHash: 12a2cc6c1c1b
+    source: prose
+    seededBy: parser
+    verified: false
+  4.11.1-R1:
+    id: 4.11.1-R1
+    rev: 800-63c-r4
+    sectionNumber: 4.11.1
+    ordinal: 1
+    level: SHALL
+    text: In the back-channel presentation model shown in Fig. 11, the subscriber is given an assertion
+      reference to present to the RP, generally through the front channel. The assertion reference
+      itself contains no information about the subscriber and SHALL be resistant to tampering and
+      fabrication by an attacker. The RP presents the assertion reference to the IdP to fetch the
+      assertion. Methods for achieving this vary based on the federation protocol in use. In the
+      authorization code flow and some forms of the hybrid flow of [OIDC], the assertion (i.e., the
+      ID Token) is presented in the back channel in exchange for the assertion reference (i.e., the
+      authorization code). In the artifact binding profile of [SAML-Bindings], the SAML assertion is
+      presented in the back channel.
+    textHash: a2c39b38bae2
+    source: prose
+    seededBy: parser
+    verified: false
+  4.11.1-R2:
+    id: 4.11.1-R2
+    rev: 800-63c-r4
+    sectionNumber: 4.11.1
+    ordinal: 2
+    level: SHALL
+    text: SHALL be limited to use by a single RP
+    textHash: b4af2d0da0c9
+    source: prose
+    seededBy: parser
+    verified: false
+  4.11.1-R3:
+    id: 4.11.1-R3
+    rev: 800-63c-r4
+    sectionNumber: 4.11.1
+    ordinal: 3
+    level: SHALL
+    text: SHALL be single-use
+    textHash: 1a691c1e773f
+    source: prose
+    seededBy: parser
+    verified: false
+  4.11.1-R4:
+    id: 4.11.1-R4
+    rev: 800-63c-r4
+    sectionNumber: 4.11.1
+    ordinal: 4
+    level: SHALL
+    text: SHALL be time-limited and SHOULD have a validity time window of no more than five minutes
+    textHash: c68cb1e5cd42
+    source: prose
+    seededBy: parser
+    verified: false
+  4.11.1-R5:
+    id: 4.11.1-R5
+    rev: 800-63c-r4
+    sectionNumber: 4.11.1
+    ordinal: 5
+    level: SHALL
+    text: SHALL be presented along with authentication of the RP to the IdP
+    textHash: 069ed1d2be3c
+    source: prose
+    seededBy: parser
+    verified: false
+  4.11.1-R6:
+    id: 4.11.1-R6
+    rev: 800-63c-r4
+    sectionNumber: 4.11.1
+    ordinal: 6
+    level: SHALL_NOT
+    text: SHALL NOT be predictable or guessable by an attacker
+    textHash: c76cabed8bb4
+    source: prose
+    seededBy: parser
+    verified: false
+  4.11.1-R7:
+    id: 4.11.1-R7
+    rev: 800-63c-r4
+    sectionNumber: 4.11.1
+    ordinal: 7
+    level: SHALL
+    text: Conveyance of the assertion reference from the IdP to the subscriber and from the subscriber
+      to the RP SHALL be made over an authenticated protected channel. Conveyance of the assertion
+      reference from the RP to the IdP and vice versa SHALL be made over an authenticated protected
+      channel.
+    textHash: 9ed49f19f627
+    source: prose
+    seededBy: parser
+    verified: false
+  4.11.1-R8:
+    id: 4.11.1-R8
+    rev: 800-63c-r4
+    sectionNumber: 4.11.1
+    ordinal: 8
+    level: SHALL
+    text: The RP SHALL protect itself against the injection of manufactured or captured assertion
+      references by using cross-site scripting (XSS) and cross-site request forgery (CSRF)
+      protection, rejecting assertion references outside of the correct stage of a federation
+      transaction, or other accepted techniques discussed in Sec. 3.11.1. When assertion references
+      are presented to the IdP, the IdP SHALL verify that the RP presenting the assertion reference
+      is the same RP that made the assertion request that resulted in the assertion reference.
+      Examples for this are discussed in Sec. 9.12, including authorization code flow of [OIDC] with
+      additional security profiles, such as [FAPI] and [iGov].
+    textHash: 222f50ff51b7
+    source: prose
+    seededBy: parser
+    verified: false
+  4.11.2-R1:
+    id: 4.11.2-R1
+    rev: 800-63c-r4
+    sectionNumber: 4.11.2
+    ordinal: 1
+    level: SHALL
+    text: The RP SHALL use the assertion identifier to ensure that a given assertion is presented at
+      most once during the assertion’s validity time window.
+    textHash: 9a7653d08f4f
+    source: prose
+    seededBy: parser
+    verified: false
+  4.11.2-R2:
+    id: 4.11.2-R2
+    rev: 800-63c-r4
+    sectionNumber: 4.11.2
+    ordinal: 2
+    level: SHALL
+    text: The RP SHALL protect itself against the injection of manufactured or captured assertions by
+      using XSS and CSRF protection, rejecting assertions outside of the correct stage of a
+      federation transaction, or other accepted techniques discussed in Sec. 3.11.1.
+    textHash: e03c5b34a901
+    source: prose
+    seededBy: parser
+    verified: false
+  4.11.2-R3:
+    id: 4.11.2-R3
+    rev: 800-63c-r4
+    sectionNumber: 4.11.2
+    ordinal: 3
+    level: SHALL
+    text: Conveyance of the assertion from the IdP to the subscriber and from the subscriber to the RP
+      SHALL be made over an authenticated protected channel.
+    textHash: 12ed164922d8
+    source: prose
+    seededBy: parser
+    verified: false
+  4.11.2-R4:
+    id: 4.11.2-R4
+    rev: 800-63c-r4
+    sectionNumber: 4.11.2
+    ordinal: 4
+    level: SHALL
+    text: With general-purpose IdPs, it is common for front-channel communications to be accomplished
+      using HTTP redirects, where the contents of the assertion are made available as part of an
+      HTTP request URL. Due to the nature of the HTTP ecosystem, these request URLs are sometimes
+      available in unexpected places, such as access logs, web proxies, and browser histories. These
+      artifacts tend to live on long past the federation transaction and are available in other
+      contexts, which increases the attack surface for reading the assertion. As a consequence, an
+      IdP that uses HTTP redirects for the front-channel presentation of assertions SHALL encrypt
+      all personal information in the assertion, as discussed in Sec. 3.13.3. Other front-channel
+      presentation mechanisms that do not share these characteristics (e.g., HTTP form-post binding,
+      application-specific URLs) SHOULD encrypt all personal information in the assertion.
+    textHash: af2225b4353c
+    source: prose
+    seededBy: parser
+    verified: false

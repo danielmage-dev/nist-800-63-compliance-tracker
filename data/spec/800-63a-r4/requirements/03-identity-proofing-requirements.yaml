@@ -1,0 +1,2345 @@
+chapter: "3"
+rev: 800-63a-r4
+requirements:
+  3.1-R1:
+    id: 3.1-R1
+    rev: 800-63a-r4
+    sectionNumber: "3.1"
+    ordinal: 1
+    level: SHALL
+    text: A complete service description, including the particular steps that the CSP follows to
+      identity-proof applicants at each offered assurance level
+    textHash: 5fa0ac4127c1
+    context: "The CSP SHALL conduct its operations according to documented procedures or a practice
+      statement that details all identity proofing processes as they are implemented to achieve the
+      defined IAL. These documented procedures SHALL include, at a minimum:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1-R2:
+    id: 3.1-R2
+    rev: 800-63a-r4
+    sectionNumber: "3.1"
+    ordinal: 2
+    level: SHALL
+    text: The CSP’s policy for providing notice to applicants about the types of identity proofing
+      processes available, the evidence and attribute collection requirements for the IALs offered
+      by the CSP, the purpose for collecting personal information (see Sec. 3.3.2), and the purposes
+      for collecting, using, and retaining biometrics (see Sec. 3.1.11)
+    textHash: 5353d3b72c9b
+    context: "The CSP SHALL conduct its operations according to documented procedures or a practice
+      statement that details all identity proofing processes as they are implemented to achieve the
+      defined IAL. These documented procedures SHALL include, at a minimum:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1-R3:
+    id: 3.1-R3
+    rev: 800-63a-r4
+    sectionNumber: "3.1"
+    ordinal: 3
+    level: SHALL
+    text: The CSP’s policy for ensuring that the identity proofing process concludes in a timely manner
+      once the applicant has met all of the requirements
+    textHash: 3a751a173306
+    context: "The CSP SHALL conduct its operations according to documented procedures or a practice
+      statement that details all identity proofing processes as they are implemented to achieve the
+      defined IAL. These documented procedures SHALL include, at a minimum:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1-R4:
+    id: 3.1-R4
+    rev: 800-63a-r4
+    sectionNumber: "3.1"
+    ordinal: 4
+    level: SHALL
+    text: The types of evidence that the CSP accepts and the justification for how the evidence fulfills
+      the strength requirements of the level at which it will be accepted by the CSP
+    textHash: 28f935407100
+    context: "The CSP SHALL conduct its operations according to documented procedures or a practice
+      statement that details all identity proofing processes as they are implemented to achieve the
+      defined IAL. These documented procedures SHALL include, at a minimum:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1-R5:
+    id: 3.1-R5
+    rev: 800-63a-r4
+    sectionNumber: "3.1"
+    ordinal: 5
+    level: SHALL
+    text: The CSP’s policy and process for validating and verifying identity evidence, including
+      training and qualification requirements for personnel who serve in identity proofing roles, as
+      provided in Sec. 2.1.2
+    textHash: 605070ca55ab
+    context: "The CSP SHALL conduct its operations according to documented procedures or a practice
+      statement that details all identity proofing processes as they are implemented to achieve the
+      defined IAL. These documented procedures SHALL include, at a minimum:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1-R6:
+    id: 3.1-R6
+    rev: 800-63a-r4
+    sectionNumber: "3.1"
+    ordinal: 6
+    level: SHALL
+    text: The specific technologies that the CSP employs for evidence validation and verification
+    textHash: 693603bc6475
+    context: "The CSP SHALL conduct its operations according to documented procedures or a practice
+      statement that details all identity proofing processes as they are implemented to achieve the
+      defined IAL. These documented procedures SHALL include, at a minimum:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1-R7:
+    id: 3.1-R7
+    rev: 800-63a-r4
+    sectionNumber: "3.1"
+    ordinal: 7
+    level: SHALL
+    text: The CSP’s policy and processes for supporting applicants who lack sufficient identity evidence
+      for the required IAL (Sec. 3.15) and for addressing identity proofing exceptions and errors
+    textHash: 3e205cb72659
+    context: "The CSP SHALL conduct its operations according to documented procedures or a practice
+      statement that details all identity proofing processes as they are implemented to achieve the
+      defined IAL. These documented procedures SHALL include, at a minimum:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1-R8:
+    id: 3.1-R8
+    rev: 800-63a-r4
+    sectionNumber: "3.1"
+    ordinal: 8
+    level: SHALL
+    text: The attributes that the CSP considers to be core attributes (Sec. 2.2) and the authoritative
+      and credible sources it uses for validating those attributes (Sec. 2.4.2.4)
+    textHash: bbb4ff1d8df3
+    context: "The CSP SHALL conduct its operations according to documented procedures or a practice
+      statement that details all identity proofing processes as they are implemented to achieve the
+      defined IAL. These documented procedures SHALL include, at a minimum:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1-R9:
+    id: 3.1-R9
+    rev: 800-63a-r4
+    sectionNumber: "3.1"
+    ordinal: 9
+    level: SHALL
+    text: The CSP’s policy for managing and communicating service changes to RPs, such as changes in
+      data sources, integrated vendors, or biometric algorithms
+    textHash: 801c25bd2574
+    context: "The CSP SHALL conduct its operations according to documented procedures or a practice
+      statement that details all identity proofing processes as they are implemented to achieve the
+      defined IAL. These documented procedures SHALL include, at a minimum:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1-R10:
+    id: 3.1-R10
+    rev: 800-63a-r4
+    sectionNumber: "3.1"
+    ordinal: 10
+    level: SHALL
+    text: The CSP’s approach to fraud management (see Sec. 3.2), including its policy and process for
+      identifying and remediating suspected or confirmed fraudulent accounts and communicating such
+      information to RPs and affected individuals
+    textHash: b2fc3746349f
+    context: "The CSP SHALL conduct its operations according to documented procedures or a practice
+      statement that details all identity proofing processes as they are implemented to achieve the
+      defined IAL. These documented procedures SHALL include, at a minimum:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1-R11:
+    id: 3.1-R11
+    rev: 800-63a-r4
+    sectionNumber: "3.1"
+    ordinal: 11
+    level: SHALL
+    text: The CSP’s policy for any conditions that would require reverification of the user (e.g.,
+      account recovery, account abandonment, regulatory “recertification” requirements)
+    textHash: 18f8c6df6dec
+    context: "The CSP SHALL conduct its operations according to documented procedures or a practice
+      statement that details all identity proofing processes as they are implemented to achieve the
+      defined IAL. These documented procedures SHALL include, at a minimum:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1-R12:
+    id: 3.1-R12
+    rev: 800-63a-r4
+    sectionNumber: "3.1"
+    ordinal: 12
+    level: SHALL
+    text: The CSP’s policy for conducting privacy risk assessments, including the timing of its periodic
+      reviews and specific conditions that will trigger an updated privacy risk assessment (see Sec.
+      3.3.1)
+    textHash: 91c3006f09d0
+    context: "The CSP SHALL conduct its operations according to documented procedures or a practice
+      statement that details all identity proofing processes as they are implemented to achieve the
+      defined IAL. These documented procedures SHALL include, at a minimum:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1-R13:
+    id: 3.1-R13
+    rev: 800-63a-r4
+    sectionNumber: "3.1"
+    ordinal: 13
+    level: SHALL
+    text: The CSP’s policy for assessing customer experience, including the testing methods employed,
+      timing of its periodic reviews, and any specific conditions that will trigger an out-of-cycle
+      review (see Sec. 3.4)
+    textHash: 69b131ca8b67
+    context: "The CSP SHALL conduct its operations according to documented procedures or a practice
+      statement that details all identity proofing processes as they are implemented to achieve the
+      defined IAL. These documented procedures SHALL include, at a minimum:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1-R14:
+    id: 3.1-R14
+    rev: 800-63a-r4
+    sectionNumber: "3.1"
+    ordinal: 14
+    level: SHALL
+    text: The CSP’s policy for the retention, protection, and deletion of all personal, sensitive, and
+      biometric data, including the treatment of all such data if the CSP ceases operation or merges
+      or transfers operations to another CSP
+    textHash: 412bf8cf2a9f
+    context: "The CSP SHALL conduct its operations according to documented procedures or a practice
+      statement that details all identity proofing processes as they are implemented to achieve the
+      defined IAL. These documented procedures SHALL include, at a minimum:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1-R15:
+    id: 3.1-R15
+    rev: 800-63a-r4
+    sectionNumber: "3.1"
+    ordinal: 15
+    level: SHALL
+    text: The CSP’s policy for reporting and updating performance metrics, as described in Sec. 3.5.2 of
+      SP 800-63
+    textHash: 2f4d4c979ddf
+    context: "The CSP SHALL conduct its operations according to documented procedures or a practice
+      statement that details all identity proofing processes as they are implemented to achieve the
+      defined IAL. These documented procedures SHALL include, at a minimum:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1-R16:
+    id: 3.1-R16
+    rev: 800-63a-r4
+    sectionNumber: "3.1"
+    ordinal: 16
+    level: SHALL
+    text: The CSP’s policy for accessing or removing a subscriber’s account in the event of their death
+      or incapacitation (see Sec. 5)
+    textHash: 5dd29f7f645a
+    context: "The CSP SHALL conduct its operations according to documented procedures or a practice
+      statement that details all identity proofing processes as they are implemented to achieve the
+      defined IAL. These documented procedures SHALL include, at a minimum:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.1-R17:
+    id: 3.1-R17
+    rev: 800-63a-r4
+    sectionNumber: "3.1"
+    ordinal: 17
+    level: SHALL
+    text: CSPs SHALL make their documented procedures or practice statements available to RPs that use
+      their identity service. CSPs SHOULD make a summarized version of their documented procedures
+      or practice statements publicly available.
+    textHash: 0b4c71e188c3
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.1-R1:
+    id: 3.2.1-R1
+    rev: 800-63a-r4
+    sectionNumber: 3.2.1
+    ordinal: 1
+    level: SHALL
+    text: CSPs SHALL establish and maintain a fraud management program that provides fraud
+      identification, detection, investigation, reporting, and resolution capabilities. The specific
+      capabilities and details of this program SHALL be documented within their CSP practice
+      statement.
+    textHash: 1d3acef23b26
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.1-R2:
+    id: 3.2.1-R2
+    rev: 800-63a-r4
+    sectionNumber: 3.2.1
+    ordinal: 2
+    level: SHALL
+    text: CSPs SHALL conduct a privacy risk assessment of all fraud checks and fraud mitigation
+      technologies prior to implementation.
+    textHash: 9d6c65f53ba4
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.1-R3:
+    id: 3.2.1-R3
+    rev: 800-63a-r4
+    sectionNumber: 3.2.1
+    ordinal: 3
+    level: SHALL
+    text: The CSP SHALL establish a self-reporting mechanism and investigation capability for subjects
+      who believe they have been the victim of fraud or an attempt to compromise their involvement
+      in the identity proofing processes.
+    textHash: 85d02badfc42
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.1-R4:
+    id: 3.2.1-R4
+    rev: 800-63a-r4
+    sectionNumber: 3.2.1
+    ordinal: 4
+    level: SHALL
+    text: CSPs SHALL analyze all remote proofing communication channels to look for high-risk indicators
+      (e.g., blocklisted proxies and IP addresses).
+    textHash: 98574fb6cb2d
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.1-R5:
+    id: 3.2.1-R5
+    rev: 800-63a-r4
+    sectionNumber: 3.2.1
+    ordinal: 5
+    level: SHALL
+    text: The CSP SHALL take measures to prevent unsuccessful applicants from inferring the accuracy of
+      any self-asserted information with that confirmed by authoritative or credible sources.1
+    textHash: 1813bbceba89
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.1-R6:
+    id: 3.2.1-R6
+    rev: 800-63a-r4
+    sectionNumber: 3.2.1
+    ordinal: 6
+    level: SHALL
+    text: CSPs SHALL monitor the performance of their fraud checks and fraud mitigation technologies to
+      ensure continued effectiveness in mitigating fraud risks.
+    textHash: 1bc0953ab5a4
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.1-R7:
+    id: 3.2.1-R7
+    rev: 800-63a-r4
+    sectionNumber: 3.2.1
+    ordinal: 7
+    level: SHALL
+    text: CSPs SHALL establish a technical or process-based mechanism to communicate suspected and
+      confirmed fraudulent events to RPs.
+    textHash: 7eb06c04351c
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.1-R8:
+    id: 3.2.1-R8
+    rev: 800-63a-r4
+    sectionNumber: 3.2.1
+    ordinal: 8
+    level: SHALL
+    text: CSPs SHALL implement a death records check for all identity proofing processes by confirming
+      with a credible, authoritative, or issuing source that the applicant is not deceased. Such
+      checks can aid in preventing synthetic identity fraud, the use of stolen identity information,
+      and exploitation by a close associate or relative.
+    textHash: 90ac1425a53f
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.1-R9:
+    id: 3.2.1-R9
+    rev: 800-63a-r4
+    sectionNumber: 3.2.1
+    ordinal: 9
+    level: SHOULD
+    text: "CSPs SHOULD implement the following fraud checks for their identity proofing processes based
+      on their available identity proofing types, selected technologies, evidence, and user base:"
+    textHash: 24bebf7dbce1
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.1-R10:
+    id: 3.2.1-R10
+    rev: 800-63a-r4
+    sectionNumber: 3.2.1
+    ordinal: 10
+    level: SHALL
+    text: "Fraud indicator check: Evaluate records (e.g., reported, confirmed, or historical fraud
+      events) to determine whether there is an elevated risk related to a specific applicant,
+      applicant’s data, or device. Such checks can indicate identity theft or compromise. Where such
+      information is collected, aggregated, or exchanged across commercial platforms and made
+      available for use by RPs and other CSPs, users SHALL be made aware of any privacy implications
+      based on a privacy risk assessment. This also applies to all websites that report user
+      activity to federal RPs."
+    textHash: f674f2c4ada4
+    context: "CSPs SHOULD implement the following fraud checks for their identity proofing processes
+      based on their available identity proofing types, selected technologies, evidence, and user
+      base:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.1-R11:
+    id: 3.2.1-R11
+    rev: 800-63a-r4
+    sectionNumber: 3.2.1
+    ordinal: 11
+    level: SHOULD
+    text: CSPs SHOULD periodically employ independent testing (e.g., red teaming exercises) to validate
+      the effectiveness of their fraud mitigation measures.
+    textHash: 02b19011b8bf
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.1-R12:
+    id: 3.2.1-R12
+    rev: 800-63a-r4
+    sectionNumber: 3.2.1
+    ordinal: 12
+    level: SHOULD
+    text: CSPs SHOULD consider the recency of fraud-related data when factoring such data into fraud
+      prevention capabilities and decisions.
+    textHash: 307d85ca4ae9
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.1-R13:
+    id: 3.2.1-R13
+    rev: 800-63a-r4
+    sectionNumber: 3.2.1
+    ordinal: 13
+    level: SHALL
+    text: For attended proofing processes, CSPs SHALL train proofing agents to detect indicators of
+      fraud and SHALL provide proofing agents and trusted referees with tools to flag suspected
+      fraudulent events for further treatment and investigation.
+    textHash: 2661ed3107b6
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.1-R14:
+    id: 3.2.1-R14
+    rev: 800-63a-r4
+    sectionNumber: 3.2.1
+    ordinal: 14
+    level: SHALL
+    text: Collusion is possible whenever CSP representatives are directly involved in proofing processes
+      or decisions. CSPs SHALL implement insider threat controls to detect and prevent collusion
+      involving CSP representatives that are directly involved with or can intervene in proofing
+      processes or decisions.
+    textHash: 7c4c4251d613
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.1-R15:
+    id: 3.2.1-R15
+    rev: 800-63a-r4
+    sectionNumber: 3.2.1
+    ordinal: 15
+    level: SHOULD
+    text: CSPs SHOULD communicate fraud events in real time to RPs through methods such as shared
+      signaling, as described in Sec. 4.8 of [SP800-63C].
+    textHash: 5210d2444681
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.1-R16:
+    id: 3.2.1-R16
+    rev: 800-63a-r4
+    sectionNumber: 3.2.1
+    ordinal: 16
+    level: MAY
+    text: CSPs MAY employ KBV as part of its fraud management program.
+    textHash: f0ebbae84406
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.1-R17:
+    id: 3.2.1-R17
+    rev: 800-63a-r4
+    sectionNumber: 3.2.1
+    ordinal: 17
+    level: SHALL
+    text: CSPs MAY implement fraud mitigation measures as compensating controls. When this is done,
+      these SHALL be documented as deviations from the normative guidance of these guidelines and
+      SHALL be conveyed to all RPs through a Digital Identity Acceptance Statement (DIAS) prior to
+      integration. See Sec. 3.4.4 of [SP800-63] for more information about the DIAS.
+    textHash: cdb182b14ea7
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.1-R18:
+    id: 3.2.1-R18
+    rev: 800-63a-r4
+    sectionNumber: 3.2.1
+    ordinal: 18
+    level: SHALL
+    text: CSPs that employ artificial intelligence (AI) or machine learning (ML) as part of their
+      identity service SHALL adhere to the requirements provided in Sec. 3.8 of [SP800-63], as
+      applicable.
+    textHash: 5f24bd0b3fdc
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.2-R1:
+    id: 3.2.2-R1
+    rev: 800-63a-r4
+    sectionNumber: 3.2.2
+    ordinal: 1
+    level: SHALL
+    text: RPs SHALL establish a point of contact with whom CSPs can interact and communicate fraud data.
+    textHash: 56a472b7c95e
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.2-R2:
+    id: 3.2.2-R2
+    rev: 800-63a-r4
+    sectionNumber: 3.2.2
+    ordinal: 2
+    level: SHALL
+    text: RPs SHALL conduct a privacy risk assessment (see Sec. 3.3.1) of any CSP fraud checks and
+      mitigation technologies to identify potential privacy risks or unintended harms. Federal
+      agency RPs SHALL implement this consistent with the requirements contained in Sec. 3.7.
+    textHash: ba89eb8ebdd4
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.2-R3:
+    id: 3.2.2-R3
+    rev: 800-63a-r4
+    sectionNumber: 3.2.2
+    ordinal: 3
+    level: SHOULD
+    text: RPs SHOULD include any requirements for fraud checks and fraud mitigation technologies in
+      trust agreements with their CSPs.
+    textHash: c09bf5e853ab
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.2-R4:
+    id: 3.2.2-R4
+    rev: 800-63a-r4
+    sectionNumber: 3.2.2
+    ordinal: 4
+    level: SHALL
+    text: RPs SHALL conduct periodic reviews of their CSP’s fraud management program, fraud checks, and
+      fraud technologies to adjust thresholds, review investigations into fraud events, and evaluate
+      the effectiveness and efficacy of fraud controls.
+    textHash: beb304837b35
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.2-R5:
+    id: 3.2.2-R5
+    rev: 800-63a-r4
+    sectionNumber: 3.2.2
+    ordinal: 5
+    level: SHALL
+    text: RPs SHALL review all fraud mitigation measures that have been deployed as compensating or
+      supplemental controls by CSPs to align with their internal risk tolerance and acceptance. The
+      RP SHALL record the CSP’s compensating controls in their own DIAS prior to integration.
+    textHash: dcb59f7b77ae
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.2-R6:
+    id: 3.2.2-R6
+    rev: 800-63a-r4
+    sectionNumber: 3.2.2
+    ordinal: 6
+    level: SHOULD
+    text: Pursuant to applicable laws and regulations, RPs SHOULD establish a mechanism to communicate
+      the outcomes of fraud reports and investigations, including both positive and negative
+      results, to CSPs and other partners in order to allow them to improve their own fraud
+      identification, mitigation, and reporting capabilities.
+    textHash: 3f3a0d4e811f
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.2-R7:
+    id: 3.2.2-R7
+    rev: 800-63a-r4
+    sectionNumber: 3.2.2
+    ordinal: 7
+    level: SHOULD
+    text: RPs SHOULD establish a fraud management program for digital identity management consistent
+      with their mission, regulatory environment, systems, applications, data, and resources.
+    textHash: 2120f499ca46
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.2-R8:
+    id: 3.2.2-R8
+    rev: 800-63a-r4
+    sectionNumber: 3.2.2
+    ordinal: 8
+    level: MAY
+    text: Informed by risks identified in a privacy risk assessment, the RP MAY also request additional
+      attributes beyond what a CSP provides as its core attributes to combat fraud or to support
+      other business processes.
+    textHash: 18c38ae47023
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.3-R1:
+    id: 3.2.3-R1
+    rev: 800-63a-r4
+    sectionNumber: 3.2.3
+    ordinal: 1
+    level: SHALL
+    text: CSPs SHALL establish and document actions and practices related to each of their fraud checks
+      and provide these actions and practices to RPs.
+    textHash: aae6328170a8
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.3-R2:
+    id: 3.2.3-R2
+    rev: 800-63a-r4
+    sectionNumber: 3.2.3
+    ordinal: 2
+    level: SHALL
+    text: CSPs SHALL establish procedures for redress to allow applicants to resolve issues associated
+      with fraud checks and mitigation technologies. See Sec. 3.6 of [SP800-63] for more information
+      about redress.
+    textHash: 171dfbf5cc33
+    source: prose
+    seededBy: parser
+    verified: false
+  3.2.3-R3:
+    id: 3.2.3-R3
+    rev: 800-63a-r4
+    sectionNumber: 3.2.3
+    ordinal: 3
+    level: SHALL
+    text: The CSP SHOULD offer trusted referee services to applicants who fail fraud checks in
+      unattended remote processes. If trusted referees are offered to applicants who fail fraud
+      checks in unattended remote processes, the trusted referees SHALL be provided with a summary
+      of the results of the fraud failures to inform their risk-based decision-making processes.
+    textHash: 3e55f4dad667
+    source: prose
+    seededBy: parser
+    verified: false
+  3.3.1-R1:
+    id: 3.3.1-R1
+    rev: 800-63a-r4
+    sectionNumber: 3.3.1
+    ordinal: 1
+    level: SHALL
+    text: "The CSP SHALL conduct and document a privacy risk assessment for the processes used for
+      identity proofing and enrollment.2 At a minimum, the privacy risk assessment SHALL assess the
+      risks associated with:"
+    textHash: f30fdfb4cd52
+    source: prose
+    seededBy: parser
+    verified: false
+  3.3.1-R2:
+    id: 3.3.1-R2
+    rev: 800-63a-r4
+    sectionNumber: 3.3.1
+    ordinal: 2
+    level: SHALL
+    text: Based on the results of its privacy risk assessment, the CSP SHALL document the measures it
+      takes to maintain the disassociability, predictability, manageability, confidentiality,
+      integrity, and availability of any personal information it collects or processes.3 In
+      determining such measures, the CSP SHOULD apply relevant guidance and standards, such as the
+      NIST Privacy Framework [NIST-Privacy] and NIST SP 800-53 [SP800-53].
+    textHash: 4d750f050aea
+    source: prose
+    seededBy: parser
+    verified: false
+  3.3.1-R3:
+    id: 3.3.1-R3
+    rev: 800-63a-r4
+    sectionNumber: 3.3.1
+    ordinal: 3
+    level: SHALL
+    text: The CSP SHALL reassess privacy risks and update its privacy risk assessment any time it makes
+      changes to its identity service that affect the processing of personal information.
+    textHash: 1c44a3069efa
+    source: prose
+    seededBy: parser
+    verified: false
+  3.3.1-R4:
+    id: 3.3.1-R4
+    rev: 800-63a-r4
+    sectionNumber: 3.3.1
+    ordinal: 4
+    level: SHALL
+    text: The CSP SHALL review its privacy risk assessment periodically, as documented in its practice
+      statement, to ensure that it accurately reflects the current risks associated with the
+      collection and processing of personal information.
+    textHash: 9b16846b15a6
+    source: prose
+    seededBy: parser
+    verified: false
+  3.3.1-R5:
+    id: 3.3.1-R5
+    rev: 800-63a-r4
+    sectionNumber: 3.3.1
+    ordinal: 5
+    level: SHALL
+    text: The CSP SHALL make a summary of its privacy risk assessment available to any RPs that use its
+      services. The summary SHALL be in sufficient detail to enable such RPs to make reasonable
+      determinations about privacy risks associated with the CSPs services and to complete their own
+      privacy risk assessments.
+    textHash: 0241cafe9d97
+    source: prose
+    seededBy: parser
+    verified: false
+  3.3.1-R6:
+    id: 3.3.1-R6
+    rev: 800-63a-r4
+    sectionNumber: 3.3.1
+    ordinal: 6
+    level: SHALL
+    text: The CSP SHALL perform a privacy risk assessment for the processing of any personal information
+      maintained in subscriber accounts (see Sec. 5).
+    textHash: 5c63afc77df9
+    source: prose
+    seededBy: parser
+    verified: false
+  3.3.2-R1:
+    id: 3.3.2-R1
+    rev: 800-63a-r4
+    sectionNumber: 3.3.2
+    ordinal: 1
+    level: SHALL
+    text: The processing of personal information SHALL be limited to the minimum necessary to validate
+      the existence of the claimed identity, associate the claimed identity with the applicant,
+      mitigate fraud, and provide RPs with attributes that they may use to make authorization
+      decisions.
+    textHash: 4fb2120ad0e5
+    source: prose
+    seededBy: parser
+    verified: false
+  3.3.2-R2:
+    id: 3.3.2-R2
+    rev: 800-63a-r4
+    sectionNumber: 3.3.2
+    ordinal: 2
+    level: SHALL
+    text: The CSP SHALL provide privacy training to all personnel and any third-party service providers
+      who have access to sensitive information associated with the CSP’s identity service.
+    textHash: f80970307fd3
+    source: prose
+    seededBy: parser
+    verified: false
+  3.3.2-R3:
+    id: 3.3.2-R3
+    rev: 800-63a-r4
+    sectionNumber: 3.3.2
+    ordinal: 3
+    level: SHALL
+    text: The CSP MAY collect a Social Security number (SSN) as an attribute when necessary for identity
+      resolution. Knowledge of an SSN is not sufficient to act as evidence of identity, nor is it
+      considered an acceptable method of verifying possession of the Social Security card when used
+      as evidence. If the SSN is collected on behalf of a federal, state, or local government
+      agency, the CSP SHALL provide notice to the applicant for the collection in accordance with
+      applicable laws.
+    textHash: d97afa3eb063
+    source: prose
+    seededBy: parser
+    verified: false
+  3.3.2-R4:
+    id: 3.3.2-R4
+    rev: 800-63a-r4
+    sectionNumber: 3.3.2
+    ordinal: 4
+    level: SHALL
+    text: At the time of collection, the CSP SHALL provide explicit notice to the applicant regarding
+      the purpose for collecting any attributes and personal information. Such a notice SHALL
+      include whether the personal information and attributes are voluntary or mandatory to complete
+      the identity proofing process, the specific attributes and other sensitive data that the CSP
+      intends to store in the applicant’s subsequent subscriber account, the consequences of not
+      providing the attributes, and the details of any records retention requirement if one is in
+      place, including an applicant’s right to request data deletion or engage in other forms of
+      redress.
+    textHash: 177f7ba94e87
+    source: prose
+    seededBy: parser
+    verified: false
+  3.3.2-R5:
+    id: 3.3.2-R5
+    rev: 800-63a-r4
+    sectionNumber: 3.3.2
+    ordinal: 5
+    level: SHOULD
+    text: CSPs SHOULD implement techniques that protect an applicant’s privacy based on the privacy
+      considerations in Sec. 7.
+    textHash: ee62d55aa5e3
+    source: prose
+    seededBy: parser
+    verified: false
+  3.4-R1:
+    id: 3.4-R1
+    rev: 800-63a-r4
+    sectionNumber: "3.4"
+    ordinal: 1
+    level: SHALL
+    text: The CSP SHALL assess the elements of its identity proofing processes to identify processes or
+      technologies that can result in customer experience challenges, particularly if those
+      challenges prevent the CSP from consistently delivering identity proofing services to all
+      users served by an RP.
+    textHash: 40eec503e058
+    source: prose
+    seededBy: parser
+    verified: false
+  3.4-R2:
+    id: 3.4-R2
+    rev: 800-63a-r4
+    sectionNumber: "3.4"
+    ordinal: 2
+    level: SHALL
+    text: CSPs SHALL provide RPs with a summary of their customer experience assessments that includes
+      information about common challenges or issues faced by users.
+    textHash: 066a3259d3ac
+    source: prose
+    seededBy: parser
+    verified: false
+  3.4-R3:
+    id: 3.4-R3
+    rev: 800-63a-r4
+    sectionNumber: "3.4"
+    ordinal: 3
+    level: SHALL
+    text: Based on the results of its assessment, the CSP SHALL document any measures it takes to
+      mitigate the possible access challenges.
+    textHash: cd1511803c9b
+    source: prose
+    seededBy: parser
+    verified: false
+  3.4-R4:
+    id: 3.4-R4
+    rev: 800-63a-r4
+    sectionNumber: "3.4"
+    ordinal: 4
+    level: SHALL
+    text: The CSP SHALL reassess the customer experience risks periodically and any time the CSP makes
+      changes to its identity service that affect the processes or technologies that impact customer
+      experience.
+    textHash: b269231b293a
+    source: prose
+    seededBy: parser
+    verified: false
+  3.4-R5:
+    id: 3.4-R5
+    rev: 800-63a-r4
+    sectionNumber: "3.4"
+    ordinal: 5
+    level: SHALL_NOT
+    text: The CSP SHALL NOT make applicant participation in these risk assessments mandatory.
+    textHash: 88c4be66b311
+    source: prose
+    seededBy: parser
+    verified: false
+  3.5-R1:
+    id: 3.5-R1
+    rev: 800-63a-r4
+    sectionNumber: "3.5"
+    ordinal: 1
+    level: SHALL
+    text: Each online transaction within the identity proofing process, including transactions that
+      involve third parties, SHALL occur over an authenticated protected channel.
+    textHash: e4838d68b553
+    source: prose
+    seededBy: parser
+    verified: false
+  3.5-R2:
+    id: 3.5-R2
+    rev: 800-63a-r4
+    sectionNumber: "3.5"
+    ordinal: 2
+    level: SHALL
+    text: The CSP SHALL implement automated attack protections for the identity proofing process, such
+      as bot detection, mitigation, and management solutions; behavioral analytics4; web application
+      firewall settings; and network traffic analysis.
+    textHash: 051a21461c85
+    source: prose
+    seededBy: parser
+    verified: false
+  3.5-R3:
+    id: 3.5-R3
+    rev: 800-63a-r4
+    sectionNumber: "3.5"
+    ordinal: 3
+    level: SHALL
+    text: All personal information that is collected as part of the identity proofing process SHALL be
+      protected to maintain the confidentiality and integrity of the information, including the
+      encryption of data at rest and the exchange of information using authenticated protected
+      channels.
+    textHash: 8e95e1bd1df8
+    source: prose
+    seededBy: parser
+    verified: false
+  3.5-R4:
+    id: 3.5-R4
+    rev: 800-63a-r4
+    sectionNumber: "3.5"
+    ordinal: 4
+    level: SHALL
+    text: The CSP SHALL assess the information security and privacy risks associated with operating its
+      identity service, according to the NIST Risk Management Framework [NIST-RMF] or equivalent
+      risk management guidelines. At a minimum, the CSP SHALL apply appropriate controls consistent
+      with the NIST SP 800-53 [SP800-53] moderate baseline, regardless of IAL.
+    textHash: 42ff86614b77
+    source: prose
+    seededBy: parser
+    verified: false
+  3.5-R5:
+    id: 3.5-R5
+    rev: 800-63a-r4
+    sectionNumber: "3.5"
+    ordinal: 5
+    level: SHALL
+    text: The CSP SHALL assess risks associated with its use of third-party services and apply
+      appropriate controls, as provided in the [SP800-161] Cybersecurity Supply Chain Risk
+      Management Practices for Systems and Organizations.
+    textHash: c9f2c852b25f
+    source: prose
+    seededBy: parser
+    verified: false
+  3.6-R1:
+    id: 3.6-R1
+    rev: 800-63a-r4
+    sectionNumber: "3.6"
+    ordinal: 1
+    level: SHALL
+    text: The CSP SHALL provide mechanisms for the redress of applicant complaints and problems that
+      arise from the identity proofing process, including proofing failures, delays, difficulties,
+      and the recovery of a compromised subscriber account (e.g., as a result of a scam or fraud).
+    textHash: d3a314a2b97f
+    source: prose
+    seededBy: parser
+    verified: false
+  3.6-R2:
+    id: 3.6-R2
+    rev: 800-63a-r4
+    sectionNumber: "3.6"
+    ordinal: 2
+    level: SHALL
+    text: These redress mechanisms SHALL be easy for applicants to find and use.
+    textHash: b877638b6302
+    source: prose
+    seededBy: parser
+    verified: false
+  3.6-R3:
+    id: 3.6-R3
+    rev: 800-63a-r4
+    sectionNumber: "3.6"
+    ordinal: 3
+    level: SHALL
+    text: The CSP SHALL assess the mechanisms for their efficacy in achieving a resolution of complaints
+      or problems.
+    textHash: b7f853858a6b
+    source: prose
+    seededBy: parser
+    verified: false
+  3.7-R1:
+    id: 3.7-R1
+    rev: 800-63a-r4
+    sectionNumber: "3.7"
+    ordinal: 1
+    level: SHALL
+    text: The agency SHALL consult with their Senior Agency Official for Privacy (SAOP) to determine
+      whether the collection of personal information, including biometrics, to conduct identity
+      proofing triggers Privacy Act requirements.
+    textHash: db1d71389517
+    source: prose
+    seededBy: parser
+    verified: false
+  3.7-R2:
+    id: 3.7-R2
+    rev: 800-63a-r4
+    sectionNumber: "3.7"
+    ordinal: 2
+    level: SHALL
+    text: The agency SHALL consult with their SAOP to determine whether the collection of personal
+      information, including biometrics, to conduct identity proofing triggers E-Government Act of
+      2002 [E-Gov] requirements.
+    textHash: d9a005046421
+    source: prose
+    seededBy: parser
+    verified: false
+  3.7-R3:
+    id: 3.7-R3
+    rev: 800-63a-r4
+    sectionNumber: "3.7"
+    ordinal: 3
+    level: SHALL
+    text: The agency SHALL publish a System of Records Notice (SORN) to cover such collections, as
+      applicable.5
+    textHash: 891c603b705a
+    source: prose
+    seededBy: parser
+    verified: false
+  3.7-R4:
+    id: 3.7-R4
+    rev: 800-63a-r4
+    sectionNumber: "3.7"
+    ordinal: 4
+    level: SHALL
+    text: The agency SHALL publish a Privacy Impact Assessment (PIA) to cover such collections, as
+      applicable.
+    textHash: 2715cd8a9ec7
+    source: prose
+    seededBy: parser
+    verified: false
+  3.7-R5:
+    id: 3.7-R5
+    rev: 800-63a-r4
+    sectionNumber: "3.7"
+    ordinal: 5
+    level: SHOULD
+    text: The agency SHOULD consult with public affairs and communications professionals within their
+      organization to determine whether a communications or public awareness strategy should be
+      developed to accompany the implementation of any new process or update to an existing process,
+      including requirements associated with identity proofing. Such strategies should consider the
+      use of materials that describe how to use the technology associated with the service, a
+      Frequently Asked Questions (FAQs) page, prerequisites to participate in the identity proofing
+      process (e.g., required evidence), or media (e.g., webinars, live or pre-recorded information
+      sessions) to support adoption of the identity service and provide applicants with a mechanism
+      to communicate questions, issues, and feedback.
+    textHash: 64759780f5e2
+    source: prose
+    seededBy: parser
+    verified: false
+  3.7-R6:
+    id: 3.7-R6
+    rev: 800-63a-r4
+    sectionNumber: "3.7"
+    ordinal: 6
+    level: SHALL
+    text: If the agency uses a third-party CSP, the agency SHALL conduct its own PIA and use the CSP’s
+      privacy risk assessment as input.
+    textHash: 82c88f15d0cf
+    source: prose
+    seededBy: parser
+    verified: false
+  3.8-R1:
+    id: 3.8-R1
+    rev: 800-63a-r4
+    sectionNumber: "3.8"
+    ordinal: 1
+    level: SHALL
+    text: Confirmation codes used for these purposes SHALL include at least 6 decimal digits (or
+      equivalent) from an approved random bit generator (see Sec. 3.2.12 of [SP800-63B]). The
+      confirmation code may be presented as numeric or printable ASCII representation for manual
+      entry, a secure (e.g., https) link containing a representation of the confirmation code, or a
+      machine-readable optical label (e.g., QR code) that contains the confirmation code.
+    textHash: 6392d18f3669
+    source: prose
+    seededBy: parser
+    verified: false
+  3.8-R2:
+    id: 3.8-R2
+    rev: 800-63a-r4
+    sectionNumber: "3.8"
+    ordinal: 2
+    level: SHALL
+    text: 21 days when sent to a validated postal address within the contiguous United States
+    textHash: 64c14290dd5c
+    context: "Confirmation codes SHALL be valid for at most:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.8-R3:
+    id: 3.8-R3
+    rev: 800-63a-r4
+    sectionNumber: "3.8"
+    ordinal: 3
+    level: SHALL
+    text: 30 days when sent to a validated postal address outside of the contiguous United States
+    textHash: 2e24b8d1b02f
+    context: "Confirmation codes SHALL be valid for at most:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.8-R4:
+    id: 3.8-R4
+    rev: 800-63a-r4
+    sectionNumber: "3.8"
+    ordinal: 4
+    level: SHALL
+    text: 10 minutes when sent to a validated telephone number (SMS or voice)
+    textHash: a090e9c56bee
+    context: "Confirmation codes SHALL be valid for at most:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.8-R5:
+    id: 3.8-R5
+    rev: 800-63a-r4
+    sectionNumber: "3.8"
+    ordinal: 5
+    level: SHALL
+    text: 24 hours when sent to a validated email address
+    textHash: "7668110036e5"
+    context: "Confirmation codes SHALL be valid for at most:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.8-R6:
+    id: 3.8-R6
+    rev: 800-63a-r4
+    sectionNumber: "3.8"
+    ordinal: 6
+    level: SHALL
+    text: Upon its use, the CSP SHALL invalidate the confirmation code.
+    textHash: 23126b8ce60f
+    source: prose
+    seededBy: parser
+    verified: false
+  3.9-R1:
+    id: 3.9-R1
+    rev: 800-63a-r4
+    sectionNumber: "3.9"
+    ordinal: 1
+    level: SHOULD
+    text: As such, CSPs MAY use continuation codes when an applicant is unable to complete all of the
+      steps necessary to be successfully identity-proofed and enrolled into the CSP’s identity
+      service in a single session, particularly when switching between different identity proofing
+      types. Continuation codes are intended to be maintained offline (e.g., printed or written
+      down) and stored in a secure location by the applicant for use in reestablishing linkage to a
+      previous, incomplete session. In order to facilitate the authentication of the applicant to a
+      subsequent session with the CSP, the CSP SHOULD first bind an authenticator to a record or
+      account that was established for the applicant prior to the cessation of the initial session.
+    textHash: 5faa0f1094e5
+    source: prose
+    seededBy: parser
+    verified: false
+  3.9-R2:
+    id: 3.9-R2
+    rev: 800-63a-r4
+    sectionNumber: "3.9"
+    ordinal: 2
+    level: SHOULD
+    text: Continuation codes SHOULD be delivered in-session but MAY be delivered out-of-band to a
+      physical mailing address, phone number, or email address.
+    textHash: 1e8c03fa3716
+    source: prose
+    seededBy: parser
+    verified: false
+  3.9-R3:
+    id: 3.9-R3
+    rev: 800-63a-r4
+    sectionNumber: "3.9"
+    ordinal: 3
+    level: SHALL
+    text: Continuation codes SHALL include at least 64 bits from an approved random bit generator (see
+      Sec. 3.2.12 of [SP800-63B]).
+    textHash: 420818fd9871
+    source: prose
+    seededBy: parser
+    verified: false
+  3.9-R4:
+    id: 3.9-R4
+    rev: 800-63a-r4
+    sectionNumber: "3.9"
+    ordinal: 4
+    level: MAY
+    text: The continuation code MAY be presented as numeric or printable ASCII representation for manual
+      entry or as a machine-readable optical label (e.g., QR code).
+    textHash: 7f1c625d738b
+    source: prose
+    seededBy: parser
+    verified: false
+  3.9-R5:
+    id: 3.9-R5
+    rev: 800-63a-r4
+    sectionNumber: "3.9"
+    ordinal: 5
+    level: SHALL
+    text: The verification of continuation codes SHALL be subject to throttling requirements, as
+      provided in Sec. 3.2.2 of [SP800-63B].
+    textHash: ea0d2621eaff
+    source: prose
+    seededBy: parser
+    verified: false
+  3.9-R6:
+    id: 3.9-R6
+    rev: 800-63a-r4
+    sectionNumber: "3.9"
+    ordinal: 6
+    level: SHALL
+    text: Continuation codes SHALL be stored in hashed form using a Federal Information Processing
+      Standards (FIPS)-approved or NIST-recommended one-way function.
+    textHash: cbb99809bd67
+    source: prose
+    seededBy: parser
+    verified: false
+  3.9-R7:
+    id: 3.9-R7
+    rev: 800-63a-r4
+    sectionNumber: "3.9"
+    ordinal: 7
+    level: SHALL
+    text: Upon its use, the CSP SHALL invalidate the continuation code.
+    textHash: b072b5b868d8
+    source: prose
+    seededBy: parser
+    verified: false
+  3.10-R1:
+    id: 3.10-R1
+    rev: 800-63a-r4
+    sectionNumber: "3.10"
+    ordinal: 1
+    level: SHALL
+    text: SHALL be sent to a validated postal address or phone number at all IALs or MAY be sent to a
+      validated email address at IAL1
+    textHash: 60735192a32d
+    source: prose
+    seededBy: parser
+    verified: false
+  3.10-R2:
+    id: 3.10-R2
+    rev: 800-63a-r4
+    sectionNumber: "3.10"
+    ordinal: 2
+    level: SHALL
+    text: SHALL include details about the identity proofing event, including the name of the identity
+      service and the date on which the identity proofing was completed
+    textHash: e03637fcb3b2
+    source: prose
+    seededBy: parser
+    verified: false
+  3.10-R3:
+    id: 3.10-R3
+    rev: 800-63a-r4
+    sectionNumber: "3.10"
+    ordinal: 3
+    level: SHALL
+    text: SHALL provide clear instructions, including contact information, on actions for the recipient
+      to take if they repudiate their participation in the identity proofing event
+    textHash: 93ff50d897bc
+    source: prose
+    seededBy: parser
+    verified: false
+  3.10-R4:
+    id: 3.10-R4
+    rev: 800-63a-r4
+    sectionNumber: "3.10"
+    ordinal: 4
+    level: SHALL
+    text: SHALL provide information about how the organization or CSP protects the security and
+      confidentiality of the information it collects
+    textHash: d8eca578f4ea
+    source: prose
+    seededBy: parser
+    verified: false
+  3.10-R5:
+    id: 3.10-R5
+    rev: 800-63a-r4
+    sectionNumber: "3.10"
+    ordinal: 5
+    level: SHALL
+    text: SHALL provide information about any responsibilities that the recipient has as a subscriber of
+      the identity service
+    textHash: c126561cbe42
+    source: prose
+    seededBy: parser
+    verified: false
+  3.10-R6:
+    id: 3.10-R6
+    rev: 800-63a-r4
+    sectionNumber: "3.10"
+    ordinal: 6
+    level: SHOULD
+    text: SHOULD provide instructions on how to access their subscriber account or information about how
+      the subscriber can update the information contained in that account
+    textHash: f532da68fedb
+    source: prose
+    seededBy: parser
+    verified: false
+  3.10-R7:
+    id: 3.10-R7
+    rev: 800-63a-r4
+    sectionNumber: "3.10"
+    ordinal: 7
+    level: SHALL
+    text: If a subscriber repudiates having been identity-proofed by the identity service, the CSP or RP
+      SHALL respond in accordance with its established fraud management and redress policies.
+    textHash: 639f57e5f610
+    source: prose
+    seededBy: parser
+    verified: false
+  3.11-R1:
+    id: 3.11-R1
+    rev: 800-63a-r4
+    sectionNumber: "3.11"
+    ordinal: 1
+    level: SHALL
+    text: CSPs SHALL provide clear, publicly available information about all uses of biometrics,
+      including what biometric data is collected, how it is stored and protected, and how to remove
+      biometric data consistent with applicable laws and regulations.
+    textHash: b16b9bcfe7e7
+    source: prose
+    seededBy: parser
+    verified: false
+  3.11-R2:
+    id: 3.11-R2
+    rev: 800-63a-r4
+    sectionNumber: "3.11"
+    ordinal: 2
+    level: SHALL
+    text: CSPs SHALL obtain explicit informed consent to collect and use biometrics from all applicants.
+    textHash: feee75baff96
+    source: prose
+    seededBy: parser
+    verified: false
+  3.11-R3:
+    id: 3.11-R3
+    rev: 800-63a-r4
+    sectionNumber: "3.11"
+    ordinal: 3
+    level: SHALL
+    text: CSPs SHALL store a record of the subscriber’s consent for biometric use and associate it with
+      the subscriber’s account.
+    textHash: 0251e85990ac
+    source: prose
+    seededBy: parser
+    verified: false
+  3.11-R4:
+    id: 3.11-R4
+    rev: 800-63a-r4
+    sectionNumber: "3.11"
+    ordinal: 4
+    level: SHALL
+    text: CSPs SHALL have a documented and publicly available deletion process and default retention
+      period for all biometric information. Retention periods SHALL be consistent with applicable
+      regulations, policies, and statutes for the regions and sectors that the CSP serves.
+    textHash: 08e2f21b76d6
+    source: prose
+    seededBy: parser
+    verified: false
+  3.11-R5:
+    id: 3.11-R5
+    rev: 800-63a-r4
+    sectionNumber: "3.11"
+    ordinal: 5
+    level: SHALL
+    text: CSPs SHOULD support the deletion of all of a subscriber’s biometric information upon the
+      subscriber’s request, except where otherwise restricted by regulation, law, or policy. CSPs
+      that do not support biometric deletion requests SHALL publicly document the regulatory,
+      statutory, or risk-based justification for their policy.
+    textHash: 88dd86843a95
+    source: prose
+    seededBy: parser
+    verified: false
+  3.11-R6:
+    id: 3.11-R6
+    rev: 800-63a-r4
+    sectionNumber: "3.11"
+    ordinal: 6
+    level: SHALL
+    text: CSPs SHALL have their biometric recognition and attack detection algorithms periodically
+      tested by independent entities (e.g., accredited laboratories or research institutions) for
+      their performance characteristics, including performance across demographic groups. In
+      addition, the CSP SHOULD conduct internal testing on biometric algorithms based on the update
+      schedule of the provider.
+    textHash: 81ba462caa3e
+    source: prose
+    seededBy: parser
+    verified: false
+  3.11-R7:
+    id: 3.11-R7
+    rev: 800-63a-r4
+    sectionNumber: "3.11"
+    ordinal: 7
+    level: SHALL
+    text: CSPs SHALL assess the performance and demographic impacts of employed biometric technologies
+      in conditions that are substantially similar to the operational environment and user base of
+      the system. The user base is defined by both the expected users and the devices they are
+      expected to use. When such assessments include real-world users, participation by users SHALL
+      be voluntary.
+    textHash: c443bb933852
+    source: prose
+    seededBy: parser
+    verified: false
+  3.11-R8:
+    id: 3.11-R8
+    rev: 800-63a-r4
+    sectionNumber: "3.11"
+    ordinal: 8
+    level: SHALL
+    text: "CSPs SHALL meet the following performance thresholds if one-to-one (1:1) comparison
+      algorithms are used for verification against a claimed identity:"
+    textHash: 6cd1e3a2b63b
+    source: prose
+    seededBy: parser
+    verified: false
+  3.11-R9:
+    id: 3.11-R9
+    rev: 800-63a-r4
+    sectionNumber: "3.11"
+    ordinal: 9
+    level: SHALL
+    text: CSPs MAY use one-to-many (1:N) identification in support of resolution or deduplication,
+      pursuant to a privacy risk assessment. In 1:N scenarios, CSPs SHALL meet a minimum performance
+      threshold for false positive identification of 1:1,000 or better.
+    textHash: 600d90bf1f67
+    source: prose
+    seededBy: parser
+    verified: false
+  3.11-R10:
+    id: 3.11-R10
+    rev: 800-63a-r4
+    sectionNumber: "3.11"
+    ordinal: 10
+    level: SHALL
+    text: A 1:N search of an applicant’s collected biometric characteristics against a database is done
+      to determine whether the applicant is already present in the database, possibly under a
+      different name. The false positive identification rate (FPIR) refers to the proportion of 1:N
+      searches in which a biometric system incorrectly identifies another person as a match, which
+      is a false positive result. The performance metric of 1:1,000 means that a false positive
+      outcome occurs for no more than 1 in every 1,000 searches. Tests that demonstrate this
+      requirement SHALL employ a gallery no smaller than 90 % of the current or intended operational
+      size (N).
+    textHash: ebf24c824413
+    source: prose
+    seededBy: parser
+    verified: false
+  3.11-R11:
+    id: 3.11-R11
+    rev: 800-63a-r4
+    sectionNumber: "3.11"
+    ordinal: 11
+    level: SHALL_NOT
+    text: CSPs that make use of 1:N biometric identification for resolution, deduplication, or fraud
+      detection purposes SHALL NOT decline a user’s enrollment without a manual review to confirm
+      the automated search results and confirm that the results are not a false positive
+      identification (e.g., twins submitting face photographs for different accounts with the same
+      CSP).
+    textHash: f12fae7b6bcc
+    source: prose
+    seededBy: parser
+    verified: false
+  3.11-R12:
+    id: 3.11-R12
+    rev: 800-63a-r4
+    sectionNumber: "3.11"
+    ordinal: 12
+    level: SHALL
+    text: Biometric verification technologies SHALL provide performance for applicants of different
+      demographic types that is no more than 25 % worse than the performance for the overall
+      population. For example, if the measured false non-match rate (FNMR) for the overall
+      population is 0.006, the FNMR for a specific demographic group cannot exceed 0.0075.
+      Similarly, if the false match rate (FMR) for the overall population is 0.0001, the FMR for
+      each demographic group cannot exceed 0.000125. The biometric system SHALL be configured with a
+      fixed threshold; it is not feasible to change the threshold for each demographic group.
+      Demographic categories to be considered SHALL include sex, age, and skin tone when these
+      factors affect biometric performance.
+    textHash: 15e4366b68fe
+    source: prose
+    seededBy: parser
+    verified: false
+  3.11-R13:
+    id: 3.11-R13
+    rev: 800-63a-r4
+    sectionNumber: "3.11"
+    ordinal: 13
+    level: SHALL
+    text: All biometric performance tests SHALL be conformant to ISO/IEC 19795-1:2021 and ISO/IEC
+      19795-10:2024, including demographics testing.
+    textHash: 34392ab88151
+    source: prose
+    seededBy: parser
+    verified: false
+  3.11-R14:
+    id: 3.11-R14
+    rev: 800-63a-r4
+    sectionNumber: "3.11"
+    ordinal: 14
+    level: SHALL
+    text: CSPs SHALL make the results of their biometric algorithm performance and biometric system
+      operational test results publicly available. The CSP MAY provide these test results in summary
+      form if the results indicate performance against the defined metrics in these guidelines and
+      across the tested demographic groups.
+    textHash: 2987e5a9bebd
+    source: prose
+    seededBy: parser
+    verified: false
+  3.11-R15:
+    id: 3.11-R15
+    rev: 800-63a-r4
+    sectionNumber: "3.11"
+    ordinal: 15
+    level: SHALL
+    text: CSP SHALL collect biometric characteristics in a way that provides reasonable assurance that
+      the biometric characteristic is collected from the applicant and not another subject.
+    textHash: e06d12f56cca
+    source: prose
+    seededBy: parser
+    verified: false
+  3.11-R16:
+    id: 3.11-R16
+    rev: 800-63a-r4
+    sectionNumber: "3.11"
+    ordinal: 16
+    level: SHALL
+    text: When collecting and comparing biometric characteristics remotely, the CSP SHALL implement
+      presentation attack detection (PAD) capabilities that meet the impostor attack presentation
+      accept rate (IAPAR) performance metric of <0.07 to confirm the genuine presence of a live
+      human being and to mitigate spoofing and impersonation attempts. All biometric presentation
+      attack detection tests SHALL be conformant to ISO/IEC 30107-3:2023.
+    textHash: e9a2d4629eb5
+    source: prose
+    seededBy: parser
+    verified: false
+  3.11-R17:
+    id: 3.11-R17
+    rev: 800-63a-r4
+    sectionNumber: "3.11"
+    ordinal: 17
+    level: SHALL
+    text: When collecting biometric characteristics on-site, the CSP SHALL have the operator view the
+      biometric source (e.g., fingers, face) for the presence of unexpected non-natural materials
+      and perform such inspections as part of the proofing process.
+    textHash: 163d91e69d1b
+    source: prose
+    seededBy: parser
+    verified: false
+  3.12-R1:
+    id: 3.12-R1
+    rev: 800-63a-r4
+    sectionNumber: "3.12"
+    ordinal: 1
+    level: SHALL
+    text: Proofing agents and trusted referees SHALL be trained to conduct visual facial image
+      comparison. This training SHALL include techniques and methods for identifying facial
+      characteristics, unique traits, and other indicators of matches or non-matches between an
+      applicant and their presented evidence.
+    textHash: f83017092127
+    source: prose
+    seededBy: parser
+    verified: false
+  3.12-R2:
+    id: 3.12-R2
+    rev: 800-63a-r4
+    sectionNumber: "3.12"
+    ordinal: 2
+    level: SHALL
+    text: Proofing agents and trusted referees SHALL be assessed on their ability to conduct visual
+      facial image comparisons. Additionally, proofing agents and trusted referees SHALL be
+      reassessed on an annual basis and remedially trained, if needed. Training SHALL be designed to
+      reflect potential real-world attack scenarios, such as comparing applicants to images of
+      relatives, twins, and individuals with a similar appearance.
+    textHash: b77ab5e9b5ef
+    source: prose
+    seededBy: parser
+    verified: false
+  3.12-R3:
+    id: 3.12-R3
+    rev: 800-63a-r4
+    sectionNumber: "3.12"
+    ordinal: 3
+    level: SHALL
+    text: CSPs SHALL provide proofing agents and trusted referees that conduct visual facial comparisons
+      during remote attended transactions with resources that support accurate comparisons, such as
+      high-quality image feeds, high-definition monitors, and image analysis software.
+    textHash: 0ded20989814
+    source: prose
+    seededBy: parser
+    verified: false
+  3.12-R4:
+    id: 3.12-R4
+    rev: 800-63a-r4
+    sectionNumber: "3.12"
+    ordinal: 4
+    level: SHALL
+    text: CSPs SHALL document their training and assessment procedures for visual image comparisons and
+      make them available to RPs upon request.
+    textHash: 90ff87506ec8
+    source: prose
+    seededBy: parser
+    verified: false
+  3.12-R5:
+    id: 3.12-R5
+    rev: 800-63a-r4
+    sectionNumber: "3.12"
+    ordinal: 5
+    level: SHALL
+    text: These requirements SHALL apply for visual facial image comparisons done as manual reviews for
+      failures of automated biometric comparisons (e.g., failure of 1:N checks conducted for
+      resolution or deduplication).
+    textHash: 4162258371f1
+    source: prose
+    seededBy: parser
+    verified: false
+  3.13-R1:
+    id: 3.13-R1
+    rev: 800-63a-r4
+    sectionNumber: "3.13"
+    ordinal: 1
+    level: SHALL
+    text: "Automated evidence validation technology SHALL meet the following performance measures:"
+    textHash: 4ffc8d21edbc
+    source: prose
+    seededBy: parser
+    verified: false
+  3.13-R2:
+    id: 3.13-R2
+    rev: 800-63a-r4
+    sectionNumber: "3.13"
+    ordinal: 2
+    level: SHALL
+    text: If a Machine Readable Zone (MRZ) or barcode is present on the evidence, the optical capture
+      and inspection SHALL compare the MRZ data to the printed data on the evidence for consistency.
+    textHash: 7f62a1181623
+    source: prose
+    seededBy: parser
+    verified: false
+  3.13-R3:
+    id: 3.13-R3
+    rev: 800-63a-r4
+    sectionNumber: "3.13"
+    ordinal: 3
+    level: SHALL
+    text: CSPs SHALL implement live capture of documents during the validation process and SHALL
+      implement passive or active document presence checks (also called document liveness). Live
+      capture techniques confirm that the document is physically present and that the image captured
+      during the identity proofing session is not a manipulated digital copy. For additional
+      requirements to prevent the injection of modified media (i.e., digitally generated video or
+      images of evidence), see Sec. 3.14.
+    textHash: e1cee120c014
+    source: prose
+    seededBy: parser
+    verified: false
+  3.13-R4:
+    id: 3.13-R4
+    rev: 800-63a-r4
+    sectionNumber: "3.13"
+    ordinal: 4
+    level: SHALL
+    text: CSPs SHALL assess the performance of employed optical capture and inspection technologies in
+      conditions that are substantially similar to the operational environment and the types of
+      evidence presented by the user base of the system. These tests SHALL account for all available
+      identity evidence types that the CSPs allow to be validated using optical capture and
+      inspection technology. If subscribers’ documents, personal information, or images are used as
+      part of the testing, it SHALL be on a voluntary basis and with subscriber notification and
+      consent.
+    textHash: 20ee5d7f0d89
+    source: prose
+    seededBy: parser
+    verified: false
+  3.13-R5:
+    id: 3.13-R5
+    rev: 800-63a-r4
+    sectionNumber: "3.13"
+    ordinal: 5
+    level: SHOULD
+    text: CSPs SHOULD have their evidence validation technology periodically tested by independent
+      entities (e.g., accredited laboratories or research institutions) for their performance
+      characteristics.
+    textHash: e42872f8b252
+    source: prose
+    seededBy: parser
+    verified: false
+  3.13-R6:
+    id: 3.13-R6
+    rev: 800-63a-r4
+    sectionNumber: "3.13"
+    ordinal: 6
+    level: SHALL
+    text: CSPs SHALL make the results of their testing publicly available.
+    textHash: c69e9b17d7a2
+    source: prose
+    seededBy: parser
+    verified: false
+  3.13-R7:
+    id: 3.13-R7
+    rev: 800-63a-r4
+    sectionNumber: "3.13"
+    ordinal: 7
+    level: SHALL
+    text: "Proofing agents and trusted referees SHALL be trained and provided with the resources to
+      visually inspect all forms of evidence supported by the CSP. This training SHALL include:"
+    textHash: 2d5184f5bd45
+    source: prose
+    seededBy: parser
+    verified: false
+  3.13-R8:
+    id: 3.13-R8
+    rev: 800-63a-r4
+    sectionNumber: "3.13"
+    ordinal: 8
+    level: SHALL
+    text: Proofing agents and trusted referees SHALL be assessed regarding their ability to visually
+      inspect evidence based on their training. Additionally, proofing agents and trusted referees
+      SHALL be reassessed on an annual basis or whenever significant new threats to the evidence
+      validation process are identified and remedially trained as needed.
+    textHash: 71a59d4a011d
+    source: prose
+    seededBy: parser
+    verified: false
+  3.13-R9:
+    id: 3.13-R9
+    rev: 800-63a-r4
+    sectionNumber: "3.13"
+    ordinal: 9
+    level: SHALL
+    text: Proofing agents and trusted referees SHALL be provided with specialized tools and equipment to
+      support the visual inspection of evidence (e.g., magnifiers, ultraviolet lights, barcode
+      readers) as appropriate for the identity evidence type.
+    textHash: 0736cdb84548
+    source: prose
+    seededBy: parser
+    verified: false
+  3.13-R10:
+    id: 3.13-R10
+    rev: 800-63a-r4
+    sectionNumber: "3.13"
+    ordinal: 10
+    level: SHALL
+    text: Proofing agents and trusted referees who conduct visual inspections via remote means SHALL be
+      provided with devices and internet connections that support sufficiently high-quality imagery
+      to be able to effectively inspect presented evidence. In these instances, the visual
+      validation SHOULD be supported by automated document validation technologies that provide
+      additional confidence in the authenticity of the evidence (e.g., submitting and validating
+      evidence in advance of an attended remote session).
+    textHash: f667a4249c92
+    source: prose
+    seededBy: parser
+    verified: false
+  3.13-R11:
+    id: 3.13-R11
+    rev: 800-63a-r4
+    sectionNumber: "3.13"
+    ordinal: 11
+    level: SHALL
+    text: CSPs SHALL document their training and assessment procedures for visual inspections of
+      evidence and make them available to RPs upon request.
+    textHash: 7b508fab0d61
+    source: prose
+    seededBy: parser
+    verified: false
+  3.14-R1:
+    id: 3.14-R1
+    rev: 800-63a-r4
+    sectionNumber: "3.14"
+    ordinal: 1
+    level: SHALL
+    text: CSPs SHALL implement technical controls to increase confidence that digital media is being
+      produced by a genuine sensor during the proofing process (e.g., detect the presence of a
+      virtual camera, device emulator, or a jailbroken device).
+    textHash: 1935c2ffa602
+    source: prose
+    seededBy: parser
+    verified: false
+  3.14-R2:
+    id: 3.14-R2
+    rev: 800-63a-r4
+    sectionNumber: "3.14"
+    ordinal: 2
+    level: SHALL
+    text: CSPs SHALL analyze all digital media submitted during the identity proofing process for
+      artifacts and indicators of potential modification, manipulation, tampering, or forgery.
+      Automated image analysis algorithms SHALL be tested against available attack artifacts (i.e.,
+      forged and manipulated images and videos) and genuine media to provide a baseline of
+      performance and to determine the expected rate of false positives and false negatives
+      generated by the system. The kinds of available attack artifacts that were tested and the
+      corresponding false negative rates SHALL be documented and made available to RPs upon request.
+      Algorithmic analysis of media and automated decisioning SHOULD be augmented by manual reviews
+      to address detection errors.
+    textHash: 623ffafe1517
+    source: prose
+    seededBy: parser
+    verified: false
+  3.14-R3:
+    id: 3.14-R3
+    rev: 800-63a-r4
+    sectionNumber: "3.14"
+    ordinal: 3
+    level: SHALL
+    text: CSPs SHALL only use authenticated protected channels for the exchange of data during remote
+      identity proofing processes.
+    textHash: 7f69006ac329
+    source: prose
+    seededBy: parser
+    verified: false
+  3.14-R4:
+    id: 3.14-R4
+    rev: 800-63a-r4
+    sectionNumber: "3.14"
+    ordinal: 4
+    level: SHOULD
+    text: CSPs SHOULD introduce a passive means of detecting forged or manipulated media for all capture
+      scenarios.
+    textHash: 6ee5751d0b8f
+    source: prose
+    seededBy: parser
+    verified: false
+  3.14-R5:
+    id: 3.14-R5
+    rev: 800-63a-r4
+    sectionNumber: "3.14"
+    ordinal: 5
+    level: SHOULD
+    text: CSPs SHOULD authenticate capture sensors or implement device attestation to increase the
+      confidence in a device being used to transmit digital media as part of a remote identity
+      proofing process.
+    textHash: 432cf6803283
+    source: prose
+    seededBy: parser
+    verified: false
+  3.14-R6:
+    id: 3.14-R6
+    rev: 800-63a-r4
+    sectionNumber: "3.14"
+    ordinal: 6
+    level: SHOULD
+    text: CSPs SHOULD analyze digital media for signatures of generative AI algorithms and deepfake
+      tools that are known to be used to create forged digital media.
+    textHash: 63d5eed4e5c4
+    source: prose
+    seededBy: parser
+    verified: false
+  3.14-R7:
+    id: 3.14-R7
+    rev: 800-63a-r4
+    sectionNumber: "3.14"
+    ordinal: 7
+    level: SHALL
+    text: CSPs SHALL train proofing agents and trusted referees to look for indications of manipulated
+      media (e.g., high latency, synchronization issues, inconsistent skin tone and resolution).
+    textHash: e704e4c3759a
+    source: prose
+    seededBy: parser
+    verified: false
+  3.14-R8:
+    id: 3.14-R8
+    rev: 800-63a-r4
+    sectionNumber: "3.14"
+    ordinal: 8
+    level: SHALL
+    text: CSPs SHALL introduce random “human-in-the-loop” cues into their capture processes to increase
+      the possibility of forged or manipulated media being detected (e.g., by requesting user
+      movements or requesting that the user move objects between the capture sensor and their face).
+    textHash: 9a2b9da21869
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15-R1:
+    id: 3.15-R1
+    rev: 800-63a-r4
+    sectionNumber: "3.15"
+    ordinal: 1
+    level: SHALL
+    text: In order to increase the accessibility of their identity proofing services and address
+      customer experience challenges, CSPs SHALL document their operational processes for dealing
+      with errors and handling exceptions. These documented processes SHOULD include providing
+      trusted referees to support applicants who are otherwise unable to meet the requirements of
+      IALs 1 and 2. Additionally, CSPs SHOULD support the use of applicant references who can vouch
+      for an applicant’s attributes, conditions, or identity.
+    textHash: 97b449caac0e
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.1-R1:
+    id: 3.15.1-R1
+    rev: 800-63a-r4
+    sectionNumber: 3.15.1
+    ordinal: 1
+    level: SHALL
+    text: The CSP SHALL notify the public of the availability of trusted referee services and how such
+      services are obtained.
+    textHash: 7bd7ab5afc0f
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.1-R2:
+    id: 3.15.1-R2
+    rev: 800-63a-r4
+    sectionNumber: 3.15.1
+    ordinal: 2
+    level: SHALL
+    text: The CSP SHALL establish written policies and procedures for the use of trusted referees as
+      part of its practice statement, as specified in Sec. 3.1.
+    textHash: 817783d94d1f
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.1-R3:
+    id: 3.15.1-R3
+    rev: 800-63a-r4
+    sectionNumber: 3.15.1
+    ordinal: 3
+    level: SHALL
+    text: "The CSP SHALL train and certify its trusted referees to make risk-based decisions that allow
+      applicants to be successfully identity-proofed based on their unique circumstances. At a
+      minimum, such training SHALL include:"
+    textHash: cf395e59bbb2
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.1-R4:
+    id: 3.15.1-R4
+    rev: 800-63a-r4
+    sectionNumber: 3.15.1
+    ordinal: 4
+    level: SHALL
+    text: The CSP SHALL establish a record of any identity proofing session that involves a trusted
+      referee, including the reasons why a trusted referee was used (e.g., automated process
+      failure, applicant request, established exception policy), the identity of the trusted
+      referee, what evidence was presented, which processes were completed (e.g., validation or
+      verification), and the trusted referee’s decision and, if negative, their rationale.
+    textHash: 223fa6b783be
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.1-R5:
+    id: 3.15.1-R5
+    rev: 800-63a-r4
+    sectionNumber: 3.15.1
+    ordinal: 5
+    level: SHALL
+    text: The CSP MAY offer trusted referee services for either on-site attended or remote attended
+      sessions. These sessions SHALL be consistent with the requirements of these proofing types
+      based on the IAL of the proofing event.
+    textHash: 92b2f62ff334
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.2-R1:
+    id: 3.15.2-R1
+    rev: 800-63a-r4
+    sectionNumber: 3.15.2
+    ordinal: 1
+    level: SHALL
+    text: CSPs SHALL document which types of exceptions and failures are eligible for the use of a
+      trusted referee.
+    textHash: 2514a250a2b3
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.2-R2:
+    id: 3.15.2-R2
+    rev: 800-63a-r4
+    sectionNumber: 3.15.2
+    ordinal: 2
+    level: SHOULD
+    text: CSPs SHOULD offer trusted referee services for failures of automated verification processes
+      (e.g., biometric comparisons).
+    textHash: b6f64c860c9c
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.2-R3:
+    id: 3.15.2-R3
+    rev: 800-63a-r4
+    sectionNumber: 3.15.2
+    ordinal: 3
+    level: SHOULD
+    text: "CSPs SHOULD offer trusted referee services for failures in completing automated validation
+      processes, such as mismatched core attributes or the absence of the applicant in a record
+      source. If a CSP offers trusted referees for this purpose, the following requirements apply:"
+    textHash: a325b4c16ee9
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.2-R4:
+    id: 3.15.2-R4
+    rev: 800-63a-r4
+    sectionNumber: 3.15.2
+    ordinal: 4
+    level: SHALL
+    text: CSPs SHALL provide a policy for additional evidence types that may be used to corroborate core
+      attributes or changes in core attributes.
+    textHash: 44ccba92b4ea
+    context: "CSPs SHOULD offer trusted referee services for failures in completing automated validation
+      processes, such as mismatched core attributes or the absence of the applicant in a record
+      source. If a CSP offers trusted referees for this purpose, the following requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.2-R5:
+    id: 3.15.2-R5
+    rev: 800-63a-r4
+    sectionNumber: 3.15.2
+    ordinal: 5
+    level: SHALL
+    text: Trusted referees SHALL review additional evidence types for authenticity to the greatest
+      degree allowed by the evidence.
+    textHash: 1e26c90eaa77
+    context: "CSPs SHOULD offer trusted referee services for failures in completing automated validation
+      processes, such as mismatched core attributes or the absence of the applicant in a record
+      source. If a CSP offers trusted referees for this purpose, the following requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.2-R6:
+    id: 3.15.2-R6
+    rev: 800-63a-r4
+    sectionNumber: 3.15.2
+    ordinal: 6
+    level: MAY
+    text: If no authoritative or credible records are available to support validation, the trusted
+      referee MAY compare the attributes on additional pieces of evidence with the strongest piece
+      of evidence available to corroborate the consistency of core attributes.
+    textHash: b4ae56f06e9c
+    context: "CSPs SHOULD offer trusted referee services for failures in completing automated validation
+      processes, such as mismatched core attributes or the absence of the applicant in a record
+      source. If a CSP offers trusted referees for this purpose, the following requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.2-R7:
+    id: 3.15.2-R7
+    rev: 800-63a-r4
+    sectionNumber: 3.15.2
+    ordinal: 7
+    level: SHALL
+    text: If there is a partial mismatch of core attributes to authoritative records, the trusted
+      referee SHALL review evidence that supports the legitimacy of the asserted attribute value
+      (e.g., recent move or change of name).
+    textHash: d481b6216b30
+    context: "CSPs SHOULD offer trusted referee services for failures in completing automated validation
+      processes, such as mismatched core attributes or the absence of the applicant in a record
+      source. If a CSP offers trusted referees for this purpose, the following requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.3-R1:
+    id: 3.15.3-R1
+    rev: 800-63a-r4
+    sectionNumber: 3.15.3
+    ordinal: 1
+    level: SHALL
+    text: The CSP SHALL notify the public of the allowability of applicant references and any
+      requirements for the relationship between the reference and an applicant.
+    textHash: 3978544ad63e
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.3-R2:
+    id: 3.15.3-R2
+    rev: 800-63a-r4
+    sectionNumber: 3.15.3
+    ordinal: 2
+    level: SHALL
+    text: The CSP SHALL establish written policies and procedures for the use of applicant references as
+      part of its practice statement, as specified in Sec. 3.1.
+    textHash: "75882024e672"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.3-R3:
+    id: 3.15.3-R3
+    rev: 800-63a-r4
+    sectionNumber: 3.15.3
+    ordinal: 3
+    level: SHALL
+    text: The CSP SHALL identity-proof an applicant reference to the same or higher IAL intended for the
+      applicant. The CSP SHALL include the information collected, recorded, and retained for
+      identity proofing the applicant references in its privacy risk assessment, as required in
+      section Sec. 3.3.1.
+    textHash: 9dc875388983
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.3-R4:
+    id: 3.15.3-R4
+    rev: 800-63a-r4
+    sectionNumber: 3.15.3
+    ordinal: 4
+    level: SHALL
+    text: The CSP SHALL record the use of an applicant reference in the subscriber account and maintain
+      a record of the applicant reference and their relationship to the applicant.
+    textHash: 9162dc377570
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.3-R5:
+    id: 3.15.3-R5
+    rev: 800-63a-r4
+    sectionNumber: 3.15.3
+    ordinal: 5
+    level: SHALL
+    text: The RP SHALL conduct a risk assessment to determine the applicability, business requirements,
+      and potential risks associated with excluding or including applicant references for proofing
+      events.
+    textHash: 8ff126eb3382
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.4-R1:
+    id: 3.15.4-R1
+    rev: 800-63a-r4
+    sectionNumber: 3.15.4
+    ordinal: 1
+    level: SHALL
+    text: Applicant references can take several different actions to support an applicant in the
+      identity proofing process, depending on the circumstances and context of the CSP and RP
+      services. CSPs SHOULD offer the use of applicant references if the risks to the online service
+      of doing so allow for it. If CSPs allow the use of applicant references, the CSPs and the RPs
+      that use their services SHALL document all acceptable uses for applicant references in their
+      contracts or trust agreements.
+    textHash: d0f4b43d91f1
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.4-R2:
+    id: 3.15.4-R2
+    rev: 800-63a-r4
+    sectionNumber: 3.15.4
+    ordinal: 2
+    level: MAY
+    text: The applicant reference MAY vouch for one or more claimed core attributes relative to the
+      applicant as part of the evidence and attribute validation process.
+    textHash: 9fda0006fc85
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.4-R3:
+    id: 3.15.4-R3
+    rev: 800-63a-r4
+    sectionNumber: 3.15.4
+    ordinal: 3
+    level: MAY
+    text: The applicant reference MAY vouch for the identity of the applicant in the absence of
+      sufficient identity evidence.
+    textHash: 985bee572af8
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.4-R4:
+    id: 3.15.4-R4
+    rev: 800-63a-r4
+    sectionNumber: 3.15.4
+    ordinal: 4
+    level: MAY
+    text: The applicant reference MAY vouch for a specific condition or status of an applicant relative
+      to the identity proofing process (e.g., homelessness, disaster scenarios).
+    textHash: 5f100321de46
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.4-R5:
+    id: 3.15.4-R5
+    rev: 800-63a-r4
+    sectionNumber: 3.15.4
+    ordinal: 5
+    level: SHALL
+    text: Capturing and recording the statements and assertions made by the applicant reference
+    textHash: 7cf70f313403
+    context: "In all instances, the CSP SHALL establish a record of the role that the applicant
+      reference played in the process and document these actions sufficient to support any
+      applicable legal and regulatory requirements. This MAY include:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.4-R6:
+    id: 3.15.4-R6
+    rev: 800-63a-r4
+    sectionNumber: 3.15.4
+    ordinal: 6
+    level: SHALL
+    text: Capturing a digital signature or physical signature of the applicant reference
+    textHash: 96171a4f9f60
+    context: "In all instances, the CSP SHALL establish a record of the role that the applicant
+      reference played in the process and document these actions sufficient to support any
+      applicable legal and regulatory requirements. This MAY include:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.4-R7:
+    id: 3.15.4-R7
+    rev: 800-63a-r4
+    sectionNumber: 3.15.4
+    ordinal: 7
+    level: SHALL
+    text: Capturing consent and acknowledgement relative to the legal and liability impacts of the
+      applicant reference’s statements
+    textHash: 9c9047b5190a
+    context: "In all instances, the CSP SHALL establish a record of the role that the applicant
+      reference played in the process and document these actions sufficient to support any
+      applicable legal and regulatory requirements. This MAY include:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.4-R8:
+    id: 3.15.4-R8
+    rev: 800-63a-r4
+    sectionNumber: 3.15.4
+    ordinal: 8
+    level: SHALL
+    text: CSPs SHALL make available to the applicant reference clear and understandable information
+      relative to the legal and liability impacts that may result from their participation as an
+      applicant reference.
+    textHash: 845b90e0ee67
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.5-R1:
+    id: 3.15.5-R1
+    rev: 800-63a-r4
+    sectionNumber: 3.15.5
+    ordinal: 1
+    level: SHALL
+    text: The CSP and RP SHALL establish requirements for applicant reference relationship confirmation
+      processes and document them in any contracts or trust agreements.
+    textHash: 6c297e36697a
+    context: "In many cases, there will be business, legal, or fraud prevention reasons to confirm the
+      relationship between the applicant and an applicant reference. If such steps are deemed
+      necessary by a risk assessment, the following requirements SHALL apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.5-R2:
+    id: 3.15.5-R2
+    rev: 800-63a-r4
+    sectionNumber: 3.15.5
+    ordinal: 2
+    level: SHALL
+    text: The CSP SHALL make a list of acceptable evidence of relationship available to the applicant
+      reference prior to initiating the relationship confirmation process.
+    textHash: 2edbbcb0f8ea
+    context: "In many cases, there will be business, legal, or fraud prevention reasons to confirm the
+      relationship between the applicant and an applicant reference. If such steps are deemed
+      necessary by a risk assessment, the following requirements SHALL apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.5-R3:
+    id: 3.15.5-R3
+    rev: 800-63a-r4
+    sectionNumber: 3.15.5
+    ordinal: 3
+    level: SHALL
+    text: The CSP SHALL request evidence of the applicant’s relationship (e.g., notarized power of
+      attorney, a professional certification).
+    textHash: 6cd5a6b79f49
+    context: "In many cases, there will be business, legal, or fraud prevention reasons to confirm the
+      relationship between the applicant and an applicant reference. If such steps are deemed
+      necessary by a risk assessment, the following requirements SHALL apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.5-R4:
+    id: 3.15.5-R4
+    rev: 800-63a-r4
+    sectionNumber: 3.15.5
+    ordinal: 4
+    level: SHALL
+    text: Upon successfully identity proofing an applicant, the CSP SHALL record the evidence used to
+      confirm the applicant reference’s relationship to the applicant in the subscriber account.
+    textHash: be1dea1ec563
+    context: "In many cases, there will be business, legal, or fraud prevention reasons to confirm the
+      relationship between the applicant and an applicant reference. If such steps are deemed
+      necessary by a risk assessment, the following requirements SHALL apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.6-R1:
+    id: 3.15.6-R1
+    rev: 800-63a-r4
+    sectionNumber: 3.15.6
+    ordinal: 1
+    level: SHALL
+    text: The CSP SHALL establish a written policy and procedures as part of its practice statement for
+      identity proofing minors who may not be able to meet the evidence requirements for a given
+      IAL.
+    textHash: f5e719f4054e
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.6-R2:
+    id: 3.15.6-R2
+    rev: 800-63a-r4
+    sectionNumber: 3.15.6
+    ordinal: 2
+    level: SHALL
+    text: When interacting with persons under the age of 13, the CSP SHALL ensure compliance with the
+      Children’s Online Privacy Protection Act of 1998 [COPPA] or other laws and regulations that
+      deal with the protection of minors, as applicable.
+    textHash: 80f8cedbc8a3
+    source: prose
+    seededBy: parser
+    verified: false
+  3.15.6-R3:
+    id: 3.15.6-R3
+    rev: 800-63a-r4
+    sectionNumber: 3.15.6
+    ordinal: 3
+    level: SHALL
+    text: CSPs SHALL support the use of applicant references when interacting with individuals under the
+      age of 18.
+    textHash: 5200028afa0e
+    source: prose
+    seededBy: parser
+    verified: false
+  3.16-R1:
+    id: 3.16-R1
+    rev: 800-63a-r4
+    sectionNumber: "3.16"
+    ordinal: 1
+    level: SHALL
+    text: CSPs SHALL document their approved approaches for elevating assurance levels in their practice
+      statements.
+    textHash: 871fb4619c73
+    context: "CSPs SHOULD allow subscribers to elevate IALs related to their subscriber accounts to
+      support higher assurance transactions with RPs. For CSPs that support these functions, the
+      following requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.16-R2:
+    id: 3.16-R2
+    rev: 800-63a-r4
+    sectionNumber: "3.16"
+    ordinal: 2
+    level: SHALL
+    text: CSPs SHALL require subscribers to authenticate at the highest authentication assurance level
+      (AAL) available on their account prior to initiating the upgrade process.
+    textHash: 0222abf14344
+    context: "CSPs SHOULD allow subscribers to elevate IALs related to their subscriber accounts to
+      support higher assurance transactions with RPs. For CSPs that support these functions, the
+      following requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.16-R3:
+    id: 3.16-R3
+    rev: 800-63a-r4
+    sectionNumber: "3.16"
+    ordinal: 3
+    level: SHALL
+    text: CSPs SHALL collect, validate, and verify additional evidence, as mandated to achieve the
+      higher IAL.
+    textHash: 2a1e7ac68cb9
+    context: "CSPs SHOULD allow subscribers to elevate IALs related to their subscriber accounts to
+      support higher assurance transactions with RPs. For CSPs that support these functions, the
+      following requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false
+  3.16-R4:
+    id: 3.16-R4
+    rev: 800-63a-r4
+    sectionNumber: "3.16"
+    ordinal: 4
+    level: SHOULD
+    text: CSPs SHOULD avoid collecting, validating, and verifying previously processed evidence, though
+      they MAY do so based on an extended period of account inactivity, indicators of fraud, or if
+      evidence has become invalidated since the original proofing event.
+    textHash: 5cbd6be75a5a
+    context: "CSPs SHOULD allow subscribers to elevate IALs related to their subscriber accounts to
+      support higher assurance transactions with RPs. For CSPs that support these functions, the
+      following requirements apply:"
+    source: prose
+    seededBy: parser
+    verified: false

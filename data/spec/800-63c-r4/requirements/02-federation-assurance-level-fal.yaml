@@ -1,0 +1,377 @@
+chapter: "2"
+rev: 800-63c-r4
+requirements:
+  2-R1:
+    id: 2-R1
+    rev: 800-63c-r4
+    sectionNumber: "2"
+    ordinal: 1
+    level: SHALL
+    text: This section defines federation assurance levels (FALs) and the requirements for securing
+      federation transactions at each FAL. In order to fulfill the requirements for a given FAL, the
+      federation transaction SHALL meet or exceed all requirements listed for that FAL.
+    textHash: ab3e3727a791
+    source: prose
+    seededBy: parser
+    verified: false
+  2.1-R1:
+    id: 2.1-R1
+    rev: 800-63c-r4
+    sectionNumber: "2.1"
+    ordinal: 1
+    level: SHALL
+    text: At all FALs, all federation transactions SHALL comply with the requirements in Sec. 3 to
+      deliver an assertion to the RP and create an authenticated session at the RP. Examples of
+      assertions used in federation protocols include the ID Token in OpenID Connect [OIDC] and the
+      Security Assertion Markup Language [SAML] Assertion format.
+    textHash: 4347a4738ae4
+    source: prose
+    seededBy: parser
+    verified: false
+  2.1-R2:
+    id: 2.1-R2
+    rev: 800-63c-r4
+    sectionNumber: "2.1"
+    ordinal: 2
+    level: SHALL
+    text: At all FALs, the RP SHALL validate the assertion from the IdP, since the RP needs to trust the
+      IdP to provide valid assertions representing the subscriber’s authentication event.
+    textHash: 10698c8268e9
+    source: prose
+    seededBy: parser
+    verified: false
+  2.1-R3:
+    id: 2.1-R3
+    rev: 800-63c-r4
+    sectionNumber: "2.1"
+    ordinal: 3
+    level: SHALL
+    text: All parties in the federation SHALL employ security controls, as discussed in Sec. 3.11.
+    textHash: 7c0284f68ec0
+    source: prose
+    seededBy: parser
+    verified: false
+  2.2-R1:
+    id: 2.2-R1
+    rev: 800-63c-r4
+    sectionNumber: "2.2"
+    ordinal: 1
+    level: SHOULD
+    text: At FAL1, the federation protocol SHOULD apply assertion injection protection, as discussed in
+      Sec. 3.11.1. The federation transaction SHOULD be initiated by the RP.
+    textHash: d9b66f4b0f00
+    source: prose
+    seededBy: parser
+    verified: false
+  2.2-R2:
+    id: 2.2-R2
+    rev: 800-63c-r4
+    sectionNumber: "2.2"
+    ordinal: 2
+    level: SHALL
+    text: At FAL1, the IdP SHALL sign the assertion using approved cryptography. The RP SHALL validate
+      the signature using the verification key associated with the expected IdP. The signature
+      protects the integrity of the assertion contents and allows for the IdP to be verified as the
+      source of the assertion.
+    textHash: d96f6cd68c9d
+    source: prose
+    seededBy: parser
+    verified: false
+  2.2-R3:
+    id: 2.2-R3
+    rev: 800-63c-r4
+    sectionNumber: "2.2"
+    ordinal: 3
+    level: SHALL
+    text: At FAL1, the assertion SHALL be audience-restricted to a specific RP or set of RPs, and the RP
+      SHALL validate that it is one of the targeted RPs for the given assertion. Each RP in the
+      audience SHALL enforce replay protection mechanisms in the assertion to ensure that the same
+      assertion is not accepted by a given RP multiple times. An assertion with multiple audiences
+      could be accepted by multiple RPs but only once by each RP.
+    textHash: 6eee7ed9ed6d
+    source: prose
+    seededBy: parser
+    verified: false
+  2.2-R4:
+    id: 2.2-R4
+    rev: 800-63c-r4
+    sectionNumber: "2.2"
+    ordinal: 4
+    level: SHOULD_NOT
+    text: At FAL1, federated identifiers SHOULD NOT contain plaintext personal information, such as
+      usernames, email addresses, employee numbers, etc.
+    textHash: 41875bf27502
+    source: prose
+    seededBy: parser
+    verified: false
+  2.2-R5:
+    id: 2.2-R5
+    rev: 800-63c-r4
+    sectionNumber: "2.2"
+    ordinal: 5
+    level: MAY
+    text: At FAL1, the trust agreement MAY be established by the subscriber during the federation
+      transaction, as discussed in Sec. 4.3.2. Alternatively, the trust agreement MAY be established
+      prior to the federation transaction (i.e., a “pre-established” trust agreement), as discussed
+      in Sec. 4.3.1.
+    textHash: 8d55a1221632
+    source: prose
+    seededBy: parser
+    verified: false
+  2.3-R1:
+    id: 2.3-R1
+    rev: 800-63c-r4
+    sectionNumber: "2.3"
+    ordinal: 1
+    level: SHALL
+    text: At FAL2, the assertion SHALL be strongly protected from assertion injection attacks, as
+      discussed in Sec. 3.11.1. The federation transaction SHALL be initiated by the RP.
+    textHash: 4f4c692f5167
+    source: prose
+    seededBy: parser
+    verified: false
+  2.3-R2:
+    id: 2.3-R2
+    rev: 800-63c-r4
+    sectionNumber: "2.3"
+    ordinal: 2
+    level: SHALL
+    text: At FAL2, the assertion SHALL be audience restricted to a single RP. The RP SHALL enforce
+      replay protection mechanisms in the assertion.
+    textHash: 80707cb8f6f4
+    source: prose
+    seededBy: parser
+    verified: false
+  2.3-R3:
+    id: 2.3-R3
+    rev: 800-63c-r4
+    sectionNumber: "2.3"
+    ordinal: 3
+    level: SHALL_NOT
+    text: At FAL2, federated identifiers SHALL NOT contain plaintext personal information, such as
+      usernames, email addresses, employee numbers, etc.
+    textHash: ec7448fc7af2
+    source: prose
+    seededBy: parser
+    verified: false
+  2.3-R4:
+    id: 2.3-R4
+    rev: 800-63c-r4
+    sectionNumber: "2.3"
+    ordinal: 4
+    level: SHALL
+    text: At FAL2, a trust agreement SHALL be established prior to the federation transaction taking
+      place (i.e., a “pre-established” trust agreement), as discussed in Sec. 4.3.1.
+    textHash: 4bf1f1ca77e2
+    source: prose
+    seededBy: parser
+    verified: false
+  2.3-R5:
+    id: 2.3-R5
+    rev: 800-63c-r4
+    sectionNumber: "2.3"
+    ordinal: 5
+    level: SHALL
+    text: IdPs operated by or on behalf of federal agencies that present assertions at FAL2 or higher
+      SHALL protect signing keys that are used in the generation of assertions with mechanisms
+      validated at [FIPS140] Level 1 or higher.
+    textHash: 1cb2d24cad81
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4-R1:
+    id: 2.4-R1
+    rev: 800-63c-r4
+    sectionNumber: "2.4"
+    ordinal: 1
+    level: SHALL
+    text: At FAL3, the RP SHALL verify that the subscriber is in control of an authenticator in addition
+      to the assertion. This authenticator is either identified in a holder-of-key assertion (see
+      Sec. 3.15) or is a bound authenticator (see Sec. 3.16).
+    textHash: 496284bfa818
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4-R2:
+    id: 2.4-R2
+    rev: 800-63c-r4
+    sectionNumber: "2.4"
+    ordinal: 2
+    level: SHALL
+    text: At FAL3, a trust agreement SHALL be established prior to the federation transaction taking
+      place (i.e., a “pre-established” trust agreement), as discussed in Sec. 4.3.1.
+    textHash: add927577fba
+    source: prose
+    seededBy: parser
+    verified: false
+  2.4-R3:
+    id: 2.4-R3
+    rev: 800-63c-r4
+    sectionNumber: "2.4"
+    ordinal: 3
+    level: SHALL
+    text: At FAL3, the identifiers for the CSP, IdP, and RP SHALL be established manually. Each
+      identifier SHALL be uniquely associated with the verification keys for the party represented.
+      Verification keys SHALL be transmitted through a trusted mechanism, which could be manual or
+      automated, as indicated in the trust agreement. For example, a public-key certificate that
+      represents the RP is uploaded to the IdP during a manual registration process. The RP is
+      manually configured with a URL that it can use to download the IdP’s public key.
+      Alternatively, the IdP and RP could each upload their respective public keys to a federation
+      authority and then download each other’s keys from that same location. For a
+      subscriber-controlled wallet, the RP could be manually configured with the URL that represents
+      the CSP’s public key. The RP fetches this public key and uses it to validate the signature of
+      the attribute bundle presented by the subscriber-controlled wallet. See Sec. 3.6 for more
+      information on the establishment, management, rotation, and revocation of keys and their
+      association with identifiers.
+    textHash: 7a25df0af556
+    source: prose
+    seededBy: parser
+    verified: false
+  2.5-R1:
+    id: 2.5-R1
+    rev: 800-63c-r4
+    sectionNumber: "2.5"
+    ordinal: 1
+    level: SHALL
+    text: IdPs SHALL support a mechanism for RPs to specify a set of minimum acceptable xALs as part of
+      the trust agreement and SHOULD support the RP specifying a more strict minimum set at runtime
+      as part of the federation transaction. When an RP requests a particular xAL, the IdP SHOULD
+      fulfill that request, if possible, or SHOULD fail the request if it cannot fulfil the RP’s
+      requested xALs. The IdP SHALL always indicate the resulting xAL in the assertion, even if the
+      request has not been met. For example, if the subscriber has an active session that was
+      authenticated at AAL1, but the RP has requested AAL2, the IdP needs to prompt the subscriber
+      for AAL2 authentication to increase the security of the session at the IdP during the
+      subscriber’s interaction at the IdP, if possible. The IdP sends the resulting AAL as part of
+      the returned assertion, whether it is AAL1 (i.e., the step-up authentication request was not
+      met) or AAL2 (i.e., the step-up authentication request was met successfully).
+    textHash: 4cd2d11b7029
+    source: prose
+    seededBy: parser
+    verified: false
+  2.5-R2:
+    id: 2.5-R2
+    rev: 800-63c-r4
+    sectionNumber: "2.5"
+    ordinal: 2
+    level: SHALL
+    text: The IAL of the subscriber account being presented to the RP, or an indication that no IAL
+      claim is being made
+    textHash: 895727eb0755
+    context: "The IdP SHALL inform the RP of the following information for each federation transaction:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.5-R3:
+    id: 2.5-R3
+    rev: 800-63c-r4
+    sectionNumber: "2.5"
+    ordinal: 3
+    level: SHALL
+    text: The AAL of the currently active session of the subscriber at the IdP, or an indication that no
+      AAL claim is being made
+    textHash: 409f0e593085
+    context: "The IdP SHALL inform the RP of the following information for each federation transaction:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.5-R4:
+    id: 2.5-R4
+    rev: 800-63c-r4
+    sectionNumber: "2.5"
+    ordinal: 4
+    level: SHALL
+    text: The FAL of the federation transaction
+    textHash: 091d13c423d3
+    context: "The IdP SHALL inform the RP of the following information for each federation transaction:"
+    source: prose
+    seededBy: parser
+    verified: false
+  2.5-R5:
+    id: 2.5-R5
+    rev: 800-63c-r4
+    sectionNumber: "2.5"
+    ordinal: 5
+    level: SHALL
+    text: The RP obtains this xAL information from a combination of the terms of the trust agreement
+      (see Sec. 3.5) and information included in the assertion (see Sec. 4.9 and Sec. 5.8). If the
+      xAL is unchanging for all messages between the IdP and RP (e.g., enterprise scenarios in which
+      all subscribers are identity-proofed at the same IAL and use the same authenticator type), the
+      xAL information SHALL be included in the terms of the trust agreement between the IdP and RP.
+      If the xAL could be within a range of possible values specified by the trust agreement, then
+      sufficient information SHALL be included as part of the assertion contents to allow the RP to
+      determine the xALs.
+    textHash: d46cb60c3351
+    source: prose
+    seededBy: parser
+    verified: false
+  2.5-R6:
+    id: 2.5-R6
+    rev: 800-63c-r4
+    sectionNumber: "2.5"
+    ordinal: 6
+    level: MAY
+    text: The IdP MAY indicate that no claim is made to the IAL or AAL for a given federation
+      transaction. In such cases, no default value is assigned to the resulting xAL by the RP. That
+      is, a federation transaction without an IAL declaration in either the trust agreement or the
+      assertion is functionally considered to have “no IAL” and the RP cannot assume the account
+      meets “IAL1,” which is the lowest numbered IAL described in this suite.
+    textHash: d9d4722c65e7
+    source: prose
+    seededBy: parser
+    verified: false
+  2.5-R7:
+    id: 2.5-R7
+    rev: 800-63c-r4
+    sectionNumber: "2.5"
+    ordinal: 7
+    level: SHALL
+    text: The RP SHALL determine the minimum IAL, AAL, and FAL that it is willing to accept for access
+      to any offered functionality and assess all IdP assertions to ensure that these xALs have been
+      met before granting access to protected resources. If IdP responses do not meet the requested
+      parameters, the RP SHALL have a mechanism for addressing these requests (e.g., declining the
+      request or routing the user to an exception handling process). The RP MAY vary its
+      functionality based on the IAL, AAL, and FAL of a specific federated authentication. For
+      example, an RP can allow federation transactions authenticated at AAL2 for common
+      functionality (e.g., viewing the status of a dam system) but require AAL3 to be used for
+      higher risk functionality (e.g., changing the flow rates of a dam system). Similarly, an RP
+      could restrict high-risk functionality (e.g., accessing sensitive information) to only certain
+      subscriber accounts that have been identity-proofed at IAL2 while allowing basic functionality
+      for all subscriber accounts, regardless of IAL.
+    textHash: f7535c4ab333
+    source: prose
+    seededBy: parser
+    verified: false
+  2.5-R8:
+    id: 2.5-R8
+    rev: 800-63c-r4
+    sectionNumber: "2.5"
+    ordinal: 8
+    level: SHALL
+    text: In a federation process, the RP does not have direct access to the details of the subscriber
+      account that have been provided to the IdP by the CSP, which details determine the IAL for the
+      subscriber account. Additionally, since the RP does not participate in the authentication
+      event or activation event at the IdP, the RP cannot determine the AAL. The RP sees many
+      aspects of the federation transaction that determine the FAL, but the IdP also has its own
+      responsibilities related to FAL, including signaling the IdP’s intended FAL of the federation
+      transaction to the RP. Consequently, the IdP SHALL provide the RP with sufficient information
+      to determine the IAL, AAL, and the IdP’s intended FAL for each federation transaction. This
+      MAY be done in the assertions, through previous arrangement in the trust agreement, or a
+      combination of both.
+    textHash: a5ac6175e316
+    source: prose
+    seededBy: parser
+    verified: false
+  2.5-R9:
+    id: 2.5-R9
+    rev: 800-63c-r4
+    sectionNumber: "2.5"
+    ordinal: 9
+    level: SHALL
+    text: The RP SHALL ensure that it meets its obligations in the federation transaction for the FAL
+      declared in the transaction. For example, the RP needs to ensure that the presentation method
+      meets the assertion injection protection requirements at FAL2 and above and that the
+      appropriate holder-of-key proof or bound authenticator is presented at FAL3.
+    textHash: 5c9bdc003326
+    source: prose
+    seededBy: parser
+    verified: false
