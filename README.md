@@ -43,12 +43,42 @@ and must not be exposed to the network.
 
 ## Running
 
+Two commands: `setup` once (or to refresh the spec), then `start` each session.
+
 ```bash
-npm run dev
+npm run setup   # install deps, ingest the spec, seed skeletons, validate
+npm start       # start the app (Vite + Express API)
 ```
 
-Vite on http://localhost:5180, Express API on :3001. The app opens on the `active`
+`npm run setup` is idempotent — safe to re-run to refresh parser output/skeletons.
+`npm start` just runs the dev servers (fast). Vite serves the UI on
+http://localhost:5180, the Express API on :3001. The app opens on the `active`
 revision; use the header selector to switch.
+
+### Running in the sandbox (recommended)
+
+The tool is designed to run inside the `acq`/sbx sandbox, where the OpenCode agent
+(for the "Find supporting code" button) and USAi access are provided by acq's
+built-in kits. A host launcher automates sandbox creation:
+
+```bash
+./run-sandbox.sh    # host: create sandbox (mounts tracker + identity-idp),
+                    #       apply the NIST egress kit, publish ports, print the URL
+```
+
+Then, in the guest session it opens:
+
+```bash
+npm run setup       # first time / to refresh
+npm start           # start the app
+```
+
+Open the UI on your host at the **host port mapped to 5180** (the launcher prints
+it; re-check anytime with `./acq ports nist-tracker`). The launcher assumes
+sibling checkouts of `identity-idp` and `agentic-coding-quickstart`; override with
+`IDP_DIR=… ACQ_DIR=… ./run-sandbox.sh`. The **egress kit** allow-lists
+`pages.nist.gov` + `csrc.nist.gov` (for spec ingest / revision detection); USAi
+egress comes from acq's built-in `usai-provider` kit.
 
 ## Data
 
@@ -83,6 +113,50 @@ npm run seed:apply -- --rev 800-63b-r4 data/seeds/<f>.yaml  # merge a Claude-aut
 npm run check                                               # validate all revisions (schema, paths, line bounds, drift)
 npm run check -- --rev 800-63b-r4                           # validate one revision
 ```
+
+## Adding a revision or document
+
+`rev` is a first-class dimension, and a `revKey` encodes both the document and the
+revision (e.g. `800-63b-r4`). Adding another revision (e.g. a future rev 5) or another
+document in the family (e.g. **SP 800-63A** identity proofing, **800-63C** federation)
+is additive — no code changes to the core, just data:
+
+1. **Vendor the NIST HTML.** Save the document's single-page HTML at
+   `data/spec/<revKey>/raw/<doc>.html`, where `<doc>` matches the registry `doc`
+   field (the ingest derives the filename from it). Example:
+   `data/spec/800-63c-r4/raw/sp800-63c.html`.
+2. **Add a registry entry** to `data/revisions.json`:
+   ```json
+   {
+     "revKey": "800-63c-r4",
+     "doc": "sp800-63c",
+     "rev": "4",
+     "label": "SP 800-63C rev 4",
+     "status": "final",
+     "sourceUrl": "https://pages.nist.gov/800-63-4/sp800-63c.html",
+     "ingestedAt": ""
+   }
+   ```
+   (If the `raw/` HTML is absent, ingest will fetch it from `sourceUrl` — which
+   requires `pages.nist.gov` egress; see the sbx egress kit under `integrations/`.)
+3. **Ingest and seed:**
+   ```bash
+   npm run ingest -- --rev 800-63c-r4
+   npm run seed:template -- --rev 800-63c-r4
+   npm run check -- --rev 800-63c-r4
+   ```
+
+The revision then appears in the UI's revision selector, with its own requirements
+and assessments, independent of other revisions.
+
+> **Parser caveat.** The ingest parser assumes the NIST **800-63-4 page template**
+> — specifically that the document body begins at an `<h1 id="abstract">` element
+> (`scripts/ingest-spec.ts`). The 63-4 family (63, 63A, 63B, 63C, 63D) shares this
+> template, so those ingest without changes. A structurally different page (a
+> future rev with a redesigned layout) may need the content-root detection in
+> `ingest-spec.ts` adjusted. Chapter titles, section numbering, requirement
+> extraction, link/asset rewriting, and all storage paths are already derived
+> generically and need no per-document changes.
 
 ## The provenance contract
 

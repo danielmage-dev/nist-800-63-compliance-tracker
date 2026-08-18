@@ -4,6 +4,8 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "setup": "npm install && npm run ingest && npm run seed:template && npm run check",
+    "start": "npm run dev",
     "dev": "concurrently -n web,api -c blue,green \"vite\" \"tsx watch server/index.ts\"",
     "build": "tsc -b && vite build",
     "ingest": "tsx scripts/ingest-spec.ts",

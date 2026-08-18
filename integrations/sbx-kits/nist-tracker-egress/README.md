@@ -60,12 +60,21 @@ hosts are read-only, unauthenticated, TLS.
 
 ## What it does
 
-Declaratively (`spec.yaml`):
+Declaratively (`spec.yaml`, neutral `hybrid/v1` kit schema):
 
+- `caps.network.tier: strict` — deny-by-default with **no** shared baseline
+  allowlist. Egress is exactly the hosts listed here, unioned with other kits'
+  allows (e.g. `usai-provider`'s `api.gsa.usai.gov`) and any per-sandbox
+  additions. This deliberately does **not** inherit the `balanced` tier's broad
+  dev allowlist (package registries, assorted AI/source hosts), which is the
+  right posture for a CUI-adjacent tool and matches the SC-7 deny-by-default
+  stance GFE/high-assurance deployments should pin.
 - `caps.network.allow`: adds `pages.nist.gov` and `csrc.nist.gov` (default port
-  443) to the sandbox egress allowlist.
+  443, read-only, TLS) to the effective allowlist.
 
 It ships no files and runs no startup commands.
+
+Validate with: `acq kit validate integrations/sbx-kits/nist-tracker-egress`.
 
 ## Verifying
 

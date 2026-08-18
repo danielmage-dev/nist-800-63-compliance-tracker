@@ -5,19 +5,6 @@ import { api } from '../../api/client';
 import type { RequirementWithStatus, Status } from '../../types';
 import { LEVEL_LABEL, STATUS_META, STATUS_ORDER } from '../../statusMeta';
 
-const CHAPTER_TITLES: Record<string, string> = {
-  '1': 'Introduction',
-  '2': 'AAL',
-  '3': 'Authenticators',
-  '4': 'Event Management',
-  '5': 'Session',
-  '6': 'Security',
-  '7': 'Privacy',
-  '8': 'Customer Experience',
-  A: 'Passwords (App. A)',
-  B: 'Syncable Authenticators (App. B)',
-};
-
 function chapterOf(r: RequirementWithStatus): string {
   return r.sectionNumber.split('.')[0];
 }
@@ -89,7 +76,20 @@ export default function Dashboard() {
     queryFn: () => api.requirements(rev),
     enabled: !!rev,
   });
+  const sectionsQ = useQuery({
+    queryKey: ['sections', rev],
+    queryFn: () => api.sections(rev),
+    enabled: !!rev,
+  });
   const reqs = reqsQ.data ?? [];
+
+  // Chapter titles come from the spec tree (top-level sections), so labels are
+  // correct for any document/revision — not a hardcoded 800-63B map.
+  const chapterTitles = useMemo(() => {
+    const m = new Map<string, string>();
+    for (const s of sectionsQ.data?.sections ?? []) m.set(s.number, s.title);
+    return m;
+  }, [sectionsQ.data]);
 
   const chapters = useMemo(() => {
     const m = new Map<string, RequirementWithStatus[]>();
@@ -130,7 +130,7 @@ export default function Dashboard() {
         {chapters.map(([c, list]) => (
           <div key={c} className="chapter-row">
             <Link className="chapter-label" to={`/rev/${encodeURIComponent(rev)}/section/${encodeURIComponent(c)}`}>
-              {c}. {CHAPTER_TITLES[c] ?? c}
+              {c}. {chapterTitles.get(c) ?? c}
             </Link>
             <Bar reqs={list} />
             <span className="chapter-count">

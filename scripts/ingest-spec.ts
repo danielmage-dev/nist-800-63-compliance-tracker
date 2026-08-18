@@ -321,8 +321,15 @@ function main(html: string) {
     transformTags: {
       a: (tagName, attribs) => {
         let href = attribs.href ?? '';
-        if (href.startsWith('/800-63-4/')) {
-          href = `https://pages.nist.gov${href}`;
+        // Resolve root-relative internal links (e.g. "/800-63-4/sp800-63a.html#s-2")
+        // to absolute pages.nist.gov URLs. Derive the origin from BASE_URL so this
+        // works for any document/revision, not just the /800-63-4/ family.
+        if (href.startsWith('/')) {
+          try {
+            href = new URL(href, BASE_URL).href;
+          } catch {
+            /* leave as-is if BASE_URL isn't a valid base */
+          }
         }
         return { tagName, attribs: { ...attribs, href } };
       },

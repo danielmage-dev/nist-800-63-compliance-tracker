@@ -29,20 +29,26 @@
 #   - docs/decisions/0002-agentic-layers-usai.md   (USAi egress; SC-7/SC-8)
 #   - docs/decisions/0004-revision-detection.md     (CSRC, report-only; SC-7)
 #   - docs/risk-assessment.md                        (T2 source egress, T11 stale-spec)
-schemaVersion: "2"
+schemaVersion: "hybrid/v1"
 kind: mixin
 name: nist-tracker-egress
 displayName: NIST Tracker Egress (NIST CSRC + pages.nist.gov)
 description: >
   Allow-lists the two NIST hosts the NIST 800-63 Compliance Tracker's
-  authoring-time scripts require on a default-deny egress network: pages.nist.gov
-  (one-time spec vendoring at ingest) and csrc.nist.gov (report-only revision
-  detection). Compose alongside the usai-provider kit, which allow-lists the USAi
-  model endpoint. The reviewer app itself makes no network calls.
+  authoring-time scripts require: pages.nist.gov (one-time spec vendoring at
+  ingest) and csrc.nist.gov (report-only revision detection). Uses tier
+  "strict" (deny-by-default, no balanced baseline) so egress is confined to
+  exactly these hosts unioned with whatever other kits (e.g. usai-provider)
+  explicitly allow. The reviewer app itself makes no network calls.
 
 caps:
   network:
+    # strict = deny-by-default with NO shared baseline; egress is only the hosts
+    # explicitly listed here (∪ other kits' allows ∪ per-sandbox additions).
+    # Appropriate for a CUI-adjacent tool; the balanced baseline's broad dev
+    # allowlist is deliberately NOT inherited.
+    tier: strict
     allow:
-      # Exact hosts (default port 443). Both are read-only, TLS.
+      # Exact hosts (default port 443, read-only, TLS).
       - pages.nist.gov
       - csrc.nist.gov
