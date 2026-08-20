@@ -51,15 +51,53 @@ const VALID_STATUS: Status[] = [
   'compliant', 'partial', 'gap', 'not-assessed', 'not-applicable',
 ];
 
+/**
+ * Static orientation: identity-idp's layout and Rails/Devise idioms. Reduces
+ * blind-grep flailing (e.g. guessing `MAX_PASSWORD_LENGTH` constants that don't
+ * exist — tunables live in initializers). These are STARTING POINTS, not
+ * restrictions; the agent may look anywhere under the root.
+ */
+const CODEBASE_MAP = [
+  `identity-idp orientation (this is a Rails app using Devise for auth):`,
+  `- Tunables/config live in config/initializers/ (e.g. config/initializers/devise.rb defines config.password_length = 12..128). Do NOT expect MAX_* Ruby constants; prefer searching initializers and *.yml config.`,
+  `- app/services/ holds business logic; app/validators/ input validation; app/forms/ form objects; app/models/ ActiveRecord + domain models; app/policies/ authorization; app/controllers/ HTTP flows.`,
+].join('\n');
+
+/**
+ * Section-keyed starting points, chosen by the requirement's document (rev) and
+ * section number. Verified to exist in the identity-idp tree. Empty string when
+ * no strong hint applies (agent falls back to the general map).
+ */
+function sectionHints(req: Requirement): string {
+  const doc = req.rev.split('-')[0]; // "800-63a" | "800-63b" | "800-63c"
+  if (doc === '800-63a') {
+    // Identity proofing / evidence validation.
+    return `Likely starting points (identity proofing): app/services/idv/, app/services/proofing/, app/services/doc_auth/, app/controllers/idv/, app/services/usps_in_person_proofing/.`;
+  }
+  if (doc === '800-63b') {
+    // Authenticators, passwords, recovery, session/MFA.
+    return `Likely starting points (authenticators/passwords/recovery): app/validators/form_password_validator.rb, config/initializers/devise.rb, app/services/backup_code_generator.rb, app/services/personal_key_generator.rb, app/services/account_reset/, app/services/pwned_passwords/, app/services/forbidden_passwords.rb; for MFA/two-factor see app/controllers/two_factor_authentication/, app/policies/two_factor_authentication/, app/forms/two_factor_authentication/.`;
+  }
+  if (doc === '800-63c') {
+    // Federation (SAML + OIDC).
+    return `Likely starting points (federation): SAML -> app/controllers/saml_idp_controller.rb, app/controllers/concerns/saml_idp_auth_concern.rb, app/services/saml_request_validator.rb, app/models/federated_protocols/; OIDC -> app/controllers/openid_connect/ (authorization_controller.rb, token_controller.rb), app/services/id_token_builder.rb, app/services/openid_connect_attribute_scoper.rb.`;
+  }
+  return '';
+}
+
 function taskPrompt(req: Requirement): string {
   return [
     `You are mapping a NIST SP 800-63 compliance requirement to the source code that implements it, in the identity-idp (login.gov) Ruby/Rails codebase rooted at your current working directory.`,
+    ``,
+    CODEBASE_MAP,
     ``,
     `Requirement ${req.id} (${req.level}):`,
     req.context ? `Context: ${req.context}` : '',
     req.text,
     ``,
-    `Investigate the codebase (search, list directories, read files) and determine whether it implements this requirement. Cite the PRIMARY implementing code (validators, initializers, models, services, configuration), not incidental references. Read the exact lines you cite.`,
+    sectionHints(req),
+    ``,
+    `Investigate the codebase (search, list directories, read files) and determine whether it implements this requirement. Begin from the starting points above when relevant, but you are not restricted to them. Cite the PRIMARY implementing code (validators, initializers, models, services, configuration), not incidental references. Read the exact lines you cite.`,
     ``,
     `Do not modify any files. When done, output ONLY a single JSON object on the final line, no prose, no markdown fences, of exactly this shape:`,
     `{"status":"compliant|partial|gap|not-applicable|not-assessed","notes":"2-4 sentences","refs":[{"path":"relative/path.rb","startLine":N,"endLine":M,"snippet":"verbatim code you read","note":"why this maps"}]}`,
